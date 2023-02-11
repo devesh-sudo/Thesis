@@ -1,8 +1,8 @@
-PWD /Users/deveshrajpal/My Drive/CMI/Dump/MCF Thesis
+PWD /Users/deveshrajpal/Desktop/Thesis
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/deveshrajpal/My Drive/CMI/Dump/MCF Thesis/Thesis_MCF.tex
+INPUT /Users/deveshrajpal/Desktop/Thesis/Thesis_MCF.tex
 OUTPUT Thesis_MCF.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
