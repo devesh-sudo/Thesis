@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Thesis_MCF.aux
+A level-1 auxiliary file: Preface.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: Convexity_Estimates.aux
+A level-1 auxiliary file: Noncollapsing.aux
+The style file: amsalpha.bst
+Database file #1: ref.bib
+You've used 9 entries,
+            2624 wiz_defined-function locations,
+            619 strings with 5645 characters,
+and the built_in function-call counts, 3254 in all, are:
+= -- 306
+> -- 111
+< -- 8
++ -- 35
+- -- 34
+* -- 292
+:= -- 515
+add.period$ -- 9
+call.type$ -- 9
+change.case$ -- 50
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 136
+empty$ -- 271
+format.name$ -- 49
+if$ -- 650
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 20
+newline$ -- 37
+num.names$ -- 25
+pop$ -- 53
+preamble$ -- 1
+purify$ -- 59
+quote$ -- 0
+skip$ -- 88
+stack$ -- 0
+substring$ -- 236
+swap$ -- 11
+text.length$ -- 8
+text.prefix$ -- 6
+top$ -- 0
+type$ -- 64
+warning$ -- 0
+while$ -- 33
+width$ -- 11
+write$ -- 108

@@ -1,0 +1,341 @@
+
+\chapter{Introduction to Mean curvature flow}
+
+\section{Fundamentals of Hypersurfaces}
+SET UP THE FOLLOWING  - 
+
+1. SECOND FUNDAMENTAL FORM\\
+2. MEAN CURVATURE\\
+3. CONVEXITY RESULTS\\
+4. MCF AS GRADIENT FLOW OF AREA\\
+5. CODAZZI IDENTITY, SIMONS IDENTITY\\
+6. UMBILLIC HYPERSURFACES ARE SPHERES\\
+
+
+Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an embedding and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
+    \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
+where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ T(M^{n}) $ which in local coordinates is given by 
+    \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
+where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. 
+Further we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. The Levi-Civita connection on $ \R^{n+1} $ is given by 
+\[ D_{X}Y =  X(Y^{i}) \partial_{i}\] (TO DO)
+Let $ x \in M^{n} $ and $ u \in T_{p}M^{n}, \tilde{v} \in T|_{U}M^{n}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
+\begin{equation}
+    dX(\nabla_{u}\tilde{v}) = D_{dX(u)}(\tilde{V}) \label{connection}
+\end{equation}
+where $ \tilde{V} $ is an extension of $ dX(\tilde{v}) $ to an open set of $ \Rn $ containing $ X(U) $. 
+\begin{thm}
+    The connection defined by \cref{connection} is well-defined and is the unique Levi-Civita connection on $ (M^{n},g) $
+\end{thm}
+When $ X $ is an embedding, the restriction of the tangent bundle of $ T\Rn|_{\mathcal{M}^{n}} $ can be decomposed as the direct sum 
+\[ T\mathcal{M}^{n}\oplus N\mathcal{M}^{n}  \]
+where $ N\mathcal{M}^{n} $ is the normal bundle which can be described as 
+\[ N\mathcal{M}^{n} = \{(p,\nu) \in T\Rn|_{ \mathcal{M}} : \left< u, \nu \right> =0 \text{ for all } u \in T_{p} \mathcal{M}\} \]
+
+\section{Evolution equations}
+Let $X : M^n \times I \to \R^{n+1}$ be a smooth $1$-parameter family of immersions such that 
+
+\[ \dou_t X(p,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t)\]
+
+Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This gives
+\[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle  \]
+\begin{thm} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of metric, normal, second fundamental form, mean curvature is given by
+\begin{equation}
+    \dou_t g_{ij} = -2Hh_{ij}
+\end{equation}
+\begin{equation}
+\dou_t \nu  = \nabla H
+\end{equation}
+\begin{equation}
+\dou_t h_{ij} = \Delta h_{ij} - 2Hh_{il}g^{lm}h_{mj}+|A|^2h_{ij}
+\end{equation}
+\begin{equation}
+    \dou_t H = \Delta H + |A|^2H
+\end{equation}
+\end{thm}
+\begin{proof}
+1. In local coordinates we have 
+\begin{align*}
+    \dou_tg_{ij} & = \frac{\dou}{\dou t} \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle \\
+& = \left\langle \frac{\dou^2X}{\dou x^i \dou t}, \frac{\dou X}{\dou x^j} \right\rangle + \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou^2 X}{\dou t \dou x^j} \right\rangle\\
+& = \left\langle \frac{\dou}{\dou t}(-H\nu), \frac{\dou X}{\dou x^j} \right\rangle + \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou }{\dou x^j}(-H\nu)\right\rangle \\
+& = -H \left\langle \frac{\dou \nu}{\dou t}, \frac{\dou X}{\dou x^j}\right\rangle  - H \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou \nu}{\dou t}\right\rangle \\
+& = -2Hh_{ij}
+\end{align*}
+2. Since $\langle \nu, \nu \rangle = 1$, we have $2\langle \frac{\dou \nu}{\dou t}, \nu \rangle = 0$, so the vector $\frac{\dou \nu}{\dou t}$ is in the tangent plane of the hypersurface, hence we can write it as a linear combination of $\{\frac{\dou X}{\dou x^j}\}$ to get
+\begin{align*}
+\frac{\dou \nu}{\dou t} &= \left\langle \frac{\dou \nu}{\dou t}, \frac{\dou X}{\dou x^i} \right\rangle \frac{\dou X}{\dou X^j}g^{ij} = - \left\langle \nu, \frac{\dou }{\dou x^i}\left( \frac{\dou X}{\dou t}\right) \right\rangle\frac{\dou X}{\dou x^j}g^{ij} \\
+& = \left\langle \nu, \frac{\dou }{\dou x^i}\left( H \nu \right) \right\rangle \frac{\dou X}{\dou x^j}g^{ij}\\
+& = \frac{\dou H}{\dou x^i}\frac{\dou X}{\dou x^j}g^{ij} + H \left\langle \nu, \frac{\dou \nu}{\dou x^i}\right\rangle \frac{\dou X}{\dou x^j}g^{ij}\\
+& = \frac{\dou H}{\dou x^i}\frac{\dou X}{\dou x^j}g^{ij} = \nabla H
+\end{align*}
+3. From the relation \[
+\frac{\dou^2 X}{\dou x^{i} \dou x^{j}} = \Gamma^{k}_{ij}\frac{\dou X}{\dou x^{k}}	
+,\] we get 
+\begin{align*}
+\dt h_{ij} & = - \dt (\frac{\dou^2 X}{\dou x^i \dou x^j},\nu)\\
+& = (\frac{\dou^2}{\dou x^i \dou x^j}(H \nu), \nu) - 
+.\end{align*}
+4. From the previous equation we get 
+\begin{align*}
+\dou_t H &= \dou_t(g^{ij}h_{ij}) = \frac{\dou g^{ij}}{\dou t}h_{ij}+ g^{ij}\frac{\dou h_{ij}}{\dou t}\\
+& = -g^{ik}\frac{\dou g_{kl}}{\dou t}g^{lj}h_{ij}+ g^{ij}(\Delta h_{ij} - 2Hh_{il}g^{lm}h_{mj}+|A|^2h_{ij})\\
+& = -g^{ik}(-2Hh_{kl})g^{lj}h_{ij}+ \Delta(g^{ij}h_{ij}) - 2Hg^{ij}g^{lm}h_{il}h_{mj}+|A|^2H\\
+& = 2H|A|^2 + \Delta H - 2H|A|^2 + |A|^2H\\
+& =  \Delta H+ |A|^2H
+\end{align*}
+\end{proof}
+\begin{corollary}
+If mean curvature is positive everywhere on the initial hypersurface, then it remains so throughout the flow.
+\end{corollary}
+\begin{proof}
+We apply maximum principle to the evolution equation of $H$.
+\end{proof}
+\begin{remark}
+This property of mean curvature holds even when the hypersurface is embedded in an arbitrary(OR WITH POSITIVE RICCI CURVATURE?) Riemannian manifold. 
+\end{remark}
+\section{The Avoidance Principle}
+
+Let $X_i : M^n_i \times  [0,T) \to \R^{n+1}, i = 1,2 $ be properly immersed solutions to mean curvature flow such that at least one of  $ M^n_1$ or $M^n_2$ is compact. 
+If the hypersurfaces are disjoint initially, i.e. $X_1(M^{n_1},0)\cap X_2(M^n_2,0) = \phi$, then they remain so. Define the distance function $d: M^n_1 \times M^n_2 \times  [0,T) \to \R$ between the solutions by \[
+d(x,y,t) = |X_2(y,t) - X_1(y,t)|
+.\] 
+as a function of time. From the assumption of compactness $d_0 \define \inf_{(x,y) \in M^n_1 \times M^n_2} d(x,y,0) >0$
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+    \draw [red] plot [smooth cycle] coordinates {(3,0)(0,3)(-3,0)(0,-3)};
+    %\draw [red](0,0) circle (3cm);
+    \fill [red!20] plot [smooth cycle] coordinates {(3,0)(0,3)(-3,0)(0,-3)};
+    
+    
+    \draw [green] plot [smooth cycle] coordinates {(2.5,0)(0,2.5)(-2.5,0)(0,-2.5)};
+    \fill [green!20] plot [smooth cycle] coordinates {(2.5,0)(0,2.5)(-2.5,0)(0,-2.5)};
+    \draw [dashed,green] (2.5,0) arc (60:120:5cm);
+    \draw [green] (-2.5,0) arc (240:300:5cm);
+    \draw [thick,green][-stealth](2.75,0) -- (2,0);
+    \draw [thick,red][-stealth](3,0) -- (2.5,0);
+    \draw [dashed,red] (3,0) arc (60:120:6cm);
+    \draw [red] (-3,0) arc (240:300:6cm); 
+\end{tikzpicture}
+\caption{Disjoint hypersurfaces flowing under MCF}
+\end{figure}
+\begin{thm}
+If $X_1$ and $X_2$ are solutions to mean curvature flow on closed manifolds with $ d_{0}>0$, then $ d(x,y,t)>0$ for all $ x,y,t$. In particular, if $ X_1(x,0) \neq X_2(y,0)$ for all $x \in M^n_1  $ and $ y \in M^n_2$, then $ X_1(x,t) \neq X_2(y,t)$ for all $ x \in M^{n}_1$, $y \in  M^n_2$ and $ t \in  [0,T)$. 
+\end{thm}
+\begin{proof}
+Assume on the contrary $ d(x,y,t)$ is not everywhere strictly greater that $ d_{0} $. Then there exists a $ t_{0} $ such that $ d(x_{0},y_{0},t_{0}) = d_{0} - \delta $
+\end{proof}
+\begin{remark}
+From the proof we can conclude that the distance between the hypersurfaces is a non-decreasing function. Another way to see this is that $ d_{t} $ satisfies a heat-type parabolic equation 
+    \[ TO\, DO \]
+ on which maximum principle is applicable. 
+\end{remark}
+\begin{proof} Fix $\epsilon > 0$ and suppose that $e ^{\epsilon (1+t)}d(x,y,t)$ is not strictly greater than $d_0$. That is there exists a time $ t_0 > 0$ such that $e^{\epsilon(1+ t)}d(\cdot, \cdot, t)$ reaches $ d_0$. That is,\[
+e^{\epsilon(1+t)}d(\cdot,\cdot,t)> 0 \quad \text{ for } t < t_0
+.\]  and \[
+e^{\epsilon(1+t)}d(x_0,y_0,t_0) = d_0 \quad \text{ for some }(x_0,y_0) \in   M^n_1 \times  M^n_2		
+.\] Then \[
+\pt (e^{\epsilon(1+t)}d)|_{(x_0,y_0,z_0)} \le 0 
+.\] Let $D$ denote the Euclidean directional derivative, by $ \nabla_i$ the covariant derivative induced on $M^n_i$ by $X_i$, and by $\nabla $ the covariant derivative on $ M^n_1 \times  M^n_2$ induced by $ \nabla_1$ and $ \nabla_2$, we find \[
+\nabla^2
+.\] 
+
+\end{proof}
+\begin{remark}
+We can phrase the avoidance principle as : disjointness is an immortal property and jointness is an ancient property.
+\end{remark}
+
+\section{Huisken's theorem}
+
+Huisken's theorem proves the convergence of compact, uniformly convex hypersurface to sphere under Mean curvature flow in finite time. 
+\begin{thm}
+Let $ X : M^{n} \times [0,T) \to \Rn  $, $ n \ge 2 $ be a maximal solution of MCF such that $ M^{n} $ is compact and $X_{0} = X(\cdot, 0)$ is convex embedding. Then $ X_{t} = X(\cdot,t) $ is a convex embedding for all $ t>0 $ and $ X_{t} $ converges to a point $ p \in \Rn $ as $ t \to T $. Further the rescaled embeddings $ \tilde{X}_{t} : M^{n} \to \Rn $ defined by 
+            \[ \tilde{X}_{t}(x) \define \frac{X_{t}(x)-p}{\sqrt{2n(T-t)}}\]
+converge uniformly in the smooth topology to a smooth embedding whose image coincides with the unit sphere $ S^{n} $.
+\end{thm}
+\subsection{Long time existence}
+
+In this subsection we will prove that blow up second fundamental form is the only obstruction for continuing the flow. 
+\subsection{Pinching estimate}
+
+The quantity $ \frac{|A|^{2} - \frac{H^{2}}{n}}{H^{2}} = \frac{1}{n} \sum_{i<j}^{} \left( \frac{\kappa_{i}}{H}- \frac{\kappa_{j}}{H} \right)^{2}  $ is scaling invariant and measures the roundness of the hypersurface. If we compute the evolution equation we get \begin{equation}
+EQUATION
+\end{equation} 
+but the maximum principle is not directly applicable because of the positive last term. So we do not directly get a pointwise $ L^{\infty} $ bound we do the next best thing possible which is $ L^{p} $ bounds. After obtaining this there is a sophisticated iteration argument developed by Stampacchia which allows us to produce an $ L^{\infty} $ estimate. See  \href{https://youtu.be/a577KPiOoxw?t=1790}{here}
+\begin{thm}
+There exists constants $ \delta $ and $ C_{0} < \infty $ depending only on $ \mathcal{M}_{0} $ such that 
+\[ |A|^{2} - \frac{H^{2}}{n} \le C_{0}H^{2-\delta} \]
+for $ t \in (0,T] $.
+
+\end{thm}
+Let $ f_{\sigma} = \frac{|A|^{2}- \frac{H^{2}}{n}}{H^{2-\sigma}} = \left(\frac{|A|^{2} - \frac{H^{2}}{n}}{H^{2}}\right)H^{\sigma}$, then the evolution equation of $ f_{\sigma} $ is 
+\begin{lemma}
+The evolution of $ f_{\sigma} $ is given by \begin{align*}
+    \frac{ \partial}{ \partial t}f_{\sigma} & = 
+\end{align*}
+\end{lemma}
+(Huisken' remark on this from the lecture series : the bad term can only be controlled using integral estimates \href{https://www.mfo.de/about-the-institute/staff/prof-dr-gerhard-huisken/lectures/mean-curvature-flow/lecture-3}{58 min mark} )
+
+(Sinestrari intuition about Stampacchia iteration : \href{https://youtu.be/XvUGowx9WNo?t=2119}{yt link})
+
+\subsection{Width-pinching}
+
+Let $ \Omega  \subset \Rn  $ be a compact, convex body with  boundary $  \mathcal{M}  = \partial \Omega$. %such that $ \mathcal{M} $ is locally uniformly convex. 
+%This allows us to define inverse of the Gauss map on the hypersurface $ \mathcal{M} $. 
+Define the support function $ \sigma : S^{n} \to \R $ as follows 
+\[ \sigma(z) \define \sup_{x \in \Omega}\left< x,z \right> .\]
+Using this we define the width function of $ \Omega $ by 
+\[ w(z) = \sigma(z)+ \sigma(-z) \qquad \text{ for all } z \in S^{n} \]
+which as the name suggests measures the width of $ \Omega  $ in the direction $ z$. Let $ w_{+} $ and $ w_{-} $ denote the maximum and minimum width. It is easy to see that maximum width is the diameter of $ \Omega $, so 
+\[ w_{+} = \sup_{x,y \in \Omega}||x-y||. \]
+If $ \mathcal{M}$ is smooth uniformly convex hypersurface, then we can write the support function in terms of Gauss map $ G : \partial \Omega \to S^{n} $ as 
+\[ \sigma(z) = \left< G^{-1}(z), z \right>, \] so 
+\[ \sigma(G(z)) = \left< z,G(z) \right>.\]
+
+It is a lemma by Andrews that the pinching of principal curvatures implies the pinching of the widths, which will be later important to prove convergence of the hypersurface into a point. 
+\begin{lemma}
+Let $ \Omega \subset \Rn $, $ n \ge 2 $ be a uniformly convex body with compact, smooth boundary $ \mathcal{M} = \partial \Omega $. Suppose the principal curvatures of $ \mathcal{M} $ are pinched by a constant $ C < \infty $, i.e. $ \kappa_{n}(x) \le C \kappa_{1}(x) $ for all $ x \in \mathcal{M}  $. Then the widths of $ \mathcal{M} $ are pinched by the same constant, so 
+\[ w_{+} \le C w_{-} \]
+\end{lemma}
+\begin{proof}
+We will first prove it for $ n=2 $, which presents the main idea. Let $ e  \in S^{2}$ be unit vector in $ \R^{3} $ and (TO DO LATER) 
+\end{proof}
+
+We know the solution of MCF of spheres, so it will be useful to relate the widths of the hypersurface to the spheres inscribed and circumscribed about it. Let $$ \rho_{+} \define \inf\{r : \Omega \subset B_{r}(x) \text{ for some }x \in \R^{n}\}$$ denote the circumradius and 
+\[ \rho_{-} \define \sup\{B_{r}(X) \subset \Omega \text{ for some }x \in \R^{n}\} \]
+denote the inradius radius. There is also a relation between inscribed and circumscribed radius to widths of the hypersurface as given by the following lemma
+\begin{lemma}
+On any bounded convex body $ \Omega \subset \Rn $, 
+\[ \rho_{+} \le \sqrt{n+1}w_{+} \quad \text{ and } \quad \rho_{-} \ge \frac{1}{n+2}w_{-}.\]
+\end{lemma}
+\begin{remark}
+These are not the best bounds however they are sufficient for our purpose.
+\end{remark}
+
+Combining the two lemmas, we get 
+\begin{equation}
+\rho_{+} \le \frac{n+2}{\sqrt{n+1}}C\rho_{-} \label{pinching}
+\end{equation}
+
+Let $ \{\mathcal{M}_{t}\}_{t \in [0,T)}$ be family of hypersurfaces flowing under MCF with maximal time $ T $ and the initial pinching constant given by
+\[ C = \sup_{ \mathcal{M}_{0}} \frac{\kappa_{n}}{\kappa_{1}} \]
+
+If we can show that $ \rho_{-} \to 0 $ as $ t \to T $, then inequality (\ref{pinching}) would imply $ \rho_{+} \to 0 $. This proves the convergence of hypersurfaces to a point. 
+\begin{thm}
+The inradius $ \rho_{t} $ of $ \Omega_{t} $ tends to zero as $ t \to T $. Thus, $ \mathcal{M}_{t} $ converges to some point $ p \in \Rn $ as $ t \to T $.
+\end{thm}
+
+\section{Monotonicity Formula}
+Let $ X :M^{n} \times I \to \R^{n+1} $ be one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form are given by 
+\[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\eta, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right> \]
+
+If we scale the solution by a factor of $ \lambda  $, defined by $ \tilde{X}(x,t) = \lambda X(x,t) $ we get the following metric and second fundamental form 
+
+\[ \tilde{g_{ij}} = \left< \frac{\dou \tilde{X}}{\dou x^{i}}, \frac{\dou \tilde{X}}{\dou x^{j}} \right>  = \lambda^{2}g_{ij} \]
+\[ \tilde{h_{ij}} = \left<\eta, \frac{\partial^{2}\tilde{X}}{\dou x^{i}\dou x^{j}} \right>  = \lambda h_{ij}\]
+
+so the scaled mean curvature is given by $ \tilde{H} = \tilde{g}^{{ij}}\tilde{h}_{ij} = \frac{1}{\lambda}H $. This implies the scaled solutions satisfy the evolution equation
+
+\[ \frac{\dou \tilde{X}}{\dou t} = \lambda \frac{\dou X}{\dou t} = -\lambda^{2}\tilde{H}\eta \]
+
+    \[ \frac{\dou \tilde{X}}{\dou (\lambda^{2}t)} = - \tilde{H}\eta \]
+Hence if scale time by $ \lambda^{2} $, then $ \tilde{X} $ is also a solution of the MCF. 
+
+Mean curvature flow is invariant under parabolic scaling, i.e.  if $ X : M^{n} \times I \to \R^{n+1} $ is solution, then so is $ X_{\lambda}(x,t) = \lambda X(x,\lambda^{2}t) $. We construct a weighted area functional which is invariant under \textit{parabolic} scaling along any solution to mean curvature flow which will be monotonous.
+
+Let $ \rho(x,t) $ be the backward heat kernel at $ (X_{0},t_{0}) $, i.e.,   \[\rho(x,t) = \frac{1}{(4 \pi (t_{0}-t))^{ \frac{n}{2}} }\cdot \exp\left( - \frac{|X(x,t)-X_{0}|^{2}}{4(t_{0}-t)} \right), \qquad t<t_{0} \]
+\begin{thm}
+If $ M_{t} $ is a solution of mean curvature flow for $ t< t_{0} $, then we have the formula
+
+    \[ \frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  = - \int_{M_{t}}\rho(x,t)\left( H- \frac{\left< X(x,t)-X_{0}, \eta \right>}{2 (t_{0}-t)} \right)^{2}d \mu_{t}\] 
+
+\end{thm}
+\begin{proof}
+To simplify the formula assume that $ \left(X_{0},t_{0}\right) = (0,0) $. We know that $ \frac{d}{dt} \mu_{t} = -H^{2} \mu_{t} $, so differentiating $ \rho $ with respect to time we get,
+\begin{align}
+    \frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  &= \int_{M_{t}}\rho(x,t)(-H^{2})d \mu_{t} + \int_{M_{t}} \frac{\dou}{\dou t}\rho(x,t)d \mu_{t}\nonumber \\
+    & = -\int_{M_{t}}\rho(x,t)H^{2}d \mu_{t} +\int_{M_{t}}\left( \frac{\left< X(x,t), H(x,t)\eta \right>}{2(-t)}\rho(x,t) \right)d\mu_{t}\nonumber \\
+    &  \qquad \qquad  + \int_{M_{t}} \left( \frac{n}{2(4 \pi)(-t)}(4 \pi)\rho(x,t) -\frac{|X(x,t)|^{2}}{4(-t)^{2}}\rho(x,t)\right)d \mu_{t}\nonumber \\ 
+    & = \int_{M_{t}}\rho\left(   \frac{n}{2(-t)} +\frac{\left< X,H \eta\right>}{2(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}\right)d \mu_{t}\label{rho0}
+    %& = -\int_{M_{t}}\rho \left| H \eta + \frac{X}{2(-t)}\right|^{2}d \mu_{t} + \int_{M_{t}}\rho \frac{ \left< X,H \eta \right>}{2(-t)} d \mu_{t} + \int_{M_{t}} \frac{n\rho}{2(-t)}d \mu_{t} \label
+\end{align}
+
+Now $ \Delta X = - H \eta $, using this relation for second term and divergence theorem we get 
+\begin{align}
+\int_{M_{t}}\rho \left< X,H \eta \right> d \mu_{t} & =  -\int_{M_{t}} \rho\left< X,\Delta X \right> d \mu_{t} \nonumber \\ 
+& = - \sum_{k=1}^{n+1}\int_{M_{t}} \rho X_{k} \Delta X_{k} d \mu_{t}\nonumber \\
+& = \sum_{k=1}^{n+1} \int_{M_{t}} \left< \nabla(\rho X_{k}), \nabla X_{k} \right>d \mu_{t}\nonumber \\ 
+& = \sum_{k=1}^{n+1} \int_{M_{t}} \left( \left< \nabla\rho, \nabla X_{k} \right>X_{k} + \rho \left< \nabla X_{k}, \nabla X_{k} \right> \right)d \mu_{t} \label{rho1}
+% & = \int_{M_{t}} \left< \nabla(\rho X), \nabla X \right>d \mu_{t}\\ 
+% & = \int_{M_{t}} \left( \rho\left< \nabla X, \nabla X  \right> + \left< \nabla \rho, \nabla X \right> X \right)
+\end{align}
+Let $ (U,\{x^{i}\}) $ be some local coordinates on the hypersurface. In these coordinates we can write $ \nabla \rho = g^{ij} \partial_{i} \rho \partial_{j} $, so $  \left< \nabla \rho , \nabla X_{k}\right> = \nabla \rho (X_{k}) = g^{ij} (\partial_{i}\rho) (\partial_{j}X_{k}) $ which implies 
+\begin{align}
+\sum_{k=1}^{n+1} \left< \nabla \rho , \nabla X_{k}  \right> X_{k} & = \sum_{k=1}^{n+1}  g^{ij} (\partial_{i}\rho) (\partial_{j}X_{k}) X_{k}\nonumber \\ 
+& = g^{ij}( \dou_i \rho) \left< X, \dou_j X \right>\nonumber \\
+& = g^{ij} \rho \left( \frac{-\left< X, \partial_{i}X \right>}{2(-t)} \right) \left< X, \dou_j X \right>\nonumber \\
+& = - \frac{\rho}{2(-t)}|X^T|^2 \label{rho2}
+\end{align}
+and 
+\begin{equation}
+\sum_{k=1}^{n+1} \rho  \left< \nabla X_{k}, \nabla X_{k} \right> = \sum_{k=1}^{n+1} \rho g^{ij} (\partial_{i} X_{k} )(\partial_{j}X_{k}) = \rho g^{ij} \left<  \partial_{i}X, \partial_{j}X \right> = \rho g^{ij}g_{ij} = n \rho \label{rho3}
+\end{equation}
+Substituting \cref{rho2} and \cref{rho3} into \cref{rho1} and multiplying by $ \frac{1}{2(-t)} $, we get 
+\begin{equation*}
+\int_{M_{t}}\rho  \frac{\left< X,H \eta \right>}{2(-t)} d \mu_{t}  = \int_{M_{t}} \rho \left( \frac{n}{2(-t)} - \frac{1}{4(-t)^2}|X^T|^2  \right) d \mu_{t} 
+\end{equation*}
+or 
+\begin{equation}
+\int_{M_{t}}\frac{n\rho}{2(-t)} d \mu_{t} = \int_{M_{t}} \rho \left(  \frac{\left< X,H \eta \right>}{2(-t)} + \frac{1}{4(-t)^2}|X^T|^2 \right)d \mu_{t}\label{rho4}
+\end{equation}
+where $ X^{T} $ denotes the tangential part of the vector $ X $. Substituting \cref{rho4} into \cref{rho0}
+\begin{align*}
+\frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  &=  \int_{M_{t}}\rho\left(\frac{\left< X,H \eta\right>}{(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}+ \frac{1}{4(-t)^2}|X^T|^2\right)d \mu_{t}\\ 
+& = -\int_{M_{t}} \rho \left( H - \frac{\left< X, \eta \right>}{2(-t)} \right)^{2} d \mu_{t}
+\end{align*}
+\end{proof}
+
+\subsection{Rescaled Monotonicity formula}
+
+From section (?) we know that the curvature blows up at the maximal time $ T $  and satisfies the inequality
+
+\[ \max_{p \in M}|A(p,t)| \ge \frac{1}{\sqrt{2(T-t)}} \]
+
+\begin{defn}
+Let $ T $ be the maximal time of existence of a mean curvature flow. If there exists a constant $ C >1 $ such that 
+
+    \[ \max_{p \in M}|A(p,t)| \le \frac{C}{\sqrt{2(T-t)}} \]
+we say the flow is developing at time $ T $ a \textit{type I singularity}.
+\end{defn}
+
+Conversely, if such a constant does not exist, that is 
+
+\[ \limsup_{t \to T} \max_{p \in M}|A(p,t)|\sqrt{T-t} = \infty \]
+
+we say that we have a \textit{type II singularity}. We will restrict ourselves to type I singularity for the rest of this section. 
+
+
+\section{Surfaces of positive mean curvature}
+
+From the maximum principle we know that if mean curvature of the initial hypersurface $M_0$ is positive then it will stay positive on $M_t$. 
+For self-similar solutions, we know that the limiting hypersurface will satisfy the equation $H = \langle x, \nu \rangle$. 
+We prove that sphere is the only compact hypersurface of positive mean curvature moving under self-similarity 
+\begin{thm}
+If $M^n$, $n\ge 2$, is compact with non-negative mean curvature $H$ and satisfies the equation $H = - \langle X, \nu \rangle$, then $M^n$ is a sphere of radius $\sqrt{n}$. 
+\end{thm}
+\begin{proof}
+Suppose the hypersurface satisfies $H = -\langle X, \nu \rangle$. Let $e_1,\ldots, e_n$ be an orthonormal frame on $M^n$, then 
+\begin{align}
+    \nabla_{i}H & = - \left< D_{e_{i}}X, \nu \right> - \left< X, \nabla_{e_{i}}\nu \right> \nonumber \\
+    & = -\left< e_{i}, \nu \right> - \left< X, \left< \nabla_{e_{i}}\nu,e_{l} \right>e_{l} \right>\nonumber \\ 
+    & = \left< X,e_{l} \right>h_{il}
+\end{align}
+\[\nabla_i \nabla_j H = h_{ij} - Hh_{il}h_{lj}+\langle x, e_l \rangle \nabla_l h_{ij}\]
+\end{proof}
+
+\section{Maximum principle}\label{max}
+We can extend the maximum principle on Euclidean space to general Riemannian manifolds. 
+\begin{lemma}
+Let 
+\end{lemma}

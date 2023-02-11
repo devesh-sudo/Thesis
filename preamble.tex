@@ -1,0 +1,153 @@
+\usepackage[english]{babel}
+% Named colors
+\usepackage[dvipsnames, table, xcdraw]{xcolor}
+\usepackage{color,soul}
+% Math stuff
+%\usepackage[no-math]{fontspec}
+%\setmainfont{Palatino Linotype}
+%\usepackage{euler}
+%\usepackage{newpxtext,newpxmath}
+\usepackage{amsmath, amsthm,  amsfonts, amssymb}
+\numberwithin{equation}{section}
+\usepackage{tikz, tikz-cd, graphicx}
+\usepackage{pgfplots}
+\usetikzlibrary{shapes}
+\pgfplotsset{compat=1.17}
+\usepackage{mathrsfs, mathtools, bm}
+%\usepackage{quiver}
+\usepackage{halloweenmath}
+% Refer
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref} 
+\usepackage[capitalize]{cleveref}
+\usepackage{comment}
+\usepackage{marginnote}
+\newenvironment{abstract}{}{}
+\usepackage{abstract}
+
+
+% Change numbering in enumerate
+\usepackage[shortlabels]{enumitem}
+\crefname{enumi}{part}{parts}
+\crefname{figure}{Figure}{Figures}
+
+
+% pagesetup
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhead{}
+%\setlength{\headheight}{0.75in}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\voffset}{-1.0in}
+%\setlength{\headsep}{10pt}
+%\setlength{\textwidth}{6.5in}
+%\setlength{\headwidth}{6.5in}
+%\setlength{\textheight}{8.75in}
+%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+%\setlength{\footskip}{0.3in}
+%\fancyhead[RO]{\thepage}
+%\fancyhead[LO]{\section}
+%\fancyhead[R]{\nouppercase\leftmark}
+\usepackage{multicol, titletoc, bookmark}
+
+
+% Colored boxes
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=1em}
+
+\theoremstyle{definition}
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+    }
+]{greenbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    }
+]{bluebox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{Mulberry!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=Mulberry, backgroundcolor=Mulberry!5,
+    }
+]{purplebox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!10,
+    }
+]{redbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{CadetBlue!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=CadetBlue, backgroundcolor=CadetBlue!5,
+    },
+    qed=\qedsymbol
+]{proofbox}
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{CadetBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=CadetBlue, backgroundcolor=CadetBlue!15,
+    }
+]{CadetBluebox}
+
+
+\renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{myproof}}{\end{myproof}}
+\declaretheorem[style = CadetBluebox, name = Theorem, numberwithin=section]{thm}
+%\declaretheorem[name = Theorem, numberwithin=section]{thm}
+%\declaretheorem[style = proofbox, name=Proof, numbered=no]{myproof}
+\declaretheorem[name=Proof, numbered=no,qed=\qedsymbol]{myproof}
+\declaretheorem[style = greenbox, name = Definition, numberwithin=section]{defn}
+\declaretheorem[style = greenbox, name = Notation]{notation}
+\declaretheorem[style = redbox, name = Proposition,sibling=thm]{proposition}
+
+\declaretheorem[style = CadetBluebox, name = Lemma, sibling=thm]{lemma}
+\declaretheorem[style = redbox, name = Corollary, numbered = no]{corollary}
+\declaretheorem[style = bluebox, name = Observation, numbered = no]{observation}
+\declaretheorem[style = bluebox, name = Example, numbered = no]{example}
+\declaretheorem[style = bluebox, name = Remark, numbered = no]{remark}
+\declaretheorem[style = purplebox, name = Problem, numbered = no]{problem}
+\declaretheorem[style = purplebox, name = Exercise, numbered = no]{exercise}
+\theoremstyle{greenbox}
+\newtheorem*{motivation}{Motivation}
+\newtheorem*{recall}{Recall}
+\newtheorem*{note}{Note}
+
+
+% Figure support.
+\usepackage{pdfpages}
+\usepackage{transparent}
+\graphicspath{{figures/}{images/}} %typical directories
+
+%math
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\dou}{\partial}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\pt}{\partial_t}
+\newcommand{\dt}{\frac{\partial}{\partial t}}
+\newcommand{\define}{:=}
+\newcommand{\Rn}{\mathbb{R}^{n+1}}

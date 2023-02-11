@@ -1,0 +1,267 @@
+\chapter{Convexity estimates}
+
+
+\section{Estimate on the scalar curvature}
+It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
+\begin{thm}
+    Let $ \mathcal{M}_{t}, t \in [0,T)$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
+    \begin{equation}
+        \lambda_{1} \ge - \eta H - C_{\eta}
+    \end{equation}
+    on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
+\end{thm}
+Let $ g_{\sigma,\eta} = \dfrac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} $
+
+
+\begin{comment}
+\begin{lemma}
+    \begin{equation}
+        | H \cdot\nabla_{i} h_{kl}  - \nabla_{i}H\cdot h_{kl}|^{2} = H^{2}| \nabla A|^{2}+ |A|^{2}| \nabla H|^{2}   - \left<  \nabla_{i}|A|^{2}, \nabla_{i}H \right>H
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    \begin{align*}
+        \left< H \cdot\nabla_{i} h_{kl}  - \nabla_{i}H\cdot h_{kl}, H \cdot\nabla_{i} h_{kl}  - \nabla_{i}H\cdot h_{kl} \right> & = H^{2}| \nabla A|^{2} + 
+    \end{align*}
+\end{proof} 
+\end{comment}
+
+%\textcolor{Red}{Better notation maybe :}
+\begin{lemma}
+    Following equality holds: 
+    \begin{equation}
+        |\nabla A \cdot H - \nabla H \otimes A|^{2} = | \nabla A|^{2}H^{2} + |A|^{2}| \nabla H|^{2} - \left<  \nabla |A|^{2}, \nabla H \right>H.
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Computing the norm, 
+    \begin{align*}
+        |\nabla A \cdot H - \nabla H \otimes A|^{2} & = \left<  \nabla A \cdot H - \nabla H \otimes A, \nabla A \cdot H - \nabla H \otimes A  \right> \\
+        & = |\nabla A|^{2}H^{2} + |\nabla H|^{2}|A|^{2} - 2H\left< \nabla A, \nabla H \otimes A \right> \\
+        & = |\nabla A|^{2}H^{2} + |\nabla H|^{2}|A|^{2} - \left< \nabla |A|^{2}, \nabla H \right>H.
+    \end{align*}
+\end{proof}
+
+The proof is divided into two parts. First part is obtaining an $ L^{p} $ estimate of $ g_{ \sigma, \eta} $ and the second part is Stampacchia iteration using Michael-Simon inequality in order to get an $ L^{\infty} $ bound. 
+
+\begin{lemma}\label{Deltag1}
+    The quantity $ \dfrac{|A|^{2}}{H^{2}} $ satisfies the differential equation 
+    \begin{equation}
+        \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} = \Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2}.
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    Computing the time derivative we get 
+    \begin{align*}
+        \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} & = \frac{1}{H^{2}} \frac{ \partial |A|^{2} }{ \partial t} - 2\frac{|A|^{2}}{H^{3}} \frac{ \partial H}{ \partial t}\\
+        & = \frac{1}{H^{2}}\left( \Delta |A|^{2} - 2|\nabla A|^{2}+2|A|^{4}\right) - 2 \frac{|A|^{2}}{H^{3}}\left( \Delta  H + |A|^{2}H\right)\\
+        & = \frac{\Delta |A|^{2}}{H^{2}} - 2 \frac{|\nabla A|^{2}}{H^{2}} - 2|A|^{2} \frac{\Delta H}{H^{3}} 
+    \end{align*}
+
+    Now calculating the Laplacian we get, \begin{align*}
+        \Delta \frac{|A|^{2}}{H^{2}} & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2}\frac{ \Delta H^{2}}{H^{4}} - \frac{2}{H^{4}} \left< \nabla |A|^{2}, \nabla H^{2} \right> + \frac{2|A|^{2}}{H^{6}}|\nabla H^{2}|^{2}\\
+        & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2} \left( \frac{2H \Delta H+ 2| \nabla H|^{2}}{H^{4}} \right)- \frac{2}{H^{4}}\left< \nabla |A|^{2}, 2H \nabla H \right> + 8 \frac{|A|^{2}}{H^{6}}|\nabla H|^{2}\\
+        & = \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right>
+    \end{align*}
+
+    which combined gives \begin{align*}
+        \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} & = \Delta \frac{|A|^{2}}{H^{2}}  - 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} + \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right> -2 \frac{|\nabla A|^{2}}{H^{2}}\\
+        & = \Delta \frac{|A|^{2}}{H^{2}} + \frac{2}{H} \left< \nabla H, \frac{\nabla |A|^{2}}{H^{2}} - \frac{2}{H^{3}}|A|^{2} \nabla H \right>  \\
+        & \qquad - \frac{2}{H^{4}}\left( |A|^{2}|\nabla H|^{2} + | \nabla A|^{2}H^{2} - H\left< \nabla |A|^{2}, \nabla H \right> \right) \\
+        & = \Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2}.
+    \end{align*}
+\end{proof} 
+
+Applying maximum principle we get that $ \frac{|A|^{2}}{H^{2}} $ is uniformly bounded so there exists a positive constant depending only on $ \mathcal{M}_{0} $ such that 
+\[ |A|^{2} \le c_{0}H^{2} \quad \text{ on } \quad \mathcal{M}_{t}, \]
+for all time $ t \in [0,T) $. 
+
+\textcolor{red}{Make it} $ g_{\sigma, \eta }\le c_{0}H^{\sigma} $
+
+
+Recall Simon's identity from \cite{huisken1984flow} \begin{equation}
+        \frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i} \nabla_{j} H \right> + |\nabla A|^{2} + Z \label{Simonid}
+\end{equation}
+
+\textcolor{red}{TO DO : Write why this isn't enough to prove the required decay}
+
+Using this we compute the time derivative of $ g_{\sigma, \eta} $
+\begin{lemma}\label{Deltag}
+    The evolution equation of $ g_{\sigma, \eta} $ is given by 
+    \begin{align}
+        \frac{ \partial g_{\sigma, \eta}}{ \partial t} =& \Delta g_{\sigma, \eta} + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g_{\sigma, \eta} \right> - \frac{\sigma (1-\sigma)}{H^{2}}g_{\sigma, \eta} | \nabla H|^{2} \nonumber\\
+    &  - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma |A|^{2} g_{\sigma, \eta}.
+    \end{align}
+\end{lemma}
+\begin{proof}
+    We can write $ g_{\sigma, \eta } = \left( \frac{|A|^{2}}{H^{2}}- (1+ \eta) \right)H^{\sigma}  $ so \begin{align*}
+        \frac{ \partial g_{\sigma, \eta}}{ \partial t} & = \left\{\Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2} \right\}H^{\sigma} \\
+        & \quad + \left( \frac{|A|^{2}}{H^{2}}- (1+ \eta) \right) \left( \Delta H^{\sigma} - \sigma(\sigma -1)H^{\sigma -2}|\nabla H|^{2} + \sigma |A|^{2}H^{\sigma } \right) \\
+        & = \Delta g_{\sigma, \eta} +2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla \frac{|A|^{2}}{H^{2}} \right>H^{\sigma}-\frac{\sigma(\sigma-1)}{H^{2}}g_{\sigma,\eta}|\nabla H|^{2} \\
+        & \quad - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma|A|^{2}g_{\sigma,\eta} \\
+        & = \Delta g_{\sigma,\eta} + 2\frac{(1-\sigma)}{H}\left(\left< \nabla H, \nabla g_{\sigma,\eta} \right> - \frac{\sigma}{H} g_{\sigma,\eta}| \nabla H|^{2}\right) - \frac{\sigma(\sigma-1)}{H^{2}}g_{\sigma,\eta}|\nabla H|^{2} \\
+        & \quad - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma|A|^{2}g_{\sigma,\eta} \\
+        & = \Delta g_{\sigma, \eta} + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g_{\sigma, \eta} \right> - \frac{\sigma (1-\sigma)}{H^{2}}g_{\sigma, \eta} | \nabla H|^{2} \\
+        &  \quad - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma |A|^{2} g_{\sigma, \eta}.
+    \end{align*}
+\end{proof}
+\begin{comment}
+    \begin{lemma}   
+    The evolution equation of $ g_{\sigma, \eta} $ is given by 
+    \begin{align}
+        \frac{ \partial g_{\sigma, \eta}}{ \partial t} =& \Delta g_{\sigma, \eta} + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g_{\sigma, \eta} \right> - \frac{\sigma (1-\sigma)}{H^{2}}g_{\sigma, \eta} | \nabla H|^{2} \nonumber\\
+    &  - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma |A|^{2} g_{\sigma, \eta}.
+    \end{align}
+\end{lemma} 
+\begin{proof}
+    We will write $ g= g_{\sigma, \eta} $ and $ \frac{ \partial}{ \partial t} = \partial_{t} $ for brevity. Using the evolution equations of $ |A|^{2}$ and $H $, 
+    \begin{align*}
+        \partial_{t} g &= \partial_{t} [(|A|^{2}-(1+\eta)H^{2})H^{\sigma-2}]\\
+        & = \{\Delta |A|^{2} -2|\nabla A|^{2}+2|A|^{4}- (1+ \eta)(2H\Delta H + 2|A|^{2}H^{2})\}H^{\sigma -2}\\
+        & \quad + (|A|^{2}-(1+\eta)H^{2})((\sigma - 2)H^{\sigma -3}\Delta H + (\sigma - 2)|A|^{2}H^{\sigma -2})\\
+        & =  \Delta (|A|^{2} - (1+ \eta)H^{2})H^{\sigma -2} - 2| \nabla A|^{2}H^{\sigma -2} + 2|A|^{4}H^{\sigma - 2}\\
+        & \quad- 2(1+ \eta)(|A|^{2}H^{2} - |\nabla H|^{2})H^{\sigma -2}  \\
+        &\quad + (|A|^{2}-(1+\eta)H^{2})( \Delta H^{\sigma -2} -(\sigma -2)(\sigma -3 )H^{\sigma -4}| \nabla H|^{2}+ (\sigma -2)|A|^{2}H^{\sigma -2})\\ 
+        & = \Delta (|A|^{2}- (1+\eta)H^{2})H^{\sigma -2}+(|A|^{2}- (1+\eta)H^{2})\Delta H^{\sigma -2} - 2|\nabla A|^{2}H^{\sigma -2}+ \sigma |A|^{4}H^{\sigma -2} \\
+        & \quad -(1+\eta)\sigma |A|^{2}H^{\sigma}
+    \end{align*} 
+
+    Where we used $ \Delta H^{2} = 2H \Delta H + 2|\nabla H|^{2} $ and $ \Delta H^{\sigma -2} =  (\sigma -2)H^{\sigma -3}\Delta H+ (\sigma -2)(\sigma -3)H^{\sigma - 4}|\nabla H|^{2}$
+
+    Now \begin{align*}
+        \Delta g & = \Delta \left( (|A|^{2}-(1+\eta)H^{2})H^{\sigma -2} \right)\\
+        & = \Delta (|A|^{2}- (1+\eta)H^{2})H^{\sigma -2}+(|A|^{2}- (1+\eta)H^{2})\Delta H^{\sigma -2} \\
+        &  \qquad +2 \left< \nabla |A|^{2}- (1+ \eta)\nabla H^{2}, \nabla H^{\sigma -2} \right>\\
+        & = \Delta (|A|^{2}- (1+\eta)H^{2})H^{\sigma -2}+(|A|^{2}- (1+\eta)H^{2})\Delta H^{\sigma -2}\\ 
+        & \qquad 2(\sigma -2)\left< |\nabla A|^{2},  \nabla H \right>H^{\sigma -3} - 2(\sigma -2)(1+ \eta)| \nabla H|^{2}H^{\sigma -2}
+    \end{align*}
+
+    Also, \begin{align*}
+        \nabla g & = \nabla \left[ (|A|^{2}- (1+\eta)H^{2})H^{\sigma -2}\right] \\
+        & = (\nabla|A|^{2}- 2(1+\eta)H\nabla H)H^{\sigma -2} + (\sigma -2)(|A|^{2}- (1+\eta)H^{2})H^{\sigma -3}\nabla H \\
+        & = (\nabla|A|^{2})H^{\sigma -2} + (\sigma -2)|A|^{2}H^{\sigma -3}\nabla H - \sigma(1+\eta)H^{\sigma -1}\nabla H
+    \end{align*}
+    which implies \begin{align*}
+        \left< \nabla H, \nabla g \right>& = \left< \nabla |A|^{2}, \nabla H \right>H^{\sigma -2} + (\sigma -2)|A|^{2}|\nabla H|^{2}H^{\sigma -3} - \sigma (1+ \eta)|\nabla H|^{2}H^{\sigma -1}
+    \end{align*}
+\end{proof}
+\end{comment}
+
+Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $
+ 
+%Let $ \vec{\lambda} = (\lambda_{1}, \ldots , \lambda_{n}) $ be the principal curvatures of the hypersurfaces $ \mathcal{M} $ and let 
+%\[ S_{k}(\mu) = \sum_{1\le i_{1}<i_{2}<\ldots<i_{k}\le n} \lambda_{i_{1}} \lambda_{i_{2}}\ldots \lambda_{i_{k}}  \]
+%denote the $ k $th elementary symmetric polynomial. 
+
+\begin{remark}
+    How Sinestrari does it in the lecture : $ \forall \eta >0 ,  \exists C_{\eta} >0 $ s.t. 
+    \[ \lambda_{1} \ge -\eta H  - C_{\eta} \]
+    for all $ t <T $ on $ \mathcal{M}_{t} $
+    
+\end{remark}
+
+\begin{lemma}
+    If $ (1+\eta)H^{2} \le |A|^{2} \le c_{0}H^{2} $ for some $ \eta, c_{0} >0 $. Then 
+    \[ |\nabla A \cdot H - \nabla H \otimes A|^{2} \ge \frac{\eta^{2}}{4n(n-1)^{2}c_{0}}H^{2}|\nabla H|^{2} \]
+\end{lemma}
+\begin{proof}
+    We break the tensor as follows \begin{align*}
+        | \nabla A \cdot H - \nabla H \otimes A|^{2} & = | \nabla A \cdot H - \frac{1}{2}\left( \nabla H \otimes A + A \otimes \nabla H  \right) - \frac{1}{2}\left( \nabla H \otimes A -  \right)
+    \end{align*}
+    DO IT IN ORIGINAL NOTATION MAYBE.
+\end{proof}
+
+\begin{lemma}
+   There exists constant $ c_{2} , c_{3}$ such that 
+    \begin{align*}
+        \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu \le& - \frac{p(p-1)}{2} \int_{ \mathcal{M}} g_{+}^{p-2}| \nabla g|^{2}d \mu - \frac{p}{c_{3}} \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{2 -\sigma}}|\nabla H|^{2} d \mu \\
+        & - p \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} d \mu + p \sigma \int_{ \mathcal{ M}}|A|^{2} g_{+}^{p} d \mu 
+    \end{align*}
+   
+\end{lemma}
+
+\begin{proof}
+    Differentiating with respect to time and using \cref{1} for $ p \ge 2 $
+    \begin{align}
+        \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu  & =  \int \left(pg_{+}^{p-1} \partial_{t}g - H^{2}g_{+}^{p}\right) d \mu \nonumber \\
+        & \le \int pg_{+}^{p-1}\left( \Delta g + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g\right>  - \frac{2}{H^{4-\sigma}}|H \nabla_{i}h_{kl} - \nabla_{i}Hh_{kl}|^{2}\right)d \mu  \nonumber\\
+        & \quad + \sigma |A|^{2} g \label{Lpg}
+    \end{align}
+
+    Using integration by parts, 
+    \begin{align}
+        \int pg_{+}^{p-1} \Delta g d \mu & = - p\int \left< \nabla g_{+}^{p-1}, \nabla g \right> d \mu \\
+        & = -p(p-1) \int g_{+}^{p-2}| \nabla g|^{2} d \mu \label{byparts}
+    \end{align}
+    Also from proposition \cref{12} we deduce that if $ c_{1} \ge 4 n(n-1)^{2}c_{0} \eta^{-2} $ 
+    \begin{align}
+        \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} &\ge \frac{g_{+}^{p-1}}{c_{1}H^{2-\sigma}}| \nabla H|^{2} \nonumber\\
+       % & = \frac{g_{+}^{p-1}}{2c_{1}H^{2-\sigma}}| \nabla H|^{2} + \frac{g_{+}^{p}}{2c_{1}H^{2}}| \nabla H|^{2} \left( \frac{H^{\sigma}}{g_{+}} \right)\\
+        & \ge \frac{g_{+}^{p-1}}{2c_{1}H^{2-\sigma}}| \nabla H|^{2} + \frac{1}{2c_{0}c_{1}} \frac{g_{+}^{p}}{H^{2}}| \nabla H|^{2} \label{nablaH}
+    \end{align}
+    To handle the gradient term, let $ p \ge \max \{2,1+4c_{0}c_{1} \} $ to obtain \begin{align*}
+        2(1-\sigma)p \frac{g_{+}^{p-1}}{H} \left< \nabla H, \nabla g \right> & \le 2p \frac{g_{+}^{p-1}}{H} |\nabla H| |\nabla g| \\
+        & \le \frac{p}{2c_{0}c_{1}} \frac{g_{+}^{p}}{H^{2}}|\nabla H|^{2} + 2c_{0}c_{1}pg_{+}^{p-2}|\nabla g|^{2} \quad [\text{Peter-Paul inequality}] \\
+        & \le p \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} - p \frac{g_{+}^{p-1}}{2c_{1}H^{2-\sigma}}|\nabla H|^{2} \\
+        & \quad + \frac{p(p-1)}{2}g_{+}^{p-2}|\nabla g|^{2} \qquad \qquad\quad  \qquad[\text{Using \cref{nablaH}}]
+    \end{align*}
+
+    Substituting this back in \cref{Lpg} and using integration by parts from \cref{byparts}, \begin{align*}
+        \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu \le & -p(p-1)\int g_{+}^{p-2}|\nabla g|^{2} d \mu + p \int \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2}d \mu & \\
+        & \quad + \frac{p(p-1)}{2}\int g_{+}^{p-2}|\nabla g|^{2}d \mu - \frac{p}{c_{3}} \int \frac{g_{+}^{p-1}}{H^{2-\sigma}}|\nabla H|^{2} d \mu \\
+        & \quad - 2p \int \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2}d \mu + p \sigma \int |A|^{2}g_{+}^{p}d \mu
+    \end{align*}
+    which gives the desired inequality with $ c_{3} = \frac{1}{2c_{1}} $.
+\end{proof}
+To handle the bad positive term appearing in the last we use the following lemma
+\begin{lemma}
+    There exists a constant $ c_{4} $ such that  \begin{align*}
+        \frac{1}{c_{4}} \int |A|^{2}g_{+}^{p} d \mu & \le \left( p+ \frac{p}{\beta} \right) \int g_{+}^{p-2}| \nabla g|^{2} + (1+ \beta p)\int \frac{g_{+}^{p-1}}{H^{2-\sigma}}| \nabla H|^{2} d \mu \\
+        & \quad + \int \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} d \mu
+    \end{align*}
+    for any $ \beta >0 , p>2$.
+\end{lemma}
+\begin{comment}
+    \begin{align*}
+    \Delta g & = \Delta  \left(\frac{|A|^{2}}{H^{2}} \right)H^{\sigma} + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\Delta H^{\sigma} + 2\left<  \nabla \left( \frac{|A|^{2}}{H^{2}}\right) , \nabla H^{\sigma} \right> \\
+    & = \left( \frac{\Delta |A|^{2}}{H^{2}} -|A|^{2} \frac{\Delta H^{2}}{H^{4}} - \frac{2}{H^{4}}\left< \nabla |A|^{2}, \nabla H^{2}  \right>+ \frac{2|A|^{2}}{H^{6}}|\nabla H^{2}|^{2}\right)H^{\sigma} \\
+    & \quad + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\left( \sigma H^{\sigma -1}\Delta H + \sigma (\sigma -1)H^{\sigma -2}| \nabla H|^{2} \right) \\
+    & = \frac{\Delta |A|^{2}}{H^{2-\sigma}} - |A|^{2}\left( \frac{2H \Delta H + |\nabla H|^{2}}{H^{4-\sigma}} \right) - \frac{2}{H^{4-\sigma}}\left( 4H\left< \nabla A, \nabla H \otimes A \right> \right) + 8|A|^{2}\frac{|\nabla H|^{2}}{H^{4-\sigma}} \\
+    & \quad 
+\end{align*}
+\end{comment}
+\begin{proof}
+    From the calculation of Laplacian in \cref{Deltag1} we know that \begin{align*}
+        \Delta g & = \Delta  \left(\frac{|A|^{2}}{H^{2}} \right)H^{\sigma} + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\Delta H^{\sigma} + 2\left<  \nabla  \frac{|A|^{2}}{H^{2}} , \nabla H^{\sigma} \right> \\
+        & = \left( \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right> \right)H^{\sigma} \\
+        & \quad + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\left( \sigma H^{\sigma-1}\Delta H + \sigma (\sigma -1)H^{\sigma -2}|\nabla H|^{2} \right) \\
+        & \quad + 2\sigma H^{\sigma-1}\left< \frac{\nabla|A|^{2}}{H^{2}} -2 \frac{|A|^{2}}{H^{3}} \nabla H , \nabla H\right> \\
+        & =  \frac{\Delta |A|^{2}}{H^{2-\sigma}} + \left( (\sigma-2) \frac{|A|^{2}}{H^{3-\sigma}} - \sigma(1+\eta)H^{\sigma-1} \right)\Delta H + 6 \frac{|A|^{2}}{H^{4-\sigma}}|\nabla H|^{2} - \frac{4}{H^{3-\sigma}}\left< \nabla |A|^{2}, \nabla H \right>  \\
+        & \quad + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} + \frac{2 \sigma}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right> - 4\sigma \frac{|A|^{2}}{H^{4-\sigma}}|\nabla H|^{2} \\
+        & =  \frac{\Delta |A|^{2}}{H^{2-\sigma}} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H + \left( 6-4 \sigma \right)\frac{|A|^{2}}{H^{4-\sigma}}|\nabla H|^{2}  \\
+        & \quad - \frac{2}{H^{4-\sigma}}H\left< \nabla |A|^{2}, \nabla H \right> + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} + \frac{2(\sigma -1)}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right> \\
+        & = \frac{\Delta |A|^{2}}{H^{2-\sigma}} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H + \left( 6-4 \sigma \right)\frac{|A|^{2}}{H^{4-\sigma}}|\nabla H|^{2}  \\
+        & \quad - \frac{2}{H^{4-\sigma}}\left( |\nabla A|^{2}H^{2} + |A|^{2}|\nabla H|^{2}-|\nabla A \cdot H - \nabla H \otimes A|^{2} \right) + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} \\
+        & \quad + \frac{2(\sigma -1)}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right>  \\
+        & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \\
+        & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2}+ \frac{2(\sigma -1)}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right>.
+    \end{align*}
+    Now similar to time derivative we calculate the gradient of $ g $ with $ H $, \begin{align*}
+        \left< \nabla g, \nabla H \right> & = \left< \nabla\frac{ |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} + \sigma\left( \frac{|A|^{2}}{H^{2}} - (1+ \eta) \right) H^{\sigma-1}| \nabla H|^{2} \\
+        & = \left< \frac{\nabla |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} -2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2}+ \sigma \frac{g}{H}| \nabla H|^{2},
+    \end{align*}
+
+    Also recall Simon's identity, and using this to eliminate the mixed inner product term 
+    \begin{align*}
+        \Delta g & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \\
+        & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} \\
+        & \quad + \frac{2(\sigma -1)}{H^{3-\sigma}}\left( \left< \nabla g, \nabla H \right> +2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2} - \sigma \frac{g}{H}|\nabla H|^{2} \right)  \\
+        & = \frac{2\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>+2Z}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \\
+        & \quad - \sigma(\sigma-1) \frac{g}{H}|\nabla H|^{2} + \frac{2(\sigma -1)}{H^{3-\sigma}}\left< \nabla g, \nabla H \right>
+    \end{align*}
+
+    Multiplying this equation by $ g_{+}^{p}H^{-\sigma} $ \begin{align*}
+        - \int \frac{2Z}{H^{2}}g_{+}^{p} d \mu & = 
+    \end{align*}
+    
+\end{proof}

@@ -1,0 +1,51 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{ACGL22}
+
+\bibitem[ACGL22]{andrews2022extrinsic}
+Ben Andrews, Bennett Chow, Christine Guenther, and Mat Langford,
+  \emph{Extrinsic geometric flows}, vol. 206, American Mathematical Society,
+  2022.
+
+\bibitem[And94]{andrews1994contraction}
+Ben Andrews, \emph{Contraction of convex hypersurfaces in euclidean space},
+  Calculus of Variations and Partial Differential Equations \textbf{2} (1994),
+  no.~2, 151--171.
+
+\bibitem[And12]{andrews2012noncollapsing}
+\bysame, \emph{Noncollapsing in mean-convex mean curvature flow}, Geometry \&
+  Topology \textbf{16} (2012), no.~3, 1413--1418.
+
+\bibitem[BH16]{brendle2016mean}
+Simon Brendle and Gerhard Huisken, \emph{Mean curvature flow with surgery of
+  mean convex surfaces in $\mathbb{R}^3$}, Inventiones mathematicae
+  \textbf{203} (2016), no.~2, 615--654.
+
+\bibitem[Bre15]{brendle2015sharp}
+Simon Brendle, \emph{A sharp bound for the inscribed radius under mean
+  curvature flow}, Inventiones mathematicae \textbf{202} (2015), no.~1,
+  217--237.
+
+\bibitem[HS99]{huisken1999mean}
+Gerhard Huisken and Carlo Sinestrari, \emph{Mean curvature flow singularities
+  for mean convex surfaces}, Calculus of Variations and Partial Differential
+  Equations \textbf{8} (1999), no.~1, 1--14.
+
+\bibitem[Hui84]{huisken1984flow}
+Gerhard Huisken, \emph{Flow by mean curvature of convex surfaces into spheres},
+  Journal of Differential Geometry \textbf{20} (1984), no.~1, 237--266.
+
+\bibitem[Hui90]{huisken1990asymptotic}
+\bysame, \emph{Asymptotic behavior for singularities of the mean curvature
+  flow}, Journal of Differential Geometry \textbf{31} (1990), no.~1, 285--299.
+
+\bibitem[Man11]{mantegazza2011lecture}
+Carlo Mantegazza, \emph{Lecture notes on mean curvature flow}, vol. 290,
+  Springer Science \& Business Media, 2011.
+
+\end{thebibliography}

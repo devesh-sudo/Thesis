@@ -1,0 +1,32 @@
+\PassOptionsToPackage{usenames,svgnames,dvipsnames,table}{xcolor}
+\documentclass[11pt,twoside=semi]{scrbook}
+
+\input{preamble}
+\begin{document}
+%\titlehead{{\Large Chennai Mathematical Institute
+%\hfill SS~2023\\}
+%Chennai}
+%\subject{Dissertation}
+\title{Mean Curvature Flow}
+\author{Devesh Rajpal}
+\date{}
+\publishers{Adviser : Prof. Ben Andrews}
+\frontmatter
+\maketitle
+\setcounter{page}{4}
+ 
+
+\include{Preface.tex}
+\mainmatter
+\tableofcontents   
+
+\include{Introduction.tex}
+\include{Convexity_Estimates.tex}
+\include{Noncollapsing.tex}
+\backmatter
+\bibliographystyle{amsalpha} % We choose the "amsalpha" reference style
+\bibliography{ref} % Entries are in the ref.bib file
+\nocite{*}
+%\printindex
+
+\end{document}
