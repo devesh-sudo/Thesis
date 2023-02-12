@@ -1457,6 +1457,9 @@ INPUT Convexity_Estimates.aux
 INPUT ./Noncollapsing.aux
 INPUT Noncollapsing.aux
 INPUT Noncollapsing.aux
+INPUT ./Convergence_of_Manifolds.aux
+INPUT Convergence_of_Manifolds.aux
+INPUT Convergence_of_Manifolds.aux
 OUTPUT Thesis_MCF.aux
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1653,6 +1656,15 @@ INPUT ./Noncollapsing.tex
 INPUT Noncollapsing.tex
 INPUT ./Noncollapsing.tex
 INPUT Noncollapsing.tex
+INPUT ./Convergence_of_Manifolds.tex
+OUTPUT Convergence_of_Manifolds.aux
+INPUT ./Convergence_of_Manifolds.tex
+INPUT ./Convergence_of_Manifolds.tex
+INPUT ./Convergence_of_Manifolds.tex
+INPUT ./Convergence_of_Manifolds.tex
+INPUT Convergence_of_Manifolds.tex
+INPUT ./Convergence_of_Manifolds.tex
+INPUT Convergence_of_Manifolds.tex
 INPUT ./Thesis_MCF.bbl
 INPUT Thesis_MCF.bbl
 INPUT ./Thesis_MCF.bbl
@@ -1670,6 +1682,9 @@ INPUT Convexity_Estimates.aux
 INPUT ./Noncollapsing.aux
 INPUT Noncollapsing.aux
 INPUT Noncollapsing.aux
+INPUT ./Convergence_of_Manifolds.aux
+INPUT Convergence_of_Manifolds.aux
+INPUT Convergence_of_Manifolds.aux
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
