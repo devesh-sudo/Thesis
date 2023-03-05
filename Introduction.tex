@@ -156,7 +156,15 @@ converge uniformly in the smooth topology to a smooth embedding whose image coin
 \end{thm}
 \subsection{Long time existence}
 
-In this subsection we will prove that blow up second fundamental form is the only obstruction for continuing the flow. 
+In this subsection we will prove that blowing up of second fundamental form is the only obstruction for continuing the flow. The proof goes by contradiction, relying on the Bernstein-Bando-Shi estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}.
+
+\begin{thm}
+    Let $ X : M^{n} \times [0,T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. If $ X $ is maximal then $ T< \infty $ and 
+    \[ \sup_{M^{n} \times [0,T)} |A| = \infty.\]
+\end{thm}
+\begin{proof}
+    Assume on the contrary that $ \sup_{M^{n} \times [0,T)}|A|^{2} \le C $. Our aim is to prove that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow.
+\end{proof}
 \subsection{Pinching estimate}
 
 The quantity $ \frac{|A|^{2} - \frac{H^{2}}{n}}{H^{2}} = \frac{1}{n} \sum_{i<j}^{} \left( \frac{\kappa_{i}}{H}- \frac{\kappa_{j}}{H} \right)^{2}  $ is scaling invariant and measures the roundness of the hypersurface. If we compute the evolution equation we get \begin{equation}

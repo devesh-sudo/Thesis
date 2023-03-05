@@ -1,4 +1,41 @@
 \chapter{Convergence of Manifolds}
 
 
-For understanding the singularity of mean curvature flow, it is essential to understand the convergence of manifolds. We'll develop a convergence criterion applicable for a remarkable number of results using Arzel\`a-Ascoli argument. 
+For understanding the singularity of mean curvature flow, it is essential to understand the convergence of manifolds. We will develop a convergence criterion applicable for a remarkable number of results using Arzel\`a-Ascoli argument. We will follow the exposition from \cite{chow2007ricci} and \cite{andrews2022extrinsic}.
+
+\section{Cheeger-Gromov convergence}
+
+\begin{defn}
+    Let $ K \subset M $ be a compact set and let $ \{g_{k}\}_{k \in \N} $, $ g_{\infty} $, and $ g $ be Riemannian metric on $ \mathcal{M}$. For $ p \in \{0\} \cup \N $, we say that $ g_{k} $ \textbf{converges in $ C^{p} $ to $ g_{\infty} $ uniformly in $ K $} if for every $ \epsilon >0 $ there exists $ k_{0} = k_{0}(\epsilon) $ such that for $ k \ge k_{0} $, 
+    \[ \sup_{0 \le \alpha \le p} \sup_{x \in K}| \nabla^{\alpha}(g_{k}-g_{\infty})|_{g} < \epsilon \]
+\end{defn}
+
+Given a manifold $ \mathcal{M} $, a sequence of open sets $ \{U_{i}\} $ is said to be an \textbf{exhaustion of $ \mathcal{M} $}  if for every compact set $ K \subset \mathcal{M} $ there exists an integer $ i_{0} $ such that $ K \in U_{i} $ for all $ i \ge i_{0} $.
+
+\begin{defn}
+    Let $ \mathcal{M} $ be a smooth manifold with exhaustion $ \{U_{k}\} $ and Riemannian metrics $ \{g_{k}\} $. We say that $ (U_{k}, g_{k}) $ converges in $ C^{\infty} $ to $ (\mathcal{M}, g_{\infty}) $ if for any compact set $ K \subset \mathcal{M} $ and any $ p >0 $ there exists $ k_{0} = k_{0}(K,p) $ such that $ g_{k} $ converges in $ C^{p} $ to $ g_{\infty} $ uniformly in $ K $ for every $ p\ge k_{0} $.
+\end{defn}
+\begin{defn}
+    A \textbf{pointed Riemannian manifold}  is a $ 3 $-tuple $ (M,g,O) $ where $ \mathcal{M} $ is a Riemannian manifold with metric $ g $ and $ O \in \mathcal{M} $ is a choice of point usually called basepoint. If $ g $ is a complete metric we say that the $ 3 $-tuple is a \textbf{complete pointed Riemannian manifold}.
+\end{defn}
+
+\begin{defn}
+    A sequence $ \{ (\mathcal{M}^{n}_{k},g_{k},O_{k})\} $ of complete pointed Riemannian manifolds \textbf{converges} to a complete Riemannian manifold $ (M_{\infty}^{n}, g_{\infty}, O_{\infty}) $ if there exists \begin{enumerate}
+        \item an exhaustion $ \{U_{k}\}_{k \in \N} $ of $ \mathcal{M}_{\infty} $ by open sets with $ O_{k} \in U_{K} $ and 
+        \item a sequence of diffeomorphisms $ \Phi_{k} : U_{k} \to V_{k} = \Phi(U_{k}) \in \mathcal{M}_{k} $ with $ \Phi(O_{k}) = O_{\infty} $
+    \end{enumerate}
+    such that $ (U_{k},\Phi^{*}(g_{k}|_{V_{k}})) $ converges in $ C^{\infty} $ to $ (\mathcal{M}_{\infty}, g_{\infty}) $ on compact sets in $ \mathcal{M}_{\infty} $.
+\end{defn}
+
+The above convergence is referred to as \textbf{Cheeger-Gromov convergence} in $ C^{\infty} $.
+
+\begin{defn}
+    A family of Riemannian manifolds is said to have \textbf{bounded geometry} if there exists positive constant $ C_{p} $ such that 
+    \[ |\nabla^{p} \Rm| \le C_{p} \]
+    for all $ p \in \{0\} \cup \N $.
+\end{defn}
+
+\begin{thm}[Compactness theorem]
+    
+\end{thm}
+\section{}

@@ -1,0 +1,2 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QCheeger-Gromov convergence.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe proof goes by contradiction, relying on the Bernstein-Bando-Shi estimates.\\E$"}

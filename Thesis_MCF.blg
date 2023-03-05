@@ -6,46 +6,47 @@ A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Convexity_Estimates.aux
 A level-1 auxiliary file: Noncollapsing.aux
 A level-1 auxiliary file: Convergence_of_Manifolds.aux
+A level-1 auxiliary file: Viscosity_Solutions.aux
 The style file: amsalpha.bst
 Database file #1: ref.bib
-You've used 10 entries,
+You've used 12 entries,
             2624 wiz_defined-function locations,
-            626 strings with 5764 characters,
-and the built_in function-call counts, 3529 in all, are:
-= -- 326
-> -- 119
-< -- 10
-+ -- 37
-- -- 36
-* -- 311
-:= -- 561
-add.period$ -- 10
-call.type$ -- 10
-change.case$ -- 55
-chr.to.int$ -- 10
-cite$ -- 10
-duplicate$ -- 153
-empty$ -- 298
-format.name$ -- 53
-if$ -- 706
+            640 strings with 6182 characters,
+and the built_in function-call counts, 4471 in all, are:
+= -- 403
+> -- 187
+< -- 12
++ -- 63
+- -- 61
+* -- 403
+:= -- 724
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 74
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 184
+empty$ -- 356
+format.name$ -- 80
+if$ -- 884
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 40
-num.names$ -- 28
-pop$ -- 61
+missing$ -- 28
+newline$ -- 47
+num.names$ -- 34
+pop$ -- 82
 preamble$ -- 1
-purify$ -- 65
+purify$ -- 86
 quote$ -- 0
-skip$ -- 97
+skip$ -- 114
 stack$ -- 0
-substring$ -- 243
-swap$ -- 13
-text.length$ -- 10
-text.prefix$ -- 7
+substring$ -- 283
+swap$ -- 16
+text.length$ -- 12
+text.prefix$ -- 8
 top$ -- 0
-type$ -- 68
+type$ -- 80
 warning$ -- 0
-while$ -- 35
-width$ -- 13
-write$ -- 119
+while$ -- 42
+width$ -- 16
+write$ -- 142

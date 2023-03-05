@@ -1460,6 +1460,9 @@ INPUT Noncollapsing.aux
 INPUT ./Convergence_of_Manifolds.aux
 INPUT Convergence_of_Manifolds.aux
 INPUT Convergence_of_Manifolds.aux
+INPUT ./Viscosity_Solutions.aux
+INPUT Viscosity_Solutions.aux
+INPUT Viscosity_Solutions.aux
 OUTPUT Thesis_MCF.aux
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1592,6 +1595,7 @@ INPUT ./Preface.tex
 INPUT Preface.tex
 INPUT ./Preface.tex
 INPUT Preface.tex
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1613,7 +1617,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
@@ -1665,6 +1668,15 @@ INPUT ./Convergence_of_Manifolds.tex
 INPUT Convergence_of_Manifolds.tex
 INPUT ./Convergence_of_Manifolds.tex
 INPUT Convergence_of_Manifolds.tex
+INPUT ./Viscosity_Solutions.tex
+OUTPUT Viscosity_Solutions.aux
+INPUT ./Viscosity_Solutions.tex
+INPUT ./Viscosity_Solutions.tex
+INPUT ./Viscosity_Solutions.tex
+INPUT ./Viscosity_Solutions.tex
+INPUT Viscosity_Solutions.tex
+INPUT ./Viscosity_Solutions.tex
+INPUT Viscosity_Solutions.tex
 INPUT ./Thesis_MCF.bbl
 INPUT Thesis_MCF.bbl
 INPUT ./Thesis_MCF.bbl
@@ -1685,6 +1697,9 @@ INPUT Noncollapsing.aux
 INPUT ./Convergence_of_Manifolds.aux
 INPUT Convergence_of_Manifolds.aux
 INPUT Convergence_of_Manifolds.aux
+INPUT ./Viscosity_Solutions.aux
+INPUT Viscosity_Solutions.aux
+INPUT Viscosity_Solutions.aux
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1695,6 +1710,7 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb

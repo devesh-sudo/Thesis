@@ -1,2 +1,7 @@
 codimension
 noncollapsing
+supremum
+basepoint
+diffeomorphisms
+Cheeger-Gromov
+Ricci
