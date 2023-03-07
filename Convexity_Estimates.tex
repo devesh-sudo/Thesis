@@ -1,12 +1,13 @@
 \chapter{Convexity estimates}
 
+As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives rise to a convex ancient solution.
 
-\section{Estimate on the scalar curvature}
+\section{Estimate of $ S_{2} $}
 It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 \begin{thm}
-    Let $ \mathcal{M}_{t}, t \in [0,T)$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
+    Let $ X : M^{n} \times [0,T) \to \Rn$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
     \begin{equation}
-        \lambda_{1} \ge - \eta H - C_{\eta}
+        S_{2} \ge - \eta H^{2} - C_{\eta}
     \end{equation}
     on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 \end{thm}
@@ -177,7 +178,7 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
         \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu \le& - \frac{p(p-1)}{2} \int_{ \mathcal{M}} g_{+}^{p-2}| \nabla g|^{2}d \mu - \frac{p}{c_{3}} \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{2 -\sigma}}|\nabla H|^{2} d \mu \\
         & - p \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} d \mu + p \sigma \int_{ \mathcal{ M}}|A|^{2} g_{+}^{p} d \mu 
     \end{align*}
-   
+   for any $ p \ge c_{2} $.
 \end{lemma}
 
 \begin{proof}
@@ -265,7 +266,7 @@ To handle the bad positive term appearing in the last we use the following lemma
     \end{align*}
     \end{proof}
 
-    \begin{proposition}
+    \begin{proposition}\label{Lpbound}
         For any $ \eta \in (0,1) $ there exists constants $ c_{5},.. $ such that the $ L^{p}( \mathcal{M}) $ norm of $ (g_{\sigma, \eta})_{+} $ is non-decreasing function of $ t $ if the following holds 
         \[ p \ge c_{5}, \qquad \sigma \le (c_{6}p)^{- \frac{1}{2}} \]
         
@@ -277,23 +278,43 @@ To handle the bad positive term appearing in the last we use the following lemma
     \begin{thm}
         Main theorem
     \end{thm}
+
+    We complete the proof of theorem \cref{1} using Stampacchia iteration which gives an $ L^{\infty} $ bound from the $ L^{p} $ bounds.
+    \vspace{1pt}
     \begin{proof}
-        
+        [Stampacchia iteration]
+
+         Let $ k \ge k_{0} $, where $$ k_{0} = \sup_{\sigma \in [0,1]} \sup_{\mathcal{M}_{0}} g_{\sigma, \eta} $$
+        Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v $ with respect to time we get for $ p $ large enough (similar to Lemma 2.1.6 \cref{2})
+        \begin{equation}
+            \frac{d}{dt} \int_{\mathcal{M}_{t}}v^{2} d \mu + \int_{\mathcal{M}_{t}} v^{2} d \mu \le \sigma p \int_{\mathcal{M}_{t}} |A|^{2}v^{2} d \mu \le c_{0} \sigma p \int_{A(k,t)}H^{2}g_{\sigma, \eta}^{p} d \mu \label{vestimate}
+        \end{equation}
+        Also from the Michael-Simon result in \cite{https://doi.org/10.1002/cpa.3160260305}, we have a Sobolev-type inequality given by 
+        \begin{equation}
+            \left( \int_{\mathcal{M}_{t}}v^{2q} d \mu \right)^{\frac{1}{q}} \le C(n) \int_{\mathcal{M}_{t}} |\nabla v|^{2} d \mu +C(n)\left( \int_{A(k,t)}H^{n}d \mu \right)^{\frac{2}{n}}\left( \int_{\mathcal{M}_{t}}v^{2q} d \mu \right)^{\frac{1}{q}} \label{MS}
+        \end{equation}
+        where $ q = \frac{n}{n-2}$ if $ n >2 $ and an arbitrary number greater than $ 1 $ if $ n=2 $. We can estimate the $ H^{n} $ factor in the integral on $ A(k,t) $ using the previous proposition and the equality (\textcolor{red}{Rephrase this better})
+        \[ \int_{\mathcal{M}_{t}} H^{n} g_{\sigma, \eta}^{p}d \mu = \int_{\mathcal{M}_{t}}g_{\sigma', \eta}^{p} d \mu \]
+        where $ \sigma' = \sigma + \frac{n}{p} $. Note that 
+        \[ \sigma' = \sigma + \frac{n}{p} \le \frac{1}{2\sqrt{c_{6}p}} + \frac{1}{\sqrt{p}} \frac{n}{\sqrt{p}} \le \frac{1}{\sqrt{c_{6}p}} \] 
+        so by \cref{Lpbound}, \begin{align*}
+            \left( \int_{A(k,t)} H^{n} d \mu \right)^{\frac{2}{n}} &\le \left( \int_{A(k,t)}H^{n} \left(\frac{g_{\sigma, \eta}^{p}}{k}\right) d \mu \right)^{\frac{2}{n}} \\
+            & = k^{-\frac{2p}{n}} \left( \int_{A(k,t)}g_{\sigma',\eta}^{p}d \mu \right)^{\frac{2}{n}} \\
+            & \le k^{-\frac{2p}{n}} \left( \int_{\mathcal{M}_{t}} (g_{\sigma',\eta})_{+}^{p} d \mu\right)^{\frac{2}{n}} \\
+            & \le \left( \frac{|\mathcal{M}_{0}|k_{0}}{k} \right)^{\frac{2p}{n}}
+        \end{align*}
+        We can fix $ k_{1} > k_{0} $ such that for any $ k \ge k_{1} $ the term $ \int_{A(k,t)}H^{n}d \mu $  in \cref{MS} is less than $ \frac{1}{2C(n)} $ which added with \cref{vestimate} gives
+        \begin{equation}
+            \frac{d}{dt}\int_{\mathcal{M}_{t}} v^{2}d \mu + \frac{1}{2C(n)}\left( \int_{\mathcal{M}_{t}}v^{2q}d \mu \right)^{\frac{1}{q}} \le c_{0} \sigma p \int_{A(k,t)} H^{2}g_{\sigma, \eta}^{p} d \mu \label{dv2dt}
+        \end{equation}
+
+        Let $ t_{0} \in [0,T] $ be the time when $ \sup_{t \in [0,T)} \int_{\mathcal{M}_{t}} v^{2} d \mu $ is attained (we let $ t_{0}=T $ if it is not attained in the interior). Integrating \cref{dv2dt} from $ 0 $ to $ t_{0} $, \begin{equation}
+            \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu+ \frac{1}{2C(n)} \int_{0}^{t_{0}} \left( \int_{\mathcal{M}_{t}}v^{2q} d \mu\right)^{\frac{1}{q}}dt \le c_{0} \sigma p \int_{0}^{t_{0}} \int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
+        \end{equation}
+        Where we used the fact that $ k>k_{0} \ge \sup_{\mathcal{M}_{0}}g_{\sigma,\eta} $ so $ \int_{\mathcal{M}_{0}}v^{2}d \mu = 0 $. Now integrating \cref{dv2dt} from $ t_{0} $ to $ T $, \begin{equation}
+            \int_{\mathcal{M}_{T}}v^{2}d \mu - \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu + \frac{1}{2C(n)} \int_{t_{0}}^{T} \left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}} dt \le c_{0}\sigma p \int_{t_{0}}^{T} \int_{A(k,t)} H^{2}g_{\sigma,\eta}^{p} d \mu dt
+        \end{equation}
+         
     \end{proof}
-    Let $t_0$ be the time when the supremum of $\int v^2$ occurs (if not at $T$)
 
  
-
-First, integrate the previous inequality (the second displayed equation on Huisken p.251) from $0$ to $t_0$ to get
-
-$$
-\sup_{[0,T]}\int v^2 + c_n\int_0^{t_0}(\int v^{2q})^{1/q}dt\leq \sigma p\int_0^{t_0}\int_{A(k)}H^2f_\sigma^pd\mu dt
-$$
-
-Also integrate from $t_0$ to $T$, to get
-
-$$
--\sup_{[0,T]}\int v^2+c_n\int_{t_0}^{T}(\int v^{2q})^{1/q}dt\leq \sigma p\int_{t_0}^{T}\int_{A(k)}H^2f_\sigma^pd\mu dt
-$$
-
-(throwing away the term $\int v^2(T)$).  Now add half the second inequality to the first.

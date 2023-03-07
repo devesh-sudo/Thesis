@@ -42,10 +42,14 @@ Bennett Chow, Sun-Chin Chu, David Glickenstein, Christine Guenther, Jim
 Richard~S Hamilton, \emph{Three-manifolds with positive ricci curvature},
   Journal of Differential geometry \textbf{17} (1982), no.~2, 255--306.
 
-\bibitem[HS99]{huisken1999mean}
-Gerhard Huisken and Carlo Sinestrari, \emph{Mean curvature flow singularities
-  for mean convex surfaces}, Calculus of Variations and Partial Differential
-  Equations \textbf{8} (1999), no.~1, 1--14.
+\bibitem[HS99a]{huisken1999convexity}
+Gerhard Huisken and Carlo Sinestrari, \emph{Convexity estimates for mean
+  curvature flow and singularities of mean convex surfaces}.
+
+\bibitem[HS99b]{huisken1999mean}
+\bysame, \emph{Mean curvature flow singularities for mean convex surfaces},
+  Calculus of Variations and Partial Differential Equations \textbf{8} (1999),
+  no.~1, 1--14.
 
 \bibitem[Hui84]{huisken1984flow}
 Gerhard Huisken, \emph{Flow by mean curvature of convex surfaces into spheres},
@@ -58,6 +62,11 @@ Gerhard Huisken, \emph{Flow by mean curvature of convex surfaces into spheres},
 \bibitem[Man11]{mantegazza2011lecture}
 Carlo Mantegazza, \emph{Lecture notes on mean curvature flow}, vol. 290,
   Springer Science \& Business Media, 2011.
+
+\bibitem[MS73]{https://doi.org/10.1002/cpa.3160260305}
+J.~H. Michael and L.~M. Simon, \emph{Sobolev and mean-value inequalities on
+  generalized submanifolds of rn}, Communications on Pure and Applied
+  Mathematics \textbf{26} (1973), no.~3, 361--379.
 
 \bibitem[Zhu02]{zhu2002lectures}
 Xi-Ping Zhu, \emph{Lectures on mean curvature flows}, vol.~32, American

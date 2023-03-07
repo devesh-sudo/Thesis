@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.23)  5 MAR 2023 02:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.23)  8 MAR 2023 02:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1054,7 +1054,7 @@ File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
 \AM@templatesizebox=\box142
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
-)) (./Thesis_MCF.aux (./Preface.aux) (./Introduction.aux) (./Convexity_Estimates.aux) (./Noncollapsing.aux) (./Convergence_of_Manifolds.aux) (./Viscosity_Solutions.aux))
+)) (./Thesis_MCF.aux (./Preface.aux) (./Introduction.aux) (./Convexity_Estimates.aux) (./Noncollapsing.aux) (./Convergence_of_Manifolds.aux))
 \openout1 = `Thesis_MCF.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1164,7 +1164,6 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
-Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 )
 \tf@toc=\write5
 \openout5 = `Thesis_MCF.toc'.
@@ -1301,22 +1300,31 @@ Package mdframed Info: mdframed detected package amsthm
 
  (./Convexity_Estimates.tex
 chapter 2.
-Package mdframed Info: mdframed works in twoside mode on input line 7.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 5.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5.
+
+Package mdframed Info: mdframed works in twoside mode on input line 8.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 7.
+(mdframed)              on input line 8.
 Excluding 'comment' comment.
-Package mdframed Info: mdframed works in twoside mode on input line 31.
+Package mdframed Info: mdframed works in twoside mode on input line 32.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 31.
-Package mdframed Info: mdframed works in twoside mode on input line 47.
+(mdframed)              on input line 32.
+Package mdframed Info: mdframed works in twoside mode on input line 48.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 47.
-Package mdframed Info: You first box width is to small
- mdframed fixed it
-(mdframed)              on input line 52.
+(mdframed)              on input line 48.
  [15
 
 
@@ -1324,40 +1332,41 @@ Package mdframed Info: You first box width is to small
 
 
 ]
-Package mdframed Info: mdframed works in twoside mode on input line 89.
+Package mdframed Info: Not enough space on this page on input line 53.
+Package mdframed Info: mdframed works in twoside mode on input line 90.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 89.
+(mdframed)              on input line 90.
  [16]
-Package mdframed Info: Not enough space on this page on input line 95.
+Package mdframed Info: Not enough space on this page on input line 96.
  Excluding 'comment' comment.
-Package mdframed Info: mdframed works in twoside mode on input line 157.
+Package mdframed Info: mdframed works in twoside mode on input line 158.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 157.
-Package mdframed Info: mdframed works in twoside mode on input line 164.
+(mdframed)              on input line 158.
+Package mdframed Info: mdframed works in twoside mode on input line 165.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 164.
+(mdframed)              on input line 165.
  [17]
-Package mdframed Info: mdframed works in twoside mode on input line 175.
+Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 175.
+(mdframed)              on input line 176.
 
 
-LaTeX Warning: Reference `1' on page 1 undefined on input line 184.
+LaTeX Warning: Reference `1' on page 1 undefined on input line 185.
 
 
-LaTeX Warning: Reference `12' on page 1 undefined on input line 196.
+LaTeX Warning: Reference `12' on page 1 undefined on input line 197.
 
 [18]
-Package mdframed Info: mdframed works in twoside mode on input line 218.
+Package mdframed Info: mdframed works in twoside mode on input line 219.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 218.
+(mdframed)              on input line 219.
  Excluding 'comment' comment.
-Overfull \hbox (19.06816pt too wide) detected at line 248
+Overfull \hbox (19.06816pt too wide) detected at line 249
 []
  []
 
@@ -1365,7 +1374,7 @@ Overfull \hbox (19.06816pt too wide) detected at line 248
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-Overfull \hbox (25.75018pt too wide) detected at line 261
+Overfull \hbox (25.75018pt too wide) detected at line 262
 []
  []
 
@@ -1378,22 +1387,29 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 269.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 269.
-Package mdframed Info: mdframed works in twoside mode on input line 278.
+Package mdframed Info: mdframed works in twoside mode on input line 279.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 278.
-) [21]
+(mdframed)              on input line 279.
+
+
+LaTeX Warning: Reference `1' on page 1 undefined on input line 282.
+
+
+LaTeX Warning: Reference `2' on page 1 undefined on input line 288.
+
+[21]) [22]
 \openout2 = `Noncollapsing.aux'.
 
- (./Noncollapsing.tex [22
+ (./Noncollapsing.tex
+chapter 3.
+) [23
 
 
 
 
 
 ]
-chapter 3.
-) [23]
 \openout2 = `Convergence_of_Manifolds.aux'.
 
  (./Convergence_of_Manifolds.tex [24
@@ -1432,43 +1448,31 @@ Package mdframed Info: mdframed works in twoside mode on input line 38.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 38.
-) [26]
-\openout2 = `Viscosity_Solutions.aux'.
-
- (./Viscosity_Solutions.tex
-chapter B.
-) [27
+) [26] (./Thesis_MCF.bbl [27
 
 
 
 
 
-] [28
 
-
-
-
-] (./Thesis_MCF.bbl) [29
-
-
-] (./Thesis_MCF.aux (./Preface.aux) (./Introduction.aux) (./Convexity_Estimates.aux) (./Noncollapsing.aux) (./Convergence_of_Manifolds.aux) (./Viscosity_Solutions.aux))
+]) [28] (./Thesis_MCF.aux (./Preface.aux) (./Introduction.aux) (./Convexity_Estimates.aux) (./Noncollapsing.aux) (./Convergence_of_Manifolds.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44633 strings out of 478268
- 1045813 string characters out of 5846346
- 1610750 words of memory out of 5000000
- 61870 multiletter control sequences out of 15000+600000
+ 44617 strings out of 478268
+ 1044981 string characters out of 5846346
+ 1610548 words of memory out of 5000000
+ 61856 multiletter control sequences out of 15000+600000
  485520 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,13n,109p,10640b,1111s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_MCF.pdf (33 pages, 304474 bytes).
+ 115i,13n,109p,10640b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Thesis_MCF.pdf (32 pages, 321923 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 442 compressed objects within 5 object streams
- 180 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 536 PDF objects out of 1000 (max. 8388607)
+ 454 compressed objects within 5 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

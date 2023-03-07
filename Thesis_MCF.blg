@@ -6,47 +6,50 @@ A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Convexity_Estimates.aux
 A level-1 auxiliary file: Noncollapsing.aux
 A level-1 auxiliary file: Convergence_of_Manifolds.aux
-A level-1 auxiliary file: Viscosity_Solutions.aux
 The style file: amsalpha.bst
 Database file #1: ref.bib
-You've used 12 entries,
+Warning--missing journal name in huisken1999convexity
+Warning--missing journal, volume, and year in huisken1999convexity
+Warning--missing pages in huisken1999convexity
+You've used 14 entries,
             2624 wiz_defined-function locations,
-            640 strings with 6182 characters,
-and the built_in function-call counts, 4471 in all, are:
-= -- 403
-> -- 187
+            648 strings with 6461 characters,
+and the built_in function-call counts, 5157 in all, are:
+= -- 466
+> -- 218
 < -- 12
-+ -- 63
-- -- 61
-* -- 403
-:= -- 724
-add.period$ -- 12
-call.type$ -- 12
-change.case$ -- 74
-chr.to.int$ -- 12
-cite$ -- 12
-duplicate$ -- 184
-empty$ -- 356
-format.name$ -- 80
-if$ -- 884
-int.to.chr$ -- 1
++ -- 74
+- -- 71
+* -- 467
+:= -- 832
+add.period$ -- 14
+call.type$ -- 14
+change.case$ -- 86
+chr.to.int$ -- 13
+cite$ -- 17
+duplicate$ -- 212
+empty$ -- 408
+format.name$ -- 92
+if$ -- 1020
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 28
-newline$ -- 47
-num.names$ -- 34
-pop$ -- 82
+missing$ -- 32
+newline$ -- 53
+num.names$ -- 39
+pop$ -- 95
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 100
 quote$ -- 0
-skip$ -- 114
+skip$ -- 134
 stack$ -- 0
-substring$ -- 283
-swap$ -- 16
+substring$ -- 318
+swap$ -- 21
 text.length$ -- 12
 text.prefix$ -- 8
 top$ -- 0
-type$ -- 80
-warning$ -- 0
-while$ -- 42
-width$ -- 16
-write$ -- 142
+type$ -- 96
+warning$ -- 3
+while$ -- 48
+width$ -- 18
+write$ -- 161
+(There were 3 warnings)
