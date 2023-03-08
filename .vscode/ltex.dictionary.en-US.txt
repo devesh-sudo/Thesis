@@ -7,3 +7,5 @@ Cheeger-Gromov
 Ricci
 Huisken
 Sinestrari
+Stampacchia
+Hölder

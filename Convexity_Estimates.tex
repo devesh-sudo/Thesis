@@ -2,9 +2,9 @@
 
 As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives rise to a convex ancient solution.
 
-\section{Estimate of $ S_{2} $}
+\section{Estimate of $S_{2}$}
 It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
-\begin{thm}
+\begin{thm}\label{mainthm}
     Let $ X : M^{n} \times [0,T) \to \Rn$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
     \begin{equation}
         S_{2} \ge - \eta H^{2} - C_{\eta}
@@ -172,10 +172,10 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
     DO IT IN ORIGINAL NOTATION MAYBE.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{dgdt}
    There exists constant $ c_{2} , c_{3}$ such that 
     \begin{align*}
-        \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu \le& - \frac{p(p-1)}{2} \int_{ \mathcal{M}} g_{+}^{p-2}| \nabla g|^{2}d \mu - \frac{p}{c_{3}} \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{2 -\sigma}}|\nabla H|^{2} d \mu \\
+        \frac{d}{dt}\int_{ \mathcal{M}} g_{+}^{p} d \mu \le& - \frac{p(p-1)}{2} \int_{ \mathcal{M}} g_{+}^{p-2}| \nabla g|^{2}d \mu - \frac{p}{c_{3}} \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{2 -\sigma}}|\nabla H|^{2} d \mu \\
         & - p \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} d \mu + p \sigma \int_{ \mathcal{ M}}|A|^{2} g_{+}^{p} d \mu 
     \end{align*}
    for any $ p \ge c_{2} $.
@@ -184,7 +184,7 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
 \begin{proof}
     Differentiating with respect to time and using \cref{1} for $ p \ge 2 $
     \begin{align}
-        \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu  & =  \int \left(pg_{+}^{p-1} \partial_{t}g - H^{2}g_{+}^{p}\right) d \mu \nonumber \\
+        \frac{d}{dt} \int_{ \mathcal{M}} g_{+}^{p} d \mu  & =  \int \left(pg_{+}^{p-1} \partial_{t}g - H^{2}g_{+}^{p}\right) d \mu \nonumber \\
         & \le \int pg_{+}^{p-1}\left( \Delta g + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g\right>  - \frac{2}{H^{4-\sigma}}|H \nabla_{i}h_{kl} - \nabla_{i}Hh_{kl}|^{2}\right)d \mu  \nonumber\\
         & \quad + \sigma |A|^{2} g \label{Lpg}
     \end{align}
@@ -208,7 +208,7 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
     \end{align*}
 
     Substituting this back in \cref{Lpg} and using integration by parts from \cref{byparts}, \begin{align*}
-        \dt \int_{ \mathcal{M}} g_{+}^{p} d \mu \le & -p(p-1)\int g_{+}^{p-2}|\nabla g|^{2} d \mu + p \int \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2}d \mu & \\
+        \frac{d}{dt} \int_{ \mathcal{M}} g_{+}^{p} d \mu \le & -p(p-1)\int g_{+}^{p-2}|\nabla g|^{2} d \mu + p \int \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2}d \mu & \\
         & \quad + \frac{p(p-1)}{2}\int g_{+}^{p-2}|\nabla g|^{2}d \mu - \frac{p}{c_{3}} \int \frac{g_{+}^{p-1}}{H^{2-\sigma}}|\nabla H|^{2} d \mu \\
         & \quad - 2p \int \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2}d \mu + p \sigma \int |A|^{2}g_{+}^{p}d \mu
     \end{align*}
@@ -275,17 +275,23 @@ To handle the bad positive term appearing in the last we use the following lemma
         
     \end{proof}
 
-    \begin{thm}
-        Main theorem
-    \end{thm}
+    \begin{lemma}
+        [Stampacchia iteration] Let $ \psi: [k_{0},\infty) \to \R $ be a non-negative, non-increasing function which satisfies \begin{equation}
+            \psi(h) \le \frac{C}{(h-k)^{\alpha}} \psi(k)^{\beta} \text{ for all } h> k >k_{0}
+        \end{equation}
+        for some constants $ C>0 $, $ \alpha > 0 $ and $ \beta >1 $. Then \begin{equation}
+            \psi(k_{0}+d) = 0,
+        \end{equation}
+        where $ d^{\alpha} = C\psi(k_{0})^{\beta-1}2^{\frac{\alpha \beta}{\beta -1}} $.
+    \end{lemma}
 
-    We complete the proof of theorem \cref{1} using Stampacchia iteration which gives an $ L^{\infty} $ bound from the $ L^{p} $ bounds.
+    We complete the proof of \cref{mainthm} using Stampacchia iteration which gives an $ L^{\infty} $ bound from the $ L^{p} $ bounds.
     \vspace{1pt}
     \begin{proof}
         [Stampacchia iteration]
 
          Let $ k \ge k_{0} $, where $$ k_{0} = \sup_{\sigma \in [0,1]} \sup_{\mathcal{M}_{0}} g_{\sigma, \eta} $$
-        Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v $ with respect to time we get for $ p $ large enough (similar to Lemma 2.1.6 \cref{2})
+        Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v $ with respect to time we get for $ p $ large enough (similar to \cref{dgdt})
         \begin{equation}
             \frac{d}{dt} \int_{\mathcal{M}_{t}}v^{2} d \mu + \int_{\mathcal{M}_{t}} v^{2} d \mu \le \sigma p \int_{\mathcal{M}_{t}} |A|^{2}v^{2} d \mu \le c_{0} \sigma p \int_{A(k,t)}H^{2}g_{\sigma, \eta}^{p} d \mu \label{vestimate}
         \end{equation}
@@ -305,16 +311,82 @@ To handle the bad positive term appearing in the last we use the following lemma
         \end{align*}
         We can fix $ k_{1} > k_{0} $ such that for any $ k \ge k_{1} $ the term $ \int_{A(k,t)}H^{n}d \mu $  in \cref{MS} is less than $ \frac{1}{2C(n)} $ which added with \cref{vestimate} gives
         \begin{equation}
-            \frac{d}{dt}\int_{\mathcal{M}_{t}} v^{2}d \mu + \frac{1}{2C(n)}\left( \int_{\mathcal{M}_{t}}v^{2q}d \mu \right)^{\frac{1}{q}} \le c_{0} \sigma p \int_{A(k,t)} H^{2}g_{\sigma, \eta}^{p} d \mu \label{dv2dt}
+            \frac{d}{dt}\int_{\mathcal{M}_{t}} v^{2}d \mu + \frac{1}{2C(n)}\left( \int_{\mathcal{M}_{t}}v^{2q}d \mu \right)^{\frac{1}{q}} \le c_{0} \sigma p \int_{A(k,t)} H^{2}g_{\sigma, \eta}^{p} d \mu \label{dv2dt}.
         \end{equation}
 
         Let $ t_{0} \in [0,T] $ be the time when $ \sup_{t \in [0,T)} \int_{\mathcal{M}_{t}} v^{2} d \mu $ is attained (we let $ t_{0}=T $ if it is not attained in the interior). Integrating \cref{dv2dt} from $ 0 $ to $ t_{0} $, \begin{equation}
-            \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu+ \frac{1}{2C(n)} \int_{0}^{t_{0}} \left( \int_{\mathcal{M}_{t}}v^{2q} d \mu\right)^{\frac{1}{q}}dt \le c_{0} \sigma p \int_{0}^{t_{0}} \int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
+            \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu+ \frac{1}{2C(n)} \int_{0}^{t_{0}} \left( \int_{\mathcal{M}_{t}}v^{2q} d \mu\right)^{\frac{1}{q}}dt \le c_{0} \sigma p \int_{0}^{t_{0}} \int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt \label{0tot0}
         \end{equation}
-        Where we used the fact that $ k>k_{0} \ge \sup_{\mathcal{M}_{0}}g_{\sigma,\eta} $ so $ \int_{\mathcal{M}_{0}}v^{2}d \mu = 0 $. Now integrating \cref{dv2dt} from $ t_{0} $ to $ T $, \begin{equation}
-            \int_{\mathcal{M}_{T}}v^{2}d \mu - \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu + \frac{1}{2C(n)} \int_{t_{0}}^{T} \left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}} dt \le c_{0}\sigma p \int_{t_{0}}^{T} \int_{A(k,t)} H^{2}g_{\sigma,\eta}^{p} d \mu dt
+        where we used the fact that $ k>k_{0} \ge \sup_{\mathcal{M}_{0}}g_{\sigma,\eta} $ so $ \int_{\mathcal{M}_{0}}v^{2}d \mu = 0 $. Now integrating \cref{dv2dt} from $ t_{0} $ to $ T $, \begin{equation}
+            \int_{\mathcal{M}_{T}}v^{2}d \mu - \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu + \frac{1}{2C(n)} \int_{t_{0}}^{T} \left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}} dt \le c_{0}\sigma p \int_{t_{0}}^{T} \int_{A(k,t)} H^{2}g_{\sigma,\eta}^{p} d \mu dt \label{t0toT}.
         \end{equation}
-         
+
+        Throwing away $ \int_{\mathcal{M}_{T}}v^{2}d \mu $ term and adding \cref{0tot0} to half of \cref{t0toT}, \begin{equation*}
+            \frac{1}{2} \int_{\mathcal{M}_{t_{0}}}v^{2}d \mu + \frac{1}{4C(n)}\int_{0}^{T}\left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}}dt \le c_{0} \sigma p \int_{0}^{T} \int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
+        \end{equation*}
+        which is same as \begin{equation}
+            \sup_{[0,T)} \int_{\mathcal{M}_{t}}v^{2}d \mu +  \int_{0}^{T} \left(\int_{\mathcal{M}_{t}} v^{2q}d \mu \right)^{\frac{1}{q}}dt \le 2\max\{1,2C(n)\}c_{0} \sigma p \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt. \label{supineq}
+        \end{equation}
+
+        Recall the interpolation inequality for $ L^{p} $ spaces for any $ f \in L^{q} \cap L^{r} $,
+        \[ ||f||_{q_{0}} \le ||f||_{q}^{\alpha}||f||_{r}^{1-\alpha} \]
+        where $ \frac{1}{q_{0}} = \frac{\alpha}{q}+ \frac{1-\alpha}{q} $ and $ 1<q_{0}<q $. Setting $ r=1, \alpha = \frac{1}{q_{0}}$ and $ f=v^{2} $ we get \begin{equation}
+            \left( \int_{\mathcal{M}_{t}}v^{2q_{0}} d \mu \right)^{\frac{1}{q_{0}}} \le \left( \int_{\mathcal{M}_{t}}v^{2q}d \mu \right)^{\frac{1}{q_{0}q}} \left( \int_{\mathcal{M}_{t}}v^{2}d \mu \right)^{1-\frac{1}{q_{0}}}.
+        \end{equation}
+
+        Integrating this in time and using Young's inequality, \begin{align*}
+            \left( \int_{0}^{T}\int_{A(k,t)}v^{2q_{0}}d \mu dt \right)^{\frac{1}{q_{0}}} &\le \left( \sup_{[0,T)}\int_{A(k,t)}v^{2}d \mu  \right)^{1-\frac{1}{q_{0}}}\left( \int_{0}^{T}\left( \int_{A(k,t)}v^{2q}d \mu \right)^{\frac{1}{q}} dt\right)^{\frac{1}{q_{0}}} \\
+            & \le \frac{ \sup_{[0,T)}\int_{A(k,t)}v^{2}d \mu}{\frac{q_{0}}{q_{0}-1}}+ \frac{\int_{0}^{T}\left( \int_{A(k,t)}v^{2q}d \mu \right)^{\frac{1}{q}} dt}{q_{0}} \\
+            & \le  \sup_{[0,T)}\int_{A(k,t)}v^{2}d \mu+ \int_{0}^{T}\left( \int_{A(k,t)}v^{2q}d \mu \right)^{\frac{1}{q}} dt \\
+            & \le c_{8} \sigma p \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
+        \end{align*}
+        where $ c_{8} =  2\max\{1,2C(n)\}c_{0}$. Set $ \psi(k) = \int_{0}^{T} \int_{A(k,t)}d \mu dt $. We will obtain bounds on $ \psi $ which along with Stampacchia iteration will imply uniform bound of $ g_{\sigma,\eta} $.  Now \cref{supineq} and H\"{o}lder inequality yields, \begin{align}
+            \int_{0}^{T}\int_{A(k,t)}v^{2}d \mu dt & \le \left( \int_{0}^{T}\int_{A(k,t)}1 d \mu dt\right)^{1-\frac{1}{q_{0}}} \left( \int_{0}^{T}\int_{A(k,t)}v^{2q_{0}}d \mu dt \right)^{\frac{1}{q_{0}}} \\
+            & \le c_{8} \sigma p\psi(k)^{1-\frac{1}{q_{0}}} \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt \label{v2bound}
+        \end{align}
+        Let $ r>1 $ which will be chosen later. Applying H\"{o}lder again on the right side with weights $ r $ and $ \frac{r}{r-1} $, \begin{align*}
+            \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt &\le \left( \int_{0}^{T}\int_{A(k,t)}d \mu dt \right)^{1-\frac{1}{r}}\left(\int_{0}^{T}\int_{A(k,t)}H^{2r}g_{\sigma,\eta}^{pr}d \mu dt\right)^{\frac{1}{r}} \\
+            & = \psi(k)^{1-\frac{1}{r}} \left( \int_{0}^{T}\int_{A(k,t)}g_{\sigma'',\eta}^{pr}d \mu dt \right)^{\frac{1}{r}} %\\
+            %& \le c_{9}\psi\left(1-\frac{1}{r}\right)
+        \end{align*}
+        where $ \sigma'' = \sigma+ \frac{2}{p} $. %and $ c_{9}$ is a bound coming from $ L^{pr} $ estimate of $ g_{\sigma'',\eta} $
+        For $ r $ large enough and $ p,\sigma^{-1} $ small enough from \cref{Lpbound} there exists a constant $ c_{9}>0 $ independent of time such that 
+        \begin{equation}\label{H2bound}
+            \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p} d \mu dt \le c_{9}^{\frac{1}{r}} \psi(k)^{1-\frac{1}{r}}.
+        \end{equation}
+        
+        %This implies \begin{align*}
+            %\int_{0}^{T}\int_{A(k,t)}v^{2}d \mu dt \le c_{8}\sigma p \psi(k)^{2-\frac{1}{r}-\frac{1}{q_{0}}}\left( \int_{0}^{T}\int_{A(k,t)}g_{\sigma'',\eta}^{pr}d \mu dt \right)^{\frac{1}{r}} 
+        %\end{align*}
+        %Let $ \gamma = 2-\frac{1}{r}-\frac{1}{q_{0}} >1 $ with $ r $ large enough and $ p, \sigma^{-1} $ small enough (\textcolor{red}{FIGURE OUT THE EXACT BOUNDS}). 
+        Combining \cref{v2bound} and \cref{H2bound} for all $ h>k \ge k_{1} $, we have \begin{align*}
+            (h-k)^{p}\psi(h) &=  \int_{0}^{T}\int_{A(h,t)}(h-k)^{p}d \mu dt  \\
+            & \le \int_{0}^{T}\int_{A(k,t)}v^{2} d \mu dt \\
+            & \le c_{8}\sigma p c_{9}^{\frac{1}{r}} \psi(k)^{2-\frac{1}{r}-\frac{1}{q_{0}}}.
+        \end{align*}
+        Let $ \gamma = 2-\frac{1}{r}-\frac{1}{q_{0}} $ and $ c_{10} =c_{8}c_{9}^{\frac{1}{r}} $. Fix $ r> \frac{q_{0}}{q_{0}-1} $ (so $ \gamma >1 $) and $ p $ large enough, $ \sigma  $ small enough while satisfying the hypothesis of \cref{Lpbound} such that $ \sigma p <1 $ then gives \begin{equation}
+            \psi(h) \le \frac{c_{10}}{(h-k)^{p}}\psi(k)^{\gamma}
+        \end{equation}
+
+        Stampacchia iteration now implies $ \psi(k) = 0 $ for all $ k \ge k_{1}+d $ where $ d^{p} =c_{10}2^{ \frac{\gamma p}{\gamma-1}+1}\psi(k_{1})^{\gamma-1}  $. Hence, 
+        \[ g_{\sigma,\eta} \le k_{1}+d\le K \define k_{1}+ c_{10} 2^{ \frac{\gamma p}{\gamma-1}+1}(|\mathcal{M}_{0}|T)^{\gamma-1}\]
+        or 
+        \begin{equation*}
+            |A|^{2}-(1+\eta)H^{2} \le KH^{2-\sigma}
+        \end{equation*}
+        so by Young's inequality, \begin{equation*}
+            |A|^{2}-H^{2}\le \eta H^{2}+KH^{2-\sigma} \le 2 \eta H^{2}+C_{2\eta}.
+        \end{equation*}
+        Notice that $ |A|^{2}-H^{2} = -\sum_{i\neq j}\kappa_{i}\kappa_{j} = -2S_{2} $ which implies the desired estimate.
     \end{proof}
 
+    \section{Asymptotic convexity}
  
+    As mentioned in \cref{Type1singularity}, we classify the singularities based on the blow-up rate of $ |A|^{2} $. The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X : M \times [0,T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{k},t_{k})\} $ in spacetime as follows. For each integer $ k \ge 1 $, let $ t_{k} \in [0,T-\frac{1}{k}] $, $ x_{k} \in M $ such that \begin{equation}
+        H^{2}(x_{k},t_{k})\left( T- \frac{1}{k}-t_{k} \right) = \sup_{(x,t) \in M \times\left[0,T-\frac{1}{k}\right]}H^{2}(x,t)\left(  T- \frac{1}{k}- t\right)
+    \end{equation}
+    Set $ L_{k} = H(x_{k},t_{k}) $, $ \alpha_{k} = -L^{2}_{k}t_{k} $ and $ \omega_{k} = L_{k}^{2}(T-\frac{1}{k}-t_{k}) $. 
+    \begin{lemma}
+        For singularities of type II, the following holds as $ k \to \infty $, 
+        \[ t_{k} \to T, \qquad L_{k} \to \infty,\qquad  \alpha_{k} \to -\infty, \qquad \omega_{k} \to \infty \]
+    \end{lemma}
