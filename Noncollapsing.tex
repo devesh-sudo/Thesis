@@ -1,3 +1,35 @@
 \chapter{Noncollapsing}
 
-Noncollapsing in mean curvature flow is a powerful result which gives a geometric idea about the structure of singularities. 
+Noncollapsing in mean curvature flow is a powerful result which gives a geometric idea about the structure of singularities. It can be used to rule out certain singularity profiles for mean convex mean curvature flow. 
+
+\section{Inscribed curvature}
+
+Let $ \mathcal{M} \in \Rn $ be a smooth hypersurface which is the boundary of an open $ \Omega $. For $ x \in \mathcal{M} $, we want to find the radius of the largest inscribed sphere in $ \mathcal{M} $ touching it at $ x $. For any $ y \in \mathcal{M}\backslash \{x\} $, the radius of the sphere passing through $ x $ and $ y $ and touching $ \mathcal{M} $ at $ x $ is given by \begin{equation}
+    r(x,y) = \frac{||x-y||^{2}}{2\left< x-y,N(x) \right>}
+\end{equation}
+where $ N(x) $ is the outward unit normal vector of $ \mathcal{M} $ at $ x $. To get the \textbf{inradius} which would be radius of the largest sphere inscribed in $ \mathcal{M} $, we take the infimum over all points $ y \in \mathcal{M}\backslash \{x\} $ to get \begin{equation}
+    r(x) = \inf_{{y \in \mathcal{M}\backslash \{x\}}} r(x,y)
+\end{equation}
+Similarly the \textbf{inscribed curvature}  is given by the reciprocal of the radius, \begin{equation}
+    k(x) = \sup_{y \in \mathcal{M}\backslash \{x\}}k(x,y) = \sup_{y \in \mathcal{M}\backslash \{x\}} \frac{2\left< x-y,N(x) \right>}{||x-y||^{2}}
+\end{equation}
+
+\begin{defn}
+    A mean convex hypersurface $ \mathcal{M} $ is said to be \textbf{$ \alpha $-noncollapsed}   if for every $ x \in \mathcal{M} $ there exists an open ball $ B $ of radius $ \frac{\alpha}{H(x)} $ entirely contained in $ \Omega $. In terms of inscribed curvature, this is same as the inequality \begin{equation}
+        k(x) \ge \alpha H(x) \quad \text{ for all} \quad x \in \mathcal{M}.
+    \end{equation}
+\end{defn}
+
+
+\begin{thm}[Noncollapsing]
+    Let $ X: M^{n} \times [0,T) \to \Rn $ be a smooth solution of the mean curvature with $ X(\cdot, 0) = \mathcal{M}_{0} $ compact and $ \alpha $-noncollapsed. Then $ X(\cdot,t) = \mathcal{M}_{t} $ is $ \alpha $-noncollapsed for all $t \in [0,T)  $.  
+\end{thm}
+
+We'll prove a stronger result which will imply Noncollapsing. 
+
+\begin{thm}
+    Let $ X : M^{n} \times [0,T) \to \Rn $ be a smooth solution of the mean curvature flow with $ \mathcal{M}_{0} $ properly embedded. Then \begin{equation}
+        \frac{\partial}{ \partial t}k \le \Delta k -2 \sum_{\kappa_{i}<k}^{} \frac{(\nabla_{i}k)^{2}}{k- \kappa_{i}} 
+    \end{equation}
+    where in inequality holds in the viscosity sense. 
+\end{thm}

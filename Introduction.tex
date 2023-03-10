@@ -343,7 +343,22 @@ Suppose the hypersurface satisfies $H = -\langle X, \nu \rangle$. Let $e_1,\ldot
 \end{proof}
 
 \section{Maximum principle}\label{max}
-We can extend the maximum principle on Euclidean space to general Riemannian manifolds. 
-\begin{lemma}
-Let 
+We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. 
+\begin{lemma}[Scalar maximum principle]
+    Let $ g(t) \in [0,T) $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $ and $ \beta : \mathcal{M}^{n} \times [0,T) \to \R $ be a locally bounded function. Let $ u : \mathcal{M}^{n} \times [0,T) \to \R$ be a $ C^{2} $ function satisfying the following inequality 
+    \[ \frac{ \partial}{ \partial t}u(x,t) \ge \Delta_{g(t)}u + \beta u\]
+    If $ u(x,0) \ge 0 $ for all $ x \in \mathcal{M}^{n}$, then $ u(x,t) \ge 0 $ for all $ (x,t) \in \mathcal{M}^{n} \times [0,T) $.
+\end{lemma}
+
+\begin{proof}
+    
+\end{proof}
+
+The above maximum principle can be further extended to tensors. This was done in \cite{hamilton1982three} for Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $.
+
+\begin{lemma}[Tensor maximum principle]
+	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
+	
+        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
+	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
 \end{lemma}

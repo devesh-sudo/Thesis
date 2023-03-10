@@ -9,3 +9,6 @@ Huisken
 Sinestrari
 Stampacchia
 Hölder
+Noncollapsing
+infimum
+noncollapsed

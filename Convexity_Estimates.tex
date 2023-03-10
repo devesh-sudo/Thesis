@@ -2,15 +2,24 @@
 
 As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives rise to a convex ancient solution.
 
-\section{Estimate of $S_{2}$}
-It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 \begin{thm}\label{mainthm}
-    Let $ X : M^{n} \times [0,T) \to \Rn$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
+    Let $ X : M^{n} \times [0,T) \to \Rn$ be a smooth solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta $ and $ \mathcal{M}_{0} $ such that 
     \begin{equation}
-        S_{2} \ge - \eta H^{2} - C_{\eta}
+        S_{k} \ge - \eta H^{k} - C_{\eta,k}
     \end{equation}
     on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 \end{thm}
+
+We will only prove the theorem for $ k=2 $. A complete proof is done using induction in \cite{huisken1999convexity}. 
+\section{Estimate of $S_{2}$}
+It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
+%\begin{thm}
+    %Let $ X : M^{n} \times [0,T) \to \Rn$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
+    %\begin{equation}
+        %S_{2} \ge - \eta H^{2} - C_{\eta}
+    %\end{equation}
+    %on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
+%\end{thm}
 Let $ g_{\sigma,\eta} = \dfrac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} $
 
 
@@ -154,12 +163,12 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
 %\[ S_{k}(\mu) = \sum_{1\le i_{1}<i_{2}<\ldots<i_{k}\le n} \lambda_{i_{1}} \lambda_{i_{2}}\ldots \lambda_{i_{k}}  \]
 %denote the $ k $th elementary symmetric polynomial. 
 
-\begin{remark}
-    How Sinestrari does it in the lecture : $ \forall \eta >0 ,  \exists C_{\eta} >0 $ s.t. 
-    \[ \lambda_{1} \ge -\eta H  - C_{\eta} \]
-    for all $ t <T $ on $ \mathcal{M}_{t} $
+%\begin{remark}
+    %How Sinestrari does it in the lecture : $ \forall \eta >0 ,  \exists C_{\eta} >0 $ s.t. 
+   % \[ \lambda_{1} \ge -\eta H  - C_{\eta} \]
+    %for all $ t <T $ on $ \mathcal{M}_{t} $
     
-\end{remark}
+%\end{remark}
 
 \begin{lemma}
     If $ (1+\eta)H^{2} \le |A|^{2} \le c_{0}H^{2} $ for some $ \eta, c_{0} >0 $. Then 
@@ -169,7 +178,7 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
     We break the tensor as follows \begin{align*}
         | \nabla A \cdot H - \nabla H \otimes A|^{2} & = | \nabla A \cdot H - \frac{1}{2}\left( \nabla H \otimes A + A \otimes \nabla H  \right) - \frac{1}{2}\left( \nabla H \otimes A -  \right)
     \end{align*}
-    DO IT IN ORIGINAL NOTATION MAYBE.
+    \textcolor{red}{DO IT IN ORIGINAL NOTATION MAYBE.}
 \end{proof}
 
 \begin{lemma}\label{dgdt}
@@ -382,11 +391,30 @@ To handle the bad positive term appearing in the last we use the following lemma
 
     \section{Asymptotic convexity}
  
-    As mentioned in \cref{Type1singularity}, we classify the singularities based on the blow-up rate of $ |A|^{2} $. The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X : M \times [0,T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{k},t_{k})\} $ in spacetime as follows. For each integer $ k \ge 1 $, let $ t_{k} \in [0,T-\frac{1}{k}] $, $ x_{k} \in M $ such that \begin{equation}
+    As mentioned in \cref{Type1singularity}, we classify the singularities based on the blow-up rate of $ |A|^{2} $. Recall from maximum principle on \cref{Deltag1} there exists a $ c_{0} $ such that $ |A|^{2}\le c_{0}H^{2} $ and from algebra we get $ H^{2}\le n|A|^{2} $ so $ |A|^{2} $ and $ H^{2} $ have same rate of growth. We will focus on the growth of $ H^{2} $. 
+    
+    The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X : M \times [0,T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{k},t_{k})\} $ in spacetime as follows. For each integer $ k \ge 1 $, let $ t_{k} \in [0,T-\frac{1}{k}] $, $ x_{k} \in M $ such that \begin{equation}
         H^{2}(x_{k},t_{k})\left( T- \frac{1}{k}-t_{k} \right) = \sup_{(x,t) \in M \times\left[0,T-\frac{1}{k}\right]}H^{2}(x,t)\left(  T- \frac{1}{k}- t\right)
     \end{equation}
     Set $ L_{k} = H(x_{k},t_{k}) $, $ \alpha_{k} = -L^{2}_{k}t_{k} $ and $ \omega_{k} = L_{k}^{2}(T-\frac{1}{k}-t_{k}) $. 
     \begin{lemma}
         For singularities of type II, the following holds as $ k \to \infty $, 
-        \[ t_{k} \to T, \qquad L_{k} \to \infty,\qquad  \alpha_{k} \to -\infty, \qquad \omega_{k} \to \infty \]
+        \[ t_{k} \to T, \quad L_{k} \to \infty,\quad  \alpha_{k} \to -\infty,\text{ and } \omega_{k} \to \infty .\]
     \end{lemma}
+    \begin{proof}
+        \textcolor{red}{TO DO}
+    \end{proof}
+    Now we will rescale the hypersurfaces to analyze the limiting behavior. For each $ k \ge 1 $, define a family of immersions by 
+    \[ X_{k}(x, t) = L_{k}(X(x, L_{k}^{-2}t+t_{k})-X(x_{k},t_{k}))  \text{ for } t \in [\alpha_{k}, \omega_{k}].\]
+    Let $ A_{k} $ and $ H_{k} $ denote the fundamental form of the rescaled immersions. Then by the definition of $ L_{k} $ and $ X_{k} $ we have 
+    \[ X_{k}(x_{k},0) = 0 \quad \text{ and }\quad H_{k}(x_{k},0)=1.\]
+    Further,  observe that 
+    \[ H_{k}^{2}(x,t) = L_{k}^{-2}H^{2}(x, L_{k}^{-2}t+t_{k}) \le \frac{T - \frac{1}{k}-t_{k}}{T-\frac{1}{k}-t_{k}-L_{k}^{-2}t} = \frac{\omega_{k}}{\omega_{k}-t}. \]
+
+    From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ M >0 $, there exists a $ k_{0} $ such that 
+    \[ \max_{x \in M} H_{k}(x,t) \le 1+\epsilon \]
+    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, M] $. This curvature bound implies analogous bounds on second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. 
+     
+    \begin{thm}
+        Let $ X : M \times [0,T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
+    \end{thm}
