@@ -6,7 +6,7 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{CCG{\etalchar{+}}07}
+\begin{thebibliography}{CMP{\etalchar{+}}15}
 
 \bibitem[ACGL22]{andrews2022extrinsic}
 Ben Andrews, Bennett Chow, Christine Guenther, and Mat Langford,
@@ -37,6 +37,15 @@ Bennett Chow, Sun-Chin Chu, David Glickenstein, Christine Guenther, Jim
   Isenberg, Tom Ivey, Dan Knopf, Peng Lu, Feng Luo, and Lei Ni, \emph{The ricci
   flow: techniques and applications}, vol. 135, American Mathematical Society
   Providence, 2007.
+
+\bibitem[CMP{\etalchar{+}}15]{colding2015mean}
+Tobias Colding, William Minicozzi, Erik Pedersen, et~al., \emph{Mean curvature
+  flow}, Bulletin of the American Mathematical Society \textbf{52} (2015),
+  no.~2, 297--333.
+
+\bibitem[EH89]{ecker1989mean}
+Klaus Ecker and Gerhard Huisken, \emph{Mean curvature evolution of entire
+  graphs}, Annals of Mathematics \textbf{130} (1989), no.~3, 453--471.
 
 \bibitem[Ham82]{hamilton1982three}
 Richard~S Hamilton, \emph{Three-manifolds with positive ricci curvature},

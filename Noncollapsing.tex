@@ -10,8 +10,8 @@ Let $ \mathcal{M} \in \Rn $ be a smooth hypersurface which is the boundary of an
 where $ N(x) $ is the outward unit normal vector of $ \mathcal{M} $ at $ x $. To get the \textbf{inradius} which would be radius of the largest sphere inscribed in $ \mathcal{M} $, we take the infimum over all points $ y \in \mathcal{M}\backslash \{x\} $ to get \begin{equation}
     r(x) = \inf_{{y \in \mathcal{M}\backslash \{x\}}} r(x,y)
 \end{equation}
-Similarly the \textbf{inscribed curvature}  is given by the reciprocal of the radius, \begin{equation}
-    k(x) = \sup_{y \in \mathcal{M}\backslash \{x\}}k(x,y) = \sup_{y \in \mathcal{M}\backslash \{x\}} \frac{2\left< x-y,N(x) \right>}{||x-y||^{2}}
+Similarly the \textbf{inscribed curvature} $ k : \mathcal{M} \to [0, \infty) $  is given by the reciprocal of the inradius, \begin{equation}
+    k(x) = \frac{1}{r(x)} = \sup_{y \in \mathcal{M}\backslash \{x\}} \frac{2\left< x-y,N(x) \right>}{||x-y||^{2}}
 \end{equation}
 
 \begin{defn}
@@ -25,7 +25,7 @@ Similarly the \textbf{inscribed curvature}  is given by the reciprocal of the ra
     Let $ X: M^{n} \times [0,T) \to \Rn $ be a smooth solution of the mean curvature with $ X(\cdot, 0) = \mathcal{M}_{0} $ compact and $ \alpha $-noncollapsed. Then $ X(\cdot,t) = \mathcal{M}_{t} $ is $ \alpha $-noncollapsed for all $t \in [0,T)  $.  
 \end{thm}
 
-We'll prove a stronger result which will imply Noncollapsing. 
+We'll prove a stronger result which will imply noncollapsing. 
 
 \begin{thm}
     Let $ X : M^{n} \times [0,T) \to \Rn $ be a smooth solution of the mean curvature flow with $ \mathcal{M}_{0} $ properly embedded. Then \begin{equation}

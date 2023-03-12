@@ -12,3 +12,9 @@ Hölder
 Noncollapsing
 infimum
 noncollapsed
+inradius
+diffeomorphism
+submanifold
+pushforward
+pointwise
+Christoffel

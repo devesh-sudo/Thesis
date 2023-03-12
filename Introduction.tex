@@ -1,9 +1,8 @@
-
 \chapter{Introduction to Mean curvature flow}
 
-\section{Fundamentals of Hypersurfaces}
-SET UP THE FOLLOWING  - 
-
+Mean curvature flow is the negative gradient flow of the volume functional on hypersurfaces. 
+\section{Fundamentals of hypersurfaces}
+SET UP THE FOLLOWING  -\\
 1. SECOND FUNDAMENTAL FORM\\
 2. MEAN CURVATURE\\
 3. CONVEXITY RESULTS\\
@@ -12,34 +11,169 @@ SET UP THE FOLLOWING  -
 6. UMBILLIC HYPERSURFACES ARE SPHERES\\
 
 
-Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an embedding and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
+Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this book we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
     \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
-where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ T(M^{n}) $ which in local coordinates is given by 
+where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ TM^{n} $ which in local coordinates is given by 
     \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
-where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. 
-Further we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. The Levi-Civita connection on $ \R^{n+1} $ is given by 
-\[ D_{X}Y =  X(Y^{i}) \partial_{i}\] (TO DO)
-Let $ x \in M^{n} $ and $ u \in T_{p}M^{n}, \tilde{v} \in T|_{U}M^{n}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
+where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. Further we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y : U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
+\[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
+where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{p}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
 \begin{equation}
     dX(\nabla_{u}\tilde{v}) = D_{dX(u)}(\tilde{V}) \label{connection}
 \end{equation}
-where $ \tilde{V} $ is an extension of $ dX(\tilde{v}) $ to an open set of $ \Rn $ containing $ X(U) $. 
+where $ \tilde{V} $ is an extension of $ dX(\tilde{v}) $ to an open set of $ \Rn $ containing $ X(U) $.  
+\begin{lemma}
+    The connection defined by \cref{connection} is well-defined and is the unique Levi-Civita connection on $ (M^{n},g) $.
+\end{lemma}
+When $ X $ is an embedding, the restriction of the tangent bundle of $ T\Rn|_{\mathcal{M}} $ can be decomposed as the direct sum 
+\[ T\mathcal{M}\oplus N\mathcal{M}  \]
+where $ N\mathcal{M} $ is the \textbf{normal bundle}  which can be described as 
+\[ N\mathcal{M} = \{(p,\nu) \in T\Rn|_{ \mathcal{M}} : \left< u, \nu \right> =0 \text{ for all } u \in T_{p} \mathcal{M}\}. \]
+For dimension reasons, the normal bundle at each point is one-dimensional. We fix a choice of unit normal $ \nu_{p} $ for each $ p \in \mathcal{M} $. This leads to \textbf{tangential projection} $ \cdot^{T} : T\Rn \to T \mathcal{M}$  and \textbf{normal projection} $ \cdot^{\perp} : T\Rn \to N \mathcal{M} $ maps of vectors in $ T\Rn $ given by 
+\[ u^{T} = u-\left< u,\nu \right> \nu,\quad \text{ and }\quad u^{\perp} = \left< u,v \right>\nu\]
+respectively. We can define the Levi-Civita connection on a embedded hypersurface $ \mathcal{M} $ using the normal projection, 
+\[ \nabla_{u}V  = (D_{u}V)^{T}\]
+where $ u  $ is a vector and $ V $ is a local vector field. Notice that this is consistent with \cref{connection} since $ dX^{-1} $ is the tangential component. The next step is to calculate the Christoffel symbols of the connection $ \nabla $. For local coordinates $ (U, \{x^{i}\}) $ in $ M^{n} $, the Christoffel symbols $ \Gamma_{ij}^{k}: U \to \R $ are obtained by the formula
+\[ \nabla_{ \partial_{i}X} \partial_{j}X = \partial_{i} (\partial_{j}X) + \Gamma_{ij}^{k} \partial_{k}X \]
+which simplifies to 
+\[ \Gamma_{ij}^{k} \partial_{k}X = \partial_{i}( \partial_{j}X) - (\partial_{i}( \partial_{j}X))^{T} = (\partial_{i}( \partial_{j}X))^{\perp}\]
+
+
+
+\section{Mean curvature flow}
+
+\begin{defn}
+    A one-parameter family of immersion $ X: M^{n} \times I \to \Rn $ is said to evolve by \textbf{Mean Curvature Flow} (MCF) if 
+		\begin{equation}
+            \frac{ \partial}{ \partial t}X(p,t) = \vec{H}(X(p,t))  = -H(X(p,t))\nu(X(p,t)) \quad \forall (p,t) \in M^{n} \times I.
+        \end{equation}
+\end{defn}
+
+Notice that the mean curvature vector $ \vec{H} = -H \nu  $ is independent of the direction of normal $ \nu $. %It will be proven in \cref{embeddings} that if $ X(\cdot,0) $ is an embedding then $ \X(\cdot,t) $ remains an embedding for all $ t \in I $. This allows us to talk about mean curvature flow of 
+
+\subsection{Examples of the mean curvature flow}
+
+It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurface. The limited number of examples come from ansatz or special cases,
+\begin{enumerate}
+    \item \textbf{Shrinking spheres}: Let $ \mathbb{S}^{n}(r) \subset \Rn $ be sphere of dimension $ n $ with radius $ r $. Since the mean curvature $ H = \frac{n}{r} $ is constant across the sphere, me make the ansatz that the hypersurface remain spherical under mean curvature flow. Let $ \mathcal{M}_{t} = \mathbb{S}^{n}(r(t)) $ be the solution, then the PDE is reduced to an ODE given by \begin{equation}
+        \frac{d}{dt}r(t) = -\frac{n}{r(t)}
+    \end{equation}
+    whose solution is $ r(t) = \sqrt{r_{0}^{2}-2nt} $ with $ r(0)=r_{0} $. So the shrinking spheres $ \mathbb{S}^{n}(\sqrt{r_{0}^{2}-2nt})$ are a solution to the mean curvature flow for $ t \in [0,\frac{r_{0}^{2}}{2n}) $. 
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
+            \draw[->] (xyz cs:x=-5) -- (xyz cs:x=5) node[above] {$x$};
+            \draw[->] (xyz cs:y=-5) -- (xyz cs:y=5) node[right] {$z$};
+            \draw[->] (xyz cs:z=-5) -- (xyz cs:z=5) node[above] {$y$};
+            \shade[ball color = gray!40, opacity = 0.5] (0,0) circle (1cm);
+            \draw (0,0) circle (1cm);
+            \draw (-1,0) arc (180:360:1 and 0.3);
+            \draw[dashed] (1,0) arc (0:180:1 and 0.3);
+            \fill[fill=black] (0,0) circle (1pt);
+            \shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
+            \draw (0,0) circle (2cm);
+            \draw (-2,0) arc (180:360:2 and 0.6);
+            \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+            %\draw[dashed] (4,0) arc (60:120:8);
+            %\draw (-4,0) arc (240:300:8);
+              
+            \shade[ball color = gray!40, opacity = 0.6] (0,0) circle (0.5cm);
+            \draw (0,0) circle (0.5cm);
+            \draw (-0.5,0) arc (180:360:0.5 and 0.15);
+            \draw[dashed] (0.5,0) arc (0:180:0.5 and 0.15);
+            \fill[fill=black] (0,0) circle (0.5pt);
+            \draw [black, -stealth, thick] (0,4) -- (0,3);
+            \draw [black, -stealth,thick] (2.8,2.8) -- (2.3,2.3);
+            \draw [black, -stealth,thick] (4,0) -- (3,0);
+            \draw [black, -stealth,thick] (0,-4) -- (0,-3);
+            \draw [black, -stealth,thick] (-4,0) -- (-3,0);
+            \draw [black, -stealth,thick] (-2.8,2.8) -- (-2.3,2.3);
+            \draw [black, -stealth,thick] (2.8,-2.8) -- (2.3,-2.3);
+            \draw [black, -stealth,thick] (-2.8,-2.8) -- (-2.3,-2.3);
+        \end{tikzpicture}
+        \caption{Shrinking spheres of dimension 2}
+    \end{figure}
+    \item \textbf{Evolution of Graphs}: Let $ f : \R^{n} \to \R $ be a smooth function. The graph of $ f $ in $ \Rn $, 
+    \[ \mathcal{M} = \{(x,f(x)) \in \Rn :  x \in \R^{n} \} \]
+    is a smooth hypersurface. The mean curvature vector at $ (x,f(x)) $ for the hypersurface can be calculated to be,
+    \[ \sqrt{1+ |\nabla f|^{2}} \, \text{div} \left( \frac{\nabla f}{\sqrt{1+ |\nabla f|^{2}}} \right).\]
+    Ecker and Huisken proved in \cite{ecker1989mean} that graphs evolving under the mean curvature flow remain graphs. So a family of graphs $ \mathcal{M}_{t} = \{(x,f_{t}(x)) :  x \in \Rn\} $ with the condition 
+    \[ \frac{\partial}{ \partial t}f_{t}(x) = \sqrt{1+ |\nabla f_{t}|^{2}} \, \text{div} \left( \frac{\nabla f_{t}}{\sqrt{1+ |\nabla f_{t}|^{2}}} \right) \]
+    is a solution of the mean curvature flow. 
+    \item \textbf{Minimal surfaces}: Minimal surfaces are the critical points of the volume functional. A hypersurface $ \mathcal{M} $ is said to be a \textbf{minimal hypersurface} if it satisfies $ H(x) = 0 $ for all $ x \in \mathcal{M}  $. Hence, minimal hypersurfaces are stationary solutions of the mean curvature flow. 
+    \item \textbf{Products of solutions with Euclidean space}
+    : Suppose $ \mathcal{M}_{t}^{n} \subset \Rn $ is a solution of the mean curvature flow. It is easy to verify that mean curvature vector of the product $ \mathcal{M}_{t}^{n} \times \R^{m} \subset \R^{n+1} \times\R^{m}  $ is given by 
+    \[ \vec{H}(x,y) = (H(x) \nu(x), 0), \]
+    which implies that the time-parametrized product $ \mathcal{N}_{t} = \mathcal{M}_{t} \times \Rn $ is a solution of the mean curvature flow as well.
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
+            \coordinate (O) at (0,0,0);
+              \coordinate (A) at (2,0,0);
+              \coordinate (B) at (0,2,0);
+              \coordinate (C) at (0,0,2);
+              \draw[->] (xyz cs:x=-5) -- (xyz cs:x=5) node[above] {$x$};
+              \draw[->] (xyz cs:y=-5) -- (xyz cs:y=5) node[right] {$z$};
+              \draw[->] (xyz cs:z=-5) -- (xyz cs:z=5) node[above] {$y$};
+            %\draw[-latex] (O) -- (A) node[below] {$y$};
+            %\draw[-latex] (O) -- (B) node[above] {$z$};
+            %\draw[-latex] (O) -- (C) node[below] {$x$};
+            \node[cylinder, draw, shape aspect=0.3, 
+              cylinder uses custom fill, cylinder end fill=gray!50, 
+              minimum height=0.7cm,
+              cylinder body fill=gray!25, opacity=0.5, 
+            scale=5, rotate=90]{};
+            \draw [black, -stealth] (1.25,3.55) -- (0.5,3.55);
+            \draw [black, -stealth] (-1.25,3.55) -- (-0.5,3.55);
+            %\draw [-stealth] 
+        \end{tikzpicture}
+        \caption{Cylinder $ S^{1} \times \R $}
+    \end{figure}  
+\end{enumerate}
+\subsection{Mean curvature flow as gradient of the area functional}
+
+Let $ \mathcal{M}_{0} \subset \Rn $ be a smooth hypersurface and $ X: M^{n} \times (-\epsilon, \epsilon) \to \Rn $ be a variation with $ X(\cdot,0) = \mathcal{M}_{0} $. Considering area as a function of time over the variation, we get \begin{equation}
+    \frac{d}{dt}\text{Area}( \mathcal{M}_{t}) = \int_{ \mathcal{M}_{t}} \left< \partial_{t}X, H \nu \right> 
+\end{equation}
+Using this, the gradient of the area functional is 
+	\[ \nabla \text{Area} = H \nu \]
+	so the most efficient way to reduce the volume is to choose the variation so that 
+	\[ \partial_{t}X = -\nabla \text{Area} = -H \nu \]
+	which is the mean curvature flow. In particular, we get the following equation for evolution of area under mean curvature flow,
+	\[ \frac{d}{dt} \text{Area}( \mathcal{M}_{t}) =  - \int_{\mathcal{M}_{t}}H^{2}\]
+which is the steepest descent of area in the space of hypersurface up to speed-parametrization. 
+\subsection{Short-time existence}
+The following theorem about the uniqueness and existence of mean curvature flow is proved in \cite{andrews2022extrinsic}. 
 \begin{thm}
-    The connection defined by \cref{connection} is well-defined and is the unique Levi-Civita connection on $ (M^{n},g) $
+    Short time existence : Let $ X_{0}: M^{n} \to \Rn $ be a smooth immersion of a compact manifold without boundary. There exists an $ \epsilon >0 $ and a smooth solution $ X : M^{n} \times [0, \epsilon) \to \Rn$ to MCF, with $ X( \cdot, 0) = X_{0} $. Moreover, the solution is unique.
 \end{thm}
-When $ X $ is an embedding, the restriction of the tangent bundle of $ T\Rn|_{\mathcal{M}^{n}} $ can be decomposed as the direct sum 
-\[ T\mathcal{M}^{n}\oplus N\mathcal{M}^{n}  \]
-where $ N\mathcal{M}^{n} $ is the normal bundle which can be described as 
-\[ N\mathcal{M}^{n} = \{(p,\nu) \in T\Rn|_{ \mathcal{M}} : \left< u, \nu \right> =0 \text{ for all } u \in T_{p} \mathcal{M}\} \]
 
+\section{Maximum principle}\label{max}
+We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. 
+\begin{lemma}[Scalar maximum principle]
+    Let $ g(t) \in [0,T) $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $ and $ \beta : \mathcal{M}^{n} \times [0,T) \to \R $ be a locally bounded function. Let $ u : \mathcal{M}^{n} \times [0,T) \to \R$ be a $ C^{2} $ function satisfying the following inequality 
+    \[ \frac{ \partial}{ \partial t}u(x,t) \ge \Delta_{g(t)}u + \beta u\]
+    If $ u(x,0) \ge 0 $ for all $ x \in \mathcal{M}^{n}$, then $ u(x,t) \ge 0 $ for all $ (x,t) \in \mathcal{M}^{n} \times [0,T) $.
+\end{lemma}
+
+\begin{proof}
+    
+\end{proof}
+
+The above maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
+
+\begin{lemma}[Tensor maximum principle]
+	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
+	
+        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
+	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
+\end{lemma}
 \section{Evolution equations}
-Let $X : M^n \times I \to \R^{n+1}$ be a smooth $1$-parameter family of immersions such that 
-
-\[ \dou_t X(p,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t)\]
-
+To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 
+\[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t)\]
 Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This gives
 \[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle  \]
-\begin{thm} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of metric, normal, second fundamental form, mean curvature is given by
+\begin{thm} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of metric, normal, second fundamental form, and mean curvature is given by
 \begin{equation}
     \dou_t g_{ij} = -2Hh_{ij}
 \end{equation}
@@ -56,33 +190,35 @@ Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hyp
 \begin{proof}
 1. In local coordinates we have 
 \begin{align*}
-    \dou_tg_{ij} & = \frac{\dou}{\dou t} \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle \\
-& = \left\langle \frac{\dou^2X}{\dou x^i \dou t}, \frac{\dou X}{\dou x^j} \right\rangle + \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou^2 X}{\dou t \dou x^j} \right\rangle\\
-& = \left\langle \frac{\dou}{\dou t}(-H\nu), \frac{\dou X}{\dou x^j} \right\rangle + \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou }{\dou x^j}(-H\nu)\right\rangle \\
-& = -H \left\langle \frac{\dou \nu}{\dou t}, \frac{\dou X}{\dou x^j}\right\rangle  - H \left\langle \frac{\dou X}{\dou x^i}, \frac{\dou \nu}{\dou t}\right\rangle \\
+    \dou_tg_{ij} & = \partial_{t} \left\langle \partial_{i}X, \partial_{j}X \right\rangle \\
+& = \left\langle \partial_{i}(\partial_{t}X), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{t}(\partial_{j}X) \right\rangle\\
+& = \left\langle \partial_{t}(-H \nu), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{j}(-H \nu)\right\rangle \\
+& = -H \left\langle \partial_{t} \nu, \partial_{j}X\right\rangle  - H \left\langle \partial_{i}X, \partial_{t}\nu\right\rangle \\
 & = -2Hh_{ij}
 \end{align*}
-2. Since $\langle \nu, \nu \rangle = 1$, we have $2\langle \frac{\dou \nu}{\dou t}, \nu \rangle = 0$, so the vector $\frac{\dou \nu}{\dou t}$ is in the tangent plane of the hypersurface, hence we can write it as a linear combination of $\{\frac{\dou X}{\dou x^j}\}$ to get
+2. Since $\langle \nu, \nu \rangle = 1$, we have $2\langle \partial_{t}\nu, \nu \rangle = 0$, so the vector $\partial_{t}\nu$ is in the tangent plane of the hypersurface. We can write it as a linear combination of tangent vectors $\{\partial_{j}X\}$ to get
 \begin{align*}
-\frac{\dou \nu}{\dou t} &= \left\langle \frac{\dou \nu}{\dou t}, \frac{\dou X}{\dou x^i} \right\rangle \frac{\dou X}{\dou X^j}g^{ij} = - \left\langle \nu, \frac{\dou }{\dou x^i}\left( \frac{\dou X}{\dou t}\right) \right\rangle\frac{\dou X}{\dou x^j}g^{ij} \\
-& = \left\langle \nu, \frac{\dou }{\dou x^i}\left( H \nu \right) \right\rangle \frac{\dou X}{\dou x^j}g^{ij}\\
-& = \frac{\dou H}{\dou x^i}\frac{\dou X}{\dou x^j}g^{ij} + H \left\langle \nu, \frac{\dou \nu}{\dou x^i}\right\rangle \frac{\dou X}{\dou x^j}g^{ij}\\
-& = \frac{\dou H}{\dou x^i}\frac{\dou X}{\dou x^j}g^{ij} = \nabla H
+\partial_{t}\nu &= \left\langle \partial_{t}\nu, \partial_{i}X \right\rangle \partial_{j}Xg^{ij} = - \left\langle \nu, \partial_{i}X\left( \partial_{t}X \right) \right\rangle\partial_{j}X g^{ij} \\
+& = \left\langle \nu, \partial_{i}\left( H \nu \right) \right\rangle \partial_{j}Xg^{ij}\\
+& = \partial_{i}H \partial_{j}X g^{ij} + H \left\langle \nu, \partial_{i}\nu\right\rangle \partial_{j}Xg^{ij}\\
+& = \partial_{i}H\partial_{j}Xg^{ij} = \nabla H
 \end{align*}
-3. From the relation \[
-\frac{\dou^2 X}{\dou x^{i} \dou x^{j}} = \Gamma^{k}_{ij}\frac{\dou X}{\dou x^{k}}	
-,\] we get 
+3. From the relations \[
+\partial_{i}\partial_{j}X = \Gamma^{k}_{ij}\partial_{k}X	-h_{ij}\nu \quad \text{ and } \quad\partial_{j}\nu = h_{jl}g^{lm}\partial_{m}X\] we get 
 \begin{align*}
-\dt h_{ij} & = - \dt (\frac{\dou^2 X}{\dou x^i \dou x^j},\nu)\\
-& = (\frac{\dou^2}{\dou x^i \dou x^j}(H \nu), \nu) - 
-.\end{align*}
-4. From the previous equation we get 
+\partial_{t} h_{ij} & = - \partial_{t} \left\langle\partial_{i}\partial_{j}X ,\nu\right\rangle\\
+& = \left\langle\partial_{i}\partial_{j}(H \nu), \nu \right\rangle - \left\langle \partial_{i}\partial_{j}X, \partial_{l}H \partial_{m}Xg^{lm}\right\rangle \\
+& = \partial_{i}\partial_{j}H + H \left\langle \partial_{i}\left( h_{jm}g^{ml} \partial_{l}X \right), \nu \right\rangle -\left< \Gamma_{ij}^{k}\partial_{k}X-h_{ij}\nu,\partial_{l}H \partial_{m}Xg^{lm} \right>\\
+& = \partial_{i}\partial_{j}H - \Gamma_{ij}^{k}\partial_{k}H + Hh_{jm}g^{ml}\left< \Gamma_{il}^{p}\partial_{p}X- h_{il}\nu, \nu \right> \\
+& = \nabla_{i}\nabla_{j}H- Hh_{il}g^{lm}h_{ml}.
+\end{align*}
+4. Utilizing the previous evolution equation with product formula of derivatives, 
 \begin{align*}
-\dou_t H &= \dou_t(g^{ij}h_{ij}) = \frac{\dou g^{ij}}{\dou t}h_{ij}+ g^{ij}\frac{\dou h_{ij}}{\dou t}\\
-& = -g^{ik}\frac{\dou g_{kl}}{\dou t}g^{lj}h_{ij}+ g^{ij}(\Delta h_{ij} - 2Hh_{il}g^{lm}h_{mj}+|A|^2h_{ij})\\
+\dou_t H &= \dou_t(g^{ij}h_{ij}) = (\partial_{t}g^{ij})h_{ij}+ g^{ij}\partial_{t}h_{ij}\\
+& = -g^{ik}(\partial_{t}g_{kl})g^{lj}h_{ij}+ g^{ij}(\Delta h_{ij} - 2Hh_{il}g^{lm}h_{mj}+|A|^2h_{ij})\\
 & = -g^{ik}(-2Hh_{kl})g^{lj}h_{ij}+ \Delta(g^{ij}h_{ij}) - 2Hg^{ij}g^{lm}h_{il}h_{mj}+|A|^2H\\
 & = 2H|A|^2 + \Delta H - 2H|A|^2 + |A|^2H\\
-& =  \Delta H+ |A|^2H
+& =  \Delta H+ |A|^2H.
 \end{align*}
 \end{proof}
 \begin{corollary}
@@ -92,7 +228,7 @@ If mean curvature is positive everywhere on the initial hypersurface, then it re
 We apply maximum principle to the evolution equation of $H$.
 \end{proof}
 \begin{remark}
-This property of mean curvature holds even when the hypersurface is embedded in an arbitrary(OR WITH POSITIVE RICCI CURVATURE?) Riemannian manifold. 
+This property of mean curvature holds even when the hypersurface is embedded in an arbitrary Riemannian manifold with positive Ricci curvature. 
 \end{remark}
 \section{The Avoidance Principle}
 
@@ -146,15 +282,8 @@ e^{\epsilon(1+t)}d(x_0,y_0,t_0) = d_0 \quad \text{ for some }(x_0,y_0) \in   M^n
 We can phrase the avoidance principle as : disjointness is an immortal property and jointness is an ancient property.
 \end{remark}
 
-\section{Huisken's theorem}
 
-Huisken's theorem proves the convergence of compact, uniformly convex hypersurface to sphere under Mean curvature flow in finite time. 
-\begin{thm}
-Let $ X : M^{n} \times [0,T) \to \Rn  $, $ n \ge 2 $ be a maximal solution of MCF such that $ M^{n} $ is compact and $X_{0} = X(\cdot, 0)$ is convex embedding. Then $ X_{t} = X(\cdot,t) $ is a convex embedding for all $ t>0 $ and $ X_{t} $ converges to a point $ p \in \Rn $ as $ t \to T $. Further the rescaled embeddings $ \tilde{X}_{t} : M^{n} \to \Rn $ defined by 
-            \[ \tilde{X}_{t}(x) \define \frac{X_{t}(x)-p}{\sqrt{2n(T-t)}}\]
-converge uniformly in the smooth topology to a smooth embedding whose image coincides with the unit sphere $ S^{n} $.
-\end{thm}
-\subsection{Long time existence}
+\section{Long time existence}
 
 In this subsection we will prove that blowing up of second fundamental form is the only obstruction for continuing the flow. The proof goes by contradiction, relying on the Bernstein type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}.
 
@@ -165,6 +294,14 @@ In this subsection we will prove that blowing up of second fundamental form is t
 \begin{proof}
     Assume on the contrary that $ \sup_{M^{n} \times [0,T)}|A|^{2} \le C $. Our aim is to prove that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow.
 \end{proof}
+\section{Huisken's theorem}
+
+Huisken's theorem proves the convergence of compact, uniformly convex hypersurface to sphere under Mean curvature flow in finite time. 
+\begin{thm}
+Let $ X : M^{n} \times [0,T) \to \Rn  $, $ n \ge 2 $ be a maximal solution of MCF such that $ M^{n} $ is compact and $X_{0} = X(\cdot, 0)$ is convex embedding. Then $ X_{t} = X(\cdot,t) $ is a convex embedding for all $ t>0 $ and $ X_{t} $ converges to a point $ p \in \Rn $ as $ t \to T $. Further the rescaled embeddings $ \tilde{X}_{t} : M^{n} \to \Rn $ defined by 
+            \[ \tilde{X}_{t}(x) \define \frac{X_{t}(x)-p}{\sqrt{2n(T-t)}}\]
+converge uniformly in the smooth topology to a smooth embedding whose image coincides with the unit sphere $ S^{n} $.
+\end{thm}
 \subsection{Pinching estimate}
 
 The quantity $ \frac{|A|^{2} - \frac{H^{2}}{n}}{H^{2}} = \frac{1}{n} \sum_{i<j}^{} \left( \frac{\kappa_{i}}{H}- \frac{\kappa_{j}}{H} \right)^{2}  $ is scaling invariant and measures the roundness of the hypersurface. If we compute the evolution equation we get \begin{equation}
@@ -183,10 +320,13 @@ The evolution of $ f_{\sigma} $ is given by \begin{align*}
     \frac{ \partial}{ \partial t}f_{\sigma} & = 
 \end{align*}
 \end{lemma}
-(Huisken' remark on this from the lecture series : the bad term can only be controlled using integral estimates \href{https://www.mfo.de/about-the-institute/staff/prof-dr-gerhard-huisken/lectures/mean-curvature-flow/lecture-3}{58 min mark} )
+\begin{comment}
+    (Huisken' remark on this from the lecture series : the bad term can only be controlled using integral estimates \href{https://www.mfo.de/about-the-institute/staff/prof-dr-gerhard-huisken/lectures/mean-curvature-flow/lecture-3}{58 min mark} )
 
 (Sinestrari intuition about Stampacchia iteration : \href{https://youtu.be/XvUGowx9WNo?t=2119}{yt link})
-
+\end{comment}
+\begin{comment}
+    
 \subsection{Width-pinching}
 
 Let $ \Omega  \subset \Rn  $ be a compact, convex body with  boundary $  \mathcal{M}  = \partial \Omega$. %such that $ \mathcal{M} $ is locally uniformly convex. 
@@ -233,22 +373,21 @@ If we can show that $ \rho_{-} \to 0 $ as $ t \to T $, then inequality (\ref{pin
 \begin{thm}
 The inradius $ \rho_{t} $ of $ \Omega_{t} $ tends to zero as $ t \to T $. Thus, $ \mathcal{M}_{t} $ converges to some point $ p \in \Rn $ as $ t \to T $.
 \end{thm}
+\end{comment}
 
 \section{Monotonicity Formula}
 Let $ X :M^{n} \times I \to \R^{n+1} $ be one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form are given by 
-\[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\eta, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right> \]
+\[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\eta, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right>. \]
 
 If we scale the solution by a factor of $ \lambda  $, defined by $ \tilde{X}(x,t) = \lambda X(x,t) $ we get the following metric and second fundamental form 
 
-\[ \tilde{g_{ij}} = \left< \frac{\dou \tilde{X}}{\dou x^{i}}, \frac{\dou \tilde{X}}{\dou x^{j}} \right>  = \lambda^{2}g_{ij} \]
-\[ \tilde{h_{ij}} = \left<\eta, \frac{\partial^{2}\tilde{X}}{\dou x^{i}\dou x^{j}} \right>  = \lambda h_{ij}\]
-
+\[ \tilde{g_{ij}} = \left< \frac{\dou \tilde{X}}{\dou x^{i}}, \frac{\dou \tilde{X}}{\dou x^{j}} \right>  = \lambda^{2}g_{ij} ,\qquad \tilde{h_{ij}} = \left<\eta, \frac{\partial^{2}\tilde{X}}{\dou x^{i}\dou x^{j}} \right>  = \lambda h_{ij}\]
 so the scaled mean curvature is given by $ \tilde{H} = \tilde{g}^{{ij}}\tilde{h}_{ij} = \frac{1}{\lambda}H $. This implies the scaled solutions satisfy the evolution equation
 
 \[ \frac{\dou \tilde{X}}{\dou t} = \lambda \frac{\dou X}{\dou t} = -\lambda^{2}\tilde{H}\eta \]
-
-    \[ \frac{\dou \tilde{X}}{\dou (\lambda^{2}t)} = - \tilde{H}\eta \]
-Hence if scale time by $ \lambda^{2} $, then $ \tilde{X} $ is also a solution of the MCF. 
+or
+\[ \frac{\dou \tilde{X}}{\dou (\lambda^{2}t)} = - \tilde{H}\eta \]
+Hence if scale time by $ \lambda^{2} $, then $ \tilde{X} $ is also a solution of the mean curvature flow.
 
 Mean curvature flow is invariant under parabolic scaling, i.e.  if $ X : M^{n} \times I \to \R^{n+1} $ is solution, then so is $ X_{\lambda}(x,t) = \lambda X(x,\lambda^{2}t) $. We construct a weighted area functional which is invariant under \textit{parabolic} scaling along any solution to mean curvature flow which will be monotonous.
 
@@ -300,7 +439,7 @@ or
 where $ X^{T} $ denotes the tangential part of the vector $ X $. Substituting \cref{rho4} into \cref{rho0}
 \begin{align*}
 \frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  &=  \int_{M_{t}}\rho\left(\frac{\left< X,H \eta\right>}{(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}+ \frac{1}{4(-t)^2}|X^T|^2\right)d \mu_{t}\\ 
-& = -\int_{M_{t}} \rho \left( H - \frac{\left< X, \eta \right>}{2(-t)} \right)^{2} d \mu_{t}
+& = -\int_{M_{t}} \rho \left( H - \frac{\left< X, \eta \right>}{2(-t)} \right)^{2} d \mu_{t}.
 \end{align*}
 \end{proof}
 
@@ -341,24 +480,3 @@ Suppose the hypersurface satisfies $H = -\langle X, \nu \rangle$. Let $e_1,\ldot
 \end{align}
 \[\nabla_i \nabla_j H = h_{ij} - Hh_{il}h_{lj}+\langle x, e_l \rangle \nabla_l h_{ij}\]
 \end{proof}
-
-\section{Maximum principle}\label{max}
-We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. 
-\begin{lemma}[Scalar maximum principle]
-    Let $ g(t) \in [0,T) $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $ and $ \beta : \mathcal{M}^{n} \times [0,T) \to \R $ be a locally bounded function. Let $ u : \mathcal{M}^{n} \times [0,T) \to \R$ be a $ C^{2} $ function satisfying the following inequality 
-    \[ \frac{ \partial}{ \partial t}u(x,t) \ge \Delta_{g(t)}u + \beta u\]
-    If $ u(x,0) \ge 0 $ for all $ x \in \mathcal{M}^{n}$, then $ u(x,t) \ge 0 $ for all $ (x,t) \in \mathcal{M}^{n} \times [0,T) $.
-\end{lemma}
-
-\begin{proof}
-    
-\end{proof}
-
-The above maximum principle can be further extended to tensors. This was done in \cite{hamilton1982three} for Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $.
-
-\begin{lemma}[Tensor maximum principle]
-	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
-	
-        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
-	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
-\end{lemma}

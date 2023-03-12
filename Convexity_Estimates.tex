@@ -2,6 +2,28 @@
 
 As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives rise to a convex ancient solution.
 
+
+
+\section{Cones and Symmetric polynomials}
+
+Mean curvature of a hypersurface at a point is the sum of principal curvatures which is a symmetric function. Similarly, Gauss curvature is the product of the principal curvatures. The study of elementary symmetric functions of principal curvatures will be crucial to analyze the convexity of singularities. We begin by recalling the definition of elementary symmetric polynomials.
+
+\begin{defn}
+    For any $ k=1, \ldots, n $, the \textbf{$ k $-th elementary symmetric polynomial}   $ S_{k} :\R^{n} \to \R $  is defined by
+    \[ S_{k}(\lambda) = \sum_{1\le i_{1}< i_{2}< \cdots < i_{k}\le n}^{}\lambda_{i_{1}}\lambda_{i_{2}} \cdots \lambda_{i_{k}} \]
+    where $ \lambda = (\lambda_{1}, \ldots, \lambda_{n}) \in \R^{n}$ with the convention $ S_{0} \equiv 1$. 
+\end{defn}
+
+Associated to each $ k $ we can also define the domain of positivity of first $ k $ elementary symmetric polynomials $ \Gamma_{k} $ given by 
+\[ \Gamma_{k} = \{\lambda \in \R^{n} : S_{1}(\lambda) >0, \ldots , S_{k}(\lambda) >0\} \]
+
+It is easy to see that $ \Gamma_{k} $ are cones in the Euclidean space and satisfy $ \Gamma_{k} \subset \Gamma_{k+1} $. In this formulation a hypersurface is mean-convex if the vector $ (\kappa_{1}, \ldots, \kappa_{n}) $ is in $ \Gamma_{1} $. The following proposition was proved in \cite{huisken1999convexity} regarding the cones $ \Gamma_{k} $. 
+\begin{proposition}
+    Let $ A = \{x \in \R^{n} : x_{1}>0, \ldots, x_{n}>0 \} $ denote the positive cone. The sets $ \Gamma_{k} $ coincide with the connected component of the domain $ \{\lambda \in \Rn : S_{k}(\lambda)>0\} $ containing the positive cone $ A $. Further, the cone $ \Gamma_{n} $ coincides with the positive cone $ A $.
+\end{proposition}
+This establishes a hierarchy of convexity with last one being uniformly convex where the principal curvature vector $ \vec{\kappa} = (\kappa_{1}, \ldots, \kappa_{n}) \in \Gamma_{n} $ for all points in the hypersurface. 
+
+
 \begin{thm}\label{mainthm}
     Let $ X : M^{n} \times [0,T) \to \Rn$ be a smooth solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta $ and $ \mathcal{M}_{0} $ such that 
     \begin{equation}
@@ -12,7 +34,7 @@ As observed in the previous chapter, a convex hypersurface evolving under (resca
 
 We will only prove the theorem for $ k=2 $. A complete proof is done using induction in \cite{huisken1999convexity}. 
 \section{Estimate of $S_{2}$}
-It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
+%It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 %\begin{thm}
     %Let $ X : M^{n} \times [0,T) \to \Rn$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
     %\begin{equation}
@@ -270,8 +292,8 @@ To handle the bad positive term appearing in the last we use the following lemma
         & \quad - \sigma(\sigma-1) \frac{g}{H^{2}}|\nabla H|^{2} + \frac{2(\sigma -1)}{H}\left< \nabla g, \nabla H \right>
     \end{align*}
 
-    Multiplying this equation by $ g_{+}^{p}H^{-\sigma} $ \begin{align*}
-        - \int \frac{2Z}{H^{2}}g_{+}^{p} d \mu & = 
+    Multiplying this equation by $ g_{+}^{p}H^{-\sigma} $ and integrating by parts to get \begin{align*}
+        -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}+ \sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right> & = 
     \end{align*}
     \end{proof}
 
