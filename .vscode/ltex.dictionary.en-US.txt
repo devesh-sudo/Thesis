@@ -18,3 +18,4 @@ submanifold
 pushforward
 pointwise
 Christoffel
+Codazzi

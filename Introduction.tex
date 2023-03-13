@@ -173,7 +173,7 @@ To understand the properties of mean curvature flow it is essential to know the 
 \[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t)\]
 Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This gives
 \[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle  \]
-\begin{thm} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of metric, normal, second fundamental form, and mean curvature is given by
+\begin{lemma} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of metric, normal, second fundamental form, and mean curvature is given by
 \begin{equation}
     \dou_t g_{ij} = -2Hh_{ij}
 \end{equation}
@@ -186,7 +186,7 @@ Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hyp
 \begin{equation}
     \dou_t H = \Delta H + |A|^2H
 \end{equation}
-\end{thm}
+\end{lemma}
 \begin{proof}
 1. In local coordinates we have 
 \begin{align*}
@@ -210,7 +210,7 @@ Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hyp
 & = \left\langle\partial_{i}\partial_{j}(H \nu), \nu \right\rangle - \left\langle \partial_{i}\partial_{j}X, \partial_{l}H \partial_{m}Xg^{lm}\right\rangle \\
 & = \partial_{i}\partial_{j}H + H \left\langle \partial_{i}\left( h_{jm}g^{ml} \partial_{l}X \right), \nu \right\rangle -\left< \Gamma_{ij}^{k}\partial_{k}X-h_{ij}\nu,\partial_{l}H \partial_{m}Xg^{lm} \right>\\
 & = \partial_{i}\partial_{j}H - \Gamma_{ij}^{k}\partial_{k}H + Hh_{jm}g^{ml}\left< \Gamma_{il}^{p}\partial_{p}X- h_{il}\nu, \nu \right> \\
-& = \nabla_{i}\nabla_{j}H- Hh_{il}g^{lm}h_{ml}.
+& = \nabla_{i}\nabla_{j}H- Hh_{il}g^{lm}h_{mj}.
 \end{align*}
 4. Utilizing the previous evolution equation with product formula of derivatives, 
 \begin{align*}

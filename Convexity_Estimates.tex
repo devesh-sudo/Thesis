@@ -4,7 +4,7 @@ As observed in the previous chapter, a convex hypersurface evolving under (resca
 
 
 
-\section{Cones and Symmetric polynomials}
+\section{Elementary symmetric polynomials and cones}
 
 Mean curvature of a hypersurface at a point is the sum of principal curvatures which is a symmetric function. Similarly, Gauss curvature is the product of the principal curvatures. The study of elementary symmetric functions of principal curvatures will be crucial to analyze the convexity of singularities. We begin by recalling the definition of elementary symmetric polynomials.
 
@@ -21,8 +21,7 @@ It is easy to see that $ \Gamma_{k} $ are cones in the Euclidean space and satis
 \begin{proposition}
     Let $ A = \{x \in \R^{n} : x_{1}>0, \ldots, x_{n}>0 \} $ denote the positive cone. The sets $ \Gamma_{k} $ coincide with the connected component of the domain $ \{\lambda \in \Rn : S_{k}(\lambda)>0\} $ containing the positive cone $ A $. Further, the cone $ \Gamma_{n} $ coincides with the positive cone $ A $.
 \end{proposition}
-This establishes a hierarchy of convexity with last one being uniformly convex where the principal curvature vector $ \vec{\kappa} = (\kappa_{1}, \ldots, \kappa_{n}) \in \Gamma_{n} $ for all points in the hypersurface. 
-
+This establishes a hierarchy of convexity with last one being uniformly convex where the principal curvature vector $ (\kappa_{1}, \ldots, \kappa_{n}) \in \Gamma_{n} $ for all points in the hypersurface. The main result of the chapter is the following theorem. 
 
 \begin{thm}\label{mainthm}
     Let $ X : M^{n} \times [0,T) \to \Rn$ be a smooth solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta $ and $ \mathcal{M}_{0} $ such that 
@@ -32,7 +31,7 @@ This establishes a hierarchy of convexity with last one being uniformly convex w
     on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 \end{thm}
 
-We will only prove the theorem for $ k=2 $. A complete proof is done using induction in \cite{huisken1999convexity}. 
+This means that the negative part of $ S_{k} $ cannot grow faster that $ H^{k} $. We will only prove the theorem for $ k=2 $ adapted from \cite{huisken1999mean}. A complete proof is done using induction in \cite{huisken1999convexity}. 
 \section{Estimate of $S_{2}$}
 %It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 %\begin{thm}
@@ -42,8 +41,8 @@ We will only prove the theorem for $ k=2 $. A complete proof is done using induc
     %\end{equation}
     %on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 %\end{thm}
-Let $ g_{\sigma,\eta} = \dfrac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} $
-
+For any $ \eta \in \R $ and $ \sigma \in [0,2] $ let $$ g_{\sigma,\eta} = \left( \frac{|A|^{2}}{H^{2}}- (1+ \eta) \right)H^{\sigma} = \frac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} = \frac{-2S_{2}- \eta H^{2}}{H^{2-\sigma}}.$$
+Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's inequality will imply the desired estimate. The proof of \cref{mainthm} for $ k=2 $ is divided into two parts. First part is obtaining an $ L^{p} $ estimate of $ g_{ \sigma, \eta} $ and the second part is utilizing Stampacchia lemma using Michael-Simon inequality in order to get an $ L^{\infty} $ bound. In order to prove the first part we derive the evolution equation of $ g_{\sigma,\eta} $ using the product rule but before that we need the following lemmas. 
 
 \begin{comment}
 \begin{lemma}
@@ -74,12 +73,12 @@ Let $ g_{\sigma,\eta} = \dfrac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} $
     \end{align*}
 \end{proof}
 
-The proof is divided into two parts. First part is obtaining an $ L^{p} $ estimate of $ g_{ \sigma, \eta} $ and the second part is Stampacchia iteration using Michael-Simon inequality in order to get an $ L^{\infty} $ bound. 
+
 
 \begin{lemma}\label{Deltag1}
     The quantity $ \dfrac{|A|^{2}}{H^{2}} $ satisfies the differential equation 
     \begin{equation}
-        \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} = \Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2}.
+        \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} = \Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2}. 
     \end{equation}
 \end{lemma}
 \begin{proof}
@@ -87,42 +86,27 @@ The proof is divided into two parts. First part is obtaining an $ L^{p} $ estima
     \begin{align*}
         \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} & = \frac{1}{H^{2}} \frac{ \partial |A|^{2} }{ \partial t} - 2\frac{|A|^{2}}{H^{3}} \frac{ \partial H}{ \partial t}\\
         & = \frac{1}{H^{2}}\left( \Delta |A|^{2} - 2|\nabla A|^{2}+2|A|^{4}\right) - 2 \frac{|A|^{2}}{H^{3}}\left( \Delta  H + |A|^{2}H\right)\\
-        & = \frac{\Delta |A|^{2}}{H^{2}} - 2 \frac{|\nabla A|^{2}}{H^{2}} - 2|A|^{2} \frac{\Delta H}{H^{3}} 
+        & = \frac{\Delta |A|^{2}}{H^{2}} - 2 \frac{|\nabla A|^{2}}{H^{2}} - 2|A|^{2} \frac{\Delta H}{H^{3}} .
     \end{align*}
 
-    Now calculating the Laplacian we get, \begin{align*}
+    Now calculating the Laplacian, \begin{align*}
         \Delta \frac{|A|^{2}}{H^{2}} & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2}\frac{ \Delta H^{2}}{H^{4}} - \frac{2}{H^{4}} \left< \nabla |A|^{2}, \nabla H^{2} \right> + \frac{2|A|^{2}}{H^{6}}|\nabla H^{2}|^{2}\\
         & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2} \left( \frac{2H \Delta H+ 2| \nabla H|^{2}}{H^{4}} \right)- \frac{2}{H^{4}}\left< \nabla |A|^{2}, 2H \nabla H \right> + 8 \frac{|A|^{2}}{H^{6}}|\nabla H|^{2}\\
         & = \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right>
     \end{align*}
-
-    which combined gives \begin{align*}
+    which substituted in the time derivative gives \begin{align*}
         \frac{\partial}{ \partial t} \frac{|A|^{2}}{H^{2}} & = \Delta \frac{|A|^{2}}{H^{2}}  - 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} + \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right> -2 \frac{|\nabla A|^{2}}{H^{2}}\\
         & = \Delta \frac{|A|^{2}}{H^{2}} + \frac{2}{H} \left< \nabla H, \frac{\nabla |A|^{2}}{H^{2}} - \frac{2}{H^{3}}|A|^{2} \nabla H \right>  \\
         & \qquad - \frac{2}{H^{4}}\left( |A|^{2}|\nabla H|^{2} + | \nabla A|^{2}H^{2} - H\left< \nabla |A|^{2}, \nabla H \right> \right) \\
         & = \Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2}.
     \end{align*}
 \end{proof} 
-
-Applying maximum principle we get that $ \frac{|A|^{2}}{H^{2}} $ is uniformly bounded so there exists a positive constant depending only on $ \mathcal{M}_{0} $ such that 
-\[ |A|^{2} \le c_{0}H^{2} \quad \text{ on } \quad \mathcal{M}_{t}, \]
-for all time $ t \in [0,T) $. 
-
-\textcolor{red}{Make it} $ g_{\sigma, \eta }\le c_{0}H^{\sigma} $
-
-
-Recall Simon's identity from \cite{huisken1984flow} \begin{equation}
-        \frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i} \nabla_{j} H \right> + |\nabla A|^{2} + Z \label{Simonid}
-\end{equation}
-
-\textcolor{red}{TO DO : Write why this isn't enough to prove the required decay}
-
 Using this we compute the time derivative of $ g_{\sigma, \eta} $
 \begin{lemma}\label{Deltag}
     The evolution equation of $ g_{\sigma, \eta} $ is given by 
     \begin{align}
         \frac{ \partial g_{\sigma, \eta}}{ \partial t} =& \Delta g_{\sigma, \eta} + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g_{\sigma, \eta} \right> - \frac{\sigma (1-\sigma)}{H^{2}}g_{\sigma, \eta} | \nabla H|^{2} \nonumber\\
-    &  - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma |A|^{2} g_{\sigma, \eta}.
+    &  - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma |A|^{2} g_{\sigma, \eta}\label{gequation}.
     \end{align}
 \end{lemma}
 \begin{proof}
@@ -137,6 +121,18 @@ Using this we compute the time derivative of $ g_{\sigma, \eta} $
         &  \quad - \frac{2}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} + \sigma |A|^{2} g_{\sigma, \eta}.
     \end{align*}
 \end{proof}
+
+Applying maximum principle on \cref{Deltag1} get that $ \frac{|A|^{2}}{H^{2}} $ is uniformly bounded so there exists a positive constant depending only on $ \mathcal{M}_{0} $ such that 
+\[ |A|^{2} \le \tilde{c_{0}}H^{2} \quad \text{ on } \quad \mathcal{M}_{t}, \]
+for all time $ t \in [0,T) $. This also implies $ g_{\sigma, \eta} \le c_{0}H^{\sigma} $ which is an upper bound but as $ H $ blows-up this isn't sufficient to prove the uniform bound.
+%\textcolor{red}{Make it} $ g_{\sigma, \eta }\le c_{0}H^{\sigma} $
+%Recall Simon's identity from Chapter 1 \cref{Simon} \begin{equation}
+        %\frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i} \nabla_{j} H \right> + |\nabla A|^{2} + Z \label{Simonid}
+%\end{equation}
+%where $ Z = H\text{tr}(A^{3})- |A|^{4} $.
+The following estimate of the good term in \cref{gequation} will be required for the $ L^{p} $ estimate. 
+%\textcolor{red}{TO DO : Write why this isn't enough to prove the required decay}
+
 \begin{comment}
     \begin{lemma}   
     The evolution equation of $ g_{\sigma, \eta} $ is given by 
@@ -179,7 +175,7 @@ Using this we compute the time derivative of $ g_{\sigma, \eta} $
 \end{proof}
 \end{comment}
 
-Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $
+
  
 %Let $ \vec{\lambda} = (\lambda_{1}, \ldots , \lambda_{n}) $ be the principal curvatures of the hypersurfaces $ \mathcal{M} $ and let 
 %\[ S_{k}(\mu) = \sum_{1\le i_{1}<i_{2}<\ldots<i_{k}\le n} \lambda_{i_{1}} \lambda_{i_{2}}\ldots \lambda_{i_{k}}  \]
@@ -192,28 +188,28 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
     
 %\end{remark}
 
-\begin{lemma}
+\begin{lemma}\cite{huisken1999mean} \label{tensored}
     If $ (1+\eta)H^{2} \le |A|^{2} \le c_{0}H^{2} $ for some $ \eta, c_{0} >0 $. Then 
-    \[ |\nabla A \cdot H - \nabla H \otimes A|^{2} \ge \frac{\eta^{2}}{4n(n-1)^{2}c_{0}}H^{2}|\nabla H|^{2} \]
+    \begin{enumerate}
+        \item $ -2Z \ge \eta H^{2}|A|^{2} $
+        \item $ |\nabla A \cdot H - \nabla H \otimes A|^{2} \ge \frac{\eta^{2}}{4n(n-1)^{2}c_{0}}H^{2}|\nabla H|^{2} $
+    \end{enumerate}
 \end{lemma}
-\begin{proof}
-    We break the tensor as follows \begin{align*}
-        | \nabla A \cdot H - \nabla H \otimes A|^{2} & = | \nabla A \cdot H - \frac{1}{2}\left( \nabla H \otimes A + A \otimes \nabla H  \right) - \frac{1}{2}\left( \nabla H \otimes A -  \right)
-    \end{align*}
-    \textcolor{red}{DO IT IN ORIGINAL NOTATION MAYBE.}
-\end{proof}
+
+For the rest of proof we will restrict $ \eta, \sigma \in (0,1) $ and $ c_{i} $ will denote a constant depending only on $ n, \eta $ and $ \mathcal{M}_{0} $. For brevity we will write $ g = g_{\sigma,\eta} $ as long as $ \sigma, \eta $ are fixed. Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $ and 
+\[ \partial_{t}g_{+}^{p} = pg_{+}^{p-1}\partial_{t}g, \qquad \nabla (g_{+}^{p}) =p g_{+}^{p-1}\nabla g. \]
 
 \begin{lemma}\label{dgdt}
    There exists constant $ c_{2} , c_{3}$ such that 
-    \begin{align*}
-        \frac{d}{dt}\int_{ \mathcal{M}} g_{+}^{p} d \mu \le& - \frac{p(p-1)}{2} \int_{ \mathcal{M}} g_{+}^{p-2}| \nabla g|^{2}d \mu - \frac{p}{c_{3}} \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{2 -\sigma}}|\nabla H|^{2} d \mu \\
-        & - p \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} d \mu + p \sigma \int_{ \mathcal{ M}}|A|^{2} g_{+}^{p} d \mu 
-    \end{align*}
+    \begin{align}
+        \frac{d}{dt}\int_{ \mathcal{M}} g_{+}^{p} d \mu \le& - \frac{p(p-1)}{2} \int_{ \mathcal{M}} g_{+}^{p-2}| \nabla g|^{2}d \mu - \frac{p}{c_{3}} \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{2 -\sigma}}|\nabla H|^{2} d \mu \nonumber\\
+        & - p \int_{ \mathcal{M}} \frac{g_{+}^{p-1}}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} d \mu + p \sigma \int_{ \mathcal{ M}}|A|^{2} g_{+}^{p} d \mu \label{Lpfirst}
+    \end{align}
    for any $ p \ge c_{2} $.
 \end{lemma}
 
 \begin{proof}
-    Differentiating with respect to time and using \cref{1} for $ p \ge 2 $
+    Differentiating with respect to time and using \cref{Deltag} for $ p \ge 2 $
     \begin{align}
         \frac{d}{dt} \int_{ \mathcal{M}} g_{+}^{p} d \mu  & =  \int \left(pg_{+}^{p-1} \partial_{t}g - H^{2}g_{+}^{p}\right) d \mu \nonumber \\
         & \le \int pg_{+}^{p-1}\left( \Delta g + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g\right>  - \frac{2}{H^{4-\sigma}}|H \nabla_{i}h_{kl} - \nabla_{i}Hh_{kl}|^{2}\right)d \mu  \nonumber\\
@@ -225,7 +221,7 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
         \int pg_{+}^{p-1} \Delta g d \mu & = - p\int \left< \nabla g_{+}^{p-1}, \nabla g \right> d \mu \\
         & = -p(p-1) \int g_{+}^{p-2}| \nabla g|^{2} d \mu \label{byparts}
     \end{align}
-    Also from proposition \cref{12} we deduce that if $ c_{1} \ge 4 n(n-1)^{2}c_{0} \eta^{-2} $ 
+    Also from \cref{tensored} we deduce that if $ c_{1} \ge 4 n(n-1)^{2}c_{0} \eta^{-2} $ 
     \begin{align}
         \frac{g_{+}^{p-1}}{H^{4-\sigma}}|\nabla A \cdot H - \nabla H \otimes A|^{2} &\ge \frac{g_{+}^{p-1}}{c_{1}H^{2-\sigma}}| \nabla H|^{2} \nonumber\\
        % & = \frac{g_{+}^{p-1}}{2c_{1}H^{2-\sigma}}| \nabla H|^{2} + \frac{g_{+}^{p}}{2c_{1}H^{2}}| \nabla H|^{2} \left( \frac{H^{\sigma}}{g_{+}} \right)\\
@@ -245,7 +241,7 @@ Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p
     \end{align*}
     which gives the desired inequality with $ c_{3} = \frac{1}{2c_{1}} $.
 \end{proof}
-To handle the bad positive term appearing in the last we use the following lemma
+To handle the bad positive term appearing in \cref{Lpfirst} we use the following lemma
 \begin{lemma}
     There exists a constant $ c_{4} $ such that  \begin{align*}
         \frac{1}{c_{4}} \int |A|^{2}g_{+}^{p} d \mu & \le \left( p+ \frac{p}{\beta} \right) \int g_{+}^{p-2}| \nabla g|^{2} + (1+ \beta p)\int \frac{g_{+}^{p-1}}{H^{2-\sigma}}| \nabla H|^{2} d \mu \\
@@ -278,36 +274,78 @@ To handle the bad positive term appearing in the last we use the following lemma
         & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \\
         & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2}+ \frac{2(\sigma -1)}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right>.
     \end{align*}
-    Now similar to time derivative we calculate the gradient of $ g $ with $ H $, \begin{align*}
+
+    Now similar to time derivative we calculate inner product of $ \nabla g $ with $ \nabla H $, \begin{align*}
         \left< \nabla g, \nabla H \right> & = \left< \nabla\frac{ |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} + \sigma\left( \frac{|A|^{2}}{H^{2}} - (1+ \eta) \right) H^{\sigma-1}| \nabla H|^{2} \\
         & = \left< \frac{\nabla |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} -2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2}+ \sigma \frac{g}{H}| \nabla H|^{2},
     \end{align*}
 
-    Also recall Simon's identity, and using this to eliminate the mixed inner product term 
-    \begin{align*}
-        \Delta g & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \\
-        & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} \\
-        & \quad + \frac{2(\sigma -1)}{H}\left( \left< \nabla g, \nabla H \right> +2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2} - \sigma \frac{g}{H}|\nabla H|^{2} \right)  \\
-        & = \frac{2\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>+2Z}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \\
-        & \quad - \sigma(\sigma-1) \frac{g}{H^{2}}|\nabla H|^{2} + \frac{2(\sigma -1)}{H}\left< \nabla g, \nabla H \right>
-    \end{align*}
+    Using Simon's identity \cite{Simon} and previous expression to  eliminate the last mixed inner product term 
+    \begin{align}
+        \Delta g & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \nonumber \\
+        & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} \nonumber \\
+        & \quad + \frac{2(\sigma -1)}{H}\left( \left< \nabla g, \nabla H \right> +2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2} - \sigma \frac{g}{H}|\nabla H|^{2} \right) \nonumber \\
+        & = \frac{2\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>+2Z}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \nonumber \\
+        & \quad - \sigma(\sigma-1) \frac{g}{H^{2}}|\nabla H|^{2} + \frac{2(\sigma -1)}{H}\left< \nabla g, \nabla H \label{Deltag2}\right>
+    \end{align}
+    Recall Green's identity for compact manifold without boundary, 
+    \[ \int_{M} u \Delta v = -\int_{M} \left< \nabla u, \nabla v \right> .\]
+    Multiplying \cref{Deltag2} by $ g_{+}^{p}H^{-\sigma} $ and using Green's identity the left-hand side evaluates to \begin{align}
+      A =  \int g_{+}^{p}H^{-\sigma}\Delta g  d \mu & =- \int \left< \nabla(g_{+}^{p}H^{-\sigma}), \nabla g \right> d \mu \nonumber\\
+       & =  -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right>d \mu \label{ddd}
+    \end{align}
+    while the right-hand side is \begin{align}
+       B =  & 2 \int \frac{\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>g_{+}^{p}}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
+        & + (\sigma-2)\int \frac{g_{+}^{p+1}}{H^{1+\sigma}}\Delta H d \mu -2(1+ \eta) \int \frac{g_{+}^{p}}{H}\Delta H d \mu  - \sigma(\sigma -1) \int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2}d \mu \nonumber\\
+        & + 2(\sigma -1) \int \frac{g_{+}^{p+1}}{H^{1+\sigma}}\left< \nabla g, \nabla H \right>d \mu \label{eee}
+    \end{align}
 
-    Multiplying this equation by $ g_{+}^{p}H^{-\sigma} $ and integrating by parts to get \begin{align*}
-        -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}+ \sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right> & = 
+    For the first term of \cref{eee} we can use divergence-type theorem for tensors to get, \begin{align}
+        2 \int \frac{\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>g_{+}^{p}}{H^{2}}d \mu & = -2 \int \left<  \operatorname{tr}_{ik}\left( \nabla_{k} \left( \frac{g_{+}^{p}h_{ij}}{H^{2}} \right) \right), \nabla_{j}H \right> d \mu \nonumber\\
+        & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left<   \nabla^{i}g \otimes h_{ij}, \nabla_{j}H \right>d \mu \nonumber \\
+        & + 4 \int \frac{g_{+}^{p}}{H^{3}} \left< \nabla^{i}H \otimes h_{ij}, \nabla_{j}H  \right>d \mu - 2\int \frac{g_{+}^{p}}{H^{2}} \left< \nabla^{i}h_{ij}, \nabla_{j} H \right> d \mu 
+    \end{align}
+
+    Using Codazzi equation $ \nabla^{i}h_{ij} = \nabla_{j}h_{i}^{i} $ for the last term, 
+    \begin{align}
+        2 \int \frac{\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>g_{+}^{p}}{H^{2}}d \mu & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu \nonumber \\
+        & + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu -2 \int \frac{g_{+}^{p}}{H^{2}} |\nabla H|^{2}d \mu \label{fff}
+    \end{align}
+
+    Applying Green's formula on $ \Delta H $ terms in \cref{eee} and putting together \cref{ddd}, \cref{eee} and \cref{fff} 
+    \setulcolor{blue}
+    \begin{align*}
+        & -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \underbracket{\sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right>d \mu}_{1} \\
+        & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu -\underbracket{2 \int \frac{g_{+}^{p}}{H^{2}}|\nabla H|^{2}d \mu}_{2}  \\
+        & + 2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu - \underbracket{(\sigma -2 )(p+1)\int \frac{g_{+}^{p}}{H^{1+\sigma}} \left< \nabla g, \nabla H \right> d \mu}_{1} \\
+        & + \underbracket{(\sigma-2)(1+\sigma) \int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2} d \mu}_{3}  + 2(1+\eta)p \int \frac{g_{+}^{p-1}}{H}\left< \nabla g , \nabla H\right>d \mu \\
+        & -\underbracket{2(1+\eta) \int \frac{g_{+}^{p}}{H^{2}}| \nabla H|^{2} d \mu}_{2} - \underbracket{\sigma(\sigma-1)\int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2}d \mu}_{3} + \underbracket{2(\sigma -1) \int \frac{g_{+}^{p+1}}{H^{1+\sigma}}\left< \nabla g, \nabla H \right>d \mu}_{1}
     \end{align*}
+    which gives \begin{align}
+        -2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu & = p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu-2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu \nonumber\\
+        & + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
+        & + p \int \left( (2-\sigma) \frac{g_{+}^{p}}{H^{1+\sigma}}+ 2(1+\eta) \frac{g_{+}^{p-1}}{H} \right)\left< \nabla g, \nabla H \right>d \mu \nonumber \\
+        & -2 \int \left( \frac{g_{+}^{p+1}}{H^{2+\sigma}}+ (2+\eta) \frac{g_{+}^{p}}{H^{2}} \right) | \nabla H|^{2}d \mu \label{ggg}
+    \end{align}
+
+    From \cref{tensored} $ -2Z \ge \eta H^{2}|A|^{2}  $ and using utilizing $ g \le c_{0}H^{\sigma} $  in \cref{ggg}, we get for any $ \beta > 0 $ 
+
+    \begin{align}
+        \eta \int g_{+}^{p}|A|^{2}d \mu & \le c_{0} 
+    \end{align}
     \end{proof}
 
     \begin{proposition}\label{Lpbound}
-        For any $ \eta \in (0,1) $ there exists constants $ c_{5},.. $ such that the $ L^{p}( \mathcal{M}) $ norm of $ (g_{\sigma, \eta})_{+} $ is non-decreasing function of $ t $ if the following holds 
+        For any $ \eta \in (0,1) $ there exists constants $ c_{5}, c_{6}$ such that the $ L^{p}( \mathcal{M}) $ norm of $ (g_{\sigma, \eta})_{+} $ is non-decreasing function of $ t $ if the following holds 
         \[ p \ge c_{5}, \qquad \sigma \le (c_{6}p)^{- \frac{1}{2}} \]
         
     \end{proposition}
     \begin{proof}
-        
+        Choose $ \beta  \sim p^{-\frac{1}{2}}$ and $ \sigma \sim c p^{-\frac{1}{2}} $
     \end{proof}
 
     \begin{lemma}
-        [Stampacchia iteration] Let $ \psi: [k_{0},\infty) \to \R $ be a non-negative, non-increasing function which satisfies \begin{equation}
+        [Stampacchia lemma] Let $ \psi: [k_{0},\infty) \to \R $ be a non-negative, non-increasing function which satisfies \begin{equation}
             \psi(h) \le \frac{C}{(h-k)^{\alpha}} \psi(k)^{\beta} \text{ for all } h> k >k_{0}
         \end{equation}
         for some constants $ C>0 $, $ \alpha > 0 $ and $ \beta >1 $. Then \begin{equation}
@@ -316,10 +354,10 @@ To handle the bad positive term appearing in the last we use the following lemma
         where $ d^{\alpha} = C\psi(k_{0})^{\beta-1}2^{\frac{\alpha \beta}{\beta -1}} $.
     \end{lemma}
 
-    We complete the proof of \cref{mainthm} using Stampacchia iteration which gives an $ L^{\infty} $ bound from the $ L^{p} $ bounds.
+    We complete the proof of \cref{mainthm} using Stampacchia lemma which gives an $ L^{\infty} $ bound from the $ L^{p} $ bounds.
     \vspace{1pt}
     \begin{proof}
-        [Stampacchia iteration]
+        [Stampacchia lemma]
 
          Let $ k \ge k_{0} $, where $$ k_{0} = \sup_{\sigma \in [0,1]} \sup_{\mathcal{M}_{0}} g_{\sigma, \eta} $$
         Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v $ with respect to time we get for $ p $ large enough (similar to \cref{dgdt})
@@ -371,7 +409,7 @@ To handle the bad positive term appearing in the last we use the following lemma
             & \le  \sup_{[0,T)}\int_{A(k,t)}v^{2}d \mu+ \int_{0}^{T}\left( \int_{A(k,t)}v^{2q}d \mu \right)^{\frac{1}{q}} dt \\
             & \le c_{8} \sigma p \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
         \end{align*}
-        where $ c_{8} =  2\max\{1,2C(n)\}c_{0}$. Set $ \psi(k) = \int_{0}^{T} \int_{A(k,t)}d \mu dt $. We will obtain bounds on $ \psi $ which along with Stampacchia iteration will imply uniform bound of $ g_{\sigma,\eta} $.  Now \cref{supineq} and H\"{o}lder inequality yields, \begin{align}
+        where $ c_{8} =  2\max\{1,2C(n)\}c_{0}$. Set $ \psi(k) = \int_{0}^{T} \int_{A(k,t)}d \mu dt $. We will obtain bounds on $ \psi $ which along with Stampacchia lemma will imply uniform bound of $ g_{\sigma,\eta} $.  Now \cref{supineq} and H\"{o}lder inequality yields, \begin{align}
             \int_{0}^{T}\int_{A(k,t)}v^{2}d \mu dt & \le \left( \int_{0}^{T}\int_{A(k,t)}1 d \mu dt\right)^{1-\frac{1}{q_{0}}} \left( \int_{0}^{T}\int_{A(k,t)}v^{2q_{0}}d \mu dt \right)^{\frac{1}{q_{0}}} \\
             & \le c_{8} \sigma p\psi(k)^{1-\frac{1}{q_{0}}} \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt \label{v2bound}
         \end{align}
@@ -399,7 +437,7 @@ To handle the bad positive term appearing in the last we use the following lemma
             \psi(h) \le \frac{c_{10}}{(h-k)^{p}}\psi(k)^{\gamma}
         \end{equation}
 
-        Stampacchia iteration now implies $ \psi(k) = 0 $ for all $ k \ge k_{1}+d $ where $ d^{p} =c_{10}2^{ \frac{\gamma p}{\gamma-1}+1}\psi(k_{1})^{\gamma-1}  $. Hence, 
+        Stampacchia lemma now implies $ \psi(k) = 0 $ for all $ k \ge k_{1}+d $ where $ d^{p} =c_{10}2^{ \frac{\gamma p}{\gamma-1}+1}\psi(k_{1})^{\gamma-1}  $. Hence, 
         \[ g_{\sigma,\eta} \le k_{1}+d\le K \define k_{1}+ c_{10} 2^{ \frac{\gamma p}{\gamma-1}+1}(|\mathcal{M}_{0}|T)^{\gamma-1}\]
         or 
         \begin{equation*}

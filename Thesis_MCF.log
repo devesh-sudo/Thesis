@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.23)  12 MAR 2023 17:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.23)  14 MAR 2023 01:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -775,7 +775,7 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              `\addtokomafont' for the page style elements need
 (scrbook)              explicite user intervention to work.
 (scrbook)              Nevertheless, using requested
-(scrbook)              package `fancyhdr' on input line 52.
+(scrbook)              package `fancyhdr' on input line 54.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
@@ -994,36 +994,36 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=ForestGreen, backgroundcolor=ForestGreen!5, ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=greenbox' on input line 68.
+(thmtools)             that uses `style=greenbox' on input line 70.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=NavyBlue, backgroundcolor=NavyBlue!5, ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=bluebox' on input line 77.
+(thmtools)             that uses `style=bluebox' on input line 79.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=Mulberry, backgroundcolor=Mulberry!5, ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=purplebox' on input line 86.
+(thmtools)             that uses `style=purplebox' on input line 88.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=RawSienna, backgroundcolor=RawSienna!10, ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=redbox' on input line 95.
+(thmtools)             that uses `style=redbox' on input line 97.
 Package thmtools Info: Key `numbered' (with value `no')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=proofbox' on input line 106.
+(thmtools)             that uses `style=proofbox' on input line 108.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=CadetBlue, backgroundcolor=CadetBlue!5, ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=proofbox' on input line 106.
+(thmtools)             that uses `style=proofbox' on input line 108.
 Package thmtools Info: Key `qed' (with value `\qedsymbol ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=proofbox' on input line 106.
+(thmtools)             that uses `style=proofbox' on input line 108.
 Package thmtools Info: Key `mdframed' (with value ` linewidth=2pt, rightline=false, topline=false, bottomline=false, linecolor=CadetBlue, backgroundcolor=CadetBlue!15, ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=CadetBluebox' on input line 114.
-Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 121.
+(thmtools)             that uses `style=CadetBluebox' on input line 116.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 123.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 Package: thmdef-mdframed 2020/08/01 v0.72
 )
@@ -1322,66 +1322,75 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 22.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 22.
 [17]
-Package mdframed Info: mdframed works in twoside mode on input line 27.
+Package mdframed Info: mdframed works in twoside mode on input line 26.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 27.
+(mdframed)              on input line 26.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 36.
+(hyperref)                removing `math shift' on input line 35.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 36.
+(hyperref)                removing `subscript' on input line 35.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 36.
+(hyperref)                removing `math shift' on input line 35.
 
 Excluding 'comment' comment.
-Package mdframed Info: mdframed works in twoside mode on input line 63.
+Package mdframed Info: mdframed works in twoside mode on input line 62.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 63.
-Package mdframed Info: mdframed works in twoside mode on input line 79.
+(mdframed)              on input line 62.
+Package mdframed Info: mdframed works in twoside mode on input line 78.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 79.
+(mdframed)              on input line 78.
+Package mdframed Info: Not enough space on this page on input line 83.
  [18]
-Package mdframed Info: mdframed works in twoside mode on input line 121.
+Package mdframed Info: Not enough space on this page on input line 83.
+Package mdframed Info: mdframed works in twoside mode on input line 105.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 121.
-Package mdframed Info: Not enough space on this page on input line 127.
- [19]
-Package mdframed Info: Not enough space on this page on input line 127.
- Excluding 'comment' comment.
-Package mdframed Info: mdframed works in twoside mode on input line 196.
+(mdframed)              on input line 105.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 111.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 111.
+[19]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 111.
+
+Excluding 'comment' comment.
+Package mdframed Info: mdframed works in twoside mode on input line 191.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 196.
-Package mdframed Info: mdframed works in twoside mode on input line 206.
+(mdframed)              on input line 191.
+Package mdframed Info: mdframed works in twoside mode on input line 202.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
-Package mdframed Info: Not enough space on this page on input line 213.
+(mdframed)              on input line 202.
+Package mdframed Info: Not enough space on this page on input line 209.
  [20]
-Package mdframed Info: Not enough space on this page on input line 213.
-
-
-LaTeX Warning: Reference `1' on page 1 undefined on input line 216.
-
-
-LaTeX Warning: Reference `12' on page 1 undefined on input line 228.
-
-[21]
-Package mdframed Info: mdframed works in twoside mode on input line 250.
+Package mdframed Info: Not enough space on this page on input line 209.
+ [21]
+Package mdframed Info: mdframed works in twoside mode on input line 246.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 250.
+(mdframed)              on input line 246.
  Excluding 'comment' comment.
-Overfull \hbox (19.06816pt too wide) detected at line 280
+Overfull \hbox (19.06816pt too wide) detected at line 276
 []
  []
 
@@ -1389,49 +1398,57 @@ Overfull \hbox (19.06816pt too wide) detected at line 280
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
-Overfull \hbox (25.75018pt too wide) detected at line 293
+
+LaTeX Warning: Citation `Simon' on page 23 undefined on input line 283.
+
+
+Overfull \hbox (25.75018pt too wide) detected at line 290
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-Package mdframed Info: mdframed works in twoside mode on input line 300.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 300.
-Package mdframed Info: mdframed works in twoside mode on input line 310.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 310.
- [24] [25] [26]
-Overfull \hbox (26.2948pt too wide) in paragraph at lines 402--403
-[]\OT1/cmr/m/n/10.95 Stampacchia it-er-a-tion now im-plies $\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 ) = 0$ for all $\OML/cmm/m/it/10.95 k \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 k[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 d$ \OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 d[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 2[]\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]\OT1/cmr/m/n/10.95 )[]$.
+ [23] [24]
+Overfull \hbox (8.46042pt too wide) in paragraph at lines 315--317
+[]\OT1/cmr/m/n/10.95 Applying Green's for-mula on $^^A\OML/cmm/m/it/10.95 H$ \OT1/cmr/m/n/10.95 terms in Eq. ([][]2.2.11[][]) and putting to-gether Eq. ([][]2.2.10[][]),
  []
 
-[27]
-Package mdframed Info: mdframed works in twoside mode on input line 423.
+
+Overfull \hbox (4.73537pt too wide) detected at line 323
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 338.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 423.
-Package mdframed Info: mdframed works in twoside mode on input line 441.
+(mdframed)              on input line 338.
+[25]
+Package mdframed Info: Not enough space on this page on input line 342.
+Package mdframed Info: mdframed works in twoside mode on input line 348.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 441.
-Package mdframed Info: Not enough space on this page on input line 442.
- [28]
-Package mdframed Info: Not enough space on this page on input line 442.
-) [29]
+(mdframed)              on input line 348.
+ [26] [27] [28]
+Overfull \hbox (17.13936pt too wide) in paragraph at lines 440--441
+[]\OT1/cmr/m/n/10.95 Stampacchia lemma now im-plies $\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 ) = 0$ for all $\OML/cmm/m/it/10.95 k \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 k[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 d$ \OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 d[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 2[]\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]\OT1/cmr/m/n/10.95 )[]$.
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 461.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 461.
+Package mdframed Info: Not enough space on this page on input line 463.
+[29]
+Package mdframed Info: Not enough space on this page on input line 463.
+Package mdframed Info: mdframed works in twoside mode on input line 479.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 479.
+) [30]
 \openout2 = `Noncollapsing.aux'.
 
- (./Noncollapsing.tex [30
-
-
-
-
-
-]
+ (./Noncollapsing.tex
 chapter 3.
 Package mdframed Info: mdframed works in twoside mode on input line 18.
 Package mdframed Info: mdframed detected package amsthm 
@@ -1445,7 +1462,13 @@ Package mdframed Info: mdframed works in twoside mode on input line 31.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 31.
-[31]
+[31
+
+
+
+
+
+]
 Package mdframed Info: Not enough space on this page on input line 35.
 ) [32]
 \openout2 = `Convergence_of_Manifolds.aux'.
@@ -1503,18 +1526,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44818 strings out of 478268
- 1048396 string characters out of 5846346
- 1611709 words of memory out of 5000000
- 61999 multiletter control sequences out of 15000+600000
+ 44841 strings out of 478268
+ 1048672 string characters out of 5846346
+ 1612278 words of memory out of 5000000
+ 62014 multiletter control sequences out of 15000+600000
  485520 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,13n,109p,10640b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,109p,10640b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_MCF.pdf (40 pages, 359666 bytes).
+Output written on Thesis_MCF.pdf (40 pages, 367439 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 588 compressed objects within 6 object streams
- 243 named destinations out of 1000 (max. 500000)
+ 705 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
+ 251 named destinations out of 1000 (max. 500000)
  219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

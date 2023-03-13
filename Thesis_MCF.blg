@@ -8,12 +8,13 @@ A level-1 auxiliary file: Noncollapsing.aux
 A level-1 auxiliary file: Convergence_of_Manifolds.aux
 The style file: amsalpha.bst
 Database file #1: ref.bib
+Warning--I didn't find a database entry for "Simon"
 Warning--missing journal name in huisken1999convexity
 Warning--missing journal, volume, and year in huisken1999convexity
 Warning--missing pages in huisken1999convexity
 You've used 17 entries,
             2624 wiz_defined-function locations,
-            668 strings with 6888 characters,
+            670 strings with 6898 characters,
 and the built_in function-call counts, 6368 in all, are:
 = -- 586
 > -- 273
@@ -52,4 +53,4 @@ warning$ -- 3
 while$ -- 61
 width$ -- 21
 write$ -- 194
-(There were 3 warnings)
+(There were 4 warnings)
