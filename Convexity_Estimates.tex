@@ -303,45 +303,59 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
     For the first term of \cref{eee} we can use divergence-type theorem for tensors to get, \begin{align}
         2 \int \frac{\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>g_{+}^{p}}{H^{2}}d \mu & = -2 \int \left<  \operatorname{tr}_{ik}\left( \nabla_{k} \left( \frac{g_{+}^{p}h_{ij}}{H^{2}} \right) \right), \nabla_{j}H \right> d \mu \nonumber\\
         & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left<   \nabla^{i}g \otimes h_{ij}, \nabla_{j}H \right>d \mu \nonumber \\
-        & + 4 \int \frac{g_{+}^{p}}{H^{3}} \left< \nabla^{i}H \otimes h_{ij}, \nabla_{j}H  \right>d \mu - 2\int \frac{g_{+}^{p}}{H^{2}} \left< \nabla^{i}h_{ij}, \nabla_{j} H \right> d \mu 
+        & \quad + 4 \int \frac{g_{+}^{p}}{H^{3}} \left< \nabla^{i}H \otimes h_{ij}, \nabla_{j}H  \right>d \mu - 2\int \frac{g_{+}^{p}}{H^{2}} \left< \nabla^{i}h_{ij}, \nabla_{j} H \right> d \mu 
     \end{align}
 
     Using Codazzi equation $ \nabla^{i}h_{ij} = \nabla_{j}h_{i}^{i} $ for the last term, 
     \begin{align}
         2 \int \frac{\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>g_{+}^{p}}{H^{2}}d \mu & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu \nonumber \\
-        & + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu -2 \int \frac{g_{+}^{p}}{H^{2}} |\nabla H|^{2}d \mu \label{fff}
+        & \quad + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu -2 \int \frac{g_{+}^{p}}{H^{2}} |\nabla H|^{2}d \mu \label{fff}
     \end{align}
 
     Applying Green's formula on $ \Delta H $ terms in \cref{eee} and putting together \cref{ddd}, \cref{eee} and \cref{fff} 
     \setulcolor{blue}
     \begin{align*}
-        & -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \underbracket{\sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right>d \mu}_{1} \\
+        & \quad -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \underbracket{\sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right>d \mu}_{1} \\
         & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu -\underbracket{2 \int \frac{g_{+}^{p}}{H^{2}}|\nabla H|^{2}d \mu}_{2}  \\
-        & + 2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu - \underbracket{(\sigma -2 )(p+1)\int \frac{g_{+}^{p}}{H^{1+\sigma}} \left< \nabla g, \nabla H \right> d \mu}_{1} \\
-        & + \underbracket{(\sigma-2)(1+\sigma) \int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2} d \mu}_{3}  + 2(1+\eta)p \int \frac{g_{+}^{p-1}}{H}\left< \nabla g , \nabla H\right>d \mu \\
-        & -\underbracket{2(1+\eta) \int \frac{g_{+}^{p}}{H^{2}}| \nabla H|^{2} d \mu}_{2} - \underbracket{\sigma(\sigma-1)\int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2}d \mu}_{3} + \underbracket{2(\sigma -1) \int \frac{g_{+}^{p+1}}{H^{1+\sigma}}\left< \nabla g, \nabla H \right>d \mu}_{1}
+        & \quad + 2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu - \underbracket{(\sigma -2 )(p+1)\int \frac{g_{+}^{p}}{H^{1+\sigma}} \left< \nabla g, \nabla H \right> d \mu}_{1} \\
+        & \quad + \underbracket{(\sigma-2)(1+\sigma) \int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2} d \mu}_{3}  + 2(1+\eta)p \int \frac{g_{+}^{p-1}}{H}\left< \nabla g , \nabla H\right>d \mu \\
+        & \quad -\underbracket{2(1+\eta) \int \frac{g_{+}^{p}}{H^{2}}| \nabla H|^{2} d \mu}_{2} - \underbracket{\sigma(\sigma-1)\int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2}d \mu}_{3} + \underbracket{2(\sigma -1) \int \frac{g_{+}^{p+1}}{H^{1+\sigma}}\left< \nabla g, \nabla H \right>d \mu}_{1}
     \end{align*}
     which gives \begin{align}
         -2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu & = p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu-2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu \nonumber\\
-        & + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
-        & + p \int \left( (2-\sigma) \frac{g_{+}^{p}}{H^{1+\sigma}}+ 2(1+\eta) \frac{g_{+}^{p-1}}{H} \right)\left< \nabla g, \nabla H \right>d \mu \nonumber \\
-        & -2 \int \left( \frac{g_{+}^{p+1}}{H^{2+\sigma}}+ (2+\eta) \frac{g_{+}^{p}}{H^{2}} \right) | \nabla H|^{2}d \mu \label{ggg}
+        & \quad + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
+        & \quad + p \int \left( (2-\sigma) \frac{g_{+}^{p}}{H^{1+\sigma}}+ 2(1+\eta) \frac{g_{+}^{p-1}}{H} \right)\left< \nabla g, \nabla H \right>d \mu \nonumber \\
+        & \quad -2 \int \left( \frac{g_{+}^{p+1}}{H^{2+\sigma}}+ (2+\eta) \frac{g_{+}^{p}}{H^{2}} \right) | \nabla H|^{2}d \mu \label{ggg}
     \end{align}
 
-    From \cref{tensored} $ -2Z \ge \eta H^{2}|A|^{2}  $ and using utilizing $ g \le c_{0}H^{\sigma} $  in \cref{ggg}, we get for any $ \beta > 0 $ 
+    From \cref{tensored} $ -2Z \ge \eta H^{2}|A|^{2}  $ and using utilizing $ g \le c_{0}H^{\sigma} $ (and $ |A| \le c_{0}H $) with Cauchy-Schwarz inequality in \cref{ggg}, 
 
     \begin{align}
-        \eta \int g_{+}^{p}|A|^{2}d \mu & \le c_{0} 
+        \eta \int g_{+}^{p}|A|^{2}d \mu & \le  c_{0}p \int g_{+}^{p-2}|\nabla g|^{2}d \mu +  4p(c_{0}+1)\int \frac{g_{+}^{p-1}}{H} | \nabla g| | \nabla H| d \mu \nonumber\\
+        & \quad + 4 c_{0}^{2}\int \frac{g_{+}^{p-1}}{H^{2-\sigma}}|\nabla H|^{2}d \mu + 2c_{0}\int \frac{g_{+}^{p-1}}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \label{hhh}\\
+        % & \quad + p(4+2c_{0})\int \frac{g_{+}^{p-1}}{H} |\nabla g| |\nabla H| d \mu 
     \end{align}
+
+    Also, for any $ \beta >0 $,
+    \begin{align}
+        2 \frac{g_{+}^{p-1}}{H}|\nabla H| |\nabla g| & \le \frac{g_{+}^{p-2}}{\beta}|\nabla g|^{2}+ \beta \frac{g_{+}^{p}}{H^{2}}|\nabla H|^{2} \nonumber \\
+        & = \frac{g_{+}^{p-2}}{\beta} | \nabla g|^{2}+ c_{0} \beta \frac{g_{+}^{p-1}}{H^{2-\sigma}}|\nabla H|^{2} \label{iii}
+    \end{align}
+    Combining \cref{ggg}, \cref{hhh} and \cref{iii} proves the lemma.
+    %\begin{align*}
+        %\eta \int g_{+}^{p}|A|^{2}d \mu & \le p(\frac{c_0}{\beta}+2\frac{1}{\beta}) \int g_{+}^{p-2}|\nabla g|^{2} d \mu + 2c_{0}((c_{0}+1)p \beta+2c_{0}) \int \frac{g_{+}^{p-1}}{H^{2-\sigma}}|\nabla H|^{2} \\
+        %& + \quad 2c_{0} \int \frac{g_{+}^{p-1}}{H^{4-\sigma}} \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
+        %& \le 
+    %\end{align*}
     \end{proof}
 
     \begin{proposition}\label{Lpbound}
         For any $ \eta \in (0,1) $ there exists constants $ c_{5}, c_{6}$ such that the $ L^{p}( \mathcal{M}) $ norm of $ (g_{\sigma, \eta})_{+} $ is non-decreasing function of $ t $ if the following holds 
-        \[ p \ge c_{5}, \qquad \sigma \le (c_{6}p)^{- \frac{1}{2}} \]
+        \[ p \ge c_{5}, \qquad \sigma \le (c_{6}p)^{- \frac{1}{2}}. \]
         
     \end{proposition}
     \begin{proof}
-        Choose $ \beta  \sim p^{-\frac{1}{2}}$ and $ \sigma \sim c p^{-\frac{1}{2}} $
+        Choose $ \beta  \sim p^{-\frac{1}{2}}$ and $ \sigma \sim c p^{-\frac{1}{2}} $.
     \end{proof}
 
     \begin{lemma}
@@ -362,23 +376,25 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
          Let $ k \ge k_{0} $, where $$ k_{0} = \sup_{\sigma \in [0,1]} \sup_{\mathcal{M}_{0}} g_{\sigma, \eta} $$
         Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v $ with respect to time we get for $ p $ large enough (similar to \cref{dgdt})
         \begin{equation}
-            \frac{d}{dt} \int_{\mathcal{M}_{t}}v^{2} d \mu + \int_{\mathcal{M}_{t}} v^{2} d \mu \le \sigma p \int_{\mathcal{M}_{t}} |A|^{2}v^{2} d \mu \le c_{0} \sigma p \int_{A(k,t)}H^{2}g_{\sigma, \eta}^{p} d \mu \label{vestimate}
+            \frac{d}{dt} \int_{\mathcal{M}_{t}}v^{2} d \mu + \int_{\mathcal{M}_{t}} |\nabla v|^{2} d \mu \le \sigma p \int_{\mathcal{M}_{t}} |A|^{2}v^{2} d \mu \le c_{0} \sigma p \int_{A(k,t)}H^{2}g_{\sigma, \eta}^{p} d \mu \label{vestimate}
         \end{equation}
         Also from the Michael-Simon result in \cite{https://doi.org/10.1002/cpa.3160260305}, we have a Sobolev-type inequality given by 
         \begin{equation}
             \left( \int_{\mathcal{M}_{t}}v^{2q} d \mu \right)^{\frac{1}{q}} \le C(n) \int_{\mathcal{M}_{t}} |\nabla v|^{2} d \mu +C(n)\left( \int_{A(k,t)}H^{n}d \mu \right)^{\frac{2}{n}}\left( \int_{\mathcal{M}_{t}}v^{2q} d \mu \right)^{\frac{1}{q}} \label{MS}
         \end{equation}
-        where $ q = \frac{n}{n-2}$ if $ n >2 $ and an arbitrary number greater than $ 1 $ if $ n=2 $. We can estimate the $ H^{n} $ factor in the integral on $ A(k,t) $ using the previous proposition and the equality (\textcolor{red}{Rephrase this better})
+        where $ q = \frac{n}{n-2}$ if $ n >2 $ and an arbitrary number greater than $ 1 $ if $ n=2 $. We can estimate the $ H^{n} $ factor in the integral on $ A(k,t) $ using the previous proposition and the equality %(\textcolor{red}{Rephrase this better})
         \[ \int_{\mathcal{M}_{t}} H^{n} g_{\sigma, \eta}^{p}d \mu = \int_{\mathcal{M}_{t}}g_{\sigma', \eta}^{p} d \mu \]
-        where $ \sigma' = \sigma + \frac{n}{p} $. Note that 
+        where $ \sigma' = \sigma + \frac{n}{p} $. We let 
+        \[ p \ge \max\{c_{5},4n^{2}c_{6}\} \quad \text{ and } \quad \sigma \le (4c_{6}p^{-\frac{1}{2}}) \]
+        so that 
         \[ \sigma' = \sigma + \frac{n}{p} \le \frac{1}{2\sqrt{c_{6}p}} + \frac{1}{\sqrt{p}} \frac{n}{\sqrt{p}} \le \frac{1}{\sqrt{c_{6}p}} \] 
-        so by \cref{Lpbound}, \begin{align*}
+        which allows us to use \cref{Lpbound}, \begin{align*}
             \left( \int_{A(k,t)} H^{n} d \mu \right)^{\frac{2}{n}} &\le \left( \int_{A(k,t)}H^{n} \left(\frac{g_{\sigma, \eta}^{p}}{k}\right) d \mu \right)^{\frac{2}{n}} \\
             & = k^{-\frac{2p}{n}} \left( \int_{A(k,t)}g_{\sigma',\eta}^{p}d \mu \right)^{\frac{2}{n}} \\
             & \le k^{-\frac{2p}{n}} \left( \int_{\mathcal{M}_{t}} (g_{\sigma',\eta})_{+}^{p} d \mu\right)^{\frac{2}{n}} \\
             & \le \left( \frac{|\mathcal{M}_{0}|k_{0}}{k} \right)^{\frac{2p}{n}}
         \end{align*}
-        We can fix $ k_{1} > k_{0} $ such that for any $ k \ge k_{1} $ the term $ \int_{A(k,t)}H^{n}d \mu $  in \cref{MS} is less than $ \frac{1}{2C(n)} $ which added with \cref{vestimate} gives
+        We can fix $ k_{1} > k_{0} $ such that for any $ k \ge k_{1} $ the term $ \int_{A(k,t)}H^{n}d \mu $  in \cref{MS} is less than $ \frac{1}{2C(n)} $. For such $ k $, using \cref{vestimate} with \cref{MS} to eliminate the gradient term, 
         \begin{equation}
             \frac{d}{dt}\int_{\mathcal{M}_{t}} v^{2}d \mu + \frac{1}{2C(n)}\left( \int_{\mathcal{M}_{t}}v^{2q}d \mu \right)^{\frac{1}{q}} \le c_{0} \sigma p \int_{A(k,t)} H^{2}g_{\sigma, \eta}^{p} d \mu \label{dv2dt}.
         \end{equation}
@@ -461,8 +477,8 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         For singularities of type II, the following holds as $ k \to \infty $, 
         \[ t_{k} \to T, \quad L_{k} \to \infty,\quad  \alpha_{k} \to -\infty,\text{ and } \omega_{k} \to \infty .\]
     \end{lemma}
-    \begin{proof}
-        \textcolor{red}{TO DO}
+    \begin{proof}%\textcolor{red}{TO DO}
+        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0,T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. 
     \end{proof}
     Now we will rescale the hypersurfaces to analyze the limiting behavior. For each $ k \ge 1 $, define a family of immersions by 
     \[ X_{k}(x, t) = L_{k}(X(x, L_{k}^{-2}t+t_{k})-X(x_{k},t_{k}))  \text{ for } t \in [\alpha_{k}, \omega_{k}].\]
@@ -473,7 +489,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
 
     From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ M >0 $, there exists a $ k_{0} $ such that 
     \[ \max_{x \in M} H_{k}(x,t) \le 1+\epsilon \]
-    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, M] $. This curvature bound implies analogous bounds on second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. 
+    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, M] $. This curvature bound implies analogous bounds on second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
      
     \begin{thm}
         Let $ X : M \times [0,T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
