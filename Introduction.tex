@@ -50,6 +50,15 @@ which simplifies to
 \end{defn}
 
 Notice that the mean curvature vector $ \vec{H} = -H \nu  $ is independent of the direction of normal $ \nu $. %It will be proven in \cref{embeddings} that if $ X(\cdot,0) $ is an embedding then $ \X(\cdot,t) $ remains an embedding for all $ t \in I $. This allows us to talk about mean curvature flow of 
+The following lemma demonstrates the similarity of mean curvature flow with heat equation 
+
+\begin{lemma}
+    The mean curvature vector is equal to Laplace-Beltrami operator of the hypersurface  
+    \[ \vec{H} = -H \nu = \Delta_{\mathcal{M}}X . \]
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
 
 \subsection{Examples of the mean curvature flow}
 
@@ -167,6 +176,14 @@ The above maximum principle can be further extended to tensors. This was done by
 	
         \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
 	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
+\end{lemma}
+
+\subsection{Applications to mean curvature flow}
+
+The tensor maximum principle can be used to prove that convexity is preserved under mean curvature flow. 
+
+\begin{lemma}
+    If 
 \end{lemma}
 \section{Evolution equations}
 To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 

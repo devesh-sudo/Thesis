@@ -4,17 +4,18 @@
 \contentsline {section}{\numberline {1.1}Fundamentals of hypersurfaces}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Mean curvature flow}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Examples of the mean curvature flow}{5}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Mean curvature flow as gradient of the area functional}{6}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Mean curvature flow as gradient of the area functional}{7}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Short-time existence}{7}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Maximum principle}{7}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Applications to mean curvature flow}{8}{subsection.1.3.1}%
 \contentsline {section}{\numberline {1.4}Evolution equations}{8}{section.1.4}%
-\contentsline {section}{\numberline {1.5}The Avoidance Principle}{9}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Long time existence}{11}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Huisken's theorem}{11}{section.1.7}%
+\contentsline {section}{\numberline {1.5}The Avoidance Principle}{10}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Long time existence}{12}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Huisken's theorem}{12}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}Pinching estimate}{12}{subsection.1.7.1}%
-\contentsline {section}{\numberline {1.8}Monotonicity Formula}{12}{section.1.8}%
+\contentsline {section}{\numberline {1.8}Monotonicity Formula}{13}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}Rescaled Monotonicity formula}{15}{subsection.1.8.1}%
-\contentsline {section}{\numberline {1.9}Surfaces of positive mean curvature}{15}{section.1.9}%
+\contentsline {section}{\numberline {1.9}Surfaces of positive mean curvature}{16}{section.1.9}%
 \contentsline {chapter}{\numberline {2}Convexity estimates}{17}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Elementary symmetric polynomials and cones}{17}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Estimate of $S_{2}$}{18}{section.2.2}%

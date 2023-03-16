@@ -1,6 +1,6 @@
 \chapter{Convexity estimates}
 
-As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives rise to a convex ancient solution.
+As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives a convex ancient solution.
 
 
 
@@ -88,8 +88,10 @@ Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's 
         & = \frac{1}{H^{2}}\left( \Delta |A|^{2} - 2|\nabla A|^{2}+2|A|^{4}\right) - 2 \frac{|A|^{2}}{H^{3}}\left( \Delta  H + |A|^{2}H\right)\\
         & = \frac{\Delta |A|^{2}}{H^{2}} - 2 \frac{|\nabla A|^{2}}{H^{2}} - 2|A|^{2} \frac{\Delta H}{H^{3}} .
     \end{align*}
-
-    Now calculating the Laplacian, \begin{align*}
+    Recall the division formula for Laplacian, \begin{align*}
+        \Delta\left(\frac{u}{v}\right) = \frac{\Delta u}{v} - u \frac{\Delta v}{v^{2}} - \frac{2}{v^{2}}\left< \nabla u, \nabla v \right> + 2 \frac{u}{v^{3}}|\nabla v|^{2}.
+    \end{align*}
+    Calculating the Laplacian-Beltrami operator using this, \begin{align*}
         \Delta \frac{|A|^{2}}{H^{2}} & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2}\frac{ \Delta H^{2}}{H^{4}} - \frac{2}{H^{4}} \left< \nabla |A|^{2}, \nabla H^{2} \right> + \frac{2|A|^{2}}{H^{6}}|\nabla H^{2}|^{2}\\
         & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2} \left( \frac{2H \Delta H+ 2| \nabla H|^{2}}{H^{4}} \right)- \frac{2}{H^{4}}\left< \nabla |A|^{2}, 2H \nabla H \right> + 8 \frac{|A|^{2}}{H^{6}}|\nabla H|^{2}\\
         & = \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right>
@@ -101,7 +103,7 @@ Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's 
         & = \Delta \frac{|A|^{2}}{H^{2}}+ \frac{2}{H} \left< \nabla H , \nabla \frac{ |A|^{2}}{H^{2}}\right>  - \frac{2}{H^{4}}|\nabla A \cdot H - \nabla H \otimes A|^{2}.
     \end{align*}
 \end{proof} 
-Using this we compute the time derivative of $ g_{\sigma, \eta} $
+Using this we compute the time derivative of $ g_{\sigma, \eta} $.
 \begin{lemma}\label{Deltag}
     The evolution equation of $ g_{\sigma, \eta} $ is given by 
     \begin{align}
@@ -124,7 +126,7 @@ Using this we compute the time derivative of $ g_{\sigma, \eta} $
 
 Applying maximum principle on \cref{Deltag1} get that $ \frac{|A|^{2}}{H^{2}} $ is uniformly bounded so there exists a positive constant depending only on $ \mathcal{M}_{0} $ such that 
 \[ |A|^{2} \le \tilde{c_{0}}H^{2} \quad \text{ on } \quad \mathcal{M}_{t}, \]
-for all time $ t \in [0,T) $. This also implies $ g_{\sigma, \eta} \le c_{0}H^{\sigma} $ which is an upper bound but as $ H $ blows-up this isn't sufficient to prove the uniform bound.
+for all time $ t \in [0,T) $. This also implies $ g_{\sigma, \eta} \le c_{0}H^{\sigma} $ but as $ H $ blows-up this isn't sufficient to prove the uniform bound.
 %\textcolor{red}{Make it} $ g_{\sigma, \eta }\le c_{0}H^{\sigma} $
 %Recall Simon's identity from Chapter 1 \cref{Simon} \begin{equation}
         %\frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i} \nabla_{j} H \right> + |\nabla A|^{2} + Z \label{Simonid}
@@ -259,7 +261,9 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
 \end{align*}
 \end{comment}
 \begin{proof}
-    From the calculation of Laplacian in \cref{Deltag1} we know that \begin{align*}
+    The Laplacian-Beltrami operator satisfies, 
+    \[ \Delta(f^{\sigma}) = \sigma f^{\sigma-1}\Delta f + \sigma(\sigma-1)f^{\sigma -2}|\nabla f|^{2} \]
+    We have an expression for in \cref{Deltag1} we know that \begin{align*}
         \Delta g & = \Delta  \left(\frac{|A|^{2}}{H^{2}} \right)H^{\sigma} + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\Delta H^{\sigma} + 2\left<  \nabla  \frac{|A|^{2}}{H^{2}} , \nabla H^{\sigma} \right> \\
         & = \left( \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right> \right)H^{\sigma} \\
         & \quad + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\left( \sigma H^{\sigma-1}\Delta H + \sigma (\sigma -1)H^{\sigma -2}|\nabla H|^{2} \right) \\
@@ -275,7 +279,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2}+ \frac{2(\sigma -1)}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right>.
     \end{align*}
 
-    Now similar to time derivative we calculate inner product of $ \nabla g $ with $ \nabla H $, \begin{align*}
+    Now similar to time derivative \cref{Deltag}, we calculate inner product of $ \nabla g $ with $ \nabla H $, \begin{align*}
         \left< \nabla g, \nabla H \right> & = \left< \nabla\frac{ |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} + \sigma\left( \frac{|A|^{2}}{H^{2}} - (1+ \eta) \right) H^{\sigma-1}| \nabla H|^{2} \\
         & = \left< \frac{\nabla |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} -2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2}+ \sigma \frac{g}{H}| \nabla H|^{2},
     \end{align*}
@@ -292,7 +296,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
     \[ \int_{M} u \Delta v = -\int_{M} \left< \nabla u, \nabla v \right> .\]
     Multiplying \cref{Deltag2} by $ g_{+}^{p}H^{-\sigma} $ and using Green's identity the left-hand side evaluates to \begin{align}
       A =  \int g_{+}^{p}H^{-\sigma}\Delta g  d \mu & =- \int \left< \nabla(g_{+}^{p}H^{-\sigma}), \nabla g \right> d \mu \nonumber\\
-       & =  -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right>d \mu \label{ddd}
+       & =  -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla g,  \nabla H \right>d \mu \label{ddd}
     \end{align}
     while the right-hand side is \begin{align}
        B =  & 2 \int \frac{\left< h_{ij}, \nabla_{i}\nabla_{j}H \right>g_{+}^{p}}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
@@ -315,7 +319,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
     Applying Green's formula on $ \Delta H $ terms in \cref{eee} and putting together \cref{ddd}, \cref{eee} and \cref{fff} 
     \setulcolor{blue}
     \begin{align*}
-        & \quad -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \underbracket{\sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left< \nabla H, \nabla g \right>d \mu}_{1} \\
+        & \quad -p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu+ \underbracket{\sigma \int \frac{g_{+}^{p}}{H^{1+\sigma}}\left<  \nabla g,\nabla H \right>d \mu}_{1} \\
         & = -2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu -\underbracket{2 \int \frac{g_{+}^{p}}{H^{2}}|\nabla H|^{2}d \mu}_{2}  \\
         & \quad + 2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu - \underbracket{(\sigma -2 )(p+1)\int \frac{g_{+}^{p}}{H^{1+\sigma}} \left< \nabla g, \nabla H \right> d \mu}_{1} \\
         & \quad + \underbracket{(\sigma-2)(1+\sigma) \int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2} d \mu}_{3}  + 2(1+\eta)p \int \frac{g_{+}^{p-1}}{H}\left< \nabla g , \nabla H\right>d \mu \\
@@ -355,7 +359,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         
     \end{proposition}
     \begin{proof}
-        Choose $ \beta  \sim p^{-\frac{1}{2}}$ and $ \sigma \sim c p^{-\frac{1}{2}} $.
+        Choose $ \beta  \sim p^{-\frac{1}{2}}$ and $ \sigma \sim c p^{-\frac{1}{2}} $ in the previous lemma.
     \end{proof}
 
     \begin{lemma}
@@ -384,7 +388,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         \end{equation}
         where $ q = \frac{n}{n-2}$ if $ n >2 $ and an arbitrary number greater than $ 1 $ if $ n=2 $. We can estimate the $ H^{n} $ factor in the integral on $ A(k,t) $ using the previous proposition and the equality %(\textcolor{red}{Rephrase this better})
         \[ \int_{\mathcal{M}_{t}} H^{n} g_{\sigma, \eta}^{p}d \mu = \int_{\mathcal{M}_{t}}g_{\sigma', \eta}^{p} d \mu \]
-        where $ \sigma' = \sigma + \frac{n}{p} $. We let 
+        where $ \sigma' = \sigma + \frac{n}{p} $. Let 
         \[ p \ge \max\{c_{5},4n^{2}c_{6}\} \quad \text{ and } \quad \sigma \le (4c_{6}p^{-\frac{1}{2}}) \]
         so that 
         \[ \sigma' = \sigma + \frac{n}{p} \le \frac{1}{2\sqrt{c_{6}p}} + \frac{1}{\sqrt{p}} \frac{n}{\sqrt{p}} \le \frac{1}{\sqrt{c_{6}p}} \] 
@@ -392,6 +396,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
             \left( \int_{A(k,t)} H^{n} d \mu \right)^{\frac{2}{n}} &\le \left( \int_{A(k,t)}H^{n} \left(\frac{g_{\sigma, \eta}^{p}}{k}\right) d \mu \right)^{\frac{2}{n}} \\
             & = k^{-\frac{2p}{n}} \left( \int_{A(k,t)}g_{\sigma',\eta}^{p}d \mu \right)^{\frac{2}{n}} \\
             & \le k^{-\frac{2p}{n}} \left( \int_{\mathcal{M}_{t}} (g_{\sigma',\eta})_{+}^{p} d \mu\right)^{\frac{2}{n}} \\
+            & \le k^{-\frac{2p}{n}} \left( \int_{\mathcal{M}_{0}} (g_{\sigma',\eta})_{+}^{p} d \mu\right)^{\frac{2}{n}} \\
             & \le \left( \frac{|\mathcal{M}_{0}|k_{0}}{k} \right)^{\frac{2p}{n}}
         \end{align*}
         We can fix $ k_{1} > k_{0} $ such that for any $ k \ge k_{1} $ the term $ \int_{A(k,t)}H^{n}d \mu $  in \cref{MS} is less than $ \frac{1}{2C(n)} $. For such $ k $, using \cref{vestimate} with \cref{MS} to eliminate the gradient term, 
@@ -459,8 +464,8 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         \begin{equation*}
             |A|^{2}-(1+\eta)H^{2} \le KH^{2-\sigma}
         \end{equation*}
-        so by Young's inequality, \begin{equation*}
-            |A|^{2}-H^{2}\le \eta H^{2}+KH^{2-\sigma} \le 2 \eta H^{2}+C_{2\eta}.
+        so by Young's inequality there exists a constant $ C_{\eta} $ such that, \begin{equation*}
+            |A|^{2}-H^{2}\le \eta H^{2}+KH^{2-\sigma} \le 2 \eta H^{2}+2C_{\eta}.
         \end{equation*}
         Notice that $ |A|^{2}-H^{2} = -\sum_{i\neq j}\kappa_{i}\kappa_{j} = -2S_{2} $ which implies the desired estimate.
     \end{proof}
@@ -487,9 +492,9 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
     Further,  observe that 
     \[ H_{k}^{2}(x,t) = L_{k}^{-2}H^{2}(x, L_{k}^{-2}t+t_{k}) \le \frac{T - \frac{1}{k}-t_{k}}{T-\frac{1}{k}-t_{k}-L_{k}^{-2}t} = \frac{\omega_{k}}{\omega_{k}-t}. \]
 
-    From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ M >0 $, there exists a $ k_{0} $ such that 
+    From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ \overline{\omega} $, there exists a $ k_{0} $ such that 
     \[ \max_{x \in M} H_{k}(x,t) \le 1+\epsilon \]
-    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, M] $. This curvature bound implies analogous bounds on second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
+    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, \overline{\omega}] $. This curvature bound implies analogous bounds on second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
      
     \begin{thm}
         Let $ X : M \times [0,T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
