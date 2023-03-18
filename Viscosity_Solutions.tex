@@ -1,1 +1,20 @@
 \chapter{Viscosity Solutions}
+
+The inscribed curvature function defined on a mean-convex hypersurface need not be smooth but despite that it satisfies differential inequalities in a weak sense. This is done using viscosity solutions which we discuss in this appendix. The source is \cite{crandall1992user}. 
+
+\begin{defn}
+    Let $ F : \R^{n} \times \R \times \R^{n} \times S(n) \to \R$ be a continuous function. Consider the PDE \begin{equation}
+        F(x,u,Du, D^{2}u) = 0
+    \end{equation}
+    where $ u $ is a real-valued function defined on an open set $ \mathscr{O} \subset \R^{n} $. Suppose that $ F $ satisfies two conditions, \begin{equation}
+        F(x,r,p,X) \le F(x,s,p,X) \quad \text{ whenever } r\le s 
+    \end{equation}
+    and \begin{equation}
+        F(x,r,p,X) \le F(x,r,p,Y) \quad \text{ whenever } X \ge Y 
+    \end{equation}
+    where $ r,s \in \R $, $ p \in \R^{n} $, $ X,Y \in S(n) $.
+    Then such $ F $ is said to be \textbf{degenerate elliptic}. 
+\end{defn}
+
+Consider the following example
+

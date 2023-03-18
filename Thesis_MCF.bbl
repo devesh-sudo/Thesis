@@ -38,6 +38,12 @@ Bennett Chow, Sun-Chin Chu, David Glickenstein, Christine Guenther, Jim
   flow: techniques and applications}, vol. 135, American Mathematical Society
   Providence, 2007.
 
+\bibitem[CIL92]{crandall1992user}
+Michael~G Crandall, Hitoshi Ishii, and Pierre-Louis Lions, \emph{User’s guide
+  to viscosity solutions of second order partial differential equations},
+  Bulletin of the American mathematical society \textbf{27} (1992), no.~1,
+  1--67.
+
 \bibitem[CMP{\etalchar{+}}15]{colding2015mean}
 Tobias Colding, William Minicozzi, Erik Pedersen, et~al., \emph{Mean curvature
   flow}, Bulletin of the American Mathematical Society \textbf{52} (2015),

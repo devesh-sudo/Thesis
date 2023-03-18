@@ -1,3 +1,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QCheeger-Gromov convergence.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe proof goes by contradiction, relying on the Bernstein-Bando-Shi estimates.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QNow \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and Hölder inequality yields, \\E(?:Dummy|Ina|Jimmy-)[0-9]+$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSpecial thanks to CMI walkblogstalklock club for the frequent walks around the campus and G-12 clan for the Marina trips.\\E$"}
