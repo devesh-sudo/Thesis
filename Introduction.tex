@@ -57,6 +57,12 @@ The following lemma demonstrates the similarity of mean curvature flow with heat
     \[ \vec{H} = -H \nu = \Delta_{\mathcal{M}}X . \]
 \end{lemma}
 \begin{proof}
+    Notice that $ \partial_{i}\partial_{j}X = \Gamma_{ij}^{k}\partial_{k}X - h_{ij}\nu $. Contracting this, 
+    \begin{align*}
+        \Delta_{\mathcal{M}}X & = g^{ij}\nabla_{i}\nabla_{j}X \\
+        & = g^{ij}(\partial_{i}\partial_{j}X - \Gamma_{ij}^{k}\partial_{k}X) \\
+        & = - H \nu
+    \end{align*}
     
 \end{proof}
 
