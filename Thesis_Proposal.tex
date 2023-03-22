@@ -1,10 +1,32 @@
-\documentclass{article}
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
 \usepackage{fullpage}
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
 \title{Asymptotic analysis of Mean Curvature Flow}
 \author{Devesh Rajpal}
 \date{}
+
 \begin{document}
 \maketitle
-    The Mean Curvature Flow (MCF) was introduced by Mullins as a physical model of grains
+\begin{center}
+   \textbf{Thesis Proposal for Mathematics PhD} 
+\end{center}
+
+
+Riemannian geometry concerns metrics, angles, and curvature on a manifold. A choice of Riemannian metric is generally referred to as the geometry of the manifold. A large part of differential geometry is motivated by the search of canonical geometries on a given topological data. A particular tool helpful in finding such canonical geometries is the notion of flow in Riemannian manifolds. %Eells and Sampson introduced the heat map flow which is concerned with minimizing the ``Energy" of a map between two fixed Riemannian manifolds which led to a greater understanding of Harmonic maps. Later 
+Hamilton devised Ricci flow and the study of its singularities along with Ricci flow with surgery program in order to attack the Poincar\'{e} conjecture on three manifolds which was successfully completed by Perelman. 
+
+Geometric flows on manifolds come in two flavors - intrinsic and extrinsic. Extrinsic flows are PDEs in the presence of a fixed ambient manifold characterizing the curvature and geometry of the immersed subject manifold. Some extrinsic flows are source of physical models of grains/ a ... . On the other hand, intrinsic flows like Ricci flow are determined by the metric of an abstract Riemannian manifold independent of any embedding or immersion. 
+
+The Mean Curvature Flow (MCF) is an extrinsic flow that flows the hypersurface immersed %in a fixed ambient Riemannian manifold. It flows the hypersurface 
+in the direction of the steepest descent of the area. Huisken observed in \cite{huisken1984flow} that for compact hypersurfaces the MCF develops a singularity in finite time so in order to study the flow one needs a good understanding of the shape of the manifold as it collapses. This is done using a blow-up analysis of the singularity. For mean-convex hypersurfaces, Huisken-Sinestrari proved that the blow-up of MCF is an ancient solution (a solution which has existed for all the time in the past) and weakly convex emphasizing the importance of ancient solutions much like in the case of Ricci flow. There has been considerable interest and progress in classifying the ancient convex solutions of MCF. 
+
+The goal of my PhD is to delve more deeply into the asymptotic analysis of MCF. I would particularly like to work on Wang's conjecture which states that every mean convex ancient solution to MCF is convex.  %This result emphasized the importance on understanding ancient solutions in order to know the singularities much like in case of Ricci flow.
+Ancient solutions posses rigidity as they are supposed to model singularities.
+
+\newpage
+\bibliographystyle{plain} % We choose the "amsalpha" reference style
+\bibliography{proposal}
+\nocite{*}
 
 \end{document}
