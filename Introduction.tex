@@ -1,13 +1,13 @@
 \chapter{Introduction to Mean curvature flow}
 
-We introduce the second fundamental form and mean curvature associated to an immersion of a hypersurface. The mean curvature flow is then is the negative gradient flow of the volume functional on hypersurfaces. 
+We introduce the second fundamental form and mean curvature associated with an immersion of a hypersurface. The mean curvature flow is then the negative gradient flow of the volume functional on hypersurfaces. 
 \section{Fundamentals of hypersurfaces}
 
-Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this book we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
+Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this thesis, we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
     \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
 where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ TM^{n} $ which in local coordinates is given by 
     \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
-where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. Further we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y : U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
+where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. Further, we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y: U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
 \[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
 where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{p}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
 \begin{equation}
@@ -23,7 +23,7 @@ where $ N\mathcal{M} $ is the \textbf{normal bundle}  which can be described as
 \[ N\mathcal{M} = \{(p,\nu) \in T\Rn|_{ \mathcal{M}} : \left< u, \nu \right> =0 \text{ for all } u \in T_{p} \mathcal{M}\}. \]
 For dimension reasons, the normal bundle at each point is one-dimensional. We fix a choice of unit normal $ \nu_{p} $ for each $ p \in \mathcal{M} $. This leads to \textbf{tangential projection} $ \cdot^{T} : T\Rn \to T \mathcal{M}$  and \textbf{normal projection} $ \cdot^{\perp} : T\Rn \to N \mathcal{M} $ maps of vectors in $ T\Rn $ given by 
 \[ u^{T} = u-\left< u,\nu \right> \nu,\quad \text{ and }\quad u^{\perp} = \left< u,v \right>\nu\]
-respectively. We can define the Levi-Civita connection on a embedded hypersurface $ \mathcal{M} $ using the normal projection, 
+respectively. We can define the Levi-Civita connection on an embedded hypersurface $ \mathcal{M} $ using the normal projection, 
 \[ \nabla_{u}V  = (D_{u}V)^{T}\]
 where $ u  $ is a vector and $ V $ is a local vector field. Notice that this is consistent with \cref{connection} since $ dX^{-1} $ is the tangential component. The next step is to calculate the Christoffel symbols of the connection $ \nabla $. For local coordinates $ (U, \{x^{i}\}) $ in $ M^{n} $, the Christoffel symbols $ \Gamma_{ij}^{k}: U \to \R $ are obtained by the formula
 \[ \nabla_{ \partial_{i}X} \partial_{j}X = \partial_{i} (\partial_{j}X) + \Gamma_{ij}^{k} \partial_{k}X \]
@@ -42,11 +42,11 @@ Now we define the Mean Curvature Flow (MCF) on hypersurfaces.
         \end{equation}
 \end{defn}
 
-Notice that the mean curvature vector $ \vec{H} = -H \nu  $ is independent of the direction of normal $ \nu $. %It will be proven in \cref{embeddings} that if $ X(\cdot,0) $ is an embedding then $ \X(\cdot,t) $ remains an embedding for all $ t \in I $. This allows us to talk about mean curvature flow of 
-The following lemma demonstrates the similarity of mean curvature flow with heat equation 
+Notice that the mean curvature vector $ \vec{H} = -H \nu  $ is independent of the direction of normal $ \nu $. %It will be proven in \cref{embeddings} that if $ X(\cdot,0) $ is an embedding then $ \X(\cdot,t) $ remains an embedding for all $ t \in I $. This allows us to talk about the mean curvature flow of 
+The following lemma demonstrates the similarity of mean curvature flow with the heat equation 
 
 \begin{lemma}
-    The mean curvature vector is equal to Laplace-Beltrami operator of the hypersurface  
+    The mean curvature vector is equal to the Laplace-Beltrami operator of the hypersurface  
     \[ \vec{H} = -H \nu = \Delta_{\mathcal{M}}X . \]
 \end{lemma}
 \begin{proof}
@@ -63,7 +63,7 @@ The following lemma demonstrates the similarity of mean curvature flow with heat
 
 It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurface. The limited number of examples come from ansatz or special cases,
 \begin{enumerate}
-    \item \textbf{Shrinking spheres}: Let $ \mathbb{S}^{n}(r) \subset \Rn $ be sphere of dimension $ n $ with radius $ r $. Since the mean curvature $ H = \frac{n}{r} $ is constant across the sphere, me make the ansatz that the hypersurface remain spherical under mean curvature flow. Let $ \mathcal{M}_{t} = \mathbb{S}^{n}(r(t)) $ be the solution, then the PDE is reduced to an ODE given by \begin{equation}
+    \item \textbf{Shrinking spheres}: Let $ \mathbb{S}^{n}(r) \subset \Rn $ be sphere of dimension $ n $ with radius $ r $. Since the mean curvature $ H = \frac{n}{r} $ is constant across the sphere, we make the ansatz that the hypersurface remains spherical under mean curvature flow. Let $ \mathcal{M}_{t} = \mathbb{S}^{n}(r(t)) $ be the solution, then the PDE is reduced to an ODE given by \begin{equation}
         \frac{d}{dt}r(t) = -\frac{n}{r(t)}
     \end{equation}
     whose solution is $ r(t) = \sqrt{r_{0}^{2}-2nt} $ with $ r(0)=r_{0} $. So the shrinking spheres $ \mathbb{S}^{n}(\sqrt{r_{0}^{2}-2nt})$ are a solution to the mean curvature flow for $ t \in [0,\frac{r_{0}^{2}}{2n}) $. 
@@ -110,7 +110,7 @@ It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurfac
     is a solution of the mean curvature flow. 
     \item \textbf{Minimal surfaces}: Minimal surfaces are the critical points of the volume functional. A hypersurface $ \mathcal{M} $ is said to be a \textbf{minimal hypersurface} if it satisfies $ H(x) = 0 $ for all $ x \in \mathcal{M}  $. Hence, minimal hypersurfaces are stationary solutions of the mean curvature flow. 
     \item \textbf{Products of solutions with Euclidean space}
-    : Suppose $ \mathcal{M}_{t}^{n} \subset \Rn $ is a solution of the mean curvature flow. It is easy to verify that mean curvature vector of the product $ \mathcal{M}_{t}^{n} \times \R^{m} \subset \R^{n+1} \times\R^{m}  $ is given by 
+    : Suppose $ \mathcal{M}_{t}^{n} \subset \Rn $ is a solution of the mean curvature flow. It is easy to verify that the mean curvature vector of the product $ \mathcal{M}_{t}^{n} \times \R^{m} \subset \R^{n+1} \times\R^{m}  $ is given by 
     \[ \vec{H}(x,y) = (H(x) \nu(x), 0), \]
     which implies that the time-parametrized product $ \mathcal{N}_{t} = \mathcal{M}_{t} \times \Rn $ is a solution of the mean curvature flow as well.
     \begin{figure}[h]
@@ -138,7 +138,7 @@ It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurfac
         \caption{Cylinder $ S^{1} \times \R $}
     \end{figure}  
 \end{enumerate}
-\subsection{Mean curvature flow as gradient of the area functional}
+\subsection{Mean curvature flow as the gradient of the area functional}
 
 Let $ \mathcal{M}_{0} \subset \Rn $ be a smooth hypersurface and $ X: M^{n} \times (-\epsilon, \epsilon) \to \Rn $ be a variation with $ X(\cdot,0) = \mathcal{M}_{0} $. Considering area as a function of time over the variation, we get \begin{equation}
     \frac{d}{dt}\text{Area}( \mathcal{M}_{t}) = \int_{ \mathcal{M}_{t}} \left< \partial_{t}X, H \nu \right> 
@@ -147,13 +147,13 @@ Using this, the gradient of the area functional is
 	\[ \nabla \text{Area} = H \nu \]
 	so the most efficient way to reduce the volume is to choose the variation so that 
 	\[ \partial_{t}X = -\nabla \text{Area} = -H \nu \]
-	which is the mean curvature flow. In particular, we get the following equation for evolution of area under mean curvature flow,
+	which is the mean curvature flow. In particular, we get the following equation for the evolution of area under mean curvature flow,
 	\[ \frac{d}{dt} \text{Area}( \mathcal{M}_{t}) =  - \int_{\mathcal{M}_{t}}H^{2}\]
 which is the steepest descent of area in the space of hypersurface up to speed-parametrization. 
 \subsection{Short-time existence}
 The following theorem about the uniqueness and existence of mean curvature flow is proved in \cite{andrews2022extrinsic}. 
 \begin{thm}
-    Short time existence : Let $ X_{0}: M^{n} \to \Rn $ be a smooth immersion of a compact manifold without boundary. There exists an $ \epsilon >0 $ and a smooth solution $ X : M^{n} \times [0, \epsilon) \to \Rn$ to MCF, with $ X( \cdot, 0) = X_{0} $. Moreover, the solution is unique.
+    Short time existence: Let $ X_{0}: M^{n} \to \Rn $ be a smooth immersion of a compact manifold without boundary. There exists an $ \epsilon >0 $ and a smooth solution $ X : M^{n} \times [0, \epsilon) \to \Rn$ to MCF, with $ X( \cdot, 0) = X_{0} $. Moreover, the solution is unique.
 \end{thm}
 
 \section{Maximum principle}\label{max}
@@ -189,7 +189,7 @@ To understand the properties of mean curvature flow it is essential to know the 
 \[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t)\]
 Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This gives
 \[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle  \]
-\begin{lemma} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of metric, normal, second fundamental form, and mean curvature is given by
+\begin{lemma} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of the metric, normal, second fundamental form and mean curvature is given by
 \begin{equation}
     \dou_t g_{ij} = -2Hh_{ij}
 \end{equation}
@@ -228,7 +228,7 @@ Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hyp
 & = \partial_{i}\partial_{j}H - \Gamma_{ij}^{k}\partial_{k}H + Hh_{jm}g^{ml}\left< \Gamma_{il}^{p}\partial_{p}X- h_{il}\nu, \nu \right> \\
 & = \nabla_{i}\nabla_{j}H- Hh_{il}g^{lm}h_{mj}.
 \end{align*}
-4. Utilizing the previous evolution equation with product formula of derivatives, 
+4. Utilizing the previous evolution equation with the product formula of derivatives, 
 \begin{align*}
 \dou_t H &= \dou_t(g^{ij}h_{ij}) = (\partial_{t}g^{ij})h_{ij}+ g^{ij}\partial_{t}h_{ij}\\
 & = -g^{ik}(\partial_{t}g_{kl})g^{lj}h_{ij}+ g^{ij}(\Delta h_{ij} - 2Hh_{il}g^{lm}h_{mj}+|A|^2h_{ij})\\
@@ -241,14 +241,14 @@ Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hyp
 If mean curvature is positive everywhere on the initial hypersurface, then it remains so throughout the flow.
 \end{corollary}
 \begin{proof}
-We apply maximum principle to the evolution equation of $H$.
+We apply the maximum principle to the evolution equation of $H$.
 \end{proof}
 \begin{remark}
 This property of mean curvature holds even when the hypersurface is embedded in an arbitrary Riemannian manifold with positive Ricci curvature. 
 \end{remark}
 \section{The Avoidance Principle}
 
-Let $X_i : M^n_i \times  [0,T) \to \R^{n+1}, i = 1,2 $ be properly immersed solutions to mean curvature flow such that at least one of  $ M^n_1$ or $M^n_2$ is compact. 
+Let $X_i: M^n_i \times  [0, T) \to \R^{n+1}, i = 1,2 $ be properly immersed solutions to mean curvature flow such that at least one of  $ M^n_1$ or $M^n_2$ is compact. 
 If the hypersurfaces are disjoint initially, i.e. $X_1(M^{n_1},0)\cap X_2(M^n_2,0) = \phi$, then they remain so. Define the distance function $d: M^n_1 \times M^n_2 \times  [0,T) \to \R$ between the solutions by \[
 d(x,y,t) = |X_2(y,t) - X_1(y,t)|
 .\] 
@@ -279,7 +279,7 @@ If $X_1$ and $X_2$ are solutions to mean curvature flow on closed manifolds with
 Assume on the contrary $ d(x,y,t)$ is not everywhere strictly greater that $ d_{0} $. Then there exists a $ t_{0} $ such that $ d(x_{0},y_{0},t_{0}) = d_{0} - \delta $
 \end{proof}
 \begin{remark}
-From the proof we can conclude that the distance between the hypersurfaces is a non-decreasing function. Another way to see this is that $ d_{t} $ satisfies a heat-type parabolic equation 
+From the proof, we can conclude that the distance between the hypersurfaces is a non-decreasing function. Another way to see this is that $ d_{t} $ satisfies a heat-type parabolic equation 
     \[ TO\, DO \]
  on which maximum principle is applicable. 
 \end{remark}
@@ -295,29 +295,29 @@ e^{\epsilon(1+t)}d(x_0,y_0,t_0) = d_0 \quad \text{ for some }(x_0,y_0) \in   M^n
 
 \end{proof}
 \begin{remark}
-We can phrase the avoidance principle as : disjointness is an immortal property and jointness is an ancient property.
+We can phrase the avoidance principle as disjointness is an immortal property and jointness is an ancient property.
 \end{remark}
 
 
 \section{Long time existence}
 
-In this subsection we will prove that blowing up of second fundamental form is the only obstruction for continuing the flow. The proof goes by contrapositive, relying on the Bernstein type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. 
+In this subsection, we will prove that the blow-up of the second fundamental form is the only obstruction to continuing the flow. The proof goes by contrapositive, relying on the Bernstein-type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. 
 
 \begin{thm}\label{longtimeexistence}
-    Let $ X : M^{n} \times [0,T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. If $ X $ is maximal then $ T< \infty $ and 
+    Let $ X: M^{n} \times [0, T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. If $ X $ is maximal then $ T< \infty $ and 
     \[ \sup_{M^{n} \times [0,T)} |A| = \infty.\]
 \end{thm}
 
 Before jumping into the proof we need a general notation for complicated tensor expressions occurring in evolution equations. 
 \begin{defn}
-    Given any two tensors $ A $ and $ B $, we write $ A * B $ to denote any linear combination of tensors formed by contraction on $ A_{i_{1} \dots i_{k}}^{a_{1} \dots a_{p}}B_{j_{1} \dots j_{l}}^{b_{1} \dots b_{q}} $ with $ g $ or $ g^{-1} $. The iterated product $ A * B * C $ can be viewed as $ A * (B * C) $ which is associative so can be written without brackets. Also, denote the multifold product $ \underbrace{A * \dots * A}_{p-\text{times}}$ by $ A^{*p} $. The Gauss equation in this notation yields $ \text{Rm} = A * A $ which after differentiation gives $ \nabla \text{Rm} = A * \nabla A $. 
+    Given any two tensors $ A $ and $ B $, we write $ A * B $ to denote any linear combination of tensors formed by contraction on $ A_{i_{1} \dots i_{k}}^{a_{1} \dots a_{p}}B_{j_{1} \dots j_{l}}^{b_{1} \dots b_{q}} $ with $ g $ or $ g^{-1} $. The iterated product $ A * B * C $ can be viewed as $ A * (B * C) $ which is associative and can be written without brackets. Also, denote the multifold product $ \underbrace{A * \dots * A}_{p-\text{times}}$ by $ A^{*p} $. The Gauss equation in this notation yields $ \text{Rm} = A * A $ which after differentiation gives $ \nabla \text{Rm} = A * \nabla A $. 
 \end{defn}
 
-The following lemma will be necessary to find out time derivative of covariant derivatives and gives the commutator relation between it. 
+The following lemma will be necessary to find out the time derivative of covariant derivatives and gives the commutator relation between them. 
 \begin{lemma}
-    Let $ S $ be a tensor with evolution equation given by 
+    Let $ S $ be a tensor with an evolution equation given by 
     \[ \partial_{t} S = \Delta S + T \]
-    where $ T $ is another tensor of same rank. Then the evolution equation of the covariant derivative is \begin{equation}
+    where $ T $ is another tensor of the same rank. Then the evolution equation of the covariant derivative is \begin{equation}
         \partial_{t}\nabla S = \Delta \nabla S + A * A  * \nabla S + A * \nabla A * S + \nabla T.
     \end{equation}
 \end{lemma}
@@ -340,7 +340,7 @@ The following lemma will be necessary to find out time derivative of covariant d
 
 
 \begin{lemma}
-    The evolution equation of higher gradient of second fundamental form is given by 
+    The evolution equation of the higher gradient of the second fundamental form is given by 
     \begin{equation}
         \partial_{t}\nabla^{m}A = \Delta \nabla^{m}A + \sum_{i+j+k =m}^{}\nabla^{i}A* \nabla^{j}A*\nabla^{k}A 
     \end{equation}
@@ -372,10 +372,10 @@ The following lemma will be necessary to find out time derivative of covariant d
         & = \Delta|\nabla^{m}A|^{2} - 2|\nabla^{m+1}A|^{2} + \sum_{i+j+k=m}^{}\nabla^{i}A * \nabla^{j}A* \nabla^{k}A* \nabla^{m}A
     \end{align*}
 \end{proof}
-We can consider maximum principle on the previous lemma. This gives control of derivates of the second fundamental form based on the bound of second fundamental form. 
+We can consider the maximum principle on the previous lemma. This gives control of derivates of the second fundamental form based on the bound of the second fundamental form. 
 
 \begin{lemma}
-    Let $ X : M^{n} \times [0,T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. Suppose that $ T < \infty $ and $ C_{0} = \sup_{M^{n} \times [0,T)}|A| < \infty $. Then for each $ m \in \N $ there exists a constant $ C_{m} < \infty $ depending only on initial manifold such that \begin{equation}
+    Let $ X: M^{n} \times [0, T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. Suppose that $ T < \infty $ and $ C_{0} = \sup_{M^{n} \times [0,T)}|A| < \infty $. Then for each $ m \in \N $ there exists a constant $ C_{m} < \infty $ depending only on initial manifold such that \begin{equation}
         \sup_{M^{n} \times [0,T)} |\nabla^{m}A| \le C_{m}.
     \end{equation}
 \end{lemma}
@@ -399,14 +399,14 @@ We can consider maximum principle on the previous lemma. This gives control of d
     Multiplying \cref{nablam1} by $ C_{n,m}C_{0}^{2} $ and adding to \cref{nablam}, \begin{align*}
         \partial_{t}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) & \le \Delta\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) + \frac{c_{m}}{4C_{0}^{2}C_{n,m}} + c_{m-1}C_{n,m}C_{0}^{2}.
     \end{align*}
-    Now by maximum principle 
-    \[ \sup_{\mathcal{M}^{n} \times [0,T)}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) \le \left( \frac{c_{m}}{4C_{0}^{2}C_{n,m}} + c_{m-1}C_{n,m}C_{0}^{2} \right)T \]
-    which implies 
+    Now by comparison principle, we get a bound 
+    \[ \sup_{\mathcal{M}^{n} \times [0,T)}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) \le \overline{C_{m}} \]
+    from which we can deduce that 
     \[ \sup_{\mathcal{M} \times [0,T)} |\nabla^{m}A|^{2} \le C_{m}\]
-    for some constant $ C_{m} < \infty $.
+    for some constant $ C_{m} < \infty $ as $ |\nabla^{m-1}A| $ is bounded.
     
 \end{proof}
-We can improve the higher order covariant derivative bound to include a time factor as well. In fact the following lemma will imply rapid decrease in the norm of higher covariant derivatives of second fundamental form with respect to time. 
+We can improve the higher-order covariant derivative bound to include a time factor as well. The following lemma will imply a rapid decrease in the norm of higher covariant derivatives of the second fundamental form with respect to time. 
 
 \begin{lemma}
     Let $ X : M^{n} \times [0,r^{2}] \to \Rn  $ be a solution of the mean curvature flow. Suppose there exists a constant $ C_{0} < \infty$ such that 
@@ -417,14 +417,14 @@ We can improve the higher order covariant derivative bound to include a time fac
     
 \end{lemma}
 \begin{proof}
-    The proof goes through induction on $ m $. The base case $ m=0 $ is our hypothesis, 
+    The proof goes through induction on $ m $. The base case $ m=0 $ is our hypothesis
 \end{proof}
 
 \begin{remark}
-    The parabolic nature of the mean curvature flow shows up here as the dimension of time is 
+    The parabolic nature of the mean curvature flow shows up here as the dimension of time is double the spatial dimension coming from $ |\nabla^{m}A| $.
 \end{remark}
 \begin{proof}[ of \cref{longtimeexistence}]
-    Assume on the contrary that $ \sup_{M^{n} \times [0,T)}|A|^{2} \le C $. Our aim is to prove that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow at $ t  = T $. 
+    Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. Our aim is to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow at $ t  = T $. 
 \end{proof}
 
 
@@ -440,7 +440,7 @@ We can improve the higher order covariant derivative bound to include a time fac
 
 Huisken's theorem proves the convergence of compact, uniformly convex hypersurface to sphere under Mean curvature flow in finite time. 
 \begin{thm}
-Let $ X : M^{n} \times [0,T) \to \Rn  $, $ n \ge 2 $ be a maximal solution of MCF such that $ M^{n} $ is compact and $X_{0} = X(\cdot, 0)$ is convex embedding. Then $ X_{t} = X(\cdot,t) $ is a convex embedding for all $ t>0 $ and $ X_{t} $ converges to a point $ p \in \Rn $ as $ t \to T $. Further the rescaled embeddings $ \tilde{X}_{t} : M^{n} \to \Rn $ defined by 
+Let $ X: M^{n} \times [0, T) \to \Rn  $, $ n \ge 2 $ be a maximal solution of MCF such that $ M^{n} $ is compact and $X_{0} = X(\cdot, 0)$ is convex embedding. Then $ X_{t} = X(\cdot,t) $ is a convex embedding for all $ t>0 $ and $ X_{t} $ converges to a point $ p \in \Rn $ as $ t \to T $. Further the rescaled embeddings $ \tilde{X}_{t} : M^{n} \to \Rn $ defined by 
             \[ \tilde{X}_{t}(x) \define \frac{X_{t}(x)-p}{\sqrt{2n(T-t)}}\]
 converge uniformly in the smooth topology to a smooth embedding whose image coincides with the unit sphere $ S^{n} $.
 \end{thm}
@@ -453,7 +453,7 @@ but the maximum principle is not directly applicable because of the positive las
 \begin{thm}
 There exists constants $ \delta $ and $ C_{0} < \infty $ depending only on $ \mathcal{M}_{0} $ such that 
 \[ |A|^{2} - \frac{H^{2}}{n} \le C_{0}H^{2-\delta} \]
-for $ t \in (0,T] $.
+for $ t \in (0, T] $.
 
 \end{thm}
 Let $ f_{\sigma} = \frac{|A|^{2}- \frac{H^{2}}{n}}{H^{2-\sigma}} = \left(\frac{|A|^{2} - \frac{H^{2}}{n}}{H^{2}}\right)H^{\sigma}$, then the evolution equation of $ f_{\sigma} $ is 
@@ -463,7 +463,7 @@ The evolution of $ f_{\sigma} $ is given by \begin{align*}
 \end{align*}
 \end{lemma}
 \begin{comment}
-    (Huisken' remark on this from the lecture series : the bad term can only be controlled using integral estimates \href{https://www.mfo.de/about-the-institute/staff/prof-dr-gerhard-huisken/lectures/mean-curvature-flow/lecture-3}{58 min mark} )
+    (Huisken's remark on this from the lecture series: the bad term can only be controlled using integral estimates \href{https://www.mfo.de/about-the-institute/staff/prof-dr-gerhard-huisken/lectures/mean-curvature-flow/lecture-3}{58 min mark} )
 
 (Sinestrari intuition about Stampacchia iteration : \href{https://youtu.be/XvUGowx9WNo?t=2119}{yt link})
 \end{comment}
@@ -471,19 +471,19 @@ The evolution of $ f_{\sigma} $ is given by \begin{align*}
     
 \subsection{Width-pinching}
 
-Let $ \Omega  \subset \Rn  $ be a compact, convex body with  boundary $  \mathcal{M}  = \partial \Omega$. %such that $ \mathcal{M} $ is locally uniformly convex. 
-%This allows us to define inverse of the Gauss map on the hypersurface $ \mathcal{M} $. 
+Let $ \Omega  \subset \Rn  $ be a compact, convex body with boundary $  \mathcal{M}  = \partial \Omega$. %such that $ \mathcal{M} $ is locally uniformly convex. 
+%This allows us to define the inverse of the Gauss map on the hypersurface $ \mathcal{M} $. 
 Define the support function $ \sigma : S^{n} \to \R $ as follows 
 \[ \sigma(z) \define \sup_{x \in \Omega}\left< x,z \right> .\]
 Using this we define the width function of $ \Omega $ by 
 \[ w(z) = \sigma(z)+ \sigma(-z) \qquad \text{ for all } z \in S^{n} \]
 which as the name suggests measures the width of $ \Omega  $ in the direction $ z$. Let $ w_{+} $ and $ w_{-} $ denote the maximum and minimum width. It is easy to see that maximum width is the diameter of $ \Omega $, so 
 \[ w_{+} = \sup_{x,y \in \Omega}||x-y||. \]
-If $ \mathcal{M}$ is smooth uniformly convex hypersurface, then we can write the support function in terms of Gauss map $ G : \partial \Omega \to S^{n} $ as 
+If $ \mathcal{M}$ is a smooth uniformly convex hypersurface, then we can write the support function in terms of Gauss map $ G: \partial \Omega \to S^{n} $ as 
 \[ \sigma(z) = \left< G^{-1}(z), z \right>, \] so 
 \[ \sigma(G(z)) = \left< z,G(z) \right>.\]
 
-It is a lemma by Andrews that the pinching of principal curvatures implies the pinching of the widths, which will be later important to prove convergence of the hypersurface into a point. 
+It is a lemma by Andrews that the pinching of principal curvatures implies the pinching of the widths, which will be later important to prove the convergence of the hypersurface into a point. 
 \begin{lemma}
 Let $ \Omega \subset \Rn $, $ n \ge 2 $ be a uniformly convex body with compact, smooth boundary $ \mathcal{M} = \partial \Omega $. Suppose the principal curvatures of $ \mathcal{M} $ are pinched by a constant $ C < \infty $, i.e. $ \kappa_{n}(x) \le C \kappa_{1}(x) $ for all $ x \in \mathcal{M}  $. Then the widths of $ \mathcal{M} $ are pinched by the same constant, so 
 \[ w_{+} \le C w_{-} \]
@@ -518,7 +518,7 @@ The inradius $ \rho_{t} $ of $ \Omega_{t} $ tends to zero as $ t \to T $. Thus, 
 \end{comment}
 
 \section{Monotonicity Formula}
-Let $ X :M^{n} \times I \to \R^{n+1} $ be one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form are given by 
+Let $ X: M^{n} \times I \to \R^{n+1} $ be a one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form is given by 
 \[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\eta, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right>. \]
 
 If we scale the solution by a factor of $ \lambda  $, defined by $ \tilde{X}(x,t) = \lambda X(x,t) $ we get the following metric and second fundamental form 
@@ -550,7 +550,7 @@ To simplify the formula assume that $ \left(X_{0},t_{0}\right) = (0,0) $. We kno
     %& = -\int_{M_{t}}\rho \left| H \eta + \frac{X}{2(-t)}\right|^{2}d \mu_{t} + \int_{M_{t}}\rho \frac{ \left< X,H \eta \right>}{2(-t)} d \mu_{t} + \int_{M_{t}} \frac{n\rho}{2(-t)}d \mu_{t} \label
 \end{align}
 
-Now $ \Delta X = - H \eta $, using this relation for second term and divergence theorem we get 
+Now $ \Delta X = - H \eta $, using this relation for the second term and divergence theorem we get 
 \begin{align}
 \int_{M_{t}}\rho \left< X,H \eta \right> d \mu_{t} & =  -\int_{M_{t}} \rho\left< X,\Delta X \right> d \mu_{t} \nonumber \\ 
 & = - \sum_{k=1}^{n+1}\int_{M_{t}} \rho X_{k} \Delta X_{k} d \mu_{t}\nonumber \\
@@ -607,9 +607,9 @@ we say that we have a \textit{type II singularity}. We will restrict ourselves t
 
 \section{Surfaces of positive mean curvature}
 
-From the maximum principle we know that if mean curvature of the initial hypersurface $M_0$ is positive then it will stay positive on $M_t$. 
+From the maximum principle, we know that if the mean curvature of the initial hypersurface $M_0$ is positive then it will stay positive on $M_t$. 
 For self-similar solutions, we know that the limiting hypersurface will satisfy the equation $H = \langle x, \nu \rangle$. 
-We prove that sphere is the only compact hypersurface of positive mean curvature moving under self-similarity 
+We prove that the sphere is the only compact hypersurface of positive mean curvature moving under self-similarity 
 \begin{thm}
 If $M^n$, $n\ge 2$, is compact with non-negative mean curvature $H$ and satisfies the equation $H = - \langle X, \nu \rangle$, then $M^n$ is a sphere of radius $\sqrt{n}$. 
 \end{thm}

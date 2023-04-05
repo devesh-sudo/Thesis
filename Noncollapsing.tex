@@ -1,6 +1,6 @@
 \chapter{Noncollapsing}
 
-Noncollapsing in mean curvature flow is a powerful result which gives a geometric idea about the structure of singularities. It can be used to rule out certain singularity profiles for mean convex mean curvature flow. 
+Noncollapsing in mean curvature flow is a powerful result that gives a geometric idea about the structure of singularities. It can be used to rule out certain singularity profiles for mean convex mean curvature flow. 
 
 \section{Inscribed curvature}
 
@@ -10,7 +10,7 @@ Let $ \mathcal{M} \subset \Rn $ be a smooth hypersurface which is the boundary o
 where $ \nu(x) $ is the outward unit normal vector of $ \mathcal{M} $ at $ x $. The inverse of the radius is the \textbf{extrinsic ball curvature} $ k : \mathcal{M} \times \mathcal{M} \backslash \{(x,x) : x \in \mathcal{M}\} \to \R $ defined by \begin{equation}
     k(x,y) = \frac{2 \left< x-y,\nu(x) \right>}{||x-y||^{2}}.
 \end{equation} 
-Now for each point $ x \in \mathcal{M} $, we can get the radius of the largest inscribed sphere touching $ \mathcal{M} $ at $ x $  which we call the \textbf{inradius} function $r :  \mathcal{M}  \to (0,\infty]$ given by %and i To get the \textbf{inradius} $ r : \mathcal{M} \to (0, \infty] $ which would be radius of the largest sphere touching $ \mathcal{M} $ at the given point and inscribed in $ \mathcal{M} $, we take the infimum over all points $ y \in \mathcal{M}\backslash \{x\} $ to get 
+Now for each point $ x \in \mathcal{M} $, we can get the radius of the largest inscribed sphere touching $ \mathcal{M} $ at $ x $  which we call the \textbf{inradius} function $r:  \mathcal{M}  \to (0,\infty]$ given by %and I To get the \textbf{inradius} $ r: \mathcal{M} \to (0, \infty] $ which would be the radius of the largest sphere touching $ \mathcal{M} $ at the given point and inscribed in $ \mathcal{M} $, we take the infimum over all points $ y \in \mathcal{M}\backslash \{x\} $ to get 
 \begin{equation}
     r(x) = \inf_{{y \in \mathcal{M}\backslash \{x\}}} r(x,y).
 \end{equation}
@@ -39,7 +39,7 @@ The inscribed curvature is greater than the largest principal curvature, which c
 \end{figure}
 
 \begin{defn}
-    Let $ \mathcal{M} $ be a mean convex hypersurface bounding an open set $ \Omega \subset \Rn$, so $ \partial \Omega = \mathcal{M} $. We say that $ \mathcal{M} $ is \textbf{$ \alpha $-noncollapsed}  if for every $ x \in \mathcal{M} $ there exists an open ball $ B $ of radius $ \frac{\alpha}{H(x)} $ touching $ \mathcal{M} $ at $ x $ and contained entirely in $ \Omega $. In terms of inscribed curvature, this is same as the inequality \begin{equation}
+    Let $ \mathcal{M} $ be a mean convex hypersurface bounding an open set $ \Omega \subset \Rn$, so $ \partial \Omega = \mathcal{M} $. We say that $ \mathcal{M} $ is \textbf{$ \alpha $-noncollapsed}  if for every $ x \in \mathcal{M} $ there exists an open ball $ B $ of radius $ \frac{\alpha}{H(x)} $ touching $ \mathcal{M} $ at $ x $ and contained entirely in $ \Omega $. In terms of inscribed curvature, this is the same as the inequality \begin{equation}
         k(x) \le \frac{1}{\alpha} H(x) \quad \text{ for all} \quad x \in \mathcal{M}.
     \end{equation}
 \end{defn}
@@ -58,7 +58,7 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
     where the inequality holds in the viscosity sense. 
 \end{thm}
 \begin{comment}
-    Before that we will show that  
+    Before that, we will show that  
 \begin{lemma}
     The inscribed curvature satisfies 
     \[ k(x) \ge \lim_{y \to x} \sup k(x,y) = \kappa_{n}(x) \]
@@ -182,11 +182,11 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
         & = \frac{1}{2}\bigg( \frac{\partial \psi}{\partial t}(x_{0},t_{0}) - \Delta \psi(x_{0},t_{0}) - |A(x_{0},t_{0})|^{2} \psi(x_{0},t_{0}) \\
         & \qquad \sum_{i=1}^{n} \frac{2}{\psi(x_{0},t_{0})-\kappa_{i}(x_{0},t_{0})}\left( \frac{\partial \psi}{\partial x_{i}}(x_{0},t_{0}) \right)^{2} \bigg)|X(x_{0},t_{0})-X(y_{0},t_{0})|^{2}.
     \end{align*}
-    As $ (x_{0},y_{0},t_{0}) $ is a local minimum of $ Z $, the left-hand side of previous equation is negative from which the inequality \cref{psi} follows. 
+    As $ (x_{0},y_{0},t_{0}) $ is a local minimum of $ Z $, the left-hand side of the previous equation is negative from which the inequality \cref{psi} follows. 
     
     
     \begin{remark}
-        Notice that the inequality is in one-variable however the proof goes through maximum principle on a two-variable function. There are a lot of applications of such two-point functions considered in \cite{brendle2014two,andrews2014moduli}.
+        Notice that the inequality is in one variable however the proof goes through the maximum principle on a two-variable function. There are a lot of applications of such two-point functions considered in \cite{brendle2014two,andrews2014moduli}.
     \end{remark}
 
 
@@ -217,7 +217,7 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
         \frac{\partial }{\partial t}\left( \frac{k}{H} \right)  & \le \frac{(\Delta k+|A|^{2}k)H - (\Delta H + |A|^{2}H)k}{H^{2}} \\
         & = \Delta \left( \frac{k}{H} \right) + \frac{2}{H}\left< \nabla \left( \frac{k}{H} \right), \nabla H \right>.
     \end{align*}
-    Now maximum principle (for viscosity solutions) yields $ \alpha k \le H  $ for all $ t \in [0,T) $. 
+    Now maximum principle (for viscosity solutions) yields $ \alpha k \le H  $ for all $ t \in [0, T) $. 
   
 
     

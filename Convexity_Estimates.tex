@@ -1,12 +1,12 @@
 \chapter{Convexity estimates}
 
-As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for a general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives a convex ancient solution.
+As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives a convex ancient solution.
 
 
 
 \section{Elementary symmetric polynomials and cones}
 
-Mean curvature of a hypersurface at a point is the sum of principal curvatures which is a symmetric function. Similarly, Gauss curvature is the product of the principal curvatures. The study of elementary symmetric functions of principal curvatures will be crucial to analyze the convexity of singularities. We begin by recalling the definition of elementary symmetric polynomials.
+The mean curvature of a hypersurface at a point is the sum of principal curvatures which is a symmetric function. Similarly, Gauss curvature is the product of the principal curvatures. The study of elementary symmetric functions of principal curvatures will be crucial to analyze the convexity of singularities. We begin by recalling the definition of elementary symmetric polynomials.
 
 \begin{defn}
     For any $ k=1, \ldots, n $, the \textbf{$ k $-th elementary symmetric polynomial}   $ S_{k} :\R^{n} \to \R $  is defined by
@@ -21,7 +21,7 @@ It is easy to see that $ \Gamma_{k} $ are cones in the Euclidean space and satis
 \begin{proposition}
     Let $ A = \{x \in \R^{n} : x_{1}>0, \ldots, x_{n}>0 \} $ denote the positive cone. The sets $ \Gamma_{k} $ coincide with the connected component of the domain $ \{\lambda \in \Rn : S_{k}(\lambda)>0\} $ containing the positive cone $ A $. Further, the cone $ \Gamma_{n} $ coincides with the positive cone $ A $.
 \end{proposition}
-This establishes a hierarchy of convexity with last one being uniformly convex where the principal curvature vector $ (\kappa_{1}, \ldots, \kappa_{n}) \in \Gamma_{n} $ for all points in the hypersurface. The main result of the chapter is the following theorem. 
+This establishes a hierarchy of convexity with the last one being uniformly convex where the principal curvature vector $ (\kappa_{1}, \ldots, \kappa_{n}) \in \Gamma_{n} $ for all points in the hypersurface. The main result of the chapter is the following theorem. 
 
 \begin{thm}\label{mainthm}
     Let $ X : M^{n} \times [0,T) \to \Rn$ be a smooth solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta $ and $ \mathcal{M}_{0} $ such that 
@@ -33,7 +33,7 @@ This establishes a hierarchy of convexity with last one being uniformly convex w
 
 This means that the negative part of $ S_{k} $ cannot grow faster that $ H^{k} $. We will only prove the theorem for $ k=2 $ adapted from \cite{huisken1999mean}. A complete proof is done using induction in \cite{huisken1999convexity}. 
 \section{Estimate of $S_{2}$}
-%It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
+%It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows us to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 %\begin{thm}
     %Let $ X : M^{n} \times [0,T) \to \Rn$ be solution of the mean curvature flow with $ n \ge 2 $ such that $ X(M^{n}, 0) = \mathcal{M}_{0} $ is compact and of positive mean curvature. Then, for any $ \eta >0 $ there exists a constant $ C_{\eta} >0 $ depending only on $ n, \eta, \mathcal{M}_{0} $ such that 
     %\begin{equation}
@@ -42,7 +42,7 @@ This means that the negative part of $ S_{k} $ cannot grow faster that $ H^{k} $
     %on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 %\end{thm}
 For any $ \eta \in \R $ and $ \sigma \in [0,2] $ let $$ g_{\sigma,\eta} = \left( \frac{|A|^{2}}{H^{2}}- (1+ \eta) \right)H^{\sigma} = \frac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} = \frac{-2S_{2}- \eta H^{2}}{H^{2-\sigma}}.$$
-Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's inequality will imply the desired estimate. The proof of \cref{mainthm} for $ k=2 $ is divided into two parts. First part is obtaining an $ L^{p} $ estimate of $ g_{ \sigma, \eta} $ and the second part is utilizing Stampacchia lemma using Michael-Simon inequality in order to get an $ L^{\infty} $ bound. In order to prove the first part we derive the evolution equation of $ g_{\sigma,\eta} $ using the product rule but before that we need the following lemmas. 
+Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's inequality will imply the desired estimate. The proof of \cref{mainthm} for $ k=2 $ is divided into two parts. The first part is obtaining an $ L^{p} $ estimate of $ g_{ \sigma, \eta} $ and the second part is utilizing Stampacchia lemma using Michael-Simon inequality in order to get an $ L^{\infty} $ bound. In order to prove the first part we derive the evolution equation of $ g_{\sigma,\eta} $ using the product rule but before that we need the following lemmas. 
 
 \begin{comment}
 \begin{lemma}
@@ -59,7 +59,7 @@ Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's 
 
 %\textcolor{Red}{Better notation maybe :}
 \begin{lemma}
-    Following equality holds: 
+    The following equality holds: 
     \begin{equation}
         |\nabla A \cdot H - \nabla H \otimes A|^{2} = | \nabla A|^{2}H^{2} + |A|^{2}| \nabla H|^{2} - \left<  \nabla |A|^{2}, \nabla H \right>H.
     \end{equation}
@@ -91,7 +91,7 @@ Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's 
     Recall the division formula for Laplacian, \begin{align*}
         \Delta\left(\frac{u}{v}\right) = \frac{\Delta u}{v} - u \frac{\Delta v}{v^{2}} - \frac{2}{v^{2}}\left< \nabla u, \nabla v \right> + 2 \frac{u}{v^{3}}|\nabla v|^{2}.
     \end{align*}
-    Calculating the Laplacian-Beltrami operator using this, \begin{align*}
+    Calculating the Laplace-Beltrami operator using this, \begin{align*}
         \Delta \frac{|A|^{2}}{H^{2}} & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2}\frac{ \Delta H^{2}}{H^{4}} - \frac{2}{H^{4}} \left< \nabla |A|^{2}, \nabla H^{2} \right> + \frac{2|A|^{2}}{H^{6}}|\nabla H^{2}|^{2}\\
         & = \frac{\Delta |A|^{2}}{H^{2}} - |A|^{2} \left( \frac{2H \Delta H+ 2| \nabla H|^{2}}{H^{4}} \right)- \frac{2}{H^{4}}\left< \nabla |A|^{2}, 2H \nabla H \right> + 8 \frac{|A|^{2}}{H^{6}}|\nabla H|^{2}\\
         & = \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right>
@@ -124,16 +124,16 @@ Using this we compute the time derivative of $ g_{\sigma, \eta} $.
     \end{align*}
 \end{proof}
 
-Applying maximum principle on \cref{Deltag1} get that $ \frac{|A|^{2}}{H^{2}} $ is uniformly bounded so there exists a positive constant depending only on $ \mathcal{M}_{0} $ such that 
+Applying the maximum principle on \cref{Deltag1} gets that $ \frac{|A|^{2}}{H^{2}} $ is uniformly bounded so there exists a positive constant depending only on $ \mathcal{M}_{0} $ such that 
 \[ |A|^{2} \le \tilde{c_{0}}H^{2} \quad \text{ on } \quad \mathcal{M}_{t}, \]
-for all time $ t \in [0,T) $. This also implies $ g_{\sigma, \eta} \le c_{0}H^{\sigma} $ but as $ H $ blows-up this isn't sufficient to prove the uniform bound.
+for all time $ t \in [0,T) $. This also implies $ g_{\sigma, \eta} \le c_{0}H^{\sigma} $ but as $ H $ blows up this isn't sufficient to prove the uniform bound.
 %\textcolor{red}{Make it} $ g_{\sigma, \eta }\le c_{0}H^{\sigma} $
 %Recall Simon's identity from Chapter 1 \cref{Simon} \begin{equation}
         %\frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i} \nabla_{j} H \right> + |\nabla A|^{2} + Z \label{Simonid}
 %\end{equation}
 %where $ Z = H\text{tr}(A^{3})- |A|^{4} $.
 The following estimate of the good term in \cref{gequation} will be required for the $ L^{p} $ estimate. 
-%\textcolor{red}{TO DO : Write why this isn't enough to prove the required decay}
+%\textcolor{red}{TO DO: Write why this isn't enough to prove the required decay}
 
 \begin{comment}
     \begin{lemma}   
@@ -198,7 +198,7 @@ The following estimate of the good term in \cref{gequation} will be required for
     \end{enumerate}
 \end{lemma}
 
-For the rest of proof we will restrict $ \eta, \sigma \in (0,1) $ and $ c_{i} $ will denote a constant depending only on $ n, \eta $ and $ \mathcal{M}_{0} $. For brevity we will write $ g = g_{\sigma,\eta} $ as long as $ \sigma, \eta $ are fixed. Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $ and 
+For the rest of proof we will restrict $ \eta, \sigma \in (0,1) $ and $ c_{i} $ will denote a constant depending only on $ n, \eta $ and $ \mathcal{M}_{0} $. For brevity, we will write $ g = g_{\sigma,\eta} $ as long as $ \sigma, \eta $ is fixed. Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $ and 
 \[ \partial_{t}g_{+}^{p} = pg_{+}^{p-1}\partial_{t}g, \qquad \nabla (g_{+}^{p}) =p g_{+}^{p-1}\nabla g. \]
 
 \begin{lemma}\label{dgdt}
@@ -284,7 +284,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         & = \left< \frac{\nabla |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} -2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2}+ \sigma \frac{g}{H}| \nabla H|^{2},
     \end{align*}
 
-    Using Simon's identity \cite{Simon} and previous expression to  eliminate the last mixed inner product term 
+    Using Simon's identity \cite{Simon} and the previous expression to  eliminate the last mixed inner product term 
     \begin{align}
         \Delta g & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \nonumber \\
         & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} \nonumber \\
@@ -325,7 +325,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         & \quad + \underbracket{(\sigma-2)(1+\sigma) \int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2} d \mu}_{3}  + 2(1+\eta)p \int \frac{g_{+}^{p-1}}{H}\left< \nabla g , \nabla H\right>d \mu \\
         & \quad -\underbracket{2(1+\eta) \int \frac{g_{+}^{p}}{H^{2}}| \nabla H|^{2} d \mu}_{2} - \underbracket{\sigma(\sigma-1)\int \frac{g_{+}^{p+1}}{H^{2+\sigma}}|\nabla H|^{2}d \mu}_{3} + \underbracket{2(\sigma -1) \int \frac{g_{+}^{p+1}}{H^{1+\sigma}}\left< \nabla g, \nabla H \right>d \mu}_{1}
     \end{align*}
-    clubbing the terms with same-numbered underbracket,  \begin{align}
+    clubbing the terms with same-numbered under bracket,  \begin{align}
         -2 \int \frac{g_{+}^{p}Z}{H^{2}}d \mu & = p \int \frac{1}{H^{\sigma}}g_{+}^{p-1}|\nabla g|^{2}d \mu-2p \int \frac{g_{+}^{p-1}}{H^{2}} \left< h_{ij}, \nabla_{i}g \nabla_{j}H \right>d \mu \nonumber\\
         & \quad + 4 \int \frac{g_{+}^{p}}{H^{3}} \left<  h_{ij}, \nabla_{i}H\nabla_{j}H  \right>d \mu + 2 \int \frac{g_{+}^{p}}{H^{4}}| \nabla A \cdot H - \nabla H \otimes A|^{2}d \mu \nonumber \\
         & \quad + p \int \left( (2-\sigma) \frac{g_{+}^{p}}{H^{1+\sigma}}+ 2(1+\eta) \frac{g_{+}^{p-1}}{H} \right)\left< \nabla g, \nabla H \right>d \mu \nonumber \\
@@ -430,7 +430,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
             & \le  \sup_{[0,T)}\int_{A(k,t)}v^{2}d \mu+ \int_{0}^{T}\left( \int_{A(k,t)}v^{2q}d \mu \right)^{\frac{1}{q}} dt \\
             & \le c_{8} \sigma p \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
         \end{align*}
-        where $ c_{8} =  2\max\{1,2C(n)\}c_{0}$. Set $ \psi(k) = \int_{0}^{T} \int_{A(k,t)}d \mu dt $. We will obtain bounds on $ \psi $ which along with Stampacchia lemma will imply uniform bound of $ g_{\sigma,\eta} $.  Now \cref{supineq} and H\"{o}lder inequality yields, \begin{align}
+        where $ c_{8} =  2\max\{1,2C(n)\}c_{0}$. Set $ \psi(k) = \int_{0}^{T} \int_{A(k,t)}d \mu dt $. We will obtain bounds on $ \psi $ which along with the Stampacchia lemma will imply a uniform bound of $ g_{\sigma,\eta} $.  Now \cref{supineq} and H\"{o}lder inequality yields, \begin{align}
             \int_{0}^{T}\int_{A(k,t)}v^{2}d \mu dt & \le \left( \int_{0}^{T}\int_{A(k,t)}1 d \mu dt\right)^{1-\frac{1}{q_{0}}} \left( \int_{0}^{T}\int_{A(k,t)}v^{2q_{0}}d \mu dt \right)^{\frac{1}{q_{0}}} \\
             & \le c_{8} \sigma p\psi(k)^{1-\frac{1}{q_{0}}} \int_{0}^{T}\int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt \label{v2bound}
         \end{align}
@@ -474,7 +474,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
  
     As mentioned in \cref{Type1singularity}, we classify the singularities based on the blow-up rate of $ |A|^{2} $. Recall from maximum principle on \cref{Deltag1} there exists a $ c_{0} $ such that $ |A|^{2}\le c_{0}H^{2} $ and from algebra we get $ H^{2}\le n|A|^{2} $ so $ |A|^{2} $ and $ H^{2} $ have same rate of growth. We will focus on the growth of $ H^{2} $. 
     
-    The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X : M \times [0,T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{k},t_{k})\} $ in spacetime as follows. For each integer $ k \ge 1 $, let $ t_{k} \in [0,T-\frac{1}{k}] $, $ x_{k} \in M $ such that \begin{equation}
+    The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X: M \times [0, T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{k},t_{k})\} $ in spacetime as follows. For each integer $ k \ge 1 $, let $ t_{k} \in [0,T-\frac{1}{k}] $, $ x_{k} \in M $ such that \begin{equation}
         H^{2}(x_{k},t_{k})\left( T- \frac{1}{k}-t_{k} \right) = \sup_{(x,t) \in M \times\left[0,T-\frac{1}{k}\right]}H^{2}(x,t)\left(  T- \frac{1}{k}- t\right)
     \end{equation}
     Set $ L_{k} = H(x_{k},t_{k}) $, $ \alpha_{k} = -L^{2}_{k}t_{k} $ and $ \omega_{k} = L_{k}^{2}(T-\frac{1}{k}-t_{k}) $. 
@@ -483,7 +483,9 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         \[ t_{k} \to T, \quad L_{k} \to \infty,\quad  \alpha_{k} \to -\infty,\text{ and } \omega_{k} \to \infty .\]
     \end{lemma}
     \begin{proof}%\textcolor{red}{TO DO}
-        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0,T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. 
+        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0, T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. 
+
+        TO DO
     \end{proof}
     Now we will rescale the hypersurfaces to analyze the limiting behavior. For each $ k \ge 1 $, define a family of immersions by 
     \[ X_{k}(x, t) = L_{k}(X(x, L_{k}^{-2}t+t_{k})-X(x_{k},t_{k}))  \text{ for } t \in [\alpha_{k}, \omega_{k}].\]
@@ -494,8 +496,8 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
 
     From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ \overline{\omega} $, there exists a $ k_{0} $ such that 
     \[ \max_{x \in M} H_{k}(x,t) \le 1+\epsilon \]
-    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, \overline{\omega}] $. This curvature bound implies analogous bounds on second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
+    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, \overline{\omega}] $. This curvature bound implies analogous bounds on the second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
      
     \begin{thm}
-        Let $ X : M \times [0,T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
+        Let $ X: M \times [0, T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further, assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
     \end{thm}
