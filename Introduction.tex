@@ -1,15 +1,7 @@
 \chapter{Introduction to Mean curvature flow}
 
-Mean curvature flow is the negative gradient flow of the volume functional on hypersurfaces. 
+We introduce the second fundamental form and mean curvature associated to an immersion of a hypersurface. The mean curvature flow is then is the negative gradient flow of the volume functional on hypersurfaces. 
 \section{Fundamentals of hypersurfaces}
-SET UP THE FOLLOWING  -\\
-1. SECOND FUNDAMENTAL FORM\\
-2. MEAN CURVATURE\\
-3. CONVEXITY RESULTS\\
-4. MCF AS GRADIENT FLOW OF AREA\\
-5. CODAZZI IDENTITY, SIMONS IDENTITY\\
-6. UMBILLIC HYPERSURFACES ARE SPHERES\\
-
 
 Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this book we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
     \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
@@ -40,8 +32,9 @@ which simplifies to
 
 
 
-\section{Mean curvature flow}
+\section{Mean Curvature Flow}
 
+Now we define the Mean Curvature Flow (MCF) on hypersurfaces. 
 \begin{defn}
     A one-parameter family of immersion $ X: M^{n} \times I \to \Rn $ is said to evolve by \textbf{Mean Curvature Flow} (MCF) if 
 		\begin{equation}
@@ -308,15 +301,141 @@ We can phrase the avoidance principle as : disjointness is an immortal property 
 
 \section{Long time existence}
 
-In this subsection we will prove that blowing up of second fundamental form is the only obstruction for continuing the flow. The proof goes by contradiction, relying on the Bernstein type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}.
+In this subsection we will prove that blowing up of second fundamental form is the only obstruction for continuing the flow. The proof goes by contrapositive, relying on the Bernstein type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. 
 
-\begin{thm}
+\begin{thm}\label{longtimeexistence}
     Let $ X : M^{n} \times [0,T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. If $ X $ is maximal then $ T< \infty $ and 
     \[ \sup_{M^{n} \times [0,T)} |A| = \infty.\]
 \end{thm}
+
+Before jumping into the proof we need a general notation for complicated tensor expressions occurring in evolution equations. 
+\begin{defn}
+    Given any two tensors $ A $ and $ B $, we write $ A * B $ to denote any linear combination of tensors formed by contraction on $ A_{i_{1} \dots i_{k}}^{a_{1} \dots a_{p}}B_{j_{1} \dots j_{l}}^{b_{1} \dots b_{q}} $ with $ g $ or $ g^{-1} $. The iterated product $ A * B * C $ can be viewed as $ A * (B * C) $ which is associative so can be written without brackets. Also, denote the multifold product $ \underbrace{A * \dots * A}_{p-\text{times}}$ by $ A^{*p} $. The Gauss equation in this notation yields $ \text{Rm} = A * A $ which after differentiation gives $ \nabla \text{Rm} = A * \nabla A $. 
+\end{defn}
+
+The following lemma will be necessary to find out time derivative of covariant derivatives and gives the commutator relation between it. 
+\begin{lemma}
+    Let $ S $ be a tensor with evolution equation given by 
+    \[ \partial_{t} S = \Delta S + T \]
+    where $ T $ is another tensor of same rank. Then the evolution equation of the covariant derivative is \begin{equation}
+        \partial_{t}\nabla S = \Delta \nabla S + A * A  * \nabla S + A * \nabla A * S + \nabla T.
+    \end{equation}
+\end{lemma}
 \begin{proof}
-    Assume on the contrary that $ \sup_{M^{n} \times [0,T)}|A|^{2} \le C $. Our aim is to prove that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow.
+    Recall the time evolution of Christoffel symbol is given by     
+    \begin{equation}
+        \partial_{t}\Gamma_{ij}^{k} = \frac{1}{2}g^{kl}(\nabla_{i}\partial_{t}g_{jl}+ \nabla_{j}\partial_{t}g_{il}-\nabla_{l}\partial_{t}g_{ij}).
+    \end{equation}
+    Substituting $ \partial_{t}g_{ij} = -2Hh_{ij} $ we get 
+    \[ \partial_{t}\Gamma_{ij}^{k} = -g^{kl}(\nabla_{i}(Hg_{jl})+ \nabla_{j}(Hg_{il})-\nabla_{l}(h_{ij})) = A * \nabla A. \]
+    Consider the commutator \begin{align*}
+        \partial_{t}\nabla S & = \nabla \partial_{t}S + \partial_{t}\Gamma *S \\
+        & = \nabla(\Delta S+T) + A * \nabla A * S \\
+        & = \Delta \nabla S + \nabla \Rm * S + \Rm * \nabla S  + \nabla T + A * \nabla A * S \\
+        & = \Delta \nabla S + A * A  * \nabla S + A * \nabla A * S + \nabla T
+    \end{align*}
+    where we have used the Ricci identity $ [\nabla, \Delta]S = \nabla \Rm * S + \Rm * \nabla A $.
 \end{proof}
+
+
+
+\begin{lemma}
+    The evolution equation of higher gradient of second fundamental form is given by 
+    \begin{equation}
+        \partial_{t}\nabla^{m}A = \Delta \nabla^{m}A + \sum_{i+j+k =m}^{}\nabla^{i}A* \nabla^{j}A*\nabla^{k}A 
+    \end{equation}
+    where $ m \in \N \cup \{0\} $. Further, the norm of the gradient satisfies 
+    \begin{equation}
+        \partial_{t}|\nabla^{m}A|^{2} = \Delta |\nabla^{m}A|^{2}- 2 |\nabla^{m+1}A|^{2} +\sum_{i+j+k =m}^{}\nabla^{i}A* \nabla^{j}A*\nabla^{k}A* \nabla^{m}A \label{normnablaA}
+    \end{equation}
+    where $ m \in \N \cup \{0\} $.
+    
+\end{lemma}
+\begin{proof}
+    We induct on $ m $. For base case $ m = 0 $, the second fundamental form evolution equation is 
+    \begin{align*}
+        \partial_{t} A & = \Delta A -2H A^{2} + |A|^{2}A \\
+        & = \Delta A + A*A*A. 
+    \end{align*}
+    Now suppose the equation holds for $ m $, then for $m +1 $ we have \begin{align*}
+        \partial_{t}\nabla^{m+1}A & = \nabla \partial_{t} (\nabla^{k}A) + (\partial_{t}\Gamma)* \nabla^{m}A \\
+        & = \nabla \left(\Delta \nabla^{m}A + \sum_{i+j+k=m}^{}\nabla^{i}A * \nabla^{j}A * \nabla^{k}A\right) + A * \nabla A * \nabla^{m}A \\
+        & = \Delta \nabla^{m+1}A + \nabla \Rm * \nabla^{m}A + \Rm* \nabla^{m+1}A + \sum_{i+j+k =m+1}^{}\nabla^{i}A* \nabla^{j}A*\nabla^{k}A \\
+        & = \Delta \nabla^{m+1}A + \sum_{i+j+k =m+1}^{}\nabla^{i}A* \nabla^{j}A*\nabla^{k}A
+    \end{align*}
+    using Ricci identity and Gauss equation $ \Rm = A*A $. For the norm, we get \begin{align*}
+        \partial_{t}|\nabla^{m}A|^{2} = 2\left<\partial_{t}\nabla^{m}A, \nabla^{m}A  \right> + A*A* \nabla^{m}A * \nabla^{m}A
+    \end{align*}
+    where the second term comes from time derivative $ \partial_{t}g^{ij} = -2Hh^{ij} = A*A $. This simplifies to \begin{align*}
+        \partial_{t}|\nabla^{m}A|^{2} & = 2\left< \Delta \nabla^{m}A + \sum_{i+j+k=m}^{}\nabla^{i}A * \nabla^{j}A* \nabla^{k}A, \nabla^{m}A  \right> + A*A*\nabla^{m}A * \nabla^{m}A \\
+        & = 2\left< \Delta \nabla^{m}A , \nabla^{m}A \right> + \sum_{i+j+k=m}^{}\nabla^{i}A * \nabla^{j}A* \nabla^{k}A \nabla^{m}A \\
+        & = \Delta|\nabla^{m}A|^{2} - 2|\nabla^{m+1}A|^{2} + \sum_{i+j+k=m}^{}\nabla^{i}A * \nabla^{j}A* \nabla^{k}A* \nabla^{m}A
+    \end{align*}
+\end{proof}
+We can consider maximum principle on the previous lemma. This gives control of derivates of the second fundamental form based on the bound of second fundamental form. 
+
+\begin{lemma}
+    Let $ X : M^{n} \times [0,T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. Suppose that $ T < \infty $ and $ C_{0} = \sup_{M^{n} \times [0,T)}|A| < \infty $. Then for each $ m \in \N $ there exists a constant $ C_{m} < \infty $ depending only on initial manifold such that \begin{equation}
+        \sup_{M^{n} \times [0,T)} |\nabla^{m}A| \le C_{m}.
+    \end{equation}
+\end{lemma}
+
+\begin{proof}
+    From \cref{normnablaA}, we can estimate \begin{align*}
+        \partial_{t}|\nabla^{m}A|^{2} \le \Delta|\nabla^{m}A|^{2} - 2|\nabla^{m+1}A|^{2} + C_{n,m}\sum_{i+j+k=m}^{}|\nabla^{i}A|  |\nabla^{j}A|| \nabla^{k}A|| \nabla^{m}A|
+    \end{align*}
+    where $ C_{n,m}< \infty $ only depends on $ n $ and $ m $. We now proceed by induction on $ m $. Suppose that for $ l \in \{1, \dots, m-1\} $ we have 
+    \[ \sup_{\mathcal{M} \times [0,T)} |\nabla^{l}A|^{2} \le C_{l}\]
+    for some constants $ C_{l} < \infty$. From the previous relation, \begin{align}
+        \partial_{t}|\nabla^{m}A|^{2} & \le \Delta |\nabla^{m}A|^{2} - 2 |\nabla^{m+1}A|^{2} + C_{n,m} \left( |A|^{2} |\nabla^{m}A|^{2} + \sum_{\substack{i+j+k=m \\
+        i,j,k \le m-1}}^{}|\nabla^{i}A||\nabla^{j}A||\nabla^{k}A||\nabla^{m}A|  \right) \nonumber \\
+        & \le \Delta|\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m}A|^{2} + c_{m}|\nabla^{m}A|  \nonumber \\
+        & \le \Delta|\nabla^{m}A|^{2} + 2C_{n,m}C_{0}^{2}|\nabla^{m}A|^{2} + \frac{c_{m}}{4C_{0}^{2}C_{n,m}} \label{nablam}
+    \end{align}
+    using the induction hypothesis. To absorb the $ |\nabla^{m}A|^{2} $ term on the right-hand side consider the inequality for $ m-1 $, \begin{align}
+        \partial_{t}|\nabla^{m-1}A|^{2} &\le \Delta |\nabla^{m-1}A|^{2} - 2|\nabla^{m}A|^{2} + C_{n,m-1} \sum_{i+j+k=m-1} |\nabla^{i}A||\nabla^{j}A| |\nabla^{k}A| |\nabla^{m-1}A| \nonumber\\
+        & \le \Delta|\nabla^{m-1}A|^{2} - 2|\nabla^{m}A|^{2} + c_{m-1} \label{nablam1}.
+    \end{align}
+    Multiplying \cref{nablam1} by $ C_{n,m}C_{0}^{2} $ and adding to \cref{nablam}, \begin{align*}
+        \partial_{t}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) & \le \Delta\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) + \frac{c_{m}}{4C_{0}^{2}C_{n,m}} + c_{m-1}C_{n,m}C_{0}^{2}.
+    \end{align*}
+    Now by maximum principle 
+    \[ \sup_{\mathcal{M}^{n} \times [0,T)}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) \le \left( \frac{c_{m}}{4C_{0}^{2}C_{n,m}} + c_{m-1}C_{n,m}C_{0}^{2} \right)T \]
+    which implies 
+    \[ \sup_{\mathcal{M} \times [0,T)} |\nabla^{m}A|^{2} \le C_{m}\]
+    for some constant $ C_{m} < \infty $.
+    
+\end{proof}
+We can improve the higher order covariant derivative bound to include a time factor as well. In fact the following lemma will imply rapid decrease in the norm of higher covariant derivatives of second fundamental form with respect to time. 
+
+\begin{lemma}
+    Let $ X : M^{n} \times [0,r^{2}] \to \Rn  $ be a solution of the mean curvature flow. Suppose there exists a constant $ C_{0} < \infty$ such that 
+    \[ \sup_{\mathcal{M}^{n} \times [0,r^{2}]} |A|^{2} \le C_{0}r^{-2}. \]
+    Then for each $ m \in \N $, there exists a constant $ C_{m} $ depending only on $ n, \mathcal{M}_{0},C_{0} $ such that 
+    \[ \sup_{\mathcal{M} \times [0,r^{2}]} |\nabla^{m}A|^{2} \le C_{m}r^{-2}t^{-m} .\]
+
+    
+\end{lemma}
+\begin{proof}
+    The proof goes through induction on $ m $. The base case $ m=0 $ is our hypothesis, 
+\end{proof}
+
+\begin{remark}
+    The parabolic nature of the mean curvature flow shows up here as the dimension of time is 
+\end{remark}
+\begin{proof}[ of \cref{longtimeexistence}]
+    Assume on the contrary that $ \sup_{M^{n} \times [0,T)}|A|^{2} \le C $. Our aim is to prove that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow at $ t  = T $. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
 \section{Huisken's theorem}
 
 Huisken's theorem proves the convergence of compact, uniformly convex hypersurface to sphere under Mean curvature flow in finite time. 

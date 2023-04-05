@@ -142,7 +142,7 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
     Now the mixed derivatives are given by
     \begin{align*}
         \frac{\partial^{2} Z}{\partial x_{i}\partial y_{i}}(x,y,t) & = - \frac{\partial \psi}{\partial x_{i}}(x,t)\left< \frac{\partial X}{\partial y_{i}}(y,t), X(x,t)-X(y,t) \right> - \psi(x,t)\left<  \frac{\partial X}{\partial y_{i}}(y,t), \frac{\partial X}{\partial x_{i}}(x,t) \right> \nonumber \\
-        & \quad + \left< \frac{\partial X}{\partial y_{i}}(y,t) , \frac{\partial \nu}{\partial x_{i}}(x,t)\right>
+        & \quad + \left< \frac{\partial X}{\partial y_{i}}(y,t) , \frac{\partial \nu}{\partial x_{i}}(x,t)\right>.
     \end{align*}
     Evaluating this at $ (x_{0},y_{0},t_{0}) $ and using \cref{psiequation} and \cref{innerproduct}, we get 
     \begin{align*}
@@ -150,20 +150,20 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
         & - (\psi(x_{0},t_{0})- \kappa_{i}(x_{0},t_{0}))\left< \frac{\partial X}{\partial y_{i}}(y_{0},t_{0}), \frac{\partial X}{\partial x_{i}}(x_{0},t_{0}) \right> \\
         & = \frac{\partial \psi}{\partial x_{i}}(x_{0},t_{0})\left< X(x_{0},t_{0})-X(y_{0},t_{0}), \frac{\partial X}{\partial x_{i}}(x_{0},t_{0}) \right> \\
         & - (\psi(x_{0},t_{0})-\kappa_{i}(x_{0},t_{0}))\left( 1 -2 \eta \left< \frac{\partial X}{\partial x_{i}}(x_{0},t_{0}) \right>^{2} \right) \\
-        & = - (\psi(x_{0},t_{0})- \kappa_{i}(x_{0},t_{0}))
+        & = - (\psi(x_{0},t_{0})- \kappa_{i}(x_{0},t_{0})).
     \end{align*}
     For the second order $ y $ derivative, 
     \begin{align*}  
         \frac{\partial^{2} Z}{\partial y_{i}^{2}}(x,y,t) & = - \psi(x,t) \left< \frac{\partial^{2} X}{\partial y_{i}^{2}}(y,t), X(x,t) - X(y,t) \right> - \psi(x,t)\left< \frac{\partial X}{\partial y_{i}}(y,t), - \frac{\partial X}{\partial y_{i}}(y,t) \right> \\
         & \quad + \left< \frac{\partial^{2} X}{\partial y_{i}^{2}}(y,t), \nu(x,t) \right>
     \end{align*}    
-    So from \cref{etay} at $ (x_{0},y_{0},t_{0}) $,
+    so from \cref{etay} at $ (x_{0},y_{0},t_{0}) $,
     \begin{align}
         \frac{\partial Z}{\partial y_{i}^{2}}(x_{0},y_{0},t_{0}) & =  \psi(x_{0},t_{0})\kappa_{i}(y_{0},t_{0})\left< X(x_{0},t_{0})-X(y_{0},t_{0}), \nu(y_{0},t_{0}) \right>+\psi(x_{0},t_{0}) \nonumber \\
         & \quad - \kappa_{i}(y_{0},t_{0})\left< \nu(y_{0},t_{0}), \nu(x_{0},t_{0}) \right> \nonumber \\
         & =  \psi(x_{0},t_{0})\kappa_{i}(y_{0},t_{0}) \left( \left< X(x_{0},t_{0})-X(y_{0},t_{0}), \nu(x_{0},t_{0}) \right> - \psi(x_{0},t_{0})|X(x_{0},t_{0})-X(y_{0},t_{0})|^{2}\right)\nonumber \\
         & \quad + \psi(x_{0},t_{0}) - \kappa_{i}(y_{0},t_{0})(1- \psi(x_{0},t_{0})\left< X(x_{0},t_{0})-X(y_{0},t_{0}), \nu(x_{0},t_{0}) \right>) \nonumber\\
-        & =  \psi(x_{0},t_{0}) - \kappa_{i}(y_{0},t_{0})
+        & =  \psi(x_{0},t_{0}) - \kappa_{i}(y_{0},t_{0}).
     \end{align}
 
     Now the time derivative is,
@@ -180,12 +180,14 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
     where $ \nu(x_{0},t_{0}) - \psi(x_{0},t_{0})(X(x_{0},t_{0})-X(y_{0},t_{0})) =\nu(y_{0},t_{0})  $ was used for last equality. Putting together we get the elliptic term, \begin{align*}
         & \frac{\partial Z}{\partial t}(x_{0},y_{0},t_{0}) - \sum_{i=1}^{n}\left( \frac{\partial^{2} X}{\partial x_{i}^{2}} + 2 \frac{\partial^{2}Z}{\partial x_{i}\partial y_{i}} + \frac{\partial^{2} Z}{\partial y_{i}^{2}} \right)(x_{0},y_{0},t_{0}) \\
         & = \frac{1}{2}\bigg( \frac{\partial \psi}{\partial t}(x_{0},t_{0}) - \Delta \psi(x_{0},t_{0}) - |A(x_{0},t_{0})|^{2} \psi(x_{0},t_{0}) \\
-        & \qquad \sum_{i=1}^{n} \frac{2}{\psi(x_{0},t_{0})-\kappa_{i}(x_{0},t_{0})}\left( \frac{\partial \psi}{\partial x_{i}}(x_{0},t_{0}) \right)^{2} \bigg)|X(x_{0},t_{0})-X(y_{0},t_{0})|^{2}
+        & \qquad \sum_{i=1}^{n} \frac{2}{\psi(x_{0},t_{0})-\kappa_{i}(x_{0},t_{0})}\left( \frac{\partial \psi}{\partial x_{i}}(x_{0},t_{0}) \right)^{2} \bigg)|X(x_{0},t_{0})-X(y_{0},t_{0})|^{2}.
     \end{align*}
     As $ (x_{0},y_{0},t_{0}) $ is a local minimum of $ Z $, the left-hand side of previous equation is negative from which the inequality \cref{psi} follows. 
     
     
-
+    \begin{remark}
+        Notice that the inequality is in one-variable however the proof goes through maximum principle on a two-variable function. There are a lot of applications of such two-point functions considered in \cite{brendle2014two,andrews2014moduli}.
+    \end{remark}
 
 
 
@@ -216,4 +218,7 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
         & = \Delta \left( \frac{k}{H} \right) + \frac{2}{H}\left< \nabla \left( \frac{k}{H} \right), \nabla H \right>.
     \end{align*}
     Now maximum principle (for viscosity solutions) yields $ \alpha k \le H  $ for all $ t \in [0,T) $. 
+  
+
+    
 \end{proof}

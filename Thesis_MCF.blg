@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Thesis_MCF.aux
+A level-1 auxiliary file: Preface.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: Convexity_Estimates.aux
+A level-1 auxiliary file: Noncollapsing.aux
+A level-1 auxiliary file: Convergence_of_Manifolds.aux
+A level-1 auxiliary file: Viscosity_Solutions.aux
+The style file: amsalpha.bst
+Database file #1: ref.bib
+Warning--I didn't find a database entry for "Simon"
+Warning--missing journal name in huisken1999convexity
+Warning--missing journal, volume, and year in huisken1999convexity
+Warning--missing pages in huisken1999convexity
+You've used 19 entries,
+            2624 wiz_defined-function locations,
+            681 strings with 7205 characters,
+and the built_in function-call counts, 7018 in all, are:
+= -- 651
+> -- 289
+< -- 15
++ -- 99
+- -- 95
+* -- 647
+:= -- 1119
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 115
+chr.to.int$ -- 18
+cite$ -- 22
+duplicate$ -- 285
+empty$ -- 555
+format.name$ -- 123
+if$ -- 1393
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 42
+newline$ -- 68
+num.names$ -- 51
+pop$ -- 122
+preamble$ -- 1
+purify$ -- 134
+quote$ -- 0
+skip$ -- 182
+stack$ -- 0
+substring$ -- 455
+swap$ -- 26
+text.length$ -- 15
+text.prefix$ -- 11
+top$ -- 0
+type$ -- 136
+warning$ -- 3
+while$ -- 67
+width$ -- 23
+write$ -- 216
+(There were 4 warnings)

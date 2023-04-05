@@ -1,0 +1,98 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{CMP{\etalchar{+}}15}
+
+\bibitem[ACGL22]{andrews2022extrinsic}
+Ben Andrews, Bennett Chow, Christine Guenther, and Mat Langford,
+  \emph{Extrinsic geometric flows}, vol. 206, American Mathematical Society,
+  2022.
+
+\bibitem[And94]{andrews1994contraction}
+Ben Andrews, \emph{Contraction of convex hypersurfaces in euclidean space},
+  Calculus of Variations and Partial Differential Equations \textbf{2} (1994),
+  no.~2, 151--171.
+
+\bibitem[And12]{andrews2012noncollapsing}
+\bysame, \emph{Noncollapsing in mean-convex mean curvature flow}, Geometry \&
+  Topology \textbf{16} (2012), no.~3, 1413--1418.
+
+\bibitem[And14]{andrews2014moduli}
+\bysame, \emph{Moduli of continuity, isoperimetric profiles, and multi-point
+  estimates in geometric heat equations}, Surveys in differential geometry
+  \textbf{19} (2014), no.~1, 1--47.
+
+\bibitem[Bre14]{brendle2014two}
+Simon Brendle, \emph{Two-point functions and their applications in geometry},
+  Bulletin of the American Mathematical Society \textbf{51} (2014), no.~4,
+  581--596.
+
+\bibitem[Bre15]{brendle2015sharp}
+\bysame, \emph{A sharp bound for the inscribed radius under mean curvature
+  flow}, Inventiones mathematicae \textbf{202} (2015), no.~1, 217--237.
+
+\bibitem[CCG{\etalchar{+}}07]{chow2007ricci}
+Bennett Chow, Sun-Chin Chu, David Glickenstein, Christine Guenther, Jim
+  Isenberg, Tom Ivey, Dan Knopf, Peng Lu, Feng Luo, and Lei Ni, \emph{The ricci
+  flow: techniques and applications}, vol. 135, American Mathematical Society
+  Providence, 2007.
+
+\bibitem[CIL92]{crandall1992user}
+Michael~G Crandall, Hitoshi Ishii, and Pierre-Louis Lions, \emph{User’s guide
+  to viscosity solutions of second order partial differential equations},
+  Bulletin of the American mathematical society \textbf{27} (1992), no.~1,
+  1--67.
+
+\bibitem[CMP{\etalchar{+}}15]{colding2015mean}
+Tobias Colding, William Minicozzi, Erik Pedersen, et~al., \emph{Mean curvature
+  flow}, Bulletin of the American Mathematical Society \textbf{52} (2015),
+  no.~2, 297--333.
+
+\bibitem[EH89]{ecker1989mean}
+Klaus Ecker and Gerhard Huisken, \emph{Mean curvature evolution of entire
+  graphs}, Annals of Mathematics \textbf{130} (1989), no.~3, 453--471.
+
+\bibitem[Ham82]{hamilton1982three}
+Richard~S Hamilton, \emph{Three-manifolds with positive ricci curvature},
+  Journal of Differential geometry \textbf{17} (1982), no.~2, 255--306.
+
+\bibitem[Ham93]{hamilton1993formations}
+\bysame, \emph{The formations of singularities in the ricci flow}, Surveys in
+  differential geometry \textbf{2} (1993), no.~1, 7--136.
+
+\bibitem[HS99a]{huisken1999convexity}
+Gerhard Huisken and Carlo Sinestrari, \emph{Convexity estimates for mean
+  curvature flow and singularities of mean convex surfaces}.
+
+\bibitem[HS99b]{huisken1999mean}
+\bysame, \emph{Mean curvature flow singularities for mean convex surfaces},
+  Calculus of Variations and Partial Differential Equations \textbf{8} (1999),
+  no.~1, 1--14.
+
+\bibitem[Hui84]{huisken1984flow}
+Gerhard Huisken, \emph{Flow by mean curvature of convex surfaces into spheres},
+  Journal of Differential Geometry \textbf{20} (1984), no.~1, 237--266.
+
+\bibitem[Hui90]{huisken1990asymptotic}
+\bysame, \emph{Asymptotic behavior for singularities of the mean curvature
+  flow}, Journal of Differential Geometry \textbf{31} (1990), no.~1, 285--299.
+
+\bibitem[Man11]{mantegazza2011lecture}
+Carlo Mantegazza, \emph{Lecture notes on mean curvature flow}, vol. 290,
+  Springer Science \& Business Media, 2011.
+
+\bibitem[MS73]{https://doi.org/10.1002/cpa.3160260305}
+J.~H. Michael and L.~M. Simon, \emph{Sobolev and mean-value inequalities on
+  generalized submanifolds of rn}, Communications on Pure and Applied
+  Mathematics \textbf{26} (1973), no.~3, 361--379.
+
+\bibitem[Zhu02]{zhu2002lectures}
+Xi-Ping Zhu, \emph{Lectures on mean curvature flows}, vol.~32, American
+  Mathematical Soc., 2002.
+
+\end{thebibliography}
