@@ -186,9 +186,9 @@ The tensor maximum principle can be used to prove that convexity is preserved un
 \end{lemma}
 \section{Evolution equations}
 To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 
-\[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t)\]
-Let $\{x^i\}$ be a local coordinate in $M^n$. Then the induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This gives
-\[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle  \]
+\[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t).\]
+The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This means that if $\{x^i\}$ are local coordinates on $M^n$, then the components of the induced metric are given by
+\[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle.  \]
 \begin{lemma} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of the metric, normal, second fundamental form and mean curvature is given by
 \begin{equation}
     \dou_t g_{ij} = -2Hh_{ij}
