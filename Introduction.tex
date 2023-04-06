@@ -397,34 +397,73 @@ We can consider the maximum principle on the previous lemma. This gives control 
         & \le \Delta|\nabla^{m-1}A|^{2} - 2|\nabla^{m}A|^{2} + c_{m-1} \label{nablam1}.
     \end{align}
     Multiplying \cref{nablam1} by $ C_{n,m}C_{0}^{2} $ and adding to \cref{nablam}, \begin{align*}
-        \partial_{t}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) & \le \Delta\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) + \frac{c_{m}}{4C_{0}^{2}C_{n,m}} + c_{m-1}C_{n,m}C_{0}^{2}.
+        \partial_{t}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) & \le \Delta\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) + \frac{c_{m}}{4C_{0}^{2}C_{n,m}} \\
+        & \qquad + c_{m-1}C_{n,m}C_{0}^{2}.
     \end{align*}
     Now by comparison principle, we get a bound 
     \[ \sup_{\mathcal{M}^{n} \times [0,T)}\left( |\nabla^{m}A|^{2}+ C_{n,m}C_{0}^{2}|\nabla^{m-1}A|^{2} \right) \le \overline{C_{m}} \]
-    from which we can deduce that 
+    from this, we can deduce that 
     \[ \sup_{\mathcal{M} \times [0,T)} |\nabla^{m}A|^{2} \le C_{m}\]
-    for some constant $ C_{m} < \infty $ as $ |\nabla^{m-1}A| $ is bounded.
-    
+    for some constant $ C_{m} $ depending only on $ n,m, C_{0}, \dots, C_{m-1} $ and the initial hypersurface. This completes the induction.
 \end{proof}
 We can improve the higher-order covariant derivative bound to include a time factor as well. The following lemma will imply a rapid decrease in the norm of higher covariant derivatives of the second fundamental form with respect to time. 
 
 \begin{lemma}
     Let $ X : M^{n} \times [0,r^{2}] \to \Rn  $ be a solution of the mean curvature flow. Suppose there exists a constant $ C_{0} < \infty$ such that 
-    \[ \sup_{\mathcal{M}^{n} \times [0,r^{2}]} |A|^{2} \le C_{0}r^{-2}. \]
-    Then for each $ m \in \N $, there exists a constant $ C_{m} $ depending only on $ n, \mathcal{M}_{0},C_{0} $ such that 
-    \[ \sup_{\mathcal{M} \times [0,r^{2}]} |\nabla^{m}A|^{2} \le C_{m}r^{-2}t^{-m} .\]
-
-    
+    \[ |A|^{2} \le C_{0}r^{-2} \]
+    on $ \mathcal{M}^{n} \times [0,r^{2}] $. Then for each $ m \in \N $, there exists a constant $ C_{m} $ depending only on $ n, \mathcal{M}_{0} $ and $C_{0} $ such that 
+    \[ t^{m}|\nabla^{m}A|^{2} \le C_{m}r^{-2} \]
+    on $ \mathcal{M}^{n} \times [0,r^{2}] $. 
 \end{lemma}
 \begin{proof}
-    The proof goes through induction on $ m $. The base case $ m=0 $ is our hypothesis
+    First, we will demonstrate how to obtain the bound for $ m=1 $ and then extend the method for general $ m $ using induction. We know that 
+    \begin{align*}
+        \partial_{t}|\nabla A|^{2} & = \Delta|\nabla A|^{2}-2|\nabla^{2} A|^{2} + \sum_{i+j+k=1}^{}\nabla^{i}A* \nabla^{j}A *\nabla^{k}A * \nabla^{m}A \\
+        & = \Delta|\nabla A|^{2}-2|\nabla^{2} A|^{2} + C_{n,1} \sum_{i+j+k=1}^{}|\nabla^{i}A||\nabla^{j}A| |\nabla^{k}A||\nabla A|  \\
+        & \le \Delta|\nabla A|^{2} -2 |\nabla^{2} A|^{2}+3C_{n,1}|A|^{2}||\nabla A|^{2} \\
+        & \le \Delta|\nabla A|^{2} -2 |\nabla^{2} A|^{2}+3C_{n,1}C_{0}r^{-2}|\nabla A|^{2}.
+    \end{align*}
+    To obtain a better bound we want to utilize the good term $ -2|\nabla^{2}A|^{2} $ and one way to do this is to define another term with a $ t $-factor and $ |A|^{2} $,
+    \[ F = t|\nabla A|^{2} + \beta|A|^{2}\]
+    which is bounded at $ t=0 $ by $ \beta C_{0}r^{-2} $. Notice that \begin{align*}
+        \partial_{t}F & \le |\nabla A|^{2}+ t\left(\Delta|\nabla A|^{2}-2|\nabla^{2} A|^{2} +3C_{n,1}C_{0}r^{-2}|\nabla A|^{2} \right) + \beta\left( \Delta |A|^{2}- 2|\nabla A|^{2} + 2|A|^{4} \right) \\
+        & \le \Delta F -2|\nabla^{2}A|^{2}+  \left(1 +3tC_{n,1}C_{0}r^{-2}-2\beta  \right) |\nabla A|^{2} + 2\beta C_{0}^{2}r^{-4} \\
+        & \le \Delta F + \left( 1+ 3C_{n,1}C_{0}^{2}-2 \beta \right)| \nabla A|^{2} + 2 \beta C_{0}^{2}r^{-4}.
+    \end{align*}
+    Choose  $ \beta > (1+3C_{n,1}C_{0}^{2}) /2 $, so that the coefficient of $ |\nabla A|^{2} $ is negative. Comparison theorem then gives 
+    \[ \sup_{ x \in \mathcal{M} }F(x,t) \le \beta C_{0}r^{-2}+ 2 \beta C_{0}^{2}r^{-4}t \le Cr^{-2} \]
+    for some constant $ C_{1} >0 $. Hence, 
+    \[ t|\nabla A|^{2} \le C_{1}r^{-2} \]
+    on $ \mathcal{M} \times [0,r^{2}] $ which establishes the inequality for $ m=1 $. 
+
+    Now assume the inequality holds for $ 1, \dots,m-1 $. Then, 
+    \begin{align*}
+        \partial_{t}|\nabla^{m} A|^{2} &\le \Delta |\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2} + C_{n,m} \sum_{i+j+k= m}^{} |\nabla^{i}A||\nabla^{j}A||\nabla^{k}A||\nabla^{m}A|  \\
+        & \le \Delta |\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2} + C_{n,m}\left( 3|A|^{2}|\nabla^{m}A|^{2} + \sum_{\substack{i+j+k=m\\i,j,k \le m-1}}^{}|\nabla^{i}A||\nabla^{j}A| |\nabla^{k}A||\nabla^{m} A|  \right) \\
+        & \le \Delta|\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2}+ 3C_{n,m}C_{0}r^{-2}|\nabla^{m}A|^{2} + C_{n,m}L_{m}r^{-3}t^{-\frac{m}{2}}|\nabla^{m}A| \\
+        & \le \Delta|\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2} + + C_{n,m}r^{-2}\left(6C_{0}|\nabla^{m}A|^{2} + \frac{L_{m}^{2}r^{-2}t^{-m}}{4C_{0}}  \right) \\
+        & \le \Delta|\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2} + r^{-2}(T_{m}|\nabla^{m}A|^{2}+ S_{m}r^{-2}t^{-m})
+    \end{align*}
+    where $ L_{m} = \sum_{\substack{i+j+k=m\\i,j,k \le m-1}}\sqrt{C_{i}C_{j}C_{k}}  $, $ T_{m} = 6C_{n,m}C_{0} $ and $ S_{m} = (C_{n,m}L_{m}^{2}) / 4C_{0} $.
+
+    Now like in the $ m=1 $ case, we define 
+    \[ F = \sum_{l=0}^{m}a_{l}t^{l}|\nabla^{l} A|^{2} \]
+    where $ a_{l} $ are positive constants to be determined later. The time derivative of $ F $ satisfies \begin{align*}
+        \partial_{t}F & \le \sum_{l=0}^{m}a_{l}t^{l}\left(\Delta|\nabla^{l}A|^{2}- 2|\nabla^{l+1}A|^{2} + r^{-2}(T_{l}|\nabla^{l}A|^{2}+ S_{l}r^{-2}t^{-l}) \right) + \sum_{l=0}^{m-1}(l+1)a_{l+1}t^{l}|\nabla^{l+1}A|^{2} \\
+        & \le \Delta F + \sum_{l=0}^{m-1}((l+1)a_{l+1}-2a_{l}+)t^{l}|\nabla^{l}A|^{2} -2|\nabla^{m+1}A|^{2} + \sum_{l=0}^{m}a_{l}r^{-4}S_{l} 
+    \end{align*}
+
+
 \end{proof}
 
 \begin{remark}
     The parabolic nature of the mean curvature flow shows up here as the dimension of time is double the spatial dimension coming from $ |\nabla^{m}A| $.
 \end{remark}
 \begin{proof}[ of \cref{longtimeexistence}]
-    Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. Our aim is to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying short time existence of mean curvature flow at $ t  = T $. 
+    Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. We aim to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying the short time existence of the mean curvature flow at $ t  = T $. \begin{align*}
+        |X(x,t)-X(x,0)| \le  \bigg|\int_{0}^{t} H(x,s) ds \bigg| \le T \sup |H| \le T \sqrt{nC_{0}}
+    \end{align*}
+    hence $ X(t, \cdot) \to X(T, \cdot) $ converges to a continuous limit. 
 \end{proof}
 
 
@@ -438,7 +477,7 @@ We can improve the higher-order covariant derivative bound to include a time fac
 
 \section{Huisken's theorem}
 
-Huisken's theorem proves the convergence of compact, uniformly convex hypersurface to sphere under Mean curvature flow in finite time. 
+Huisken's theorem states that compact, uniformly convex hypersurface converges to a round sphere under Mean curvature flow in finite time. 
 \begin{thm}
 Let $ X: M^{n} \times [0, T) \to \Rn  $, $ n \ge 2 $ be a maximal solution of MCF such that $ M^{n} $ is compact and $X_{0} = X(\cdot, 0)$ is convex embedding. Then $ X_{t} = X(\cdot,t) $ is a convex embedding for all $ t>0 $ and $ X_{t} $ converges to a point $ p \in \Rn $ as $ t \to T $. Further the rescaled embeddings $ \tilde{X}_{t} : M^{n} \to \Rn $ defined by 
             \[ \tilde{X}_{t}(x) \define \frac{X_{t}(x)-p}{\sqrt{2n(T-t)}}\]

@@ -11,21 +11,21 @@
 \contentsline {section}{\numberline {1.4}Evolution equations}{8}{section.1.4}%
 \contentsline {section}{\numberline {1.5}The Avoidance Principle}{10}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Long time existence}{12}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Huisken's theorem}{16}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Pinching estimate}{16}{subsection.1.7.1}%
-\contentsline {section}{\numberline {1.8}Monotonicity Formula}{17}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}Rescaled Monotonicity formula}{19}{subsection.1.8.1}%
-\contentsline {section}{\numberline {1.9}Surfaces of positive mean curvature}{19}{section.1.9}%
-\contentsline {chapter}{\numberline {2}Convexity estimates}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Elementary symmetric polynomials and cones}{21}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Estimate of $S_{2}$}{22}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Asymptotic convexity}{34}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Noncollapsing}{37}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Inscribed curvature}{37}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Differential inequality for inscribed curvature}{38}{section.3.2}%
-\contentsline {chapter}{\numberline {A}Convergence of Manifolds}{45}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Cheeger-Gromov convergence}{45}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Applications to mean curvature flow}{46}{section.A.2}%
-\contentsline {chapter}{\numberline {B}Viscosity Solutions}{47}{appendix.B}%
+\contentsline {section}{\numberline {1.7}Huisken's theorem}{17}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Pinching estimate}{18}{subsection.1.7.1}%
+\contentsline {section}{\numberline {1.8}Monotonicity Formula}{18}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Rescaled Monotonicity formula}{21}{subsection.1.8.1}%
+\contentsline {section}{\numberline {1.9}Surfaces of positive mean curvature}{21}{section.1.9}%
+\contentsline {chapter}{\numberline {2}Convexity estimates}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Elementary symmetric polynomials and cones}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Estimate of $S_{2}$}{24}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Asymptotic convexity}{36}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Noncollapsing}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Inscribed curvature}{39}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Differential inequality for inscribed curvature}{40}{section.3.2}%
+\contentsline {chapter}{\numberline {A}Convergence of Manifolds}{47}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Cheeger-Gromov convergence}{47}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Applications to mean curvature flow}{48}{section.A.2}%
+\contentsline {chapter}{\numberline {B}Viscosity Solutions}{49}{appendix.B}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
