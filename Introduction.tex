@@ -214,7 +214,7 @@ The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\del
 \end{align*}
 2. Since $\langle \nu, \nu \rangle = 1$, we have $2\langle \partial_{t}\nu, \nu \rangle = 0$, so the vector $\partial_{t}\nu$ is in the tangent plane of the hypersurface. We can write it as a linear combination of tangent vectors $\{\partial_{j}X\}$ to get
 \begin{align*}
-\partial_{t}\nu &= \left\langle \partial_{t}\nu, \partial_{i}X \right\rangle \partial_{j}Xg^{ij} = - \left\langle \nu, \partial_{i}X\left( \partial_{t}X \right) \right\rangle\partial_{j}X g^{ij} \\
+\partial_{t}\nu &= \left\langle \partial_{t}\nu, \partial_{i}X \right\rangle \partial_{j}Xg^{ij} = - \left\langle \nu, \partial_{i}\left( \partial_{t}X \right) \right\rangle\partial_{j}X g^{ij} \\
 & = \left\langle \nu, \partial_{i}\left( H \nu \right) \right\rangle \partial_{j}Xg^{ij}\\
 & = \partial_{i}H \partial_{j}X g^{ij} + H \left\langle \nu, \partial_{i}\nu\right\rangle \partial_{j}Xg^{ij}\\
 & = \partial_{i}H\partial_{j}Xg^{ij} = \nabla H
@@ -252,7 +252,7 @@ Let $X_i: M^n_i \times  [0, T) \to \R^{n+1}, i = 1,2 $ be properly immersed solu
 If the hypersurfaces are disjoint initially, i.e. $X_1(M^{n_1},0)\cap X_2(M^n_2,0) = \phi$, then they remain so. Define the distance function $d: M^n_1 \times M^n_2 \times  [0,T) \to \R$ between the solutions by \[
 d(x,y,t) = |X_2(y,t) - X_1(y,t)|
 .\] 
-as a function of time. From the assumption of compactness $d_0 \define \inf_{(x,y) \in M^n_1 \times M^n_2} d(x,y,0) >0$
+as a function of time. From the assumptions of compactness and properness, $d_0 \define \inf_{(x,y) \in M^n_1 \times M^n_2} d(x,y,0) >0$
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
@@ -463,7 +463,7 @@ We can improve the higher-order covariant derivative bound to include a time fac
     Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. We aim to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying the short time existence of the mean curvature flow at $ t  = T $. \begin{align*}
         |X(x,t)-X(x,0)| \le  \bigg|\int_{0}^{t} H(x,s) ds \bigg| \le T \sup |H| \le T \sqrt{nC_{0}}
     \end{align*}
-    hence $ X(t, \cdot) \to X(T, \cdot) $ converges to a continuous limit. 
+    %hence $ X(t, \cdot) \to X(T, \cdot) $ converges to a continuous limit. 
 \end{proof}
 
 
