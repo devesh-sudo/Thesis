@@ -26,7 +26,11 @@ For dimension reasons, the normal bundle at each point is one-dimensional. We fi
 respectively. We can define the Levi-Civita connection on an embedded hypersurface $ \mathcal{M} $ using the normal projection, 
 \[ \nabla_{u}V  = (D_{u}V)^{T}\]
 where $ u  $ is a vector and $ V $ is a local vector field. Notice that this is consistent with \cref{connection} since $ dX^{-1} $ is the tangential component. The next step is to calculate the Christoffel symbols of the connection $ \nabla $. For local coordinates $ (U, \{x^{i}\}) $ in $ M^{n} $, the Christoffel symbols $ \Gamma_{ij}^{k}: U \to \R $ are obtained by the formula
-\[ \Gamma_{ij}^{k} \partial_{k}X = (\partial_{i}( \partial_{j}X))^{T}.\]
+
+\[ (\partial_{i} \partial_{j}X)^T = \Gamma_{ij}^{k} \partial_{k}X \]
+%which simplifies it to 
+%\[ \Gamma_{ij}^{k} \partial_{k}X = \partial_{i}( \partial_{j}X) - (\partial_{i}( \partial_{j}X))^{T} = (\partial_{i}( \partial_{j}X))^{\perp}\]
+
 Taking the inner product with $ \partial_{l}X $ and inverting it we get 
 \[ \Gamma_{ij}^{k} = g^{kl} \left< \partial_{i}\partial_{j}X, \partial_{l}X \right>.\]
 
@@ -59,6 +63,7 @@ Further, the principal curvatures satisfy some gradient formulas given as follow
         \item (Simon's identity) $ \frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i}\nabla_{j}H \right> + |\nabla A|^{2}+ Z$ where $ Z = H \operatorname{tr}(L^{3}) - |A|^{4} $. 
     \end{enumerate}
 \end{lemma}
+
 
 \section{Mean Curvature Flow}
 
