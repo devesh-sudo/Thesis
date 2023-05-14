@@ -173,23 +173,44 @@ The above maximum principle can be further extended to tensors. This was done by
 \begin{lemma}[Tensor maximum principle]
 	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
 	
-        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
+        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + u^{k}\nabla_{k}M_{ij}+ N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
 	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
 \end{lemma}
-
-\subsection{Applications to mean curvature flow}
 
 The tensor maximum principle can be used to prove that convexity is preserved under mean curvature flow. 
 
 \begin{lemma}
-    If 
+    Let $ X: M^{n} \times [0, T) \to \Rn $ be a solution to mean curvature flow. If the initial hypersurface $ X(\cdot, 0) = \mathcal{M}_{0}$ is convex then $ \mathcal{M}_{t} $ is also convex for all $ t \in [0,T) $.
 \end{lemma}
+\begin{proof}
+    The condition of convexity is equivalent to $ h_{ij} \ge 0 $. We will prove a stronger result. Suppose that 
+    \[ \epsilon h g_{ij} \le h_{ij} \]
+    for some constant $ 0 < \epsilon \le \frac{1}{n} $ at $ t = 0 $, then the inequality remains true for $ 0 \le t <T $. In the tensor maximum principle set 
+    \[ M_{ij} = \frac{h_{ij}}{H} - \epsilon g_{ij}, \qquad u^{k} = \frac{2}{H}g^{kl} \nabla_{l}H \]
+    and 
+    \[ N_{ij} = 2 \epsilon H h_{ij} - 2h_{im}g^{ml}h_{lj}. \]
+    To calculate the time derivatives, we use \cref{evolutioneq}, 
+    \[ \partial_{t}\left( \frac{h_{ij}}{H} \right) = \frac{H \Delta h_{ij}- h_{ij}\Delta H}{H^{2}} - 2h_{im}g^{ml}h_{ij},  \]
+    
+    \[ \Delta \left( \frac{h_{ij}}{H} \right)  = \frac{H \Delta h_{ij}- h_{ij} \Delta H }{H^{2}} - \frac{2}{H}g^{kl}\nabla_{k
+    }\nabla_{l}( \frac{h_{ij}}{H})\]
+
+
+    It remains to check that $ N_{ij} $ satisfies the null-eigenvector in this setting. Assume that for some vector $ X = \{X^{j}\} $, 
+    \[ h_{ij}  X^{j} = \epsilon HX_{i} \]
+    then \begin{align*}
+        N_{ij}X^{i}X^{j} & = 2 \epsilon H h_{ij}X^{i}X^{j} - 2h_{im}g^{ml}h_{lj}X^{i}X^{j} \\
+        & = 2 \epsilon^{2}H^{2}|X|^{2} - 2 \epsilon^{2}H^{2}X^{2} = 0. 
+    \end{align*}
+    Substituting $ \epsilon = 0 $ yields the result. 
+\end{proof}
 \section{Evolution equations}
 To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 
 \[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t).\]
 The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This means that if $\{x^i\}$ are local coordinates on $M^n$, then the components of the induced metric are given by
 \[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle.  \]
-\begin{lemma} Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of the metric, normal, second fundamental form and mean curvature is given by
+\begin{lemma}\label{evolutioneq}
+     Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of the metric, normal, second fundamental form and mean curvature is given by
 \begin{equation}
     \dou_t g_{ij} = -2Hh_{ij}
 \end{equation}
@@ -201,6 +222,9 @@ The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\del
 \end{equation}
 \begin{equation}
     \dou_t H = \Delta H + |A|^2H \label{dtH}
+\end{equation}
+\begin{equation}
+    \partial_{t}|A|^{2} = \Delta |A|^{2}-2|\nabla A|^{2} + 2|A|^{4}
 \end{equation}
 \end{lemma}
 \begin{proof}
@@ -236,6 +260,9 @@ The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\del
 & = 2H|A|^2 + \Delta H - 2H|A|^2 + |A|^2H\\
 & =  \Delta H+ |A|^2H.
 \end{align*}
+5. Again from the previous result on the evolution of $ h_{ij} $ we get \begin{align*}
+    \partial_{t}|A|^{2} & = 
+\end{align*}
 \end{proof}
 \begin{corollary}
 If mean curvature is positive everywhere on the initial hypersurface, then it remains so throughout the flow.
@@ -246,7 +273,8 @@ We apply the maximum principle to the evolution equation of $H$.
 \begin{remark}
 This property of mean curvature holds even when the hypersurface is embedded in an arbitrary Riemannian manifold with positive Ricci curvature. 
 \end{remark}
-\section{The Avoidance Principle}
+\begin{comment}
+    \section{The Avoidance Principle}
 
 Let $X_i: M^n_i \times  [0, T) \to \R^{n+1}, i = 1,2 $ be properly immersed solutions to mean curvature flow such that at least one of  $ M^n_1$ or $M^n_2$ is compact. 
 If the hypersurfaces are disjoint initially, i.e. $X_1(M^{n_1},0)\cap X_2(M^n_2,0) = \phi$, then they remain so. Define the distance function $d: M^n_1 \times M^n_2 \times  [0,T) \to \R$ between the solutions by \[
@@ -299,7 +327,8 @@ We can phrase the avoidance principle as disjointness is an immortal property an
 \end{remark}
 
 
-\section{Long time existence}
+\end{comment}
+\section{Long time existence}\label{Longtime}
 
 In this subsection, we will prove that the blow-up of the second fundamental form is the only obstruction to continuing the flow. The proof goes by contrapositive, relying on the Bernstein-type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. 
 
@@ -419,7 +448,7 @@ We can improve the higher-order covariant derivative bound to include a time fac
     First, we will demonstrate how to obtain the bound for $ m=1 $ and then extend the method for general $ m $ using induction. We know that 
     \begin{align*}
         \partial_{t}|\nabla A|^{2} & = \Delta|\nabla A|^{2}-2|\nabla^{2} A|^{2} + \sum_{i+j+k=1}^{}\nabla^{i}A* \nabla^{j}A *\nabla^{k}A * \nabla^{m}A \\
-        & = \Delta|\nabla A|^{2}-2|\nabla^{2} A|^{2} + C_{n,1} \sum_{i+j+k=1}^{}|\nabla^{i}A||\nabla^{j}A| |\nabla^{k}A||\nabla A|  \\
+        & \le \Delta|\nabla A|^{2}-2|\nabla^{2} A|^{2} + C_{n,1} \sum_{i+j+k=1}^{}|\nabla^{i}A||\nabla^{j}A| |\nabla^{k}A||\nabla A|  \\
         & \le \Delta|\nabla A|^{2} -2 |\nabla^{2} A|^{2}+3C_{n,1}|A|^{2}||\nabla A|^{2} \\
         & \le \Delta|\nabla A|^{2} -2 |\nabla^{2} A|^{2}+3C_{n,1}C_{0}r^{-2}|\nabla A|^{2}.
     \end{align*}
@@ -430,14 +459,15 @@ We can improve the higher-order covariant derivative bound to include a time fac
         & \le \Delta F -2|\nabla^{2}A|^{2}+  \left(1 +3tC_{n,1}C_{0}r^{-2}-2\beta  \right) |\nabla A|^{2} + 2\beta C_{0}^{2}r^{-4} \\
         & \le \Delta F + \left( 1+ 3C_{n,1}C_{0}^{2}-2 \beta \right)| \nabla A|^{2} + 2 \beta C_{0}^{2}r^{-4}.
     \end{align*}
-    Choose  $ \beta > (1+3C_{n,1}C_{0}^{2}) /2 $, so that the coefficient of $ |\nabla A|^{2} $ is negative. Comparison theorem then gives 
+    Choose  $ \beta > (1+3C_{n,1}C_{0}^{2}) /2 $, so that the coefficient of $ |\nabla A|^{2} $ is negative. The comparison theorem then gives 
     \[ \sup_{ x \in \mathcal{M} }F(x,t) \le \beta C_{0}r^{-2}+ 2 \beta C_{0}^{2}r^{-4}t \le Cr^{-2} \]
     for some constant $ C_{1} >0 $. Hence, 
     \[ t|\nabla A|^{2} \le C_{1}r^{-2} \]
     on $ \mathcal{M} \times [0,r^{2}] $ which establishes the inequality for $ m=1 $. 
 
     Now assume the inequality holds for $ 1, \dots,m-1 $. Then, 
-    \begin{align*}
+  
+      \begin{align*}
         \partial_{t}|\nabla^{m} A|^{2} &\le \Delta |\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2} + C_{n,m} \sum_{i+j+k= m}^{} |\nabla^{i}A||\nabla^{j}A||\nabla^{k}A||\nabla^{m}A|  \\
         & \le \Delta |\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2} + C_{n,m}\left( 3|A|^{2}|\nabla^{m}A|^{2} + \sum_{\substack{i+j+k=m\\i,j,k \le m-1}}^{}|\nabla^{i}A||\nabla^{j}A| |\nabla^{k}A||\nabla^{m} A|  \right) \\
         & \le \Delta|\nabla^{m}A|^{2}- 2|\nabla^{m+1}A|^{2}+ 3C_{n,m}C_{0}r^{-2}|\nabla^{m}A|^{2} + C_{n,m}L_{m}r^{-3}t^{-\frac{m}{2}}|\nabla^{m}A| \\
@@ -453,6 +483,30 @@ We can improve the higher-order covariant derivative bound to include a time fac
         & \le \Delta F + \sum_{l=0}^{m-1}((l+1)a_{l+1}-2a_{l}+)t^{l}|\nabla^{l}A|^{2} -2|\nabla^{m+1}A|^{2} + \sum_{l=0}^{m}a_{l}r^{-4}S_{l} 
     \end{align*}
 
+\begin{align*}
+\partial_t Q_m \leq & \Delta Q_{m} -2 a_m t^m\left|\nabla^{m+1} \mathrm{A}\right|^2+c|A|^4 +\sum_{\ell=1}^m\left(\ell a_{\ell}-2 a_{\ell-1}\right) t^{\ell-1}\left|\nabla^{\ell} \mathrm{A}\right|^2 \\
+& + c \sum_{l=1}^m t^{l} a_{\ell}\left(|\mathrm{A}|^2\left|\nabla^{\ell} \mathrm{II}\right|^2+2 A_{\ell}^{\frac{1}{2}} r^{-3} t^{-\frac{l}{2}}\left|\nabla^{l} \mathrm{A}\right|\right) \\
+\leq & -2 a_m t^m\left|\nabla^{m+1} \mathrm{II}\right|^2+c r^{-4}\left(C_0^2+\sum_{\ell=1}^m A_{\ell}^{\frac{2}{3}} a_{\ell}\right) \\
+& +\sum_{\ell=1}^m\left(\left(C_0+A_{\ell}^{\frac{1}{3}}\right) c a_{\ell} r^{-2} t+\ell a_{l}-2 a_{l-1}\right) t^{\ell-1}\left|\nabla^{l} A\right|^2
+\end{align*}
+
+where
+$$
+A_{\ell} \doteqdot \frac{1}{4} \sum_{\substack{i+j+k=\ell \\ i, j, k<\ell}} \frac{C_i C_j C_k}{a_i a_j a_k}
+$$
+If we choose
+$$
+a_{\ell} \doteqdot \frac{2 a_{\ell-1}}{\left(C_0+A_{\ell}^{\frac{1}{3}}\right) c+\ell}
+$$
+then
+$$
+\partial_t \leq \Delta Q_m  c r^{-4}\left(C_0^2+\sum_{\ell=1}^m A_{\ell}\right) \doteqdot C_m r^{-4}
+$$
+and the maximum principle yields
+$$
+Q_m \leq C_m r^{-2}
+$$
+in $M^n \times\left[0, r^2\right]$.
 
 \end{proof}
 
@@ -463,19 +517,11 @@ We can improve the higher-order covariant derivative bound to include a time fac
     Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. We aim to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying the short time existence of the mean curvature flow at $ t  = T $. \begin{align*}
         |X(x,t)-X(x,0)| \le  \bigg|\int_{0}^{t} H(x,s) ds \bigg| \le T \sup |H| \le T \sqrt{nC_{0}}
     \end{align*}
-    %hence $ X(t, \cdot) \to X(T, \cdot) $ converges to a continuous limit. 
+
 \end{proof}
 
-
-
-
-
-
-
-
-
-
-\section{Huisken's theorem}
+\begin{comment}
+    \section{Huisken's theorem}
 
 Huisken's theorem states that compact, uniformly convex hypersurface converges to a round sphere under Mean curvature flow in finite time. 
 \begin{thm}
@@ -501,7 +547,8 @@ The evolution of $ f_{\sigma} $ is given by \begin{align*}
     \frac{ \partial}{ \partial t}f_{\sigma} & = 
 \end{align*}
 \end{lemma}
-\begin{comment}
+
+\end{comment}\begin{comment}
     (Huisken's remark on this from the lecture series: the bad term can only be controlled using integral estimates \href{https://www.mfo.de/about-the-institute/staff/prof-dr-gerhard-huisken/lectures/mean-curvature-flow/lecture-3}{58 min mark} )
 
 (Sinestrari intuition about Stampacchia iteration : \href{https://youtu.be/XvUGowx9WNo?t=2119}{yt link})
@@ -557,7 +604,8 @@ The inradius $ \rho_{t} $ of $ \Omega_{t} $ tends to zero as $ t \to T $. Thus, 
 \end{comment}
 
 \section{Monotonicity Formula}
-Let $ X: M^{n} \times I \to \R^{n+1} $ be a one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form is given by 
+\begin{comment}
+    Let $ X: M^{n} \times I \to \R^{n+1} $ be a one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form is given by 
 \[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\eta, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right>. \]
 
 If we scale the solution by a factor of $ \lambda  $, defined by $ \tilde{X}(x,t) = \lambda X(x,t) $ we get the following metric and second fundamental form 
@@ -569,8 +617,9 @@ so the scaled mean curvature is given by $ \tilde{H} = \tilde{g}^{{ij}}\tilde{h}
 or
 \[ \frac{\dou \tilde{X}}{\dou (\lambda^{2}t)} = - \tilde{H}\eta \]
 Hence if scale time by $ \lambda^{2} $, then $ \tilde{X} $ is also a solution of the mean curvature flow.
+\end{comment}
 
-Mean curvature flow is invariant under parabolic scaling, i.e.  if $ X : M^{n} \times I \to \R^{n+1} $ is solution, then so is $ X_{\lambda}(x,t) = \lambda X(x,\lambda^{2}t) $. We construct a weighted area functional which is invariant under \textit{parabolic} scaling along any solution to mean curvature flow which will be monotonous.
+Mean curvature flow is invariant under parabolic scaling, i.e.  if $ X : M^{n} \times I \to \R^{n+1} $ is solution, then so is $ X_{\lambda}(x,t) = \lambda X(x,\lambda^{-2}t) $. We construct a weighted area functional which is invariant under \textit{parabolic} scaling along any solution to mean curvature flow which will be monotonous.
 
 Let $ \rho(x,t) $ be the backward heat kernel at $ (X_{0},t_{0}) $, i.e.,   \[\rho(x,t) = \frac{1}{(4 \pi (t_{0}-t))^{ \frac{n}{2}} }\cdot \exp\left( - \frac{|X(x,t)-X_{0}|^{2}}{4(t_{0}-t)} \right), \qquad t<t_{0} \]
 \begin{thm}
@@ -626,7 +675,7 @@ where $ X^{T} $ denotes the tangential part of the vector $ X $. Substituting \c
 
 \subsection{Rescaled Monotonicity formula}\label{Type1singularity}
 
-From section (?) we know that the curvature blows up at the maximal time $ T $  and satisfies the inequality
+From section \cref{Longtime} we know that the curvature blows up at the maximal time $ T $  and satisfies the inequality
 
 \[ \max_{p \in M}|A(p,t)| \ge \frac{1}{\sqrt{2(T-t)}} \]
 
@@ -641,10 +690,32 @@ Conversely, if such a constant does not exist, that is
 
 \[ \limsup_{t \to T} \max_{p \in M}|A(p,t)|\sqrt{T-t} = \infty \]
 
-we say that we have a \textit{type II singularity}. We will restrict ourselves to type I singularity for the rest of this section. 
+we say that we have a \textit{type II singularity}. We will restrict ourselves to type I singularity for the rest of this section. We want to rescale $M_t$ near a singular point as $t \rightarrow T$, such that the curvature of the rescaled surfaces remains uniformly bounded. Using the inequality $ |H| \le \sqrt{n}|A| $, 
+
+$$
+|X(p, t)-X(p, s)| \leq \int_s^t|H(p, \tau)| d \tau \leq \sqrt{n}C\left[(T-s)^{1 / 2}-(T-t)^{1 / 2}\right]
+$$
+for all $p \in M^n$ and $0 \leq s<t<T$. Thus, $X(\cdot, t)$ converges uniformly as $t \rightarrow T$. Using this we define a blow-up point as follows
+\begin{defn}
+    We say that $x \in \mathbb{R}^{n+1}$ is a \textbf{blow-up point}  if there is $p \in M^n$ such that $X(p, t) \rightarrow x$ as $t \rightarrow T$ and $|A|(p, t)$ becomes unbounded as $t \rightarrow T$.
+\end{defn}
+
+Let us assume now that $0 \in \mathbb{R}^{n+1}$ is a blow-up point. Then we define the rescaled immersions $\tilde{X}(p, s)$ by
+$$
+\tilde{X}(p, s)=(2(T-t))^{-1 / 2} X(p, t), \quad s(t)=-\frac{1}{2} \log (T-t) .
+$$
+The surfaces $\tilde{M}_s=\tilde{X}(\cdot, s)\left(M^n\right)$ are therefore defined for $-\frac{1}{2} \log T \leq s<\infty$ and satisfy the equation
+$$
+\frac{d}{d s} \tilde{X}(p, s)=\tilde{H}(p, s)+\tilde{X}(p, s).
+$$
+For finding out the evolution of the second fundamental form and mean curvature after rescaling, we use the following lemma 
+\begin{lemma}
+    Suppose $P$ is a tensor which satisfies $$ \frac{dP}{dt}=\Delta P+Q$$ for the original evolution equation and $P$ has degree $\alpha$, i.e . Then $Q$ has degree $(\alpha-2)$ and $d \widetilde{P} / d s=\tilde{\Delta} \tilde{P}+\tilde{Q}+\alpha \tilde{P}$
+\end{lemma}
 
 
-\section{Surfaces of positive mean curvature}
+\begin{comment}
+    \section{Surfaces of positive mean curvature}
 
 From the maximum principle, we know that if the mean curvature of the initial hypersurface $M_0$ is positive then it will stay positive on $M_t$. 
 For self-similar solutions, we know that the limiting hypersurface will satisfy the equation $H = \langle x, \nu \rangle$. 
@@ -661,3 +732,4 @@ Suppose the hypersurface satisfies $H = -\langle X, \nu \rangle$. Let $e_1,\ldot
 \end{align}
 \[\nabla_i \nabla_j H = h_{ij} - Hh_{il}h_{lj}+\langle x, e_l \rangle \nabla_l h_{ij}\]
 \end{proof}
+\end{comment}

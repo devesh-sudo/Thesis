@@ -18,6 +18,7 @@ Similarly, the \textbf{inscribed curvature} $ k : \mathcal{M} \to [0, \infty) $ 
     k(x) = \frac{1}{r(x)} = \sup_{y \in \mathcal{M}\backslash \{x\}} k(x,y).%\sup_{y \in \mathcal{M}\backslash \{x\}} \frac{2\left< x-y,\nu(x) \right>}{||x-y||^{2}}
 \end{equation}
 The inscribed curvature is greater than the largest principal curvature, which can be proved in the following fashion. 
+\newpage
 \begin{lemma}
     Let $ \mathcal{M} $ be an embedded hypersurface in $ \Rn $ and the inscribed curvature be defined as above. Then for any point $ x \in \mathcal{M} $,
     \[ k(x) \ge \kappa_{n}(x) \]
@@ -120,7 +121,7 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
         \frac{\partial^{2}Z}{\partial x_{i}^{2}}(x,y,t) & = \frac{1}{2}\frac{\partial^{2} \psi}{\partial x_{i}^{2}}|X(x,t)-X(y,t)|^{2} + 2\frac{\partial \psi}{\partial x_{i}}\left< X(x,t)-X(y,t), \frac{\partial X}{\partial x_{i}} \right> \nonumber \\
         & \quad + \psi \left< \frac{\partial X}{\partial x_{i}}, \frac{\partial X}{\partial x_{i}} \right> + \psi \left< X(x,t)-X(y,t), \frac{\partial^{2} X}{\partial x_{i}^{2}} \right> \nonumber \\
         & \quad - \frac{\partial h_{i}^{k}}{\partial x_{i}}\left< X(x,t)-X(y,t), \frac{\partial X}{\partial x_{k}} \right> - h_{i}^{k}\left< \frac{\partial X}{\partial x_{i}}, \frac{\partial X}{\partial x_{k}} \right>\nonumber \\
-        & \quad - h_{i}^{k}\left< X(x,t)-X(y,t), \frac{\partial^{2}X}{\partial x_{i}\partial x_{k}} \right> \label{Zxx}
+        & \quad - h_{i}^{k}\left< X(x,t)-X(y,t), \frac{\partial^{2}X}{\partial x_{i}\partial x_{k}} \right> .\label{Zxx}
     \end{align}
     Recall we had chosen normal coordinates at $ x_{0} $ such that the matrix $ h_{ij}(x_{0},t_{0}) $ is diagonal so
     \[ \frac{\partial^{2}X}{\partial x_{i}^{2}} = \Gamma_{ii}^{k}\frac{\partial X}{\partial x_{k}} -h_{ii}\nu = -\kappa_{i}\nu. \]
@@ -186,24 +187,8 @@ Following \cite{andrews2022extrinsic,brendle2015sharp} the time evolution equati
     
     
     \begin{remark}
-        Notice that the inequality is in one variable however the proof goes through the maximum principle on a two-variable function. There are a lot of applications of such two-point functions considered in \cite{brendle2014two,andrews2014moduli}.
+        Notice that the inequality is in one variable however, the proof goes through the maximum principle on a two-variable function. There are a lot of applications of such two-point functions considered in \cite{brendle2014two,andrews2014moduli}.
     \end{remark}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \end{proof}
 \begin{corollary}

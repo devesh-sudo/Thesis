@@ -17,7 +17,7 @@ The mean curvature of a hypersurface at a point is the sum of principal curvatur
 Associated to each $ k $ we can also define the domain of positivity of first $ k $ elementary symmetric polynomials $ \Gamma_{k} $ given by 
 \[ \Gamma_{k} = \{\lambda \in \R^{n} : S_{1}(\lambda) >0, \ldots , S_{k}(\lambda) >0\} \]
 
-It is easy to see that $ \Gamma_{k} $ are cones in the Euclidean space and satisfy $ \Gamma_{k} \subset \Gamma_{k+1} $. In this formulation a hypersurface is mean-convex if the vector $ (\kappa_{1}, \ldots, \kappa_{n}) $ is in $ \Gamma_{1} $. The following proposition was proved in \cite{huisken1999convexity} regarding the cones $ \Gamma_{k} $. 
+It is easy to see that $ \Gamma_{k} $ are cones in the Euclidean space and satisfy $ \Gamma_{k+1} \subset \Gamma_{k} $. In this formulation a hypersurface is mean-convex if the vector $ (\kappa_{1}, \ldots, \kappa_{n}) $ is in $ \Gamma_{1} $. The following proposition was proved in \cite{huisken1999convexity} regarding the cones $ \Gamma_{k} $. 
 \begin{proposition}
     Let $ A = \{x \in \R^{n} : x_{1}>0, \ldots, x_{n}>0 \} $ denote the positive cone. The sets $ \Gamma_{k} $ coincide with the connected component of the domain $ \{\lambda \in \Rn : S_{k}(\lambda)>0\} $ containing the positive cone $ A $. Further, the cone $ \Gamma_{n} $ coincides with the positive cone $ A $.
 \end{proposition}
@@ -31,7 +31,7 @@ This establishes a hierarchy of convexity with the last one being uniformly conv
     on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 \end{thm}
 
-This means that the negative part of $ S_{k} $ cannot grow faster that $ H^{k} $. We will only prove the theorem for $ k=2 $ adapted from \cite{huisken1999mean}. A complete proof is done using induction in \cite{huisken1999convexity}. 
+This means that the negative part of $ S_{k} $ cannot grow faster than $ H^{k} $. We will only prove the theorem for $ k=2 $ adapted from \cite{huisken1999mean}. A complete proof is done using induction in \cite{huisken1999convexity}. 
 \section{Estimate of $S_{2}$}
 %It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows us to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 %\begin{thm}
@@ -41,7 +41,9 @@ This means that the negative part of $ S_{k} $ cannot grow faster that $ H^{k} $
     %\end{equation}
     %on $ \mathcal{M}_{t} $ for any $ t \in [0,T) $.
 %\end{thm}
-For any $ \eta \in \R $ and $ \sigma \in [0,2] $ let $$ g_{\sigma,\eta} = \left( \frac{|A|^{2}}{H^{2}}- (1+ \eta) \right)H^{\sigma} = \frac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} = \frac{-2S_{2}- \eta H^{2}}{H^{2-\sigma}}.$$
+For any $ \eta \in \R $ and $ \sigma \in [0,2] $ let 
+$$ g_{\sigma,\eta} = \left( \frac{|A|^{2}}{H^{2}}- (1+ \eta) \right)H^{\sigma} = \frac{|A|^{2}-(1+\eta)H^{2}}{H^{2-\sigma}} = \frac{-2S_{2}- \eta H^{2}}{H^{2-\sigma}}.$$
+
 Our aim is to derive a uniform bound of $ g_{\sigma,\eta} $ which using Young's inequality will imply the desired estimate. The proof of \cref{mainthm} for $ k=2 $ is divided into two parts. The first part is obtaining an $ L^{p} $ estimate of $ g_{ \sigma, \eta} $ and the second part is utilizing Stampacchia lemma using Michael-Simon inequality in order to get an $ L^{\infty} $ bound. In order to prove the first part we derive the evolution equation of $ g_{\sigma,\eta} $ using the product rule but before that we need the following lemmas. 
 
 \begin{comment}
@@ -198,7 +200,7 @@ The following estimate of the good term in \cref{gequation} will be required for
     \end{enumerate}
 \end{lemma}
 
-For the rest of proof we will restrict $ \eta, \sigma \in (0,1) $ and $ c_{i} $ will denote a constant depending only on $ n, \eta $ and $ \mathcal{M}_{0} $. For brevity, we will write $ g = g_{\sigma,\eta} $ as long as $ \sigma, \eta $ is fixed. Let $ g_{+}= \max{g(x,t),0} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $ and 
+For the rest of proof we will restrict $ \eta, \sigma \in (0,1) $ and $ c_{i} $ will denote a constant depending only on $ n, \eta $ and $ \mathcal{M}_{0} $. For brevity, we will write $ g = g_{\sigma,\eta} $ as long as $ \sigma, \eta $ is fixed. Let $ g_{+}= \max\{g(x,t),0\} $ denote the positive part of $ g $. Then $ g_{+}^{p} \in C^{1}( \mathcal{M} \times [0,T)) $ for $ p>1 $ and 
 \[ \partial_{t}g_{+}^{p} = pg_{+}^{p-1}\partial_{t}g, \qquad \nabla (g_{+}^{p}) =p g_{+}^{p-1}\nabla g. \]
 
 \begin{lemma}\label{dgdt}
@@ -214,13 +216,13 @@ For the rest of proof we will restrict $ \eta, \sigma \in (0,1) $ and $ c_{i} $ 
     Differentiating with respect to time and using \cref{Deltag} for $ p \ge 2 $
     \begin{align}
         \frac{d}{dt} \int_{ \mathcal{M}} g_{+}^{p} d \mu  & =  \int \left(pg_{+}^{p-1} \partial_{t}g - H^{2}g_{+}^{p}\right) d \mu \nonumber \\
-        & \le \int pg_{+}^{p-1}\left( \Delta g + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g\right>  - \frac{2}{H^{4-\sigma}}|H \nabla_{i}h_{kl} - \nabla_{i}Hh_{kl}|^{2}\right)d \mu  \nonumber\\
-        & \quad + \sigma |A|^{2} g \label{Lpg}
+        & \le \int pg_{+}^{p-1}\left( \Delta g + 2\frac{(1-\sigma)}{H}\left< \nabla H, \nabla g\right>  - \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2}\right)d \mu  \nonumber\\
+        & \quad + p \int \sigma |A|^{2} g_{+}^{p} d \mu\label{Lpg}
     \end{align}
 
     Using integration by parts, 
     \begin{align}
-        \int pg_{+}^{p-1} \Delta g d \mu & = - p\int \left< \nabla g_{+}^{p-1}, \nabla g \right> d \mu \\
+        \int pg_{+}^{p-1} \Delta g d \mu & = - p\int \left< \nabla g_{+}^{p-1}, \nabla g \right> d \mu \nonumber\\
         & = -p(p-1) \int g_{+}^{p-2}| \nabla g|^{2} d \mu \label{byparts}
     \end{align}
     Also from \cref{tensored} we deduce that if $ c_{1} \ge 4 n(n-1)^{2}c_{0} \eta^{-2} $ 
@@ -263,7 +265,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
 \begin{proof}
     The Laplacian-Beltrami operator satisfies, 
     \[ \Delta(f^{\sigma}) = \sigma f^{\sigma-1}\Delta f + \sigma(\sigma-1)f^{\sigma -2}|\nabla f|^{2} \]
-    We have an expression for in \cref{Deltag1} we know that \begin{align*}
+    We have an expression for the Laplacian of $ \frac{|A|^{2}}{H^{2}} $ in \cref{Deltag1} from which it follows that  \begin{align*}
         \Delta g & = \Delta  \left(\frac{|A|^{2}}{H^{2}} \right)H^{\sigma} + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\Delta H^{\sigma} + 2\left<  \nabla  \frac{|A|^{2}}{H^{2}} , \nabla H^{\sigma} \right> \\
         & = \left( \frac{\Delta |A|^{2}}{{H^{2}}} - 2|A|^{2} \frac{\Delta H}{H^{3}} + 6|A|^{2} \frac{| \nabla H|^{2}}{H^{4}} - \frac{4}{H^{3}}\left< \nabla |A|^{2}, \nabla H \right> \right)H^{\sigma} \\
         & \quad + \left( \frac{|A|^{2}}{H^{2}} - (1+\eta) \right)\left( \sigma H^{\sigma-1}\Delta H + \sigma (\sigma -1)H^{\sigma -2}|\nabla H|^{2} \right) \\
@@ -279,12 +281,12 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2}+ \frac{2(\sigma -1)}{H^{3-\sigma}} \left< \nabla |A|^{2}, \nabla H \right>.
     \end{align*}
 
-    Now similar to time derivative \cref{Deltag}, we calculate inner product of $ \nabla g $ with $ \nabla H $, \begin{align*}
+    Now similar to time derivative in \cref{Deltag}, we calculate inner product of $ \nabla g $ with $ \nabla H $, \begin{align*}
         \left< \nabla g, \nabla H \right> & = \left< \nabla\frac{ |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} + \sigma\left( \frac{|A|^{2}}{H^{2}} - (1+ \eta) \right) H^{\sigma-1}| \nabla H|^{2} \\
-        & = \left< \frac{\nabla |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} -2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2}+ \sigma \frac{g}{H}| \nabla H|^{2},
+        & = \left< \frac{\nabla |A|^{2}}{H^{2}}, \nabla H \right>H^{\sigma} -2 \frac{|A|^{2}}{H^{3-\sigma}}|\nabla H|^{2}+ \sigma \frac{g}{H}| \nabla H|^{2}.
     \end{align*}
 
-    Using Simon's identity \cite{Simon} and the previous expression to  eliminate the last mixed inner product term 
+    Using Simon's identity and the previous expression to  eliminate the last mixed inner product term 
     \begin{align}
         \Delta g & = \frac{\Delta |A|^{2}- 2|\nabla A|^{2}}{H^{2-\sigma}} + \frac{2}{H^{4-\sigma}}| \nabla A \cdot H - \nabla H \otimes A|^{2} + \left( (\sigma-2)\frac{g}{H} - 2(1+\eta)H^{\sigma-1} \right)\Delta H \nonumber \\
         & \quad - 4(\sigma -1) \frac{|A|^{2}}{H^{4-\sigma}} |\nabla H|^{2} + \sigma(\sigma -1)\frac{g}{H^{2}}|\nabla H|^{2} \nonumber \\
@@ -378,7 +380,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         [Stampacchia lemma]
 
          Let $ k \ge k_{0} $, where $$ k_{0} = \sup_{\sigma \in [0,1]} \sup_{\mathcal{M}_{0}} g_{\sigma, \eta} $$
-        Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v $ with respect to time we get for $ p $ large enough (similar to \cref{dgdt})
+        Define $ v = (g_{\sigma,\eta} - k)_{+}^{\frac{p}{2}} $ and $ A(k,t) = \{x \in \mathcal{M}_{t} : v(x,t)>0\} $. Differentiating $ v^{2} $ with respect to time we get for $ p $ large enough (similar to \cref{dgdt})
         \begin{equation}
             \frac{d}{dt} \int_{\mathcal{M}_{t}}v^{2} d \mu + \int_{\mathcal{M}_{t}} |\nabla v|^{2} d \mu \le \sigma p \int_{\mathcal{M}_{t}} |A|^{2}v^{2} d \mu \le c_{0} \sigma p \int_{A(k,t)}H^{2}g_{\sigma, \eta}^{p} d \mu \label{vestimate}
         \end{equation}
@@ -393,7 +395,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         so that 
         \[ \sigma' = \sigma + \frac{n}{p} \le \frac{1}{2\sqrt{c_{6}p}} + \frac{1}{\sqrt{p}} \frac{n}{\sqrt{p}} \le \frac{1}{\sqrt{c_{6}p}} \] 
         which allows us to use \cref{Lpbound}, \begin{align*}
-            \left( \int_{A(k,t)} H^{n} d \mu \right)^{\frac{2}{n}} &\le \left( \int_{A(k,t)}H^{n} \left(\frac{g_{\sigma, \eta}^{p}}{k}\right) d \mu \right)^{\frac{2}{n}} \\
+            \left( \int_{A(k,t)} H^{n} d \mu \right)^{\frac{2}{n}} &\le \left( \int_{A(k,t)}H^{n} \left(\frac{g_{\sigma, \eta}^{p}}{k^{p}}\right) d \mu \right)^{\frac{2}{n}} \\
             & = k^{-\frac{2p}{n}} \left( \int_{A(k,t)}g_{\sigma',\eta}^{p}d \mu \right)^{\frac{2}{n}} \\
             & \le k^{-\frac{2p}{n}} \left( \int_{\mathcal{M}_{t}} (g_{\sigma',\eta})_{+}^{p} d \mu\right)^{\frac{2}{n}} \\
             & \le k^{-\frac{2p}{n}} \left( \int_{\mathcal{M}_{0}} (g_{\sigma',\eta})_{+}^{p} d \mu\right)^{\frac{2}{n}} \\
@@ -483,9 +485,15 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         \[ t_{k} \to T, \quad L_{k} \to \infty,\quad  \alpha_{k} \to -\infty,\text{ and } \omega_{k} \to \infty .\]
     \end{lemma}
     \begin{proof}%\textcolor{red}{TO DO}
-        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0, T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. 
-
-        TO DO
+        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0, T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. For $ k $ large enough we have
+        $$
+        \bar{t}<T-1 / k, \quad H^2(\bar{x}, \bar{t})(T-\bar{t}-1 / k)>M.
+        $$
+        It follows
+        $$
+        \omega_k=H^2\left(x_k, t_k\right)\left(T-t_k-1 / k\right) \geq H^2(\bar{x}, \bar{t})(T-\bar{t}-1 / k)>M .
+        $$
+        %TO DO
     \end{proof}
     Now we will rescale the hypersurfaces to analyze the limiting behavior. For each $ k \ge 1 $, define a family of immersions by 
     \[ X_{k}(x, t) = L_{k}(X(x, L_{k}^{-2}t+t_{k})-X(x_{k},t_{k}))  \text{ for } t \in [\alpha_{k}, \omega_{k}].\]
@@ -496,7 +504,7 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
 
     From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ \overline{\omega} $, there exists a $ k_{0} $ such that 
     \[ \max_{x \in M} H_{k}(x,t) \le 1+\epsilon \]
-    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, \overline{\omega}] $. This curvature bound implies analogous bounds on the second fundamental form as well as its covariant derivatives. Invoking \cref{Arzela} there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
+    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, \overline{\omega}] $. This curvature bound implies analogous bounds on the second fundamental form as well as its covariant derivatives. Invoking Arzela-Ascoli theorem there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
      
     \begin{thm}
         Let $ X: M \times [0, T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further, assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
