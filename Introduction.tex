@@ -59,6 +59,11 @@ The following lemma demonstrates the similarity of mean curvature flow with the 
     
 \end{proof}
 
+The flow exists for a short time on any arbitrary hypersurface which is proved in \cite{andrews2022extrinsic}. This is known as short-time existence of solutions
+\begin{thm}[Short time existence]
+    Let $ X_{0}: M^{n} \to \Rn $ be a smooth immersion of a compact manifold without boundary. There exists an $ \epsilon >0 $ and a smooth solution $ X : M^{n} \times [0, \epsilon) \to \Rn$ to MCF, with $ X( \cdot, 0) = X_{0} $. Moreover, the solution is unique.
+\end{thm}
+
 \subsection{Examples of the mean curvature flow}
 
 It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurface. The limited number of examples come from ansatz or special cases,
@@ -151,11 +156,6 @@ Using this, the gradient of the area functional is
 	which is the mean curvature flow. In particular, we get the following equation for the evolution of area under mean curvature flow,
 	\[ \frac{d}{dt} \text{Area}( \mathcal{M}_{t}) =  - \int_{\mathcal{M}_{t}}H^{2}\]
 which is the steepest descent of area in the space of hypersurface up to speed-parametrization. 
-\subsection{Short-time existence}
-The following theorem about the uniqueness and existence of mean curvature flow is proved in \cite{andrews2022extrinsic}. 
-\begin{thm}
-    Short time existence: Let $ X_{0}: M^{n} \to \Rn $ be a smooth immersion of a compact manifold without boundary. There exists an $ \epsilon >0 $ and a smooth solution $ X : M^{n} \times [0, \epsilon) \to \Rn$ to MCF, with $ X( \cdot, 0) = X_{0} $. Moreover, the solution is unique.
-\end{thm}
 
 \section{Evolution equations}
 To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 
@@ -344,7 +344,7 @@ The tensor maximum principle can be used to prove that convexity is preserved un
 
 \section{Long time existence}\label{Longtime}
 
-In this subsection, we will prove that the blow-up of the second fundamental form is the only obstruction to continuing the flow. The proof goes by contrapositive, relying on the Bernstein-type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. 
+In this subsection, we will prove that the blow-up of the second fundamental form is the only obstruction to continuing the flow. The proof goes by contrapositive, relying on the Bernstein-type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. This theorem characterizes the maximal time of existence.
 
 \begin{thm}\label{longtimeexistence}
     Let $ X: M^{n} \times [0, T) \to \Rn $ be a solution of the mean curvature flow with $ M^{n} $ compact. If $ X $ is maximal then $ T< \infty $ and 
@@ -496,7 +496,7 @@ We can improve the higher-order covariant derivative bound to include a time fac
         \partial_{t}F & \le \sum_{l=0}^{m}a_{l}t^{l}\left(\Delta|\nabla^{l}A|^{2}- 2|\nabla^{l+1}A|^{2} + r^{-2}(T_{l}|\nabla^{l}A|^{2}+ S_{l}r^{-2}t^{-l}) \right) + \sum_{l=0}^{m-1}(l+1)a_{l+1}t^{l}|\nabla^{l+1}A|^{2} \\
         & \le \Delta F + \sum_{l=0}^{m-1}((l+1)a_{l+1}-2a_{l}+)t^{l}|\nabla^{l}A|^{2} -2|\nabla^{m+1}A|^{2} + \sum_{l=0}^{m}a_{l}r^{-4}S_{l} 
     \end{align*}
-
+\begin{comment}
 \begin{align*}
 \partial_t Q_m \leq & \Delta Q_{m} -2 a_m t^m\left|\nabla^{m+1} \mathrm{A}\right|^2+c|A|^4 +\sum_{\ell=1}^m\left(\ell a_{\ell}-2 a_{\ell-1}\right) t^{\ell-1}\left|\nabla^{\ell} \mathrm{A}\right|^2 \\
 & + c \sum_{l=1}^m t^{l} a_{\ell}\left(|\mathrm{A}|^2\left|\nabla^{\ell} \mathrm{II}\right|^2+2 A_{\ell}^{\frac{1}{2}} r^{-3} t^{-\frac{l}{2}}\left|\nabla^{l} \mathrm{A}\right|\right) \\
@@ -506,33 +506,29 @@ We can improve the higher-order covariant derivative bound to include a time fac
 
 where
 $$
-A_{\ell} \doteqdot \frac{1}{4} \sum_{\substack{i+j+k=\ell \\ i, j, k<\ell}} \frac{C_i C_j C_k}{a_i a_j a_k}
+A_{l} \doteqdot \frac{1}{4} \sum_{\substack{i+j+k=l \\ i, j, k<l}} \frac{C_i C_j C_k}{a_i a_j a_k}
 $$
 If we choose
-$$
-a_{\ell} \doteqdot \frac{2 a_{\ell-1}}{\left(C_0+A_{\ell}^{\frac{1}{3}}\right) c+\ell}
-$$
-then
-$$
-\partial_t \leq \Delta Q_m  c r^{-4}\left(C_0^2+\sum_{\ell=1}^m A_{\ell}\right) \doteqdot C_m r^{-4}
-$$
-and the maximum principle yields
-$$
-Q_m \leq C_m r^{-2}
-$$
-in $M^n \times\left[0, r^2\right]$.
+\[ a_{l} \doteqdot \frac{2 a_{\ell-1}}{\left(C_0+A_{l}^{\frac{1}{3}}\right) c+l} \]
+then 
+\[ \partial_t \leq \Delta Q_m  c r^{-4}\left(C_0^2+\sum_{l=1}^m A_{l}\right) \doteqdot C_m r^{-4} \]
 
+and the maximum principle yields 
+\[ Q_m \leq C_m r^{-2} \]
+in $M^n \times\left[0, r^2\right]$.
+\end{comment}
 \end{proof}
 
 \begin{remark}
     The parabolic nature of the mean curvature flow shows up here as the dimension of time is double the spatial dimension coming from $ |\nabla^{m}A| $.
 \end{remark}
-\begin{proof}[ of \cref{longtimeexistence}]
-    Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. We aim to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying the short time existence of the mean curvature flow at $ t  = T $. \begin{align*}
+We finish up the proof for the stated long time existence result. \\
+
+\textbf{Proof of \cref{longtimeexistence}.} (Sketch) 
+    Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. We aim to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying the short time existence of the mean curvature flow at $ t  = T $. Notice that \begin{align*}
         |X(x,t)-X(x,0)| \le  \bigg|\int_{0}^{t} H(x,s) ds \bigg| \le T \sup |H| \le T \sqrt{nC_{0}}
     \end{align*}
-
-\end{proof}
+    Similarly using the gradient estimates we get the corresponding bound for the gradients of $ X $. By careful setting of Arzela-Ascoli in compact-open topology there exists a smooth limit $ X_{T} $. Applying the short-time existence result in $ X_{T} $ we get a contradiction in the hypothesis. \qed
 
 \begin{comment}
     \section{Huisken's theorem}
@@ -695,14 +691,12 @@ Using this we define the type I singularity if the blow-up rate is bounded by a 
 Let $ T $ be the maximal time of existence of a mean curvature flow. If there exists a constant $ C >1 $ such that 
 
 \[ \max_{p \in M}|A(p,t)| \le \frac{C}{\sqrt{2(T-t)}} \]
-we say the flow is developing at time $ T $ a \textit{type I singularity}.
+we say the flow is developing at time $ T $ a \textit{type I singularity}. Conversely, if such a constant does not exist, that is 
+\[ \limsup_{t \to T} \max_{p \in M}|A(p,t)|\sqrt{T-t} = \infty \]
+we say that we have a \textit{type II singularity}.
 \end{defn}
 
-Conversely, if such a constant does not exist, that is 
-
-\[ \limsup_{t \to T} \max_{p \in M}|A(p,t)|\sqrt{T-t} = \infty \]
-
-we say that we have a \textit{type II singularity}. We will restrict ourselves to type I singularity for the rest of this section. We want to rescale $M_t$ near a singular point as $t \rightarrow T$, such that the curvature of the rescaled surfaces remains uniformly bounded. Using the inequality $ |H| \le \sqrt{n}|A| $, 
+ We will restrict ourselves to type I singularity for the rest of this section. We want to rescale $M_t$ near a singular point as $t \rightarrow T$, such that the curvature of the rescaled surfaces remains uniformly bounded. Using the inequality $ |H| \le \sqrt{n}|A| $, 
 
 $$
 |X(p, t)-X(p, s)| \leq \int_s^t|H(p, \tau)| d \tau \leq \sqrt{n}C\left[(T-s)^{1 / 2}-(T-t)^{1 / 2}\right]
@@ -751,8 +745,8 @@ After the same rescaling the backward heat kernel becomes
 \[ \tilde{\rho}(p,s) = \exp \left( - \frac{1}{2}| \tilde{X}(p,s)|^{2} \right) \]
 which leads to the following corollary.
 \begin{corollary}
-    Let $ \tilde{X}_{s} $ denote the rescaled hypersurfaces by the \cref{rescaling}, then the corresponding monotonicity forumala is 
-    \[ \frac{d}{d s} \int_{\tilde{X}_{s}} \tilde{\rho} d \tilde{\mu}_{s}=  - \int_{\tilde{X}_{s}} \tilde{\rho}| \tilde{H} \tilde{\nu}+ \left< \tilde{X}, \tilde{\nu} \right> |^{2}d \tilde{\mu}_{s}.\]
+    Let $ \tilde{X}_{s} $ denote the rescaled hypersurfaces by the \cref{rescaling}, then the corresponding monotonicity formula is 
+    \[ \frac{d}{d s} \int_{\tilde{X}_{s}} \tilde{\rho} d \tilde{\mu}_{s}=  - \int_{\tilde{X}_{s}} \tilde{\rho} \left(\tilde{H}- \left< \tilde{X}, \tilde{\nu} \right> \right)^{2}d \tilde{\mu}_{s}.\]
 \end{corollary}
 \begin{proof}
     We use the fact that $ \frac{d \tilde{\mu}}{ds} = (n-H^{2}) \tilde{\mu}_{s} $ and calculate the derivative analogous to the proof in \cref{Monotonicityformula}.
