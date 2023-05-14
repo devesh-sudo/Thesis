@@ -5,17 +5,14 @@ A level-1 auxiliary file: Preface.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: Convexity_Estimates.aux
 A level-1 auxiliary file: Noncollapsing.aux
-A level-1 auxiliary file: Convergence_of_Manifolds.aux
-A level-1 auxiliary file: Viscosity_Solutions.aux
 The style file: amsalpha.bst
 Database file #1: ref.bib
-Warning--I didn't find a database entry for "Simon"
 Warning--missing journal name in huisken1999convexity
 Warning--missing journal, volume, and year in huisken1999convexity
 Warning--missing pages in huisken1999convexity
 You've used 19 entries,
             2624 wiz_defined-function locations,
-            681 strings with 7205 characters,
+            677 strings with 7144 characters,
 and the built_in function-call counts, 7018 in all, are:
 = -- 651
 > -- 289
@@ -54,4 +51,4 @@ warning$ -- 3
 while$ -- 67
 width$ -- 23
 write$ -- 216
-(There were 4 warnings)
+(There were 3 warnings)
