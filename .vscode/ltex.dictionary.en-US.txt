@@ -35,3 +35,4 @@ Laplace-Beltrami
 Ecker
 Arzela-Ascoli
 homeomorphism
+Weingarten

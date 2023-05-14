@@ -7,7 +7,7 @@ Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X :
     \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
 where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ TM^{n} $ which in local coordinates is given by 
     \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
-where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. Further, we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y: U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
+where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. We will use the notation $ \left< \cdot, \cdot \right> $ for $ g $ as well which is consistent because of the immersion condition. Further, we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y: U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
 \[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
 where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{x}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
 \begin{equation}
@@ -26,17 +26,50 @@ For dimension reasons, the normal bundle at each point is one-dimensional. We fi
 respectively. We can define the Levi-Civita connection on an embedded hypersurface $ \mathcal{M} $ using the normal projection, 
 \[ \nabla_{u}V  = (D_{u}V)^{T}\]
 where $ u  $ is a vector and $ V $ is a local vector field. Notice that this is consistent with \cref{connection} since $ dX^{-1} $ is the tangential component. The next step is to calculate the Christoffel symbols of the connection $ \nabla $. For local coordinates $ (U, \{x^{i}\}) $ in $ M^{n} $, the Christoffel symbols $ \Gamma_{ij}^{k}: U \to \R $ are obtained by the formula
+
 \[ (\partial_{i} \partial_{j}X)^T = \Gamma_{ij}^{k} \partial_{k}X \]
 %which simplifies it to 
 %\[ \Gamma_{ij}^{k} \partial_{k}X = \partial_{i}( \partial_{j}X) - (\partial_{i}( \partial_{j}X))^{T} = (\partial_{i}( \partial_{j}X))^{\perp}\]
 
+Taking the inner product with $ \partial_{l}X $ and inverting it we get 
+\[ \Gamma_{ij}^{k} = g^{kl} \left< \partial_{i}\partial_{j}X, \partial_{l}X \right>.\]
+
+The normal part of the Euclidean covariant derivative is a tensor, called the \textbf{second fundamental form} of $ \mathcal{M} $ and is denoted by $ A $. Let $ u, v \in T \mathcal{M} $ and $ V \in \Gamma(T \mathcal{M}) $ be an extension of $ v $. Then $ A $ is given by
+\[ A(u,v) \define (D_{u}V)^{T} \]
+is independent of the extension $ V $ and is a symmetric two-tensor. The components of $ A $ over local coordinates will be denoted by $ h_{ij} = A(\partial_{i}, \partial_{j}) $. Further we can use the isomorphism $ T_{p}M \cong T_{p}^{*}M $ given by $ g $ to convert $ A $ into a linear map $ L_{p}: T_{p} \mathcal{M} \to T_{p}\mathcal{M} $ given by 
+\[ \left< L_{p}(u),v \right>= A(u,v). \]
+This is called the \textbf{Weingarten map}. Also if $ N $ is a local extension of the normal, then 
+\[ L_{p}(u) = D_{u}N .\]
+This is true because 
+\[ 0 = \frac{1}{2}D_{u}|N|^{2} = \left< D_{u}N, \nu \right> \quad \text{ and} \quad
+ \left< D_{u}N,v \right> = - \left< \nu, D_{u}V \right> = A(u,v)\]
+where $ V $ is some extension of $ v $. As $ A $ is symmetric, the Weingarten map is a self-adjoint operator with real eigenvalues. The ordered eigenvalues of $ L_{p} $ 
+\[ \kappa_{1}(p) \le \dots \le \kappa_{n}(p) \]
+are called \textbf{principal curvatures}. If we switch the sign of the normal, the principal curvatures flip the sign as well since the Weingarten map flips the sign. The trace of the Weingarten map is called the \textbf{mean curvature} and is denoted by $ H $. So in terms of principal curvatures, 
+\[ H = \operatorname{tr}(L) = \kappa_{1}+ \dots +\kappa_{n}. \]
+
+We say that a hypersurface $ X : M^{n} \to \Rn $ is \textbf{mean convex}  if it admits a unit normal field with respect to which its mean curvature is non-negative and \textbf{strictly mean convex}  if it admits a unit normal vector field with respect to which its mean curvature is positive. 
+
+We can express the Riemann curvature tensor in terms of principal curvatures as follows, 
+\begin{align*}
+    R_{ijkl}& = \left< \nabla_{ji}^{2}\partial_{k} - \nabla_{ij}^{2}\partial_{k}, \partial_{l} \right>  = h_{ik}h_{jl} - h_{il}h_{jk},\\
+    Ric_{ij} &= g^{kl}R_{ikjl} = Hh_{ij}-h_{il}g^{lk}h_{kj},\\
+    R &= g^{ij}Ric_{ij} = g^{ij}g^{kl}R_{ikjl} = H^{2} - |A|^{2} .
+\end{align*}
+Further, the principal curvatures satisfy some gradient formulas given as follows \begin{lemma}
+    \begin{enumerate}
+        \item (Codazzi's identity) $ \nabla_{i}h_{jk} = \nabla_{j}h_{ik} $.
+        \item $ \Delta h_{ij} = \nabla_{i}\nabla_{j}H + H h_{il} g^{lm}h_{mj} - |A|^{2}h_{ij} $. 
+        \item (Simon's identity) $ \frac{1}{2}\Delta |A|^{2} = \left< h_{ij}, \nabla_{i}\nabla_{j}H \right> + |\nabla A|^{2}+ Z$ where $ Z = H \operatorname{tr}(L^{3}) - |A|^{4} $. 
+    \end{enumerate}
+\end{lemma}
 
 
 \section{Mean Curvature Flow}
 
-Now we define the Mean Curvature Flow (MCF) on hypersurfaces. 
+Now we define the mean curvature flow (MCF) on hypersurfaces. %This is a PDE on hypersurfaces immersed in the Euclidean space.
 \begin{defn}
-    A one-parameter family of immersion $ X: M^{n} \times I \to \Rn $ is said to evolve by \textbf{Mean Curvature Flow} (MCF) if 
+    A one-parameter family of immersion $ X: M^{n} \times I \to \Rn $ is said to evolve by \textbf{mean curvature flow} (MCF) if 
 		\begin{equation}
             \frac{ \partial}{ \partial t}X(p,t) = \vec{H}(p,t)  = -H(p,t)\nu(p,t) \quad \forall (p,t) \in M^{n} \times I.
         \end{equation}
@@ -54,10 +87,20 @@ The following lemma demonstrates the similarity of mean curvature flow with the 
     \begin{align*}
         \Delta_{\mathcal{M}}X & = g^{ij}\nabla_{i}\nabla_{j}X \\
         & = g^{ij}(\partial_{i}\partial_{j}X - \Gamma_{ij}^{k}\partial_{k}X) \\
-        & = - H \nu
+        & = - g^{ij}h_{ij} \nu \\
+        & = - H \nu.
     \end{align*}
     
 \end{proof}
+We can change the definition to include only the normal part as well. \begin{defn}
+    A one-parameter family of immersion $ X: M^{n} \times I \to \Rn $ is said to evolve by \textbf{reparametrized mean curvature flow} (MCF) if 
+    \begin{equation}
+        \left( \frac{ \partial}{ \partial t}X(p,t) \right)^{\perp} = \vec{H}(p,t)  = -H(p,t)\nu(p,t) \quad \forall (p,t) \in M^{n} \times I.
+    \end{equation}
+\end{defn}
+The reason it is called so is that if we consider the one-parameter family of diffeomorphisms $ \psi_{t}: M \to M $ generated by 
+\[ \frac{\partial \psi_{t}}{\partial t}(p) = dX_{t}^{-1}\left( ( \frac{\partial X}{\partial t}(p,t))^{\perp} - \frac{\partial X}{\partial t}(p,t) \right), \qquad \psi_{0} = \operatorname{id}_{M} \]
+then the reparametrized manifold $ \overline{X}_{t} = X_{t} \circ \psi_{t} $ is a solution of mean curvature flow.
 
 The flow exists for a short time on any arbitrary hypersurface which is proved in \cite{andrews2022extrinsic}. This is known as short-time existence of solutions
 \begin{thm}[Short time existence]
@@ -108,11 +151,12 @@ It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurfac
     \end{figure}
     \item \textbf{Evolution of Graphs}: Let $ f : \R^{n} \to \R $ be a smooth function. The graph of $ f $ in $ \Rn $, 
     \[ \mathcal{M} = \{(x,f(x)) \in \Rn :  x \in \R^{n} \} \]
-    is a smooth hypersurface. The mean curvature vector at $ (x,f(x)) $ for the hypersurface can be calculated to be,
-    \[ \sqrt{1+ |\nabla f|^{2}} \, \text{div} \left( \frac{\nabla f}{\sqrt{1+ |\nabla f|^{2}}} \right).\]
+    is a smooth hypersurface. The mean curvature vector at $ (x,f(x)) $ for the hypersurface can be calculated by the formula
+    %\[ \sqrt{1+ |\nabla f|^{2}} \, \text{div} \left( \frac{\nabla f}{\sqrt{1+ |\nabla f|^{2}}} \right)\]
+    $$-H\nu+g^{ij}{\Gamma_{ij}^{k}}\partial_kX = g^{ij}\partial_i\partial_jX = \left(0,\sqrt{1+|\nabla f|^2}\mathrm{div}\left( \frac{\nabla f}{\sqrt{1+ |\nabla f|^{2}}} \right)\right).$$
     Ecker and Huisken proved in \cite{ecker1989mean} that graphs evolving under the mean curvature flow remain graphs. So a family of graphs $ \mathcal{M}_{t} = \{(x,f_{t}(x)) :  x \in \Rn\} $ with the condition 
     \[ \frac{\partial}{ \partial t}f_{t}(x) = \sqrt{1+ |\nabla f_{t}|^{2}} \, \text{div} \left( \frac{\nabla f_{t}}{\sqrt{1+ |\nabla f_{t}|^{2}}} \right) \]
-    is a solution of the mean curvature flow. 
+    is a solution of the mean curvature flow (after a reparametrization). 
     \item \textbf{Minimal surfaces}: Minimal surfaces are the critical points of the volume functional. A hypersurface $ \mathcal{M} $ is said to be a \textbf{minimal hypersurface} if it satisfies $ H(x) = 0 $ for all $ x \in \mathcal{M}  $. Hence, minimal hypersurfaces are stationary solutions of the mean curvature flow. 
     \item \textbf{Products of solutions with Euclidean space}
     : Suppose $ \mathcal{M}_{t}^{n} \subset \Rn $ is a solution of the mean curvature flow. It is easy to verify that the mean curvature vector of the product $ \mathcal{M}_{t}^{n} \times \R^{m} \subset \R^{n+1} \times\R^{m}  $ is given by 
