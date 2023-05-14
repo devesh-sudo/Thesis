@@ -168,7 +168,22 @@ We can extend the maximum principle on Euclidean space to general Riemannian man
     
 \end{proof}
 
-The above maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
+This can be generalized to include a non-linear term as well. \begin{lemma}[Comparison lemma]
+ Let $u: M^n \times[0, T) \mapsto \mathbb{R}$ be $C^2$ supersolution to the equation 
+ 
+ \[ \frac{\partial v}{\partial t} = \Delta_{g(t)}v + \left< X, \nabla v \right> + F(v)\]
+  on a closed manifold. Suppose there exists $C \in \mathbb{R}$ such that $u(x, 0) \geq C$ for all $x \in M^n$, and let $\psi$ be the solution to the associated ordinary differential equation
+$$
+\frac{d \psi}{d t}=F(\psi)
+$$
+satisfying
+$$
+\psi(0)=C
+$$
+Then $u(x, t) \geq \psi(t)$ for all $x \in M^n$ and $t \in[0, T)$ such that $\psi(t)$ exists.
+\end{lemma}
+
+The above stated scalar maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
 
 \begin{lemma}[Tensor maximum principle]
 	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
@@ -208,7 +223,7 @@ The tensor maximum principle can be used to prove that convexity is preserved un
 To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 
 \[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t).\]
 The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\delta$ is the flat metric on $\R^{n+1}$. This means that if $\{x^i\}$ are local coordinates on $M^n$, then the components of the induced metric are given by
-\[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle.  \]
+\[ g_{ij} = \delta(X_*(\dou_i),X_*(\dou_j)) = \left\langle  \frac{\dou X}{\dou x^i}, \frac{\dou X}{\dou x^j} \right\rangle = \left< \partial_{i}X, \partial_{j} X\right>.  \]
 \begin{lemma}\label{evolutioneq}
      Let $X: M^n \times I \to \R^{n+1}$ be a solution of mean curvature flow. Then the evolution equation of the metric, normal, second fundamental form and mean curvature is given by
 \begin{equation}
@@ -261,8 +276,12 @@ The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\del
 & =  \Delta H+ |A|^2H.
 \end{align*}
 5. Again from the previous result on the evolution of $ h_{ij} $ we get \begin{align*}
-    \partial_{t}|A|^{2} & = 
+    \partial_{t}|A|^{2} & = \partial_{t}(g^{ik}g^{jl}h_{ij}h_{kl}) \\
+    & = 4H g^{im}g^{kn}h_{mn}g^{jl}h_{ij}h_{kl} + 2g^{ik}g^{jl}h_{kl}(\Delta h_{ij}-2Hh_{im}g^{mn}h_{nj}+|A|^{2}h_{ij}) \\
+    & = 2g^{ik}g^{jl}h_{kl}\Delta h_{ij} +2|A|^{4}, 
 \end{align*}
+and 
+\[ \Delta |A|^{2} = g^{kl}\nabla_{k}\nabla_{l}(g^{pq}g^{mn}h_{pm}h_{qn}) = 2g^{pq}g^{mn}h_{pm}\Delta h_{qn} + 2|\nabla A|^{2}. \]
 \end{proof}
 \begin{corollary}
 If mean curvature is positive everywhere on the initial hypersurface, then it remains so throughout the flow.
