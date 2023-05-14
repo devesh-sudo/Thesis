@@ -26,9 +26,9 @@ For dimension reasons, the normal bundle at each point is one-dimensional. We fi
 respectively. We can define the Levi-Civita connection on an embedded hypersurface $ \mathcal{M} $ using the normal projection, 
 \[ \nabla_{u}V  = (D_{u}V)^{T}\]
 where $ u  $ is a vector and $ V $ is a local vector field. Notice that this is consistent with \cref{connection} since $ dX^{-1} $ is the tangential component. The next step is to calculate the Christoffel symbols of the connection $ \nabla $. For local coordinates $ (U, \{x^{i}\}) $ in $ M^{n} $, the Christoffel symbols $ \Gamma_{ij}^{k}: U \to \R $ are obtained by the formula
-\[ \nabla_{ \partial_{i}X} \partial_{j}X = \partial_{i} (\partial_{j}X) + \Gamma_{ij}^{k} \partial_{k}X \]
-which simplifies to 
-\[ \Gamma_{ij}^{k} \partial_{k}X = \partial_{i}( \partial_{j}X) - (\partial_{i}( \partial_{j}X))^{T} = (\partial_{i}( \partial_{j}X))^{\perp}\]
+\[ (\partial_{i} \partial_{j}X)^T = \Gamma_{ij}^{k} \partial_{k}X \]
+%which simplifies to 
+%\[ \Gamma_{ij}^{k} \partial_{k}X = \partial_{i}( \partial_{j}X) - (\partial_{i}( \partial_{j}X))^{T} = (\partial_{i}( \partial_{j}X))^{\perp}\]
 
 
 
@@ -38,7 +38,7 @@ Now we define the Mean Curvature Flow (MCF) on hypersurfaces.
 \begin{defn}
     A one-parameter family of immersion $ X: M^{n} \times I \to \Rn $ is said to evolve by \textbf{Mean Curvature Flow} (MCF) if 
 		\begin{equation}
-            \frac{ \partial}{ \partial t}X(p,t) = \vec{H}(X(p,t))  = -H(X(p,t))\nu(X(p,t)) \quad \forall (p,t) \in M^{n} \times I.
+            \frac{ \partial}{ \partial t}X(p,t) = \vec{H}(p,t)  = -H(p,t)\nu(p,t) \quad \forall (p,t) \in M^{n} \times I.
         \end{equation}
 \end{defn}
 
