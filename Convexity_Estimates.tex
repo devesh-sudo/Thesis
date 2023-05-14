@@ -409,11 +409,11 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
         Let $ t_{0} \in [0,T] $ be the time when $ \sup_{t \in [0,T)} \int_{\mathcal{M}_{t}} v^{2} d \mu $ is attained (we let $ t_{0}=T $ if it is not attained in the interior). Integrating \cref{dv2dt} from $ 0 $ to $ t_{0} $, \begin{equation}
             \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu+ \frac{1}{2C(n)} \int_{0}^{t_{0}} \left( \int_{\mathcal{M}_{t}}v^{2q} d \mu\right)^{\frac{1}{q}}dt \le c_{0} \sigma p \int_{0}^{t_{0}} \int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt \label{0tot0}
         \end{equation}
-        where we used the fact that $ k>k_{0} \ge \sup_{\mathcal{M}_{0}}g_{\sigma,\eta} $ so $ \int_{\mathcal{M}_{0}}v^{2}d \mu = 0 $. Now integrating \cref{dv2dt} from $ t_{0} $ to $ T $, \begin{equation}
-            \int_{\mathcal{M}_{T}}v^{2}d \mu - \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu + \frac{1}{2C(n)} \int_{t_{0}}^{T} \left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}} dt \le c_{0}\sigma p \int_{t_{0}}^{T} \int_{A(k,t)} H^{2}g_{\sigma,\eta}^{p} d \mu dt \label{t0toT}.
+        where we used the fact that $ k>k_{0} \ge \sup_{\mathcal{M}_{0}}g_{\sigma,\eta} $ so $ \int_{\mathcal{M}_{0}}v^{2}d \mu = 0 $. Now integrating \cref{dv2dt} from $ t_{0} $ to $ T - \epsilon$ for $ \epsilon $ small enough, \begin{equation}
+            \int_{\mathcal{M}_{T-\epsilon}}v^{2}d \mu - \int_{\mathcal{M}_{t_{0}}} v^{2}d \mu + \frac{1}{2C(n)} \int_{t_{0}}^{T-\epsilon} \left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}} dt \le c_{0}\sigma p \int_{t_{0}}^{T-\epsilon} \int_{A(k,t)} H^{2}g_{\sigma,\eta}^{p} d \mu dt \label{t0toT}.
         \end{equation}
 
-        Throwing away $ \int_{\mathcal{M}_{T}}v^{2}d \mu $ term and adding \cref{0tot0} to half of \cref{t0toT}, \begin{equation*}
+        Throwing away $ \int_{\mathcal{M}_{T-\epsilon}}v^{2}d \mu $ term and adding \cref{0tot0} to half of \cref{t0toT} after taking the limit $ \epsilon \to 0 $, \begin{equation*}
             \frac{1}{2} \int_{\mathcal{M}_{t_{0}}}v^{2}d \mu + \frac{1}{4C(n)}\int_{0}^{T}\left( \int_{\mathcal{M}_{t}}v^{2q} \right)^{\frac{1}{q}}dt \le c_{0} \sigma p \int_{0}^{T} \int_{A(k,t)}H^{2}g_{\sigma,\eta}^{p}d \mu dt
         \end{equation*}
         which is same as \begin{equation}
