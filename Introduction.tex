@@ -3,13 +3,13 @@
 We introduce the second fundamental form and mean curvature associated with an immersion of a hypersurface. The mean curvature flow is then the negative gradient flow of the volume functional on hypersurfaces. 
 \section{Fundamentals of hypersurfaces}
 
-Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this thesis, we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
+Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a homeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this thesis, we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
     \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
 where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ TM^{n} $ which in local coordinates is given by 
     \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
 where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. Further, we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y: U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
 \[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
-where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{p}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
+where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{x}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
 \begin{equation}
     dX(\nabla_{u}\tilde{v}) = D_{dX(u)}(\tilde{V}) \label{connection}
 \end{equation}
@@ -208,7 +208,7 @@ The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\del
 \begin{align*}
     \dou_tg_{ij} & = \partial_{t} \left\langle \partial_{i}X, \partial_{j}X \right\rangle \\
 & = \left\langle \partial_{i}(\partial_{t}X), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{t}(\partial_{j}X) \right\rangle\\
-& = \left\langle \partial_{t}(-H \nu), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{j}(-H \nu)\right\rangle \\
+& = \left\langle \partial_{i}(-H \nu), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{j}(-H \nu)\right\rangle \\
 & = -H \left\langle \partial_{t} \nu, \partial_{j}X\right\rangle  - H \left\langle \partial_{i}X, \partial_{t}\nu\right\rangle \\
 & = -2Hh_{ij}
 \end{align*}
