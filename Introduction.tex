@@ -3,13 +3,13 @@
 We introduce the second fundamental form and mean curvature associated with an immersion of a hypersurface. The mean curvature flow is then the negative gradient flow of the volume functional on hypersurfaces. 
 \section{Fundamentals of hypersurfaces}
 
-Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a diffeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this thesis, we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
+Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X : M^{n} \to \R^{n+1} $. If $ X $ is a homeomorphism onto its image, we say $ X $ is an \textbf{embedding}  and its image $ \mathcal{M}^{n} = X(M^{n}) $ has the structure of a smooth $ n $-dimensional submanifold of $ \R^{n+1} $. We say that $ M^{n} $ is an \textbf{immersed hypersurface} and $ \mathcal{M} $ is an \textbf{embedded hypersurface} respectively. Throughout this thesis, we will denote the embedded manifold $ X(M) $ by script $ \mathcal{M} $ to differentiate between the domain and its image. Let $ (U, \{x^{i}\}) $ be a coordinate system on $ M^{m} $, in Euclidean coordinates the pushforward of tangent vectors will be 
     \[ dX( \partial_{i}) \define \frac{ \partial X}{ \partial x^{i}} = \partial_{i}X \]
 where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ TM^{n} $ which in local coordinates is given by 
     \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
 where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. Further, we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y: U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
 \[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
-where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{p}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
+where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{x}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
 \begin{equation}
     dX(\nabla_{u}\tilde{v}) = D_{dX(u)}(\tilde{V}) \label{connection}
 \end{equation}
@@ -232,13 +232,13 @@ The induced metric on the hypersurface is given by $g = X^*(\delta)$ where $\del
 \begin{align*}
     \dou_tg_{ij} & = \partial_{t} \left\langle \partial_{i}X, \partial_{j}X \right\rangle \\
 & = \left\langle \partial_{i}(\partial_{t}X), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{t}(\partial_{j}X) \right\rangle\\
-& = \left\langle \partial_{t}(-H \nu), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{j}(-H \nu)\right\rangle \\
+& = \left\langle \partial_{i}(-H \nu), \partial_{j}X \right\rangle + \left\langle \partial_{i}X, \partial_{j}(-H \nu)\right\rangle \\
 & = -H \left\langle \partial_{t} \nu, \partial_{j}X\right\rangle  - H \left\langle \partial_{i}X, \partial_{t}\nu\right\rangle \\
 & = -2Hh_{ij}
 \end{align*}
 2. Since $\langle \nu, \nu \rangle = 1$, we have $2\langle \partial_{t}\nu, \nu \rangle = 0$, so the vector $\partial_{t}\nu$ is in the tangent plane of the hypersurface. We can write it as a linear combination of tangent vectors $\{\partial_{j}X\}$ to get
 \begin{align*}
-\partial_{t}\nu &= \left\langle \partial_{t}\nu, \partial_{i}X \right\rangle \partial_{j}Xg^{ij} = - \left\langle \nu, \partial_{i}X\left( \partial_{t}X \right) \right\rangle\partial_{j}X g^{ij} \\
+\partial_{t}\nu &= \left\langle \partial_{t}\nu, \partial_{i}X \right\rangle \partial_{j}Xg^{ij} = - \left\langle \nu, \partial_{i}\left( \partial_{t}X \right) \right\rangle\partial_{j}X g^{ij} \\
 & = \left\langle \nu, \partial_{i}\left( H \nu \right) \right\rangle \partial_{j}Xg^{ij}\\
 & = \partial_{i}H \partial_{j}X g^{ij} + H \left\langle \nu, \partial_{i}\nu\right\rangle \partial_{j}Xg^{ij}\\
 & = \partial_{i}H\partial_{j}Xg^{ij} = \nabla H
@@ -280,7 +280,7 @@ Let $X_i: M^n_i \times  [0, T) \to \R^{n+1}, i = 1,2 $ be properly immersed solu
 If the hypersurfaces are disjoint initially, i.e. $X_1(M^{n_1},0)\cap X_2(M^n_2,0) = \phi$, then they remain so. Define the distance function $d: M^n_1 \times M^n_2 \times  [0,T) \to \R$ between the solutions by \[
 d(x,y,t) = |X_2(y,t) - X_1(y,t)|
 .\] 
-as a function of time. From the assumption of compactness $d_0 \define \inf_{(x,y) \in M^n_1 \times M^n_2} d(x,y,0) >0$
+as a function of time. From the assumptions of compactness and properness, $d_0 \define \inf_{(x,y) \in M^n_1 \times M^n_2} d(x,y,0) >0$
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
@@ -517,7 +517,7 @@ in $M^n \times\left[0, r^2\right]$.
     Assume on the contrary that $ \sup_{M^{n} \times [0, T)}|A|^{2} \le C $. We aim to show that the manifold $X(\cdot, t)= \mathcal{M}_{t} $ converges to a smooth limit $ \mathcal{M}_{T} $ as $ t \to T $ which will give a contradiction by applying the short time existence of the mean curvature flow at $ t  = T $. \begin{align*}
         |X(x,t)-X(x,0)| \le  \bigg|\int_{0}^{t} H(x,s) ds \bigg| \le T \sup |H| \le T \sqrt{nC_{0}}
     \end{align*}
-    hence a subsequence of $ X(t, \cdot) \to X(T, \cdot) $ converges to a continuous limit. 
+
 \end{proof}
 
 \begin{comment}
