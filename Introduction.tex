@@ -138,6 +138,7 @@ It is difficult to solve the Mean curvature flow PDE on an arbitrary hypersurfac
         \caption{Cylinder $ S^{1} \times \R $}
     \end{figure}  
 \end{enumerate}
+
 \subsection{Mean curvature flow as the gradient of the area functional}
 
 Let $ \mathcal{M}_{0} \subset \Rn $ be a smooth hypersurface and $ X: M^{n} \times (-\epsilon, \epsilon) \to \Rn $ be a variation with $ X(\cdot,0) = \mathcal{M}_{0} $. Considering area as a function of time over the variation, we get \begin{equation}
@@ -156,69 +157,6 @@ The following theorem about the uniqueness and existence of mean curvature flow 
     Short time existence: Let $ X_{0}: M^{n} \to \Rn $ be a smooth immersion of a compact manifold without boundary. There exists an $ \epsilon >0 $ and a smooth solution $ X : M^{n} \times [0, \epsilon) \to \Rn$ to MCF, with $ X( \cdot, 0) = X_{0} $. Moreover, the solution is unique.
 \end{thm}
 
-\section{Maximum principle}\label{max}
-We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. 
-\begin{lemma}[Scalar maximum principle]
-    Let $ g(t) \in [0,T) $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $ and $ \beta : \mathcal{M}^{n} \times [0,T) \to \R $ be a locally bounded function. Let $ u : \mathcal{M}^{n} \times [0,T) \to \R$ be a $ C^{2} $ function satisfying the following inequality 
-    \[ \frac{ \partial}{ \partial t}u(x,t) \ge \Delta_{g(t)}u + \beta u\]
-    If $ u(x,0) \ge 0 $ for all $ x \in \mathcal{M}^{n}$, then $ u(x,t) \ge 0 $ for all $ (x,t) \in \mathcal{M}^{n} \times [0,T) $.
-\end{lemma}
-
-\begin{proof}
-    
-\end{proof}
-
-This can be generalized to include a non-linear term as well. \begin{lemma}[Comparison lemma]
- Let $u: M^n \times[0, T) \mapsto \mathbb{R}$ be $C^2$ supersolution to the equation 
- 
- \[ \frac{\partial v}{\partial t} = \Delta_{g(t)}v + \left< X, \nabla v \right> + F(v)\]
-  on a closed manifold. Suppose there exists $C \in \mathbb{R}$ such that $u(x, 0) \geq C$ for all $x \in M^n$, and let $\psi$ be the solution to the associated ordinary differential equation
-$$
-\frac{d \psi}{d t}=F(\psi)
-$$
-satisfying
-$$
-\psi(0)=C
-$$
-Then $u(x, t) \geq \psi(t)$ for all $x \in M^n$ and $t \in[0, T)$ such that $\psi(t)$ exists.
-\end{lemma}
-
-The above stated scalar maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
-
-\begin{lemma}[Tensor maximum principle]
-	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
-	
-        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + u^{k}\nabla_{k}M_{ij}+ N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
-	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
-\end{lemma}
-
-The tensor maximum principle can be used to prove that convexity is preserved under mean curvature flow. 
-
-\begin{lemma}
-    Let $ X: M^{n} \times [0, T) \to \Rn $ be a solution to mean curvature flow. If the initial hypersurface $ X(\cdot, 0) = \mathcal{M}_{0}$ is convex then $ \mathcal{M}_{t} $ is also convex for all $ t \in [0,T) $.
-\end{lemma}
-\begin{proof}
-    The condition of convexity is equivalent to $ h_{ij} \ge 0 $. We will prove a stronger result. Suppose that 
-    \[ \epsilon h g_{ij} \le h_{ij} \]
-    for some constant $ 0 < \epsilon \le \frac{1}{n} $ at $ t = 0 $, then the inequality remains true for $ 0 \le t <T $. In the tensor maximum principle set 
-    \[ M_{ij} = \frac{h_{ij}}{H} - \epsilon g_{ij}, \qquad u^{k} = \frac{2}{H}g^{kl} \nabla_{l}H \]
-    and 
-    \[ N_{ij} = 2 \epsilon H h_{ij} - 2h_{im}g^{ml}h_{lj}. \]
-    To calculate the time derivatives, we use \cref{evolutioneq}, 
-    \[ \partial_{t}\left( \frac{h_{ij}}{H} \right) = \frac{H \Delta h_{ij}- h_{ij}\Delta H}{H^{2}} - 2h_{im}g^{ml}h_{ij},  \]
-    
-    \[ \Delta \left( \frac{h_{ij}}{H} \right)  = \frac{H \Delta h_{ij}- h_{ij} \Delta H }{H^{2}} - \frac{2}{H}g^{kl}\nabla_{k
-    }\nabla_{l}( \frac{h_{ij}}{H})\]
-
-
-    It remains to check that $ N_{ij} $ satisfies the null-eigenvector in this setting. Assume that for some vector $ X = \{X^{j}\} $, 
-    \[ h_{ij}  X^{j} = \epsilon HX_{i} \]
-    then \begin{align*}
-        N_{ij}X^{i}X^{j} & = 2 \epsilon H h_{ij}X^{i}X^{j} - 2h_{im}g^{ml}h_{lj}X^{i}X^{j} \\
-        & = 2 \epsilon^{2}H^{2}|X|^{2} - 2 \epsilon^{2}H^{2}X^{2} = 0. 
-    \end{align*}
-    Substituting $ \epsilon = 0 $ yields the result. 
-\end{proof}
 \section{Evolution equations}
 To understand the properties of mean curvature flow it is essential to know the evolution of geometric quantities of the hypersurface. Let $X : M^n \times I \to \R^{n+1}$ be a smooth solution of mean curvature flow, so 
 \[ \dou_t X(x,t) = \overrightarrow{H}(x,t)  = -H(x,t)\nu(x,t).\]
@@ -347,6 +285,73 @@ We can phrase the avoidance principle as disjointness is an immortal property an
 
 
 \end{comment}
+
+
+\section{Maximum principle}\label{max}
+We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. 
+\begin{lemma}[Scalar maximum principle]
+    Let $ g(t) \in [0,T) $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $ and $ \beta : \mathcal{M}^{n} \times [0,T) \to \R $ be a locally bounded function. Let $ u : \mathcal{M}^{n} \times [0,T) \to \R$ be a $ C^{2} $ function satisfying the following inequality 
+    \[ \frac{ \partial}{ \partial t}u(x,t) \ge \Delta_{g(t)}u + \beta u\]
+    If $ u(x,0) \ge 0 $ for all $ x \in \mathcal{M}^{n}$, then $ u(x,t) \ge 0 $ for all $ (x,t) \in \mathcal{M}^{n} \times [0,T) $.
+\end{lemma}
+
+\begin{proof}
+    
+\end{proof}
+
+This can be generalized to include a non-linear term as well. \begin{lemma}[Comparison lemma]
+ Let $u: M^n \times[0, T) \mapsto \mathbb{R}$ be $C^2$ supersolution to the equation 
+ 
+ \[ \frac{\partial v}{\partial t} = \Delta_{g(t)}v + \left< X, \nabla v \right> + F(v)\]
+  on a closed manifold. Suppose there exists $C \in \mathbb{R}$ such that $u(x, 0) \geq C$ for all $x \in M^n$, and let $\psi$ be the solution to the associated ordinary differential equation
+$$
+\frac{d \psi}{d t}=F(\psi)
+$$
+satisfying
+$$
+\psi(0)=C
+$$
+Then $u(x, t) \geq \psi(t)$ for all $x \in M^n$ and $t \in[0, T)$ such that $\psi(t)$ exists.
+\end{lemma}
+
+The above stated scalar maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
+
+\begin{lemma}[Tensor maximum principle]
+	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
+	
+        \[ \frac{ \partial}{ \partial t}M_{ij} = \Delta M_{ij} + u^{k}\nabla_{k}M_{ij}+ N_{ij}  \text{ for all } (x,t) \in  \mathcal{M}^{n} \times [0,T) \]
+	where $ N_{ij} = p(M_{ij},g_{ij}) $ satisfies the null-eigenvector condition above. If $ M $ is non-negative at $ t=0 $, then it remains non-negative on $ [0,T) $.
+\end{lemma}
+
+The tensor maximum principle can be used to prove that convexity is preserved under mean curvature flow. 
+
+\begin{lemma}
+    Let $ X: M^{n} \times [0, T) \to \Rn $ be a solution to mean curvature flow. If the initial hypersurface $ X(\cdot, 0) = \mathcal{M}_{0}$ is convex then $ \mathcal{M}_{t} $ is also convex for all $ t \in [0,T) $.
+\end{lemma}
+\begin{proof}
+    The condition of convexity is equivalent to $ h_{ij} \ge 0 $. We will prove a stronger result. Suppose that 
+    \[ \epsilon h g_{ij} \le h_{ij} \]
+    for some constant $ 0 < \epsilon \le \frac{1}{n} $ at $ t = 0 $, then the inequality remains true for $ 0 \le t <T $. In the tensor maximum principle set 
+    \[ M_{ij} = \frac{h_{ij}}{H} - \epsilon g_{ij}, \qquad u^{k} = \frac{2}{H}g^{kl} \nabla_{l}H \]
+    and 
+    \[ N_{ij} = 2 \epsilon H h_{ij} - 2h_{im}g^{ml}h_{lj}. \]
+    To calculate the time derivatives, we use \cref{evolutioneq}, 
+    \[ \partial_{t}\left( \frac{h_{ij}}{H} \right) = \frac{H \Delta h_{ij}- h_{ij}\Delta H}{H^{2}} - 2h_{im}g^{ml}h_{ij},  \]
+    
+    \[ \Delta \left( \frac{h_{ij}}{H} \right)  = \frac{H \Delta h_{ij}- h_{ij} \Delta H }{H^{2}} - \frac{2}{H}g^{kl}\nabla_{k
+    }\nabla_{l}( \frac{h_{ij}}{H})\]
+
+
+    It remains to check that $ N_{ij} $ satisfies the null-eigenvector in this setting. Assume that for some vector $ X = \{X^{j}\} $, 
+    \[ h_{ij}  X^{j} = \epsilon HX_{i} \]
+    then \begin{align*}
+        N_{ij}X^{i}X^{j} & = 2 \epsilon H h_{ij}X^{i}X^{j} - 2h_{im}g^{ml}h_{lj}X^{i}X^{j} \\
+        & = 2 \epsilon^{2}H^{2}|X|^{2} - 2 \epsilon^{2}H^{2}X^{2} = 0. 
+    \end{align*}
+    Substituting $ \epsilon = 0 $ yields the result. 
+\end{proof}
+
+
 \section{Long time existence}\label{Longtime}
 
 In this subsection, we will prove that the blow-up of the second fundamental form is the only obstruction to continuing the flow. The proof goes by contrapositive, relying on the Bernstein-type estimates. This technique is very similar to the one Hamilton used for Ricci flow \cite{hamilton1982three}. A solution of the mean curvature flow $ X : M^{n} \times [0,T) \to \Rn $ is said to be \textbf{maximal}  if given any other solution $ Y : M^{n} \times [0,S) \to \Rn $ which coincides with $ X $ for $ t \in [0,T) \cap [0,S) $ we have $ T \ge S $. Such a $ T $ is said to be the \textbf{maximal time} for $ X $. 
