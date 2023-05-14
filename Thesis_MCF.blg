@@ -10,45 +10,45 @@ Database file #1: ref.bib
 Warning--missing journal name in huisken1999convexity
 Warning--missing journal, volume, and year in huisken1999convexity
 Warning--missing pages in huisken1999convexity
-You've used 19 entries,
+You've used 20 entries,
             2624 wiz_defined-function locations,
-            677 strings with 7144 characters,
-and the built_in function-call counts, 7018 in all, are:
-= -- 651
-> -- 289
-< -- 15
-+ -- 99
-- -- 95
-* -- 647
-:= -- 1119
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 115
-chr.to.int$ -- 18
-cite$ -- 22
-duplicate$ -- 285
-empty$ -- 555
-format.name$ -- 123
-if$ -- 1393
+            681 strings with 7237 characters,
+and the built_in function-call counts, 7351 in all, are:
+= -- 677
+> -- 308
+< -- 16
++ -- 106
+- -- 101
+* -- 672
+:= -- 1175
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 121
+chr.to.int$ -- 19
+cite$ -- 23
+duplicate$ -- 301
+empty$ -- 582
+format.name$ -- 130
+if$ -- 1460
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 68
-num.names$ -- 51
-pop$ -- 122
+missing$ -- 45
+newline$ -- 71
+num.names$ -- 54
+pop$ -- 130
 preamble$ -- 1
-purify$ -- 134
+purify$ -- 141
 quote$ -- 0
-skip$ -- 182
+skip$ -- 194
 stack$ -- 0
-substring$ -- 455
-swap$ -- 26
-text.length$ -- 15
+substring$ -- 463
+swap$ -- 28
+text.length$ -- 16
 text.prefix$ -- 11
 top$ -- 0
-type$ -- 136
+type$ -- 140
 warning$ -- 3
-while$ -- 67
-width$ -- 23
-write$ -- 216
+while$ -- 70
+width$ -- 24
+write$ -- 227
 (There were 3 warnings)

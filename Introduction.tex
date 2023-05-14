@@ -288,33 +288,23 @@ We can phrase the avoidance principle as disjointness is an immortal property an
 
 
 \section{Maximum principle}\label{max}
-We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. 
+We can extend the maximum principle on Euclidean space to general Riemannian manifolds in the following fashion. Refer to \cite{chow2004ricci} for proofs.
 \begin{lemma}[Scalar maximum principle]
     Let $ g(t) \in [0,T) $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $ and $ \beta : \mathcal{M}^{n} \times [0,T) \to \R $ be a locally bounded function. Let $ u : \mathcal{M}^{n} \times [0,T) \to \R$ be a $ C^{2} $ function satisfying the following inequality 
     \[ \frac{ \partial}{ \partial t}u(x,t) \ge \Delta_{g(t)}u + \beta u\]
     If $ u(x,0) \ge 0 $ for all $ x \in \mathcal{M}^{n}$, then $ u(x,t) \ge 0 $ for all $ (x,t) \in \mathcal{M}^{n} \times [0,T) $.
 \end{lemma}
 
-\begin{proof}
-    
-\end{proof}
-
 This can be generalized to include a non-linear term as well. \begin{lemma}[Comparison lemma]
- Let $u: M^n \times[0, T) \mapsto \mathbb{R}$ be $C^2$ supersolution to the equation 
+ Let $u: M^n \times[0, T) \mapsto \mathbb{R}$ be $C^2$ function satisfying
  
- \[ \frac{\partial v}{\partial t} = \Delta_{g(t)}v + \left< X, \nabla v \right> + F(v)\]
-  on a closed manifold. Suppose there exists $C \in \mathbb{R}$ such that $u(x, 0) \geq C$ for all $x \in M^n$, and let $\psi$ be the solution to the associated ordinary differential equation
-$$
-\frac{d \psi}{d t}=F(\psi)
-$$
-satisfying
-$$
-\psi(0)=C
-$$
-Then $u(x, t) \geq \psi(t)$ for all $x \in M^n$ and $t \in[0, T)$ such that $\psi(t)$ exists.
+ \[ \frac{\partial u}{\partial t} \ge \Delta_{g(t)}u + \left< X, \nabla u \right> + F(u)\]
+  on a closed manifold. Suppose there exists $C \in \mathbb{R}$ such that $u(x, 0) \geq C$ for all $x \in M^n$, and let $\psi$ be the solution to the associated ordinary differential equation with initial condition
+  \[ \frac{d \psi}{d t}=F(\psi), \qquad \psi(0)=C \]
+Then $u(x,t) \geq \psi(t)$ for all $x \in M^n$ and $t \in[0, T)$ such that $\psi(t)$ exists.
 \end{lemma}
 
-The above stated scalar maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
+The above-stated scalar maximum principle can be further extended to tensors. This was done by Hamilton in \cite{hamilton1982three} in the context of Ricci flow. Let $ M = M_{ij}dx^{i}\otimes dx^{j} $ be a symmetric $ 2 $-tensor. We say $ M $ is non-negative if $ v^{T}Mv = M_{ij}v^{i}v^{j} \ge 0 $ for all vectors $ v $. Let $ N_{ij} = p(M_{ij},g_{ij}) $ be a tensor formed by contracting products of $ M_{ij} $ with itself using the metric. Also suppose that whenever $ v $ is a null-eigenvector of $ M_{ij} $ (i.e. $ M_{ij}v^{j} = 0 $), we have $ N_{ij}v^{i}v^{j} \ge 0 $. Then the following maximum principle holds
 
 \begin{lemma}[Tensor maximum principle]
 	Let $ g(t) \in [0,T)  $ be a $ 1 $-parameter family of Riemannian metrics on a closed manifold $ \mathcal{M}^{n} $. Let $ M_{ij} $ be a symmetric non-negative tensor evolving by the equation 
@@ -339,7 +329,7 @@ The tensor maximum principle can be used to prove that convexity is preserved un
     \[ \partial_{t}\left( \frac{h_{ij}}{H} \right) = \frac{H \Delta h_{ij}- h_{ij}\Delta H}{H^{2}} - 2h_{im}g^{ml}h_{ij},  \]
     
     \[ \Delta \left( \frac{h_{ij}}{H} \right)  = \frac{H \Delta h_{ij}- h_{ij} \Delta H }{H^{2}} - \frac{2}{H}g^{kl}\nabla_{k
-    }\nabla_{l}( \frac{h_{ij}}{H})\]
+    }\nabla_{l}\left( \frac{h_{ij}}{H}\right).\]
 
 
     It remains to check that $ N_{ij} $ satisfies the null-eigenvector in this setting. Assume that for some vector $ X = \{X^{j}\} $, 
@@ -630,44 +620,42 @@ The inradius $ \rho_{t} $ of $ \Omega_{t} $ tends to zero as $ t \to T $. Thus, 
 \section{Monotonicity Formula}
 \begin{comment}
     Let $ X: M^{n} \times I \to \R^{n+1} $ be a one-parameter family of immersions flowing by mean curvature. Let $ \{x^{i}\} $ be local coordinates around a point $ p \in M $. Then the metric and second fundamental form is given by 
-\[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\eta, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right>. \]
+\[ g_{ij} = \left< \frac{\dou X}{\dou x^{i}}, \frac{\dou X}{\dou x^{j}} \right> , \qquad h_{ij} = \left<\nu, \frac{\partial^{2}X}{\dou x^{i}\dou x^{j}} \right>. \]
 
 If we scale the solution by a factor of $ \lambda  $, defined by $ \tilde{X}(x,t) = \lambda X(x,t) $ we get the following metric and second fundamental form 
 
-\[ \tilde{g_{ij}} = \left< \frac{\dou \tilde{X}}{\dou x^{i}}, \frac{\dou \tilde{X}}{\dou x^{j}} \right>  = \lambda^{2}g_{ij} ,\qquad \tilde{h_{ij}} = \left<\eta, \frac{\partial^{2}\tilde{X}}{\dou x^{i}\dou x^{j}} \right>  = \lambda h_{ij}\]
+\[ \tilde{g_{ij}} = \left< \frac{\dou \tilde{X}}{\dou x^{i}}, \frac{\dou \tilde{X}}{\dou x^{j}} \right>  = \lambda^{2}g_{ij} ,\qquad \tilde{h_{ij}} = \left<\nu, \frac{\partial^{2}\tilde{X}}{\dou x^{i}\dou x^{j}} \right>  = \lambda h_{ij}\]
 so the scaled mean curvature is given by $ \tilde{H} = \tilde{g}^{{ij}}\tilde{h}_{ij} = \frac{1}{\lambda}H $. This implies the scaled solutions satisfy the evolution equation
 
-\[ \frac{\dou \tilde{X}}{\dou t} = \lambda \frac{\dou X}{\dou t} = -\lambda^{2}\tilde{H}\eta \]
+\[ \frac{\dou \tilde{X}}{\dou t} = \lambda \frac{\dou X}{\dou t} = -\lambda^{2}\tilde{H}\nu \]
 or
-\[ \frac{\dou \tilde{X}}{\dou (\lambda^{2}t)} = - \tilde{H}\eta \]
+\[ \frac{\dou \tilde{X}}{\dou (\lambda^{2}t)} = - \tilde{H}\nu \]
 Hence if scale time by $ \lambda^{2} $, then $ \tilde{X} $ is also a solution of the mean curvature flow.
 \end{comment}
 
 Mean curvature flow is invariant under parabolic scaling, i.e.  if $ X : M^{n} \times I \to \R^{n+1} $ is solution, then so is $ X_{\lambda}(x,t) = \lambda X(x,\lambda^{-2}t) $. We construct a weighted area functional which is invariant under \textit{parabolic} scaling along any solution to mean curvature flow which will be monotonous.
 
 Let $ \rho(x,t) $ be the backward heat kernel at $ (X_{0},t_{0}) $, i.e.,   \[\rho(x,t) = \frac{1}{(4 \pi (t_{0}-t))^{ \frac{n}{2}} }\cdot \exp\left( - \frac{|X(x,t)-X_{0}|^{2}}{4(t_{0}-t)} \right), \qquad t<t_{0} \]
-\begin{thm}
+\begin{thm}[Monotonicity formula] \label{Monotonicityformula}
 If $ M_{t} $ is a solution of mean curvature flow for $ t< t_{0} $, then we have the formula
-
-    \[ \frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  = - \int_{M_{t}}\rho(x,t)\left( H- \frac{\left< X(x,t)-X_{0}, \eta \right>}{2 (t_{0}-t)} \right)^{2}d \mu_{t}\] 
-
+    \[ \frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  = - \int_{M_{t}}\rho(x,t)\left( H- \frac{\left< X(x,t)-X_{0}, \nu \right>}{2 (t_{0}-t)} \right)^{2}d \mu_{t}.\] 
 \end{thm}
 \begin{proof}
 To simplify the formula assume that $ \left(X_{0},t_{0}\right) = (0,0) $. We know that $ \frac{d}{dt} \mu_{t} = -H^{2} \mu_{t} $, so differentiating $ \rho $ with respect to time we get,
 \begin{align}
     \frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  &= \int_{M_{t}}\rho(x,t)(-H^{2})d \mu_{t} + \int_{M_{t}} \frac{\dou}{\dou t}\rho(x,t)d \mu_{t}\nonumber \\
-    & = -\int_{M_{t}}\rho(x,t)H^{2}d \mu_{t} +\int_{M_{t}}\left( \frac{\left< X(x,t), H(x,t)\eta \right>}{2(-t)}\rho(x,t) \right)d\mu_{t}\nonumber \\
+    & = -\int_{M_{t}}\rho(x,t)H^{2}d \mu_{t} +\int_{M_{t}}\left( \frac{\left< X(x,t), H(x,t)\nu \right>}{2(-t)}\rho(x,t) \right)d\mu_{t}\nonumber \\
     &  \qquad \qquad  + \int_{M_{t}} \left( \frac{n}{2(4 \pi)(-t)}(4 \pi)\rho(x,t) -\frac{|X(x,t)|^{2}}{4(-t)^{2}}\rho(x,t)\right)d \mu_{t}\nonumber \\ 
-    & = \int_{M_{t}}\rho\left(   \frac{n}{2(-t)} +\frac{\left< X,H \eta\right>}{2(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}\right)d \mu_{t}\label{rho0}
-    %& = -\int_{M_{t}}\rho \left| H \eta + \frac{X}{2(-t)}\right|^{2}d \mu_{t} + \int_{M_{t}}\rho \frac{ \left< X,H \eta \right>}{2(-t)} d \mu_{t} + \int_{M_{t}} \frac{n\rho}{2(-t)}d \mu_{t} \label
+    & = \int_{M_{t}}\rho\left(   \frac{n}{2(-t)} +\frac{\left< X,H \nu\right>}{2(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}\right)d \mu_{t}.\label{rho0}
+    %& = -\int_{M_{t}}\rho \left| H \nu + \frac{X}{2(-t)}\right|^{2}d \mu_{t} + \int_{M_{t}}\rho \frac{ \left< X,H \nu \right>}{2(-t)} d \mu_{t} + \int_{M_{t}} \frac{n\rho}{2(-t)}d \mu_{t} \label
 \end{align}
 
-Now $ \Delta X = - H \eta $, using this relation for the second term and divergence theorem we get 
+Now $ \Delta X = - H \nu $, using this relation for the second term and divergence theorem we get 
 \begin{align}
-\int_{M_{t}}\rho \left< X,H \eta \right> d \mu_{t} & =  -\int_{M_{t}} \rho\left< X,\Delta X \right> d \mu_{t} \nonumber \\ 
+\int_{M_{t}}\rho \left< X,H \nu \right> d \mu_{t} & =  -\int_{M_{t}} \rho\left< X,\Delta X \right> d \mu_{t} \nonumber \\ 
 & = - \sum_{k=1}^{n+1}\int_{M_{t}} \rho X_{k} \Delta X_{k} d \mu_{t}\nonumber \\
 & = \sum_{k=1}^{n+1} \int_{M_{t}} \left< \nabla(\rho X_{k}), \nabla X_{k} \right>d \mu_{t}\nonumber \\ 
-& = \sum_{k=1}^{n+1} \int_{M_{t}} \left( \left< \nabla\rho, \nabla X_{k} \right>X_{k} + \rho \left< \nabla X_{k}, \nabla X_{k} \right> \right)d \mu_{t} \label{rho1}
+& = \sum_{k=1}^{n+1} \int_{M_{t}} \left( \left< \nabla\rho, \nabla X_{k} \right>X_{k} + \rho \left< \nabla X_{k}, \nabla X_{k} \right> \right)d \mu_{t}. \label{rho1}
 % & = \int_{M_{t}} \left< \nabla(\rho X), \nabla X \right>d \mu_{t}\\ 
 % & = \int_{M_{t}} \left( \rho\left< \nabla X, \nabla X  \right> + \left< \nabla \rho, \nabla X \right> X \right)
 \end{align}
@@ -684,29 +672,29 @@ and
 \end{equation}
 Substituting \cref{rho2} and \cref{rho3} into \cref{rho1} and multiplying by $ \frac{1}{2(-t)} $, we get 
 \begin{equation*}
-\int_{M_{t}}\rho  \frac{\left< X,H \eta \right>}{2(-t)} d \mu_{t}  = \int_{M_{t}} \rho \left( \frac{n}{2(-t)} - \frac{1}{4(-t)^2}|X^T|^2  \right) d \mu_{t} 
+\int_{M_{t}}\rho  \frac{\left< X,H \nu \right>}{2(-t)} d \mu_{t}  = \int_{M_{t}} \rho \left( \frac{n}{2(-t)} - \frac{1}{4(-t)^2}|X^T|^2  \right) d \mu_{t} 
 \end{equation*}
 or 
 \begin{equation}
-\int_{M_{t}}\frac{n\rho}{2(-t)} d \mu_{t} = \int_{M_{t}} \rho \left(  \frac{\left< X,H \eta \right>}{2(-t)} + \frac{1}{4(-t)^2}|X^T|^2 \right)d \mu_{t}\label{rho4}
+\int_{M_{t}}\frac{n\rho}{2(-t)} d \mu_{t} = \int_{M_{t}} \rho \left(  \frac{\left< X,H \nu \right>}{2(-t)} + \frac{1}{4(-t)^2}|X^T|^2 \right)d \mu_{t}\label{rho4}
 \end{equation}
 where $ X^{T} $ denotes the tangential part of the vector $ X $. Substituting \cref{rho4} into \cref{rho0}
 \begin{align*}
-\frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  &=  \int_{M_{t}}\rho\left(\frac{\left< X,H \eta\right>}{(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}+ \frac{1}{4(-t)^2}|X^T|^2\right)d \mu_{t}\\ 
-& = -\int_{M_{t}} \rho \left( H - \frac{\left< X, \eta \right>}{2(-t)} \right)^{2} d \mu_{t}.
+\frac{d}{dt} \int_{M_{t}}\rho(x,t)d \mu_{t}  &=  \int_{M_{t}}\rho\left(\frac{\left< X,H \nu\right>}{(-t)}- \frac{|X|^{2}}{4(-t)^{2}} -H^{2}+ \frac{1}{4(-t)^2}|X^T|^2\right)d \mu_{t}\\ 
+& = -\int_{M_{t}} \rho \left( H - \frac{\left< X, \nu \right>}{2(-t)} \right)^{2} d \mu_{t}.
 \end{align*}
 \end{proof}
 
 \subsection{Rescaled Monotonicity formula}\label{Type1singularity}
 
-From section \cref{Longtime} we know that the curvature blows up at the maximal time $ T $  and satisfies the inequality
+Applying the comparison principle on the time evolution of $ |A|^{2} $ we get that if the curvature blows up at the maximal time $ T $  and satisfies the inequality
 
-\[ \max_{p \in M}|A(p,t)| \ge \frac{1}{\sqrt{2(T-t)}} \]
-
+\[ \max_{p \in M}|A(p,t)| \ge \frac{1}{\sqrt{2(T-t)}}.\]
+Using this we define the type I singularity if the blow-up rate is bounded by a constant. 
 \begin{defn}
 Let $ T $ be the maximal time of existence of a mean curvature flow. If there exists a constant $ C >1 $ such that 
 
-    \[ \max_{p \in M}|A(p,t)| \le \frac{C}{\sqrt{2(T-t)}} \]
+\[ \max_{p \in M}|A(p,t)| \le \frac{C}{\sqrt{2(T-t)}} \]
 we say the flow is developing at time $ T $ a \textit{type I singularity}.
 \end{defn}
 
@@ -725,18 +713,56 @@ for all $p \in M^n$ and $0 \leq s<t<T$. Thus, $X(\cdot, t)$ converges uniformly 
 \end{defn}
 
 Let us assume now that $0 \in \mathbb{R}^{n+1}$ is a blow-up point. Then we define the rescaled immersions $\tilde{X}(p, s)$ by
-$$
-\tilde{X}(p, s)=(2(T-t))^{-1 / 2} X(p, t), \quad s(t)=-\frac{1}{2} \log (T-t) .
-$$
+
+\begin{equation}
+    \tilde{X}(p, s)=(2(T-t))^{-1 / 2} X(p, t), \quad s(t)=-\frac{1}{2} \log (T-t) .\label{rescaling}
+\end{equation}
+
 The surfaces $\tilde{M}_s=\tilde{X}(\cdot, s)\left(M^n\right)$ are therefore defined for $-\frac{1}{2} \log T \leq s<\infty$ and satisfy the equation
 $$
-\frac{d}{d s} \tilde{X}(p, s)=\tilde{H}(p, s)+\tilde{X}(p, s).
+\frac{d}{d s} \tilde{X}(p, s)=\tilde{H}(p, s) \tilde{\nu}(p,s)+\tilde{X}(p, s).
 $$
-For finding out the evolution of the second fundamental form and mean curvature after rescaling, we use the following lemma 
+For any tensor $ P $, let $ \tilde{P} $ denote the rescaled tensor. We say that $ P $ has degree $ \alpha $ if $ \tilde{P} = (2(T-t))^{- \frac{\alpha}{2}}P $. Then there is an expression evaluating the evolution of rescaled tensor.
 \begin{lemma}
-    Suppose $P$ is a tensor which satisfies $$ \frac{dP}{dt}=\Delta P+Q$$ for the original evolution equation and $P$ has degree $\alpha$, i.e . Then $Q$ has degree $(\alpha-2)$ and $d \widetilde{P} / d s=\tilde{\Delta} \tilde{P}+\tilde{Q}+\alpha \tilde{P}$
+    Suppose $P$ is a tensor that satisfies $$ \frac{dP}{dt}=\Delta P+Q$$ for the original evolution equation and $P$ has degree $\alpha$. Then $Q$ has degree $(\alpha-2)$ and 
+    \[  \frac{d \tilde{P}}{ds}=\tilde{\Delta} \tilde{P}+\tilde{Q}+{\alpha} \tilde{h}\tilde{P} \]
+    
 \end{lemma}
 
+For finding out the evolution of the second fundamental form and mean curvature after rescaling, we use this lemma to get.
+\begin{proposition}
+    For each $ m \ge 0 $ there is a $ C(m) < \infty $ such that $ |\tilde{\nabla}^{m} \tilde{A}|^{2} \le C(m)$ holds on $ \tilde{M}_{s} $ uniformly in $ s $, where $ C(m) $ depends on $ n,m,C_{0} $ and $ M_{0} $. 
+\end{proposition}
+\begin{proof}
+   One can calculate the degree of $ |\nabla^{m} A|^{2}  = -2(m+1)$ from \cref{normnablaA} and further we know that 
+   \begin{align*}
+    \partial_{s}|\tilde{\nabla}^{m}\tilde{A}|^{2} \le \Delta|\tilde{\nabla}^{m}\tilde{A}|^{2} - 2|\tilde{\nabla}^{m+1}\tilde{A}|^{2} + \tilde{C}_{n,m}\sum_{i+j+k=m}^{}|\tilde{\nabla}^{i}\tilde{A}|  |\tilde{\nabla}^{j}\tilde{A}|| \tilde{\nabla}^{k}\tilde{A}|| \tilde{\nabla}^{m}\tilde{A}|
+\end{align*}
+   We induct on $ m $. For $ m = 0 $, the rescaled second fundamental form under type I condition satisfies 
+   \[ |\tilde{A}|^{2} = 2(T-t)|A| \le C \]
+   Assume the result holds for $ 0,\dots, m-1 $. Then for $ m $ there exists a constant $ B $ such that 
+   \[ \frac{\partial}{\partial s}| \tilde{\nabla}^{m} \tilde{A}|^{2}  \le \tilde{\Delta}| \tilde{ \nabla}^{m}A|^{2} + B (1+|\tilde{\nabla}A|^{2})\]
+   Adding the \cref{normnablaA} for $ m-1 $, 
+   \[ \frac{\partial}{\partial s}(|\tilde{\nabla}^{m} \tilde{A}|^{2}+ B| \tilde{\nabla}^{m-1} \tilde{A}|^{2}) \le \tilde{\Delta}(|\tilde{\nabla}^{m} \tilde{A}|^{2}+ B| \tilde{\nabla}^{m-1} \tilde{A}|^{2})  - B|\tilde{\nabla}^{m}\tilde{A}|^{2}+ B_{1}\]
+   where $ B_{1} $ depends on $ B $ and $ \tilde{C}_{n,l} $ for $ l = 0, \dots, m-1 $. Now from the induction hypothesis $ |\tilde{\nabla}\tilde{A}|^{2} $ is bounded so from maximum principles in the previous estimate we can bound $ |\tilde{\nabla} \tilde{A}|^{2} $ by a constant depending on initial data, $ B $ and $ B_{1} $. This completes the induction.
+\end{proof}
+
+After the same rescaling the backward heat kernel becomes
+\[ \tilde{\rho}(p,s) = \exp \left( - \frac{1}{2}| \tilde{X}(p,s)|^{2} \right) \]
+which leads to the following corollary.
+\begin{corollary}
+    Let $ \tilde{X}_{s} $ denote the rescaled hypersurfaces by the \cref{rescaling}, then the corresponding monotonicity forumala is 
+    \[ \frac{d}{d s} \int_{\tilde{X}_{s}} \tilde{\rho} d \tilde{\mu}_{s}=  - \int_{\tilde{X}_{s}} \tilde{\rho}| \tilde{H} \tilde{\nu}+ \left< \tilde{X}, \tilde{\nu} \right> |^{2}d \tilde{\mu}_{s}.\]
+\end{corollary}
+\begin{proof}
+    We use the fact that $ \frac{d \tilde{\mu}}{ds} = (n-H^{2}) \tilde{\mu}_{s} $ and calculate the derivative analogous to the proof in \cref{Monotonicityformula}.
+\end{proof}
+
+One application of the estimates of the rescaled second fundamental form and rescaled monotonicity formula is to obtain a structural formula of type I singularity. This was proved by Huisken in \cite{huisken1990asymptotic}. \begin{thm}
+    Let $ X: M^{n} \times [0, T) \to \Rn$ be a maximal solution of mean curvature flow with type I singularity. Let $ \tilde{X}_{s} $ denote the rescaled hypersurfaces with the origin as the blow-up point. Then for each sequence $ s_{j} \to \infty $ there exists a subsequence $ s_{j_{k}} $ such that $ \tilde{X}_{s_{j_{k}}} $ converges smoothly to an immersed non-empty limiting surface $ \tilde{X}_{\infty} $ which satisfies 
+    \[ H = \left< \tilde{X}_{\infty},\nu \right> .\]
+    Further, if $ \tilde{X}_{\infty} $ is compact, then is a sphere of radius $ \sqrt{n} $.
+\end{thm}
 
 \begin{comment}
     \section{Surfaces of positive mean curvature}
@@ -757,3 +783,5 @@ Suppose the hypersurface satisfies $H = -\langle X, \nu \rangle$. Let $e_1,\ldot
 \[\nabla_i \nabla_j H = h_{ij} - Hh_{il}h_{lj}+\langle x, e_l \rangle \nabla_l h_{ij}\]
 \end{proof}
 \end{comment}
+
+
