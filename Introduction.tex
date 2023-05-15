@@ -8,12 +8,16 @@ Let $M^{n}$ be a smooth $ n $-dimensional manifold with a smooth immersion $ X :
 where $ dX : TM^{n} \to T\R^{n+1} $ is the derivative of $ X $. Since $ dX $ is an injection for each point in $ M^{n} $, we can define an inner product on $ TM^{n} $ which in local coordinates is given by 
     \[ g( \partial_{i}, \partial_{j}) = \left< \partial_{i}X, \partial_{j}X \right> \]
 where $ \left< \cdot, \cdot \right> $ denotes the standard inner product on Euclidean space. We will use the notation $ \left< \cdot, \cdot \right> $ for $ g $ as well which is consistent because of the immersion condition. Further, we can define the Levi-Civita connection on $ M^{n} $ from the Levi-Civita connection on $ \R^{n+1} $. Let $ X_{p} \in T_{p}\Rn $ be a vector and $ Y: U \to T\Rn|_{U} $ be a local vector field in a neighborhood $ U $ containing $ p $. The Levi-Civita connection of $ Y $ with respect to $ X $ on  $ \R^{n+1} $ is given by 
-\[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
+%\[ D_{X_{p}}Y =  X_{p}(Y^{i}) \partial_{i}\]
+\[ D_{X_{p}}Y =  (X_{p}(Y^{1}), \dots, X_{p}(Y^{n+1}))\]
 where $ Y = (Y^{1}, \ldots , Y^{n+1}) $ are the components of $ Y $ in the standard coordinates. Using the immersion condition, we define a connection on $ TM^{n} $ induced from $ D $.  Let $ x \in M^{n} $ and $ u \in T_{x}M^{n}, \tilde{v} \in TM^{n}|_{U}$ for some open set $ U $ containing $ x $. Define a connection $ \nabla $ by 
+%\begin{equation}
+    %dX(\nabla_{u}\tilde{v}) = D_{dX(u)}(\tilde{V}) \label{connection}
+%\end{equation}
 \begin{equation}
-    dX(\nabla_{u}\tilde{v}) = D_{dX(u)}(\tilde{V}) \label{connection}
+    (\nabla_{u}\tilde{v}) = \pi(D_{dX(u)}(\tilde{V})) \label{connection}
 \end{equation}
-where $ \tilde{V} $ is an extension of $ dX(\tilde{v}) $ to an open set of $ \Rn $ containing $ X(U) $.  
+where $ \tilde{V} $ is an extension of $ dX(\tilde{v}) $ to an open set of $ \Rn $ containing $ X(U) $ and $ \pi_{X(x)} : T_{X(x)}\Rn \to dX(T_{x}M) $ is the orthogonal projection onto the tangent subspace.  
 \begin{lemma}
     The connection defined by \cref{connection} is well-defined and is the unique Levi-Civita connection on $ (M^{n},g) $.
 \end{lemma}
