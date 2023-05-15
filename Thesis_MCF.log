@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.23)  15 MAY 2023 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.23)  15 MAY 2023 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1444,52 +1444,52 @@ Package mdframed Info: mdframed detected package amsthm
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 35.
+(hyperref)                removing `math shift' on input line 36.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 35.
+(hyperref)                removing `subscript' on input line 36.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 35.
+(hyperref)                removing `math shift' on input line 36.
 
 Excluding 'comment' comment.
-Package mdframed Info: mdframed works in twoside mode on input line 64.
+Package mdframed Info: mdframed works in twoside mode on input line 65.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 64.
-Package mdframed Info: mdframed works in twoside mode on input line 80.
+(mdframed)              on input line 65.
+Package mdframed Info: mdframed works in twoside mode on input line 81.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 80.
-Package mdframed Info: Not enough space on this page on input line 85.
+(mdframed)              on input line 81.
+Package mdframed Info: Not enough space on this page on input line 86.
  [26]
-Package mdframed Info: Not enough space on this page on input line 85.
-Package mdframed Info: mdframed works in twoside mode on input line 109.
+Package mdframed Info: Not enough space on this page on input line 86.
+Package mdframed Info: mdframed works in twoside mode on input line 110.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 109.
-Package mdframed Info: Not enough space on this page on input line 115.
+(mdframed)              on input line 110.
+Package mdframed Info: Not enough space on this page on input line 116.
  [27]
-Package mdframed Info: Not enough space on this page on input line 115.
+Package mdframed Info: Not enough space on this page on input line 116.
  Excluding 'comment' comment.
-Package mdframed Info: mdframed works in twoside mode on input line 195.
+Package mdframed Info: mdframed works in twoside mode on input line 196.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 195.
+(mdframed)              on input line 196.
  [28]
-Package mdframed Info: mdframed works in twoside mode on input line 206.
+Package mdframed Info: mdframed works in twoside mode on input line 207.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
+(mdframed)              on input line 207.
  [29]
-Package mdframed Info: mdframed works in twoside mode on input line 250.
+Package mdframed Info: mdframed works in twoside mode on input line 251.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 250.
+(mdframed)              on input line 251.
  Excluding 'comment' comment.
-Overfull \hbox (19.06816pt too wide) detected at line 282
+Overfull \hbox (19.06816pt too wide) detected at line 283
 []
  []
 
@@ -1497,7 +1497,7 @@ Overfull \hbox (19.06816pt too wide) detected at line 282
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-Overfull \hbox (25.75018pt too wide) detected at line 296
+Overfull \hbox (25.75018pt too wide) detected at line 297
 []
  []
 
@@ -1505,39 +1505,39 @@ Overfull \hbox (25.75018pt too wide) detected at line 296
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31] [32]
-Overfull \hbox (2.98541pt too wide) in paragraph at lines 321--323
+Overfull \hbox (2.98541pt too wide) in paragraph at lines 322--324
 []\OT1/cmr/m/n/10.95 Applying Green's for-mula on $^^A\OML/cmm/m/it/10.95 H$ \OT1/cmr/m/n/10.95 terms in Eq. ([][]2.2.10[][]) and putting to-gether Eq. ([][]2.2.9[][]),
  []
 
 
-Overfull \hbox (15.6854pt too wide) detected at line 329
+Overfull \hbox (15.6854pt too wide) detected at line 330
 []
  []
 
 [33]
-Package mdframed Info: mdframed works in twoside mode on input line 358.
+Package mdframed Info: mdframed works in twoside mode on input line 359.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 358.
-Package mdframed Info: mdframed works in twoside mode on input line 368.
+(mdframed)              on input line 359.
+Package mdframed Info: mdframed works in twoside mode on input line 369.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 368.
+(mdframed)              on input line 369.
  [34] [35] [36]
-Overfull \hbox (17.13936pt too wide) in paragraph at lines 463--464
+Overfull \hbox (17.13936pt too wide) in paragraph at lines 464--465
 []\OT1/cmr/m/n/10.95 Stampacchia lemma now im-plies $\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k\OT1/cmr/m/n/10.95 ) = 0$ for all $\OML/cmm/m/it/10.95 k \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 k[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 d$ \OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 d[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 c[]\OT1/cmr/m/n/10.95 2[]\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]\OT1/cmr/m/n/10.95 )[]$.
  []
 
 [37]
-Package mdframed Info: mdframed works in twoside mode on input line 484.
+Package mdframed Info: mdframed works in twoside mode on input line 485.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 484.
+(mdframed)              on input line 485.
  [38]
-Package mdframed Info: mdframed works in twoside mode on input line 510.
+Package mdframed Info: mdframed works in twoside mode on input line 511.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 510.
+(mdframed)              on input line 511.
 ) [39]
 \openout2 = `Noncollapsing.aux'.
 
@@ -1629,7 +1629,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  115i,16n,109p,10640b,1223s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_MCF.pdf (54 pages, 415108 bytes).
+Output written on Thesis_MCF.pdf (54 pages, 415250 bytes).
 PDF statistics:
  789 PDF objects out of 1000 (max. 8388607)
  682 compressed objects within 7 object streams
