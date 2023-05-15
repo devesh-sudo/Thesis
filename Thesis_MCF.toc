@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {1.3}Evolution equations}{9}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Maximum principle}{11}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Long time existence}{13}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Monotonicity Formula}{18}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Rescaled Monotonicity formula}{20}{subsection.1.6.1}%
+\contentsline {section}{\numberline {1.6}Monotonicity Formula}{19}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Rescaled Monotonicity formula}{21}{subsection.1.6.1}%
 \contentsline {chapter}{\numberline {2}Convexity estimates}{25}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Elementary symmetric polynomials and cones}{25}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Estimate of $S_{2}$}{26}{section.2.2}%
