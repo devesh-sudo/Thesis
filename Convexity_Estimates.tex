@@ -1,6 +1,6 @@
 \chapter{Convexity estimates}
 
-As observed in the previous chapter, a convex hypersurface evolving under (rescaled) mean curvature flow converges smoothly to a round sphere. This convergence cannot be expected for general mean-convex hypersurfaces as singularities might appear. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives a convex ancient solution.
+ As observed in the previous chapter the mean curvature flow preserves convexity and mean convexity. In this chapter, we would like to study the convexity of the hypersurface as it approaches singularity via a blow-up method. Huisken and Sinestrari proved in \cite{huisken1999convexity, huisken1999mean} that mean convex hypersurface are asymptotically convex i.e. blowing the flow near singularity gives a convex ancient solution.
 
 
 
@@ -32,7 +32,7 @@ This establishes a hierarchy of convexity with the last one being uniformly conv
 \end{thm}
 
 %This means that the negative part of $ S_{k} $ cannot grow faster than $ H^{k} $.
-This can be interpreted as the negative part of $S_k$ becomes very small compared because of the inhomogeneous factor $ \eta$ at points where $H^k$ is large(i.e. where the singularities are developing). We will only prove the theorem for $ k=2 $ adapted from \cite{huisken1999mean}. A complete proof is done using induction in \cite{huisken1999convexity}. 
+This can be interpreted as following - the negative part of $S_k$ becomes very small compared because of the inhomogeneous factor $ \eta$ at points where $H^k$ is large(i.e. where the singularities are developing). We will only prove the theorem for $ k=2 $ adapted from \cite{huisken1999mean}. A complete proof is done using induction in \cite{huisken1999convexity}. 
 \section{Estimate of $S_{2}$}
 %It was established in section \cref{max} that mean-convexity and uniform convexity is preserved under MCF. While $ 2 $-convexity isn't preserved under mean curvature flow; we can still derive an asymptotic result which allows us to study the singularity. %In this section we will introduce a method to analyze the general $ m $ - convex hypersurface and prove that it is preserved under MCF. 
 %\begin{thm}
@@ -477,35 +477,41 @@ To handle the bad positive term appearing in \cref{Lpfirst} we use the following
  
     As mentioned in \cref{Type1singularity}, we classify the singularities based on the blow-up rate of $ |A|^{2} $. Recall from maximum principle on \cref{Deltag1} there exists a $ c_{0} $ such that $ |A|^{2}\le c_{0}H^{2} $ and from algebra we get $ H^{2}\le n|A|^{2} $ so $ |A|^{2} $ and $ H^{2} $ have same rate of growth. We will focus on the growth of $ H^{2} $. 
     
-    The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X: M \times [0, T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{k},t_{k})\} $ in spacetime as follows. For each integer $ k \ge 1 $, let $ t_{k} \in [0,T-\frac{1}{k}] $, $ x_{k} \in M $ such that \begin{equation}
-        H^{2}(x_{k},t_{k})\left( T- \frac{1}{k}-t_{k} \right) = \sup_{(x,t) \in M \times\left[0,T-\frac{1}{k}\right]}H^{2}(x,t)\left(  T- \frac{1}{k}- t\right)
+    The estimates obtained in the previous section will be very useful to obtain an asymptotic analysis of type II singularities. Following \cite{huisken1999mean} suppose a maximal solution  $X: M \times [0, T) \to \Rn $ develops a type II singularity. Choose a sequence of points $ \{(x_{m},t_{m})\} $ in spacetime as follows. For each integer $ m \ge 1 $, let $ t_{m} \in [0,T-\frac{1}{m}] $, $ x_{m} \in M $ such that \begin{equation}
+        H^{2}(x_{m},t_{m})\left( T- \frac{1}{m}-t_{m} \right) = \sup_{(x,t) \in M \times\left[0,T-\frac{1}{m}\right]}H^{2}(x,t)\left(  T- \frac{1}{m}- t\right)
     \end{equation}
-    Set $ L_{k} = H(x_{k},t_{k}) $, $ \alpha_{k} = -L^{2}_{k}t_{k} $ and $ \omega_{k} = L_{k}^{2}(T-\frac{1}{k}-t_{k}) $. 
+    Set $ L_{m} = H(x_{m},t_{m}) $, $ \alpha_{m} = -L^{2}_{m}t_{m} $ and $ \omega_{m} = L_{m}^{2}(T-\frac{1}{m}-t_{m}) $. 
     \begin{lemma}
-        For singularities of type II, the following holds as $ k \to \infty $, 
-        \[ t_{k} \to T, \quad L_{k} \to \infty,\quad  \alpha_{k} \to -\infty,\text{ and } \omega_{k} \to \infty .\]
+        For singularities of type II, the following holds as $ m \to \infty $, 
+        \[ t_{m} \to T, \quad L_{m} \to \infty,\quad  \alpha_{m} \to -\infty,\text{ and } \omega_{m} \to \infty .\]
     \end{lemma}
     \begin{proof}%\textcolor{red}{TO DO}
-        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0, T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. For $ k $ large enough we have
+        Fix $ M  >0 $. As the singularity is of type II, there exists a $ t_{M} \in [0, T) $ and $ x_{M} \in \mathcal{M} $ such that $ H^{2}(x_{M},t_{M})(T-t_{m})> 2M $. For $ m $ large enough we have
         $$
-        \bar{t}<T-1 / k, \quad H^2(\bar{x}, \bar{t})(T-\bar{t}-1 / k)>M.
+        \bar{t}<T-1 / m, \quad H^2(\bar{x}, \bar{t})(T-\bar{t}-1 / m)>M.
         $$
         It follows
         $$
-        \omega_k=H^2\left(x_k, t_k\right)\left(T-t_k-1 / k\right) \geq H^2(\bar{x}, \bar{t})(T-\bar{t}-1 / k)>M .
+        \omega_m=H^2\left(x_m, t_m\right)\left(T-t_m-1 / m\right) \geq H^2(\bar{x}, \bar{t})(T-\bar{t}-1 / m)>M .
         $$
         %TO DO
     \end{proof}
-    Now we will rescale the hypersurfaces to analyze the limiting behavior. For each $ k \ge 1 $, define a family of immersions by 
-    \[ X_{k}(x, t) = L_{k}(X(x, L_{k}^{-2}t+t_{k})-X(x_{k},t_{k}))  \text{ for } t \in [\alpha_{k}, \omega_{k}].\]
-    Let $ A_{k} $ and $ H_{k} $ denote the fundamental form of the rescaled immersions. Then by the definition of $ L_{k} $ and $ X_{k} $ we have 
-    \[ X_{k}(x_{k},0) = 0 \quad \text{ and }\quad H_{k}(x_{k},0)=1.\]
+    Now we will rescale the hypersurfaces to analyze the limiting behavior. For each $ m \ge 1 $, define a family of immersions by 
+    \[ X_{m}(x, t) = L_{m}(X(x, L_{m}^{-2}t+t_{m})-X(x_{m},t_{m}))  \text{ for } t \in [\alpha_{m}, \omega_{m}].\]
+    Let $ A_{m} $ and $ H_{m} $ denote the fundamental form of the rescaled immersions. Then by the definition of $ L_{m} $ and $ X_{m} $ we have 
+    \[ X_{m}(x_{m},0) = 0 \quad \text{ and }\quad H_{m}(x_{m},0)=1.\]
     Further,  observe that 
-    \[ H_{k}^{2}(x,t) = L_{k}^{-2}H^{2}(x, L_{k}^{-2}t+t_{k}) \le \frac{T - \frac{1}{k}-t_{k}}{T-\frac{1}{k}-t_{k}-L_{k}^{-2}t} = \frac{\omega_{k}}{\omega_{k}-t}. \]
+    \[ H_{m}^{2}(x,t) = L_{m}^{-2}H^{2}(x, L_{m}^{-2}t+t_{m}) \le \frac{T - \frac{1}{m}-t_{m}}{T-\frac{1}{m}-t_{m}-L_{m}^{-2}t} = \frac{\omega_{m}}{\omega_{m}-t}. \]
 
-    From the previous lemma $ \omega_{k} \to \infty $, so for any $ \epsilon >0 $ and $ \overline{\omega} $, there exists a $ k_{0} $ such that 
-    \[ \max_{x \in M} H_{k}(x,t) \le 1+\epsilon \]
-    for any $ k \ge k_{0} $ and $ t \in [\alpha_{k_{0}}, \overline{\omega}] $. This curvature bound implies analogous bounds on the second fundamental form as well as its covariant derivatives. Invoking Arzela-Ascoli theorem there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
+    From the previous lemma $ \omega_{m} \to \infty $, so for any $ \epsilon >0 $ and $ \overline{\omega} $, there exists a $ m_{0} $ such that 
+    \[ \max_{x \in M} H_{m}(x,t) \le 1+\epsilon \]
+    for any $ m \ge m_{0} $ and $ t \in [\alpha_{m_{0}}, \overline{\omega}] $. Also, observe that the elementary symmetric polynomials of principal curvatures of the indexed hypersurfaces scale as 
+   $ (S_{k})_{m} = L_{m}^{-k} S_{k}$ so
+    \begin{align*}
+      (S_{k})_{m} & \ge - \eta H_{m}^{k} - L_{m}^{-k} C_{\eta,k} \\
+      & \ge - \eta (1+ \epsilon)^{k} - L_{m}^{-k} C_{\eta,k}
+    \end{align*}
+    which can be made arbitrarily small in the limit $ m \to \infty $. The curvature bound implies analogous bounds on the second fundamental form as well as its covariant derivatives. Invoking the Arzela-Ascoli theorem there exists a subsequence of $ X_{k} $ converging uniformly on compact subsets of $ \Rn \times \R $ to a limiting solution $ X_{\infty} $ of the mean curvature flow. This proves the asymptotic convexity of the flow in the following sense.
      
     \begin{thm}
         Let $ X: M \times [0, T) \to \Rn$ be a smooth maximal solution of the mean curvature flow with $ X(\cdot,0) = \mathcal{M}_{0} $ compact and of positive mean curvature. Further, assume that the flow develops a singularity of type II. Then there exists a sequence of rescaled flow $ X_{k}(\cdot,t) $ converging smoothly on every compact set to a mean curvature flow $ X_{\infty}(\cdot, t) $ which is defined for $ t \in (-\infty, \infty) $. Also, the limit hypersurface $ X_{\infty} $ is convex (not necessarily uniformly convex) for each $ t \in (-\infty, \infty)  $ and satisfies $ 0< H_{\infty}\le 1 $ everywhere with equality at least at one point. 
