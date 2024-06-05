@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex Thesis_Proposal"] 1717551287 "Thesis_Proposal.aux" "Thesis_Proposal.bbl" "Thesis_Proposal" 1717554369
+["bibtex Thesis_Proposal"] 1717551287 "Thesis_Proposal.aux" "Thesis_Proposal.bbl" "Thesis_Proposal" 1717557662
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Thesis_Proposal.aux" 1717554362 861 6eae2d35c254eb0b1b7de6791bf1a2df "pdflatex"
+  "Thesis_Proposal.aux" 1717557662 861 6eae2d35c254eb0b1b7de6791bf1a2df "pdflatex"
   "proposal.bib" 1717551152 1029 cfae803db586c297e4a7ded44d3be473 ""
   (generated)
   "Thesis_Proposal.blg"
   "Thesis_Proposal.bbl"
-["pdflatex"] 1717554362 "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.tex" "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.pdf" "Thesis_Proposal" 1717554369
+["pdflatex"] 1717557662 "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.tex" "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.pdf" "Thesis_Proposal" 1717557662
   "/etc/texmf/web2c/texmf.cnf" 1713934888 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.aux" 1717554362 861 6eae2d35c254eb0b1b7de6791bf1a2df ""
-  "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.tex" 1717554369 3236 31ab4a6f21683f2a0eabf4f75d213a07 ""
+  "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.aux" 1717557662 861 6eae2d35c254eb0b1b7de6791bf1a2df ""
+  "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.tex" 1717557661 3239 f72dafe9f8d8fa12b1b7d7869996a0c8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -61,12 +61,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713936451 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713936456 4877305 4b6cd38925916c823589160c5db84d76 ""
-  "Thesis_Proposal.aux" 1717554362 861 6eae2d35c254eb0b1b7de6791bf1a2df "pdflatex"
+  "Thesis_Proposal.aux" 1717557662 861 6eae2d35c254eb0b1b7de6791bf1a2df "pdflatex"
   "Thesis_Proposal.bbl" 1717551287 825 ba42d9608d3ba4cf8fcc6a7f3c49a33e "bibtex Thesis_Proposal"
-  "Thesis_Proposal.tex" 1717554369 3236 31ab4a6f21683f2a0eabf4f75d213a07 ""
+  "Thesis_Proposal.tex" 1717557661 3239 f72dafe9f8d8fa12b1b7d7869996a0c8 ""
   (generated)
-  "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.log"
-  "Thesis_Proposal.pdf"
   "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.pdf"
-  "Thesis_Proposal.aux"
+  "/home/deveshrajpal/Documents/GitHub/Thesis/Thesis_Proposal.log"
   "Thesis_Proposal.log"
+  "Thesis_Proposal.aux"
+  "Thesis_Proposal.pdf"
